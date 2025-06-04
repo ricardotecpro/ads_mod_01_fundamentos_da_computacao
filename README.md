@@ -1,18 +1,15 @@
-#Conteúdo
-
-```markdown
 # APRESENTAÇÃO DA DISCIPLINA DE LINGUAGEM DE PROGRAMAÇÃO 💻
 
-**Prof. Me. Ricardo L Pires**
+**Prof. Me. Ricardo Pires**
 
 ---
 
 ## 🤔 Quem sou eu?
 
-*(Esta seção deve ser preenchida pelo Professor Ricardo L Pires com suas informações)*
+
 
 ### EXPERIÊNCIA PROFISSIONAL
-*(Detalhar aqui a experiência profissional relevante do professor)*
+
 
 ---
 
@@ -46,55 +43,55 @@ A disciplina visa:
 O curso será dividido nos seguintes módulos principais:
 
 **1. Conceitos de Linguagem C++ e Programação Orientada a Objetos (POO)**
-    * 1.1. Revisão dos comandos básicos de C++
-    * 1.2. Programação Orientada a Objetos com C++:
-        * 1.2.1. Classes
-        * 1.2.2. Objetos
-        * 1.2.3. Construtores
-        * 1.2.4. Métodos de Acesso (Getters)
-        * 1.2.5. Métodos Modificadores (Setters)
-        * 1.2.6. Objetos Constantes
-        * 1.2.7. Herança
-        * 1.2.8. Polimorfismo
-        * 1.2.9. Agregação
-        * 1.2.10. Composição
-        * 1.2.11. Interfaces (Classes Abstratas Puras)
-    * 1.3. Desenvolvimento de Aplicações usando conceitos de POO em C++
+* 1.1. Revisão dos comandos básicos de C++
+* 1.2. Programação Orientada a Objetos com C++:
+* 1.2.1. Classes
+* 1.2.2. Objetos
+* 1.2.3. Construtores
+* 1.2.4. Métodos de Acesso (Getters)
+* 1.2.5. Métodos Modificadores (Setters)
+* 1.2.6. Objetos Constantes
+* 1.2.7. Herança
+* 1.2.8. Polimorfismo
+* 1.2.9. Agregação
+* 1.2.10. Composição
+* 1.2.11. Interfaces (Classes Abstratas Puras)
+* 1.3. Desenvolvimento de Aplicações usando conceitos de POO em C++
 
 **2. Programação WEB**
-    * 2.1. Conceitos de Programação WEB
-    * 2.2. Criação de Formulários WEB
-    * 2.3. Acesso a Banco de Dados
-    * 2.4. Manipulação de Controles e Eventos
-    * 2.5. Manutenção de Estados (variáveis de sessão, cookies, etc.)
-    * 2.6. Troca de Valores entre páginas (ex: PostBack, QueryString)
-    * 2.7. Criação de Menus de navegação
-    * 2.8. Criação e aplicação de Estilos (CSS)
-    * 2.9. Controle de Acesso (LOGIN e autenticação)
-    * 2.10. Desenvolvimento de Aplicações WEB aplicando conceitos de POO
+* 2.1. Conceitos de Programação WEB
+* 2.2. Criação de Formulários WEB
+* 2.3. Acesso a Banco de Dados
+* 2.4. Manipulação de Controles e Eventos
+* 2.5. Manutenção de Estados (variáveis de sessão, cookies, etc.)
+* 2.6. Troca de Valores entre páginas (ex: PostBack, QueryString)
+* 2.7. Criação de Menus de navegação
+* 2.8. Criação e aplicação de Estilos (CSS)
+* 2.9. Controle de Acesso (LOGIN e autenticação)
+* 2.10. Desenvolvimento de Aplicações WEB aplicando conceitos de POO
 
 **3. Frameworks de Desenvolvimento**
-    * 3.1. Conceitos de Frameworks
-    * 3.2. Conceitos de Arquiteturas de software (Monolítica, Microserviços, etc.)
-    * 3.3. Conceitos de Programação em Camadas (N-Tier Architecture)
-    * 3.4. Framework de Arquitetura MVC (Model-View-Controller)
-    * 3.5. Conceitos de Persistência de Dados
-    * 3.6. Framework ORM (Object-Relational Mapping)
-    * 3.7. Conceitos de Rotas em aplicações web
-    * 3.8. Conceitos de Autenticação e Autorização em frameworks
-    * 3.9. Conceitos de Linguagem Estruturada de Consulta (SQL) e sua integração
-    * 3.10. Desenvolvimento de Aplicações usando Frameworks
+* 3.1. Conceitos de Frameworks
+* 3.2. Conceitos de Arquiteturas de software (Monolítica, Microserviços, etc.)
+* 3.3. Conceitos de Programação em Camadas (N-Tier Architecture)
+* 3.4. Framework de Arquitetura MVC (Model-View-Controller)
+* 3.5. Conceitos de Persistência de Dados
+* 3.6. Framework ORM (Object-Relational Mapping)
+* 3.7. Conceitos de Rotas em aplicações web
+* 3.8. Conceitos de Autenticação e Autorização em frameworks
+* 3.9. Conceitos de Linguagem Estruturada de Consulta (SQL) e sua integração
+* 3.10. Desenvolvimento de Aplicações usando Frameworks
 
 **4. Desenvolvimento de Aplicações Single Page Application (SPA)**
-    * 4.1. Conceitos de Aplicações SPA
-    * 4.2. Conceitos de Arquitetura MVVM (Model-View-ViewModel) e outras arquiteturas SPA
-    * 4.3. Conceitos de Aplicações Bloqueantes e Não Bloqueantes (Asynchronous Operations)
-    * 4.4. Conceitos de Desenvolvimento de Componentes reutilizáveis
-    * 4.5. Conceitos de Serviços WEB (Web Services)
-    * 4.6. Conceitos de Serviços REST (Representational State Transfer)
-    * 4.7. Implementação de Serviços REST (APIs)
-    * 4.8. Implementação de aplicações SPA consumindo serviços REST
-    * 4.9. Desenvolvimento de aplicações SPA completas
+* 4.1. Conceitos de Aplicações SPA
+* 4.2. Conceitos de Arquitetura MVVM (Model-View-ViewModel) e outras arquiteturas SPA
+* 4.3. Conceitos de Aplicações Bloqueantes e Não Bloqueantes (Asynchronous Operations)
+* 4.4. Conceitos de Desenvolvimento de Componentes reutilizáveis
+* 4.5. Conceitos de Serviços WEB (Web Services)
+* 4.6. Conceitos de Serviços REST (Representational State Transfer)
+* 4.7. Implementação de Serviços REST (APIs)
+* 4.8. Implementação de aplicações SPA consumindo serviços REST
+* 4.9. Desenvolvimento de aplicações SPA completas
 
 ---
 
@@ -151,8 +148,3 @@ O desempenho dos alunos será avaliado por meio de:
 * **Chave de Inscrição:** `INFO2024`
 
 ---
-```
-## 📅 CRONOGRAMA
-O cronograma detalhado das aulas será disponibilizado na plataforma Moodle, onde você poderá acompanhar as datas, conteúdos e atividades programadas.
-## 📞 CONTATO
-Para dúvidas ou mais informações, entre em contato pelo e-mail:
