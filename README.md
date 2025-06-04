@@ -1,6 +1,6 @@
 # APRESENTAÇÃO DA DISCIPLINA DE LINGUAGEM DE PROGRAMAÇÃO 💻
 
-**Prof. Me. Ricardo Pires**
+**Prof.**
 
 ---
 
@@ -27,7 +27,7 @@ Para que possamos nos conhecer melhor, por favor, compartilhe um pouco sobre voc
 
 ## 🎓 PLANO DE CURSO
 
-**Instituição:** Fundação Educacional do Município de Assis
+**Instituição:** Fundação
 
 ### OBJETIVO GERAL
 A disciplina visa:
@@ -144,7 +144,7 @@ O desempenho dos alunos será avaliado por meio de:
 
 **INSCREVA-SE NA PLATAFORMA:**
 
-* **Curso:** Linguagem de Programação - ADS - 2 - Turma 2 (LPADST2)
-* **Chave de Inscrição:** `INFO2024`
+* **Curso:** Linguagem de Programação - ADS - 2 - Turma ? (LPADST2)
+* **Chave de Inscrição:** `INFO202?`
 
 ---
