@@ -152,3 +152,5 @@ O desempenho dos alunos será avaliado por meio de:
 O cronograma detalhado das aulas será disponibilizado na plataforma Moodle, incluindo datas, horários e conteúdos a serem abordados em cada aula.
 
 ## 📞 CONTATO
+
+Para dúvidas ou mais informações, entre em contato pelo e-mail:
