@@ -1,4 +1,10 @@
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+
 # APRESENTAÇÃO DA DISCIPLINA DE LINGUAGEM DE PROGRAMAÇÃO 💻
+
+
+![Disquete](./assets/disquete.gif)
+
 
 **Prof.**
 
@@ -6,12 +12,14 @@
 
 ## 🤔 Quem sou eu?
 
+<img src="./assets/linux.png" alt="Logo da Disciplina" width="200" height="200">
 
 
 ### EXPERIÊNCIA PROFISSIONAL
 
+![cs](./assets/cs.gif)
 
----
+<!-- --- -->
 
 ## 👋 APRESENTAÇÃO DOS ALUNOS
 
@@ -103,7 +111,7 @@ Durante o curso, exploraremos e utilizaremos as seguintes tecnologias:
 * **Java**
 * **Python**
 * **JavaScript**
-* (Outras ferramentas e IDEs específicas serão معرفیadas conforme necessário)
+* (Outras ferramentas e IDEs específicas serão usadas conforme necessário)
 
 ---
 
