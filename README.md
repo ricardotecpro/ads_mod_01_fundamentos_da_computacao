@@ -148,6 +148,8 @@ O desempenho dos alunos será avaliado por meio de:
 
 ---
 
+<!--
+
 ## 🌐 MOODLE
 
 **INSCREVA-SE NA PLATAFORMA:**
@@ -162,3 +164,5 @@ O cronograma detalhado das aulas será disponibilizado na plataforma Moodle, inc
 ## 📞 CONTATO
 
 Para dúvidas ou mais informações, entre em contato pelo e-mail:
+
+-->
