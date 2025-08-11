@@ -164,3 +164,7 @@ O cronograma detalhado das aulas será disponibilizado na plataforma Moodle, inc
 Para dúvidas ou mais informações, entre em contato pelo e-mail:
 
 -->
+
+---
+
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)

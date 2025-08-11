@@ -1,5 +1,3 @@
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
-
 # 💻 Curso de Computação
 
 Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrará os conteúdos organizados por temas, com materiais de apoio, exercícios, exemplos de código e projetos.
@@ -62,6 +60,7 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 - Kubernetes (K8s)
 - Jenkins e CI/CD
 - Terraform
+- Trello
 
 ### 09. Back-End [Acesse](https://ricardotecpro.github.io/modulo_09_backend/)
 - APIs RESTful
@@ -103,17 +102,6 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 - Aula 9: Organizando Projetos com Módulos
 - Aula 10: Coleções Comuns
 
-
 ---
 
-<!--
-
-## 🚀 Como Contribuir
-
-1. Faça um fork deste repositório
-2. Crie uma branch para sua feature: `git checkout -b minha-feature`
-3. Commit suas alterações: `git commit -m 'Adiciona nova feature'`
-4. Envie sua branch: `git push origin minha-feature`
-5. Abra um Pull Request
-
----
+### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
