@@ -1,168 +1,119 @@
 ### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
 
-# APRESENTAÇÃO DA DISCIPLINA DE LINGUAGEM DE PROGRAMAÇÃO 💻
+# 💻 Curso de Computação
+
+Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrará os conteúdos organizados por temas, com materiais de apoio, exercícios, exemplos de código e projetos.
+
+## 📚 Conteúdo Programático
+
+### 00. Apresentação do Curso [Acesse](https://ricardotecpro.github.io/modulo_00_apresentacao_do_curso/)
+- Apresentação da disciplina
+
+### 01. Lógica de Programação e Algoritmos [Acesse](https://ricardotecpro.github.io/modulo_01_logica_programacao/)
+- Conceitos básicos de algoritmos
+- Estruturas de decisão e repetição
+- Variáveis, operadores e funções
+
+### 02. Git GitHub Markdown [Acesse](https://ricardotecpro.github.io/modulo_02_git_github_markdown/)
+- Controle de versão com Git
+- Fluxos de trabalho (branch, merge, pull request)
+- Publicação de projetos com GitHub Pages
 
 
-![Disquete](./assets/disquete.gif)
+### 03. Web HTML e CSS [Acesse](https://ricardotecpro.github.io/modulo_03_html_css/)
+- Estrutura de páginas HTML
+- Estilização com CSS
+- Layouts responsivos
 
 
-**Prof.**
-
----
-
-## 🤔 Quem sou eu?
-
-<img src="./assets/linux.png" alt="Logo da Disciplina" width="200" height="200">
+### 04. Paradigma OO Java [Acesse](https://ricardotecpro.github.io/modulo_04_poo_java/)
+- Fundamentos da linguagem
+- Programação orientada a objetos
+- Lambda expressions
+- Coleções e Streams
 
 
-### EXPERIÊNCIA PROFISSIONAL
+### 05. Banco de Dados SQL [Acesse](https://ricardotecpro.github.io/modulo_05_banco_dados/)
 
-![cs](./assets/cs.gif)
+**SGBDs Relacionais:**
+- MySQL
+- PostgreSQL
+- H2
+- SQLite
 
-<!-- --- -->
+**Bancos de Dados NoSQL:**
+- Cassandra
+- MongoDB
 
-## 👋 APRESENTAÇÃO DOS ALUNOS
+### 06. JavaScript Node.js [Acesse](https://ricardotecpro.github.io/modulo_06_javascript/)
+- Sintaxe e estruturas básicas
+- Manipulação do DOM
+- Programação assíncrona
 
-Para que possamos nos conhecer melhor, por favor, compartilhe um pouco sobre você:
+### 07. Análise de Sistemas [Acesse](https://ricardotecpro.github.io/modulo_07_analise_uml/)
+- Engenharia de Requisitos
+- Modelagem com UML
 
-* **Nome:**
-* **Cidade:**
-* **Trabalha na área de TI?** (Sim/Não. Se sim, qual função?)
-* **Qual seu principal objetivo para este ano?**
-* **Já se identifica com alguma área específica da TI?** (Ex: Desenvolvimento Web, Mobile, Banco de Dados, Redes, Segurança, IA, etc.)
+### 08. Ambiente de Desenvolvimento [Acesse](https://ricardotecpro.github.io/modulo_08_ambiente_desenvolvimento/) 
+- Linux e terminal
+- IDEs e editores
+- Docker e containers
+- Composer, NGINX
+- Kubernetes (K8s)
+- Jenkins e CI/CD
+- Terraform
 
----
+### 09. Back-End [Acesse](https://ricardotecpro.github.io/modulo_09_backend/)
+- APIs RESTful
+- Operações CRUD
+- ORM (Object-Relational Mapping)
+- DTO (Data Transfer Object)
 
-## 🎓 PLANO DE CURSO
+### 10. Front-End [Acesse](https://ricardotecpro.github.io/modulo_10_frontend/)
+- Angular
+- React
+- Vue.js
 
-**Instituição:** Fundação
+### 11. Mobile [Acesse](https://ricardotecpro.github.io/modulo_11_mobile/)
+- Android
+- Ionic
+- React Native
+- Flutter
 
-### OBJETIVO GERAL
-A disciplina visa:
-* Aprofundar nos conceitos de **Orientação a Objetos** utilizando C/C++.
-* Aplicar conhecimentos de **Programação WEB**.
-* Utilizar **frameworks** para o desenvolvimento de soluções WEB.
-* Desenvolver uma **visão sistêmica** da comunicação entre diferentes soluções de software.
+### 12. Estrutura de Dados [Acesse](https://ricardotecpro.github.io/modulo_12_estrutura_dados/)
+- Listas, pilhas e filas
+- Árvores e grafos
+- Algoritmos de ordenação e busca
 
----
+### 13. Python [Acesse](https://ricardotecpro.github.io/modulo_13_python/)
+- Dados
+- Web
+- Automação
+- IoT
 
-### 📚 CONTEÚDO PROGRAMÁTICO
+### 14. Rust [Acesse](https://ricardotecpro.github.io/modulo_14_rust/)
+- Aula 1: Por que Rust? E Configuração do Ambiente
+- Aula 2: “Olá, Mundo!” e o Poder do Cargo
+- Aula 3: Variáveis, Mutabilidade e Tipos de Dados Primitivos
+- Aula 4: Funções e Controle de Fluxo
+- Aula 5: Ownership (Posse) - O Conceito Central 
+- Aula 6: Borrowing (Empréstimo) e Referências
+- Aula 7: Structs - Criando Tipos de Dados Personalizados
+- Aula 8: Enums e o Poder do match
+- Aula 9: Organizando Projetos com Módulos
+- Aula 10: Coleções Comuns
 
-O curso será dividido nos seguintes módulos principais:
-
-**1. Conceitos de Linguagem C++ e Programação Orientada a Objetos (POO)**
-* 1.1. Revisão dos comandos básicos de C++
-* 1.2. Programação Orientada a Objetos com C++:
-* 1.2.1. Classes
-* 1.2.2. Objetos
-* 1.2.3. Construtores
-* 1.2.4. Métodos de Acesso (Getters)
-* 1.2.5. Métodos Modificadores (Setters)
-* 1.2.6. Objetos Constantes
-* 1.2.7. Herança
-* 1.2.8. Polimorfismo
-* 1.2.9. Agregação
-* 1.2.10. Composição
-* 1.2.11. Interfaces (Classes Abstratas Puras)
-* 1.3. Desenvolvimento de Aplicações usando conceitos de POO em C++
-
-**2. Programação WEB**
-* 2.1. Conceitos de Programação WEB
-* 2.2. Criação de Formulários WEB
-* 2.3. Acesso a Banco de Dados
-* 2.4. Manipulação de Controles e Eventos
-* 2.5. Manutenção de Estados (variáveis de sessão, cookies, etc.)
-* 2.6. Troca de Valores entre páginas (ex: PostBack, QueryString)
-* 2.7. Criação de Menus de navegação
-* 2.8. Criação e aplicação de Estilos (CSS)
-* 2.9. Controle de Acesso (LOGIN e autenticação)
-* 2.10. Desenvolvimento de Aplicações WEB aplicando conceitos de POO
-
-**3. Frameworks de Desenvolvimento**
-* 3.1. Conceitos de Frameworks
-* 3.2. Conceitos de Arquiteturas de software (Monolítica, Microserviços, etc.)
-* 3.3. Conceitos de Programação em Camadas (N-Tier Architecture)
-* 3.4. Framework de Arquitetura MVC (Model-View-Controller)
-* 3.5. Conceitos de Persistência de Dados
-* 3.6. Framework ORM (Object-Relational Mapping)
-* 3.7. Conceitos de Rotas em aplicações web
-* 3.8. Conceitos de Autenticação e Autorização em frameworks
-* 3.9. Conceitos de Linguagem Estruturada de Consulta (SQL) e sua integração
-* 3.10. Desenvolvimento de Aplicações usando Frameworks
-
-**4. Desenvolvimento de Aplicações Single Page Application (SPA)**
-* 4.1. Conceitos de Aplicações SPA
-* 4.2. Conceitos de Arquitetura MVVM (Model-View-ViewModel) e outras arquiteturas SPA
-* 4.3. Conceitos de Aplicações Bloqueantes e Não Bloqueantes (Asynchronous Operations)
-* 4.4. Conceitos de Desenvolvimento de Componentes reutilizáveis
-* 4.5. Conceitos de Serviços WEB (Web Services)
-* 4.6. Conceitos de Serviços REST (Representational State Transfer)
-* 4.7. Implementação de Serviços REST (APIs)
-* 4.8. Implementação de aplicações SPA consumindo serviços REST
-* 4.9. Desenvolvimento de aplicações SPA completas
-
----
-
-### 🛠️ LINGUAGENS E FERRAMENTAS
-
-Durante o curso, exploraremos e utilizaremos as seguintes tecnologias:
-
-* **C++**
-* **Java**
-* **Python**
-* **JavaScript**
-* (Outras ferramentas e IDEs específicas serão usadas conforme necessário)
-
----
-
-### 📝 ATIVIDADES
-
-As atividades da disciplina incluirão:
-
-1.  Resolução de exercícios práticos.
-2.  Elaboração de novos exercícios e desafios.
-3.  Pesquisas individuais e em grupo, abordando aspectos teóricos do conteúdo programático.
-4.  Apresentação de seminários sobre temas relevantes.
-5.  Desenvolvimento de trabalhos práticos, individualmente ou em grupos.
-6.  Elaboração de programas e pequenas aplicações.
-
----
-
-### 💯 AVALIAÇÃO
-
-O desempenho dos alunos será avaliado por meio de:
-
-1.  **Provas escritas ou práticas:** Avaliações formais sobre o conteúdo ministrado.
-2.  **Trabalhos e/ou seminários:** Avaliação contínua do aprendizado através de projetos, apresentações e participação.
-
----
-
-### 📖 BIBLIOGRAFIA BÁSICA
-
-* GREENE, Jennifer. **Use A Cabeça! C#**. Rio de Janeiro: Alta Books, 2011. (Embora o foco seja C++, este livro pode oferecer insights sobre POO de forma didática)
-* SAVITCH, Walter J. **C++ Absoluto**. São Paulo: Addison Wesley, 2004.
-* MATOS, Ecivaldo; ZABOT, Diego. **Aplicativos com Bootstrap e Angular : como desenvolver apps responsivos**. São Paulo: Érica, 2020.
-* MILETTO, Evandro Manara, BERTAGNOLLI, Silvia Castro. **Desenvolvimento de Software II**. Porto Alegre : Bookman, 2014.
-
-*(Bibliografia complementar poderá ser indicada durante o curso.)*
 
 ---
 
 <!--
 
-## 🌐 MOODLE
+## 🚀 Como Contribuir
 
-**INSCREVA-SE NA PLATAFORMA:**
-
-* **Curso:** Linguagem de Programação - ADS - 2 - Turma ? (LPADST2)
-* **Chave de Inscrição:** `INFO202?`
+1. Faça um fork deste repositório
+2. Crie uma branch para sua feature: `git checkout -b minha-feature`
+3. Commit suas alterações: `git commit -m 'Adiciona nova feature'`
+4. Envie sua branch: `git push origin minha-feature`
+5. Abra um Pull Request
 
 ---
-## 📅 CRONOGRAMA
-O cronograma detalhado das aulas será disponibilizado na plataforma Moodle, incluindo datas, horários e conteúdos a serem abordados em cada aula.
-
-## 📞 CONTATO
-
-Para dúvidas ou mais informações, entre em contato pelo e-mail:
-
--->
