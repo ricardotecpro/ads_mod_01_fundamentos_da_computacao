@@ -4,10 +4,10 @@
 
 Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrará os conteúdos organizados por temas, com materiais de apoio, exercícios, exemplos de código e projetos.
 
-## 📚 Conteúdo Programático
+## 📚 Conteúdo Programático - Módulos:
 
 ### 00. Apresentação do Curso [Acesse](https://ricardotecpro.github.io/modulo_00_apresentacao_do_curso/)
-- Apresentação da disciplina
+- Apresentação da disciplina de linguagem de programação [Acesse](curso.md)
 
 ### 01. Lógica de Programação e Algoritmos [Acesse](https://ricardotecpro.github.io/modulo_01_logica_programacao/)
 - Conceitos básicos de algoritmos
