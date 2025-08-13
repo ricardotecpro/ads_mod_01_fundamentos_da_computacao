@@ -1,21 +1,19 @@
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
-
 # Apresentação da disciplina de linguagem de programação 💻
 
 
-![Disquete](./assets/disquete.gif)
+![Disquete](assets/disquete.gif)
 
 
 ---
 
 ## 🤔 Quem sou eu?
 
-<img src="./assets/linux.png" alt="Logo da Disciplina" width="200" height="200">
+<img src="assets/linux.png" alt="Logo da Disciplina" width="200" height="200">
 
 
 ### Experiência profissional
 
-![cs](./assets/cs.gif)
+![cs](assets/cs.gif)
 
 <!-- --- -->
 

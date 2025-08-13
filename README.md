@@ -2,10 +2,14 @@
 
 Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrará os conteúdos organizados por temas, com materiais de apoio, exercícios, exemplos de código e projetos.
 
-## 📚 Conteúdo Programático - Módulos:
+## 📚 Conteúdo Programático
+ 
+### Módulos:
 
-### 00. Apresentação do Curso [Acesse](https://ricardotecpro.github.io/modulo_00_apresentacao_do_curso/)
-- Apresentação da disciplina de linguagem de programação [Acesse](curso.md)
+### 00. Curso de Computação [Acesse](https://ricardotecpro.github.io/modulo_00_computacao/)
+
+- Apresentação da disciplina de linguagem de programação [Acesse](_apresentacao_do_curso/curso.md)
+- Apresentação da Disciplina Desenvolvimento de Sistemas [Acesse]
 
 ### 01. Lógica de Programação e Algoritmos [Acesse](https://ricardotecpro.github.io/modulo_01_logica_programacao/)
 - Conceitos básicos de algoritmos
@@ -24,7 +28,7 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 - Layouts responsivos
 
 
-### 04. Paradigma OO Java [Acesse](https://ricardotecpro.github.io/modulo_04_poo_java/)
+### 04. Java [Acesse](https://ricardotecpro.github.io/modulo_04_java/)
 - Fundamentos da linguagem
 - Programação orientada a objetos
 - Lambda expressions
@@ -48,11 +52,11 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 - Manipulação do DOM
 - Programação assíncrona
 
-### 07. Análise de Sistemas [Acesse](https://ricardotecpro.github.io/modulo_07_analise_uml/)
+### 07. Análise de Sistemas UML [Acesse](https://ricardotecpro.github.io/modulo_07_analise_uml/)
 - Engenharia de Requisitos
 - Modelagem com UML
 
-### 08. Ambiente de Desenvolvimento [Acesse](https://ricardotecpro.github.io/modulo_08_ambiente_desenvolvimento/) 
+### 08. Ferramentas de Desenvolvimento [Acesse](https://ricardotecpro.github.io/modulo_08_ferramentas/) 
 - Linux e terminal
 - IDEs e editores
 - Docker e containers
@@ -64,6 +68,7 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 
 ### 09. Back-End [Acesse](https://ricardotecpro.github.io/modulo_09_backend/)
 - APIs RESTful
+- APIs WebSockets
 - Operações CRUD
 - ORM (Object-Relational Mapping)
 - DTO (Data Transfer Object)
@@ -91,17 +96,15 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 - IoT
 
 ### 14. Rust [Acesse](https://ricardotecpro.github.io/modulo_14_rust/)
-- Aula 1: Por que Rust? E Configuração do Ambiente
-- Aula 2: “Olá, Mundo!” e o Poder do Cargo
-- Aula 3: Variáveis, Mutabilidade e Tipos de Dados Primitivos
-- Aula 4: Funções e Controle de Fluxo
-- Aula 5: Ownership (Posse) - O Conceito Central 
-- Aula 6: Borrowing (Empréstimo) e Referências
-- Aula 7: Structs - Criando Tipos de Dados Personalizados
-- Aula 8: Enums e o Poder do match
-- Aula 9: Organizando Projetos com Módulos
-- Aula 10: Coleções Comuns
+
+### 15. Full Stack [Acesse](https://ricardotecpro.github.io/modulo_15_full_stack/)
+
+### 16. DevOps [Acesse](https://ricardotecpro.github.io/modulo_16_devops/)
+
+### 17. Paradigmas de Programação [Acesse](https://ricardotecpro.github.io/modulo_17_paradigmas_programacao/)
+
+### 18. Padrões de Projeto [Acesse](https://ricardotecpro.github.io/modulo_18_padroes_projeto/)
 
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)
