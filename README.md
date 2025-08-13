@@ -9,7 +9,7 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 ### 00. Curso de Computação [Acesse](https://ricardotecpro.github.io/modulo_00_computacao/)
 
 - Apresentação da disciplina de linguagem de programação [Acesse](_apresentacao_do_curso/curso.md)
-- Apresentação da Disciplina Desenvolvimento de Sistemas [Acesse]
+- Apresentação da Disciplina Desenvolvimento de Sistemas
 
 ### 01. Lógica de Programação e Algoritmos [Acesse](https://ricardotecpro.github.io/modulo_01_logica_programacao/)
 - Conceitos básicos de algoritmos
