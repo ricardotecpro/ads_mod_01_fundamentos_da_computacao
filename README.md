@@ -3,14 +3,14 @@
 Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrará os conteúdos organizados por temas, com materiais de apoio, exercícios, exemplos de código e projetos.
 
 ## 📚 Conteúdo Programático
- 
+
 ### Módulos:
 
 ### 00. Curso de Computação [Acesse](https://ricardotecpro.github.io/modulo_00_computacao/)
-
-- Apresentação da disciplina de linguagem de programação [Acesse](apresentacao_do_curso/curso.md)
-- Apresentação da Disciplina Desenvolvimento de Sistemas
-
+- Apresentação da disciplina de linguagem de programação [Acesse]({% link apresentacao_do_curso/curso.md %})
+- Apresentação da Disciplina Desenvolvimento de Sistemas 
+ 
+ 
 ### 01. Lógica de Programação e Algoritmos [Acesse](https://ricardotecpro.github.io/modulo_01_logica_programacao/)
 - Conceitos básicos de algoritmos
 - Estruturas de decisão e repetição
@@ -21,12 +21,10 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 - Fluxos de trabalho (branch, merge, pull request)
 - Publicação de projetos com GitHub Pages
 
-
 ### 03. Web HTML e CSS [Acesse](https://ricardotecpro.github.io/modulo_03_html_css/)
 - Estrutura de páginas HTML
 - Estilização com CSS
 - Layouts responsivos
-
 
 ### 04. Java [Acesse](https://ricardotecpro.github.io/modulo_04_java/)
 - Fundamentos da linguagem
@@ -34,15 +32,12 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 - Lambda expressions
 - Coleções e Streams
 
-
 ### 05. Banco de Dados SQL [Acesse](https://ricardotecpro.github.io/modulo_05_banco_dados/)
-
 **SGBDs Relacionais:**
 - MySQL
 - PostgreSQL
 - H2
 - SQLite
-
 **Bancos de Dados NoSQL:**
 - Cassandra
 - MongoDB
