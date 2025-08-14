@@ -96,7 +96,7 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 
 ### 16. DevOps e Cloud [Acesse](https://ricardotecpro.github.io/modulo_16_devops_cloud/)
 
-### 17. Paradigmas de Programação [Acesse](https://ricardotecpro.github.io/modulo_17_paradigmas_programacao/)
+### 17. Paradigmas de Programação [Acesse](https://ricardotecpro.github.io/modulo_17_paradigmas/)
 
 ### 18. Padrões de Projeto [Acesse](https://ricardotecpro.github.io/modulo_18_padroes_projeto/)
 
