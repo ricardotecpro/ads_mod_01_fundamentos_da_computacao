@@ -1,15 +1,12 @@
 # Apresentação da disciplina de linguagem de programação 💻
 
-
 ![Disquete](assets/disquete.gif)
-
 
 ---
 
 ## 🤔 Quem sou eu?
 
 <img src="assets/linux.png" alt="Logo da Disciplina" width="200" height="200">
-
 
 ### Experiência profissional
 

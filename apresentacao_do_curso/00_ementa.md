@@ -1376,6 +1376,8 @@ export default App;
 
 **2. Hook `useState` e `useEffect` (`ContadorDinamico.tsx`):**
 
+{% raw %}
+
 ```typescript jsx
 // src/componentes/ContadorDinamico.tsx - Caminho e nome de arquivo modificados
 import React, { useState, useEffect } from 'react';
@@ -1425,6 +1427,8 @@ const ContadorDinamico: React.FC<ContadorProps> = ({ valorInicial = 0, increment
 
 export default ContadorDinamico;
 ```
+
+
 
 **Uso em `App.tsx`:**
 
@@ -1514,6 +1518,9 @@ const ListaDeTarefas: React.FC = () => {
 
 export default ListaDeTarefas;
 ```
+
+{% endraw %}
+
 
 **Uso em `App.tsx`:**
 
