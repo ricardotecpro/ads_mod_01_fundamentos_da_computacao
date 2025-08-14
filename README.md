@@ -94,7 +94,7 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 
 ### 15. Full Stack [Acesse](https://ricardotecpro.github.io/modulo_15_full_stack/)
 
-### 16. DevOps [Acesse](https://ricardotecpro.github.io/modulo_16_devops/)
+### 16. DevOps e Cloud [Acesse](https://ricardotecpro.github.io/modulo_16_devops_cloud/)
 
 ### 17. Paradigmas de Programação [Acesse](https://ricardotecpro.github.io/modulo_17_paradigmas_programacao/)
 
