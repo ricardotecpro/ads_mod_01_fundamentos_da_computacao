@@ -10,8 +10,6 @@ Uma linguagem de template utiliza **variáveis, loops e condicionais** dentro de
 
 📌 **Exemplo de funcionamento básico:**
 
-{% raw %}
-
 ```
 1. O template contém **marcadores dinâmicos** (`{{ }}` ou `{% %}`).
 2. Um **motor de template** substitui esses marcadores por valores reais.
@@ -66,9 +64,11 @@ O **Handlebars** é outra linguagem de template muito usada, com uma sintaxe mai
 
 📌 **Exemplo de Template Handlebars (`index.hbs`)**
 
+{% raw %}
 ```html
 <h1>Olá, {{nome}}!</h1>
 ```
+{% endraw %}
 
 📌 **Código Node.js com Express e Handlebars**
 
@@ -124,9 +124,11 @@ No **Python (Flask, Django)**, a linguagem de template mais usada é **Jinja2**.
 
 📌 **Exemplo de Template Jinja2 (`index.html`)**
 
+{% raw %}
 ```html
 <h1>Olá, {{ nome }}!</h1>
 ```
+{% endraw %}
 
 📌 **Código Python com Flask**
 
@@ -145,7 +147,6 @@ if __name__ == '__main__':
 
 🔹 O **`{{ nome }}`** será substituído por `"Lucas"`.
 
-{ endraw %}
 ---
 
 ## **3. Benefícios das Linguagens de Template**
