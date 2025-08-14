@@ -10,6 +10,8 @@ Uma linguagem de template utiliza **variáveis, loops e condicionais** dentro de
 
 📌 **Exemplo de funcionamento básico:**
 
+{% raw %}
+
 ```
 1. O template contém **marcadores dinâmicos** (`{{ }}` ou `{% %}`).
 2. Um **motor de template** substitui esses marcadores por valores reais.
@@ -143,6 +145,7 @@ if __name__ == '__main__':
 
 🔹 O **`{{ nome }}`** será substituído por `"Lucas"`.
 
+{ endraw %}
 ---
 
 ## **3. Benefícios das Linguagens de Template**
