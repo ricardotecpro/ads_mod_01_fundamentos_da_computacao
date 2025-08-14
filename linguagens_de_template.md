@@ -10,9 +10,11 @@ Uma linguagem de template utiliza **variáveis, loops e condicionais** dentro de
 
 📌 **Exemplo de funcionamento básico:**
 
+```
 1. O template contém **marcadores dinâmicos** (`{{ }}` ou `{% %}`).
 2. Um **motor de template** substitui esses marcadores por valores reais.
 3. O resultado final é um **arquivo HTML renderizado** no navegador.
+```
 
 ---
 
