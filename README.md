@@ -1,5 +1,7 @@
 # 💻 Curso de Computação
 
+<!--
+
 Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrará os conteúdos organizados por temas, com materiais de apoio, exercícios, exemplos de código e projetos.
 
 ## 📚 Conteúdo Programático
@@ -10,7 +12,8 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 - Apresentação da disciplina de linguagem de programação [Acesse](./curso.md)
 - Apresentação da Disciplina Desenvolvimento de Sistemas 
  
- 
+
+
 ### 01. Lógica de Programação e Algoritmos [Acesse](https://ricardotecpro.github.io/modulo_01_logica_programacao/)
 - Conceitos básicos de algoritmos
 - Estruturas de decisão e repetição
@@ -90,15 +93,26 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 - Automação
 - IoT
 
+
+
 ### 14. Rust [Acesse](https://ricardotecpro.github.io/modulo_14_rust/)
 
-### 15. Full Stack [Acesse](https://ricardotecpro.github.io/modulo_15_full_stack/)
+-->
 
+### 15. Full Stack [Acesse](https://ricardotecpro.github.io/modulo_15_fullstack/)
+
+
+
+<!--
+ 
 ### 16. DevOps e Cloud [Acesse](https://ricardotecpro.github.io/modulo_16_devops_cloud/)
 
 ### 17. Paradigmas de Programação [Acesse](https://ricardotecpro.github.io/modulo_17_paradigmas/)
 
 ### 18. Padrões de Projeto [Acesse](https://ricardotecpro.github.io/modulo_18_padroes_projeto/)
+
+-->
+
 
 ---
 

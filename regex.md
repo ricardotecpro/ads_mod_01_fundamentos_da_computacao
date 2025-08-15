@@ -261,8 +261,8 @@ STOP RUN.
 ---
 
 ## **Conclusão**
-A lista inclui **Regex em várias linguagens**, mostrando como diferentes tecnologias lidam com padrões de busca e manipulação de strings. 🚀
+A lista inclui **Regex em várias linguagens**, mostrando como diferentes tecnologias lidam com padrões de busca e manipulação de strings.
 
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)

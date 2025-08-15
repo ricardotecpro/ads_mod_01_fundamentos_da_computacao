@@ -303,8 +303,5 @@ O programador define **o que** deve ser feito, e não **como** fazer.
 ✔ Python, Lisp, Prolog, Julia, R  
 
 ---
-🚀
 
----
-
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)

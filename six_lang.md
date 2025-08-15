@@ -86,8 +86,4 @@ Segue **comparação completa entre as linguagens C, Rust, Java, Python, JavaScr
 
 ---
 
-💡
-
----
-
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)

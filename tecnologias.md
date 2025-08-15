@@ -120,4 +120,4 @@ Se você está começando, recomendo esta ordem:
 
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)

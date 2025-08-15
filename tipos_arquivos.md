@@ -170,8 +170,6 @@ CMD ["node", "index.js"]
 ## **Conclusão**
 Os formatos de arquivos desempenham um papel **crucial no desenvolvimento de software**, seja para código-fonte, automação, bancos de dados, distribuição ou documentação.  
 
- 🚀
- 
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)

@@ -90,4 +90,4 @@ Aqui está a classificação correta dessas linguagens em **compiladas, interpre
 
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)

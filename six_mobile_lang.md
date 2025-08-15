@@ -2,7 +2,7 @@
 
 ---
 
-## ✅ COMPARATIVO ENTRE TECNOLOGIAS PARA DESENVOLVIMENTO MOBILE
+## ✅ COMPARATIVO ENTRE TECNOLOGIAS PARA DESENVOLVimento MOBILE
 
 | **Tecnologia**                   | **Objetivo e Filosofia de Projeto**                                                              | **Recursos Fundamentais**                                              | **Casos de Uso Típicos**                                                          | **Desempenho e Recursos**                                                                    | **Vantagens**                                                                   | **Desvantagens**                                                             |
 | -------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
@@ -38,4 +38,4 @@
 
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)

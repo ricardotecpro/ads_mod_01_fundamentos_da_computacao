@@ -111,8 +111,6 @@ email: joao@email.com
 ✅ **JSON, XML e YAML** são usados para armazenar e trocar dados.  
 ✅ **Markdown** é ideal para documentação e textos formatados.  
 
-🚀
-
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)

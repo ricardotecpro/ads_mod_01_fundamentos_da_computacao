@@ -65,4 +65,4 @@ Essa distinção é importante, especialmente em linguagens como C e C++, onde o
 
 ---
 
-### [ricardotecpro.github.io](https://ricardotecpro.github.io/)
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)
