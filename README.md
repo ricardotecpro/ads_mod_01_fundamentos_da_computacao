@@ -9,7 +9,7 @@ Bem-vindo ao repositório oficial do curso de Computação. Aqui você encontrar
 ### Módulos:
 
 ### 00. Curso de Computação [Acesse](https://ricardotecpro.github.io/modulo_00_computacao/)
-- Apresentação da disciplina de linguagem de programação [Acesse](./curso.md)
+- Apresentação da disciplina de linguagem de programação [Acesse](./Login.md)
 - Apresentação da Disciplina Desenvolvimento de Sistemas 
  
 
