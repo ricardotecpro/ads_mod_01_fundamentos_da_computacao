@@ -109,3 +109,7 @@ Vamos ver como esses pilares se conectam quando você executa um comando simples
 4.  **Arquitetura**: A CPU recebe as instruções de baixo nível do interpretador. Sua Unidade Lógica e Aritmética (ALU) executa a operação de soma nos números, que agora estão representados em binário.
 5.  **Hardware Físico**: Milhares de transistores e portas lógicas no chip da CPU fisicamente mudam de estado para realizar a adição binária.
 6.  O resultado (o número 5, também em binário) flui de volta por todas as camadas, sendo eventualmente convertido em pixels na tela que formam o caractere "5".
+
+---
+
+### 🚀 [ricardotecpro.github.io](https://ricardotecpro.github.io/)
