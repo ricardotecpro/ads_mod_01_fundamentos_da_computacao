@@ -1,0 +1,26 @@
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h3>Índice do Curso</h3>
+    </div>
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="{{ " /" | relative_url }}" class="{% if page.url == " /" %}active{% endif %}">🏠 Início</a>
+            </li>
+
+            {% assign sorted_aulas = site.aulas | sort: 'url' %}
+            {% for aula in sorted_aulas %}
+            <li>
+                <a href="{{ site.baseurl }}{{ aula.url }}" class="{% if page.url == aula.url %}active{% endif %}">
+                    <span class="lesson-id">{{ aula.url | split: '/' | last | replace: 'aula-', '' | replace: '.html',
+                        '' }}</span>
+                    <span class="lesson-title">{{ aula.title | replace: 'Aula ', '' | replace: '01 – ', '' | replace:
+                        '02 – ', '' | replace: '03 – ', '' | replace: '04 – ', '' | replace: '05 – ', '' | replace: '06
+                        – ', '' | replace: '07 – ', '' | replace: '08 – ', '' | replace: '09 – ', '' | replace: '10 – ',
+                        '' | replace: '11 – ', '' | replace: '12 – ', '' | replace: '13 – ', '' | replace: '14 – ', '' |
+                        replace: '15 – ', '' | replace: '16 – ', '' }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>
