@@ -1,101 +1,40 @@
 # Configuração do Ambiente (Linux)
 
-Este guia mostra como instalar e configurar o **Git** no Linux (Ubuntu/Debian e derivados).
+Para este curso, usaremos ferramentas básicas que geralmente já vêm instaladas no Linux, mas vamos garantir que você tenha tudo pronto.
 
----
+## 1. Navegador Web
 
-## 1. Instalando o Git
-
-O Git geralmente está disponível nos repositórios oficiais da maioria das distribuições.
-
-### No Ubuntu / Debian / Mint
-
-Abra seu terminal (`Ctrl+Alt+T`) e execute:
-
+Recomendamos **Firefox** ou **Chromium/Chrome**.
+Para instalar no Ubuntu/Debian:
 ```bash
 sudo apt update
-sudo apt install git -y
+sudo apt install firefox
+# ou
+sudo apt install chromium-browser
 ```
 
-### No Fedora
+## 2. Visual Studio Code
 
+É o editor recomendado.
+1. Baixe o pacote `.deb` ou `.rpm` em [code.visualstudio.com](https://code.visualstudio.com/).
+2. Instale via terminal: `sudo apt install ./nome-do-arquivo.deb`.
+
+Ou instale via Snap:
 ```bash
-sudo dnf install git -y
+sudo snap install code --classic
 ```
 
-### No Arch Linux
+## 3. Python
 
+O Python geralmente já vem instalado no Linux. Verifique:
 ```bash
-sudo pacman -S git
+python3 --version
+```
+Se não estiver instalado:
+```bash
+sudo apt install python3 python3-pip
 ```
 
 ---
 
-## 2. Verificando a Versão
-
-Após a instalação, verifique se tudo deu certo:
-
-```bash
-git --version
-```
-
-**Saída esperada:**
-```
-git version 2.34.1 (ou superior)
-```
-
----
-
-## 3. Configuração de Identidade (Obrigatória)
-
-O Git exige que você se identifique para registrar a autoria das mudanças.
-
-Execute no terminal:
-
-```bash
-git config --global user.name "Seu Nome Completo"
-git config --global user.email "seu.email@exemplo.com"
-```
-
-> **Nota**: O email deve ser o mesmo da sua conta GitHub.
-
-Verifique se a configuração foi aplicada:
-
-```bash
-git config --list
-```
-
----
-
-## 4. Configurando Chave SSH (Opcional, mas Recomendado)
-
-Para não precisar digitar senha a cada push para o GitHub, configure uma chave SSH.
-
-1. Gerar a chave:
-   ```bash
-   ssh-keygen -t ed25519 -C "seu.email@exemplo.com"
-   ```
-   (Pressione Enter para todas as perguntas).
-
-2. Iniciar o agente SSH:
-   ```bash
-   eval "$(ssh-agent -s)"
-   ssh-add ~/.ssh/id_ed25519
-   ```
-
-3. Exibir a chave pública para copiar:
-   ```bash
-   cat ~/.ssh/id_ed25519.pub
-   ```
-
-4. Copie o resultado (começa com `ssh-ed25519...`) e adicione no GitHub em **Settings > SSH and GPG keys > New SSH key**.
-
----
-
-## ✅ Pronto!
-
-Agora você tem um ambiente Git completo no Linux! 🐧
-
-**Próximos passos:**
-- Vá para [Aula 01](../aulas/aula-01.md)
-- Comece a versionar seus projetos!
+**🎉 Pronto! Ambiente Linux configurado.**

@@ -6,31 +6,31 @@ Aqui você encontra os slides apresentados em cada aula, prontos para revisão o
 
 -   :material-numeric-1-box: **Módulo 1 – Conceitos Básicos**
     
-    - [Slide 01 - Introdução ao Controle de Versão](slide-01.html)
-    - [Slide 02 - Instalação e Configuração](slide-02.html)
-    - [Slide 03 - Primeiros Passos com Git](slide-03.html)
-    - [Slide 04 - Branches e Merges](slide-04.html)
+    - [Slide 01 - Introdução à Computação](slide-01.html)
+    - [Slide 02 - Conversão Decimal > Binário](slide-02.html)
+    - [Slide 03 - Conversão Binário > Decimal](slide-03.html)
+    - [Slide 04 - Sistema Octal](slide-04.html)
 
--   :material-numeric-2-box: **Módulo 2 – Trabalhando com GitHub**
+-   :material-numeric-2-box: **Módulo 2 – Hexadecimal e Aritmética**
     
-    - [Slide 05 - Resolução de Conflitos](slide-05.html)
-    - [Slide 06 - Introdução ao GitHub](slide-06.html)
-    - [Slide 07 - Repositórios Remotos](slide-07.html)
-    - [Slide 08 - Pull Requests e Code Review](slide-08.html)
+    - [Slide 05 - Conversão Hexadecimal](slide-05.html)
+    - [Slide 06 - Binário e Hexadecimal](slide-06.html)
+    - [Slide 07 - Aritmética Binária](slide-07.html)
+    - [Slide 08 - Representação de Dados](slide-08.html)
 
--   :material-numeric-3-box: **Módulo 3 – Fluxos e Organização**
+-   :material-numeric-3-box: **Módulo 3 – Lógica Digital**
     
-    - [Slide 09 - GitHub Flow](slide-09.html)
-    - [Slide 10 - Issues e Projects](slide-10.html)
-    - [Slide 11 - Boas Práticas de Commit](slide-11.html)
-    - [Slide 12 - README e Markdown](slide-12.html)
+    - [Slide 09 - Lógica Booleana](slide-09.html)
+    - [Slide 10 - Tabelas Verdade](slide-10.html)
+    - [Slide 11 - Circuitos Lógicos](slide-11.html)
+    - [Slide 12 - Arquitetura de Computadores](slide-12.html)
 
--   :material-numeric-4-box: **Módulo 4 – Colaboração e Carreira**
+-   :material-numeric-4-box: **Módulo 4 – Software e Algoritmos**
     
-    - [Slide 13 - Trabalhando em Equipe](slide-13.html)
-    - [Slide 14 - GitHub Pages e Portfólio](slide-14.html)
-    - [Slide 15 - Erros Comuns e Soluções](slide-15.html)
-    - [Slide 16 - Carreira e Próximos Passos](slide-16.html)
+    - [Slide 13 - Memória e Armazenamento](slide-13.html)
+    - [Slide 14 - Sistemas Operacionais](slide-14.html)
+    - [Slide 15 - Algoritmos e Fluxogramas](slide-15.html)
+    - [Slide 16 - Introdução à Programação](slide-16.html)
 
 </div>
 

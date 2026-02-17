@@ -1,72 +1,36 @@
 # Configuração do Ambiente (Windows)
 
-Este guia irá ajudá-lo a instalar e configurar o **Git** no Windows.
+Para este curso de Fundamentos da Computação, precisaremos de ferramentas simples e essenciais. Focaremos em um bom editor de texto e um navegador moderno.
 
-## 1. Instalando o Git
+## 1. Navegador Web (Browser)
 
-O Git é a ferramenta essencial que usaremos durante todo o curso.
+Você provavelmente já tem um, mas recomendamos **Google Chrome** ou **Mozilla Firefox** para melhor compatibilidade com as ferramentas de desenvolvedor que veremos.
 
-### Passo 1: Baixar
-1. Acesse o site oficial: [git-scm.com/download/win](https://git-scm.com/download/win).
-2. O download deve começar automaticamente. Se não, clique em **Click here to download**.
+- [Baixar Google Chrome](https://www.google.com/chrome/)
+- [Baixar Firefox](https://www.mozilla.org/pt-BR/firefox/new/)
 
-### Passo 2: Instalar
-1. Execute o instalador baixado (`Git-2.x.x-64-bit.exe`).
-2. Siga o processo de instalação (clique em **Next** repetidamente).
-3. **Opções Importantes**:
-   - Quando perguntar sobre o editor padrão, você pode deixar o **Vim** (padrão) ou escolher o **Visual Studio Code** se já tiver instalado.
-   - Na opção de "Adjusting your PATH environment", deixe a opção recomendada (**Git from the command line and also from 3rd-party software**).
-   - Nas demais telas, pode manter o padrão.
-4. Clique em **Install**.
-5. Aguarde e clique em **Finish**.
+## 2. Visual Studio Code (VS Code)
 
----
+O VS Code é o editor de código mais popular do mundo. Usaremos ele para escrever nossos algoritmos e visualizar arquivos Markdown.
 
-## 2. Testando a Instalação
+### Instalação
+1. Acesse [code.visualstudio.com](https://code.visualstudio.com/).
+2. Baixe a versão para **Windows**.
+3. Execute o instalador e siga as instruções (pode manter as opções padrão).
 
-Vamos garantir que o Git está pronto para uso.
+### Extensões Recomendadas
+Após instalar, abra o VS Code, clique no ícone de "Extensions" (quadrado na barra lateral esquerda) e instale:
+- **Portuguese (Brazil) Language Pack**: Para deixar o VS Code em português.
+- **Markdown All in One**: Para ajudar na leitura dos materiais do curso.
 
-1. Abra o menu Iniciar e procure por **Git Bash**.
-2. Abra o aplicativo **Git Bash**. Ele é um terminal poderoso que simula comandos Linux no Windows.
-3. Digite o seguinte comando e aperte Enter:
+## 3. Python (Opcional)
 
-   ```bash
-   git --version
-   ```
+Para as aulas de algoritmos (Módulo 4), usaremos Python para demonstrar conceitos práticos.
 
-4. Se aparecer algo como `git version 2.40.0.windows.1`, parabéns! O Git está instalado.
+1. Baixe em [python.org](https://www.python.org/downloads/).
+2. **Importante**: Na primeira tela da instalação, marque a opção **"Add Python to PATH"**.
+3. Clique em **Install Now**.
 
 ---
 
-## 3. Configuração Obrigatória (Identidade)
-
-Antes de fazer qualquer commit, você precisa dizer ao Git quem você é.
-
-No **Git Bash**, execute os dois comandos abaixo (substitua pelos seus dados):
-
-```bash
-git config --global user.name "Seu Nome Completo"
-git config --global user.email "seu.email@exemplo.com"
-```
-
-> **Dica**: Use o mesmo email que você usou (ou usará) para criar sua conta no GitHub.
-
-Para verificar se salvou, digite:
-
-```bash
-git config --list
-```
-
-Procure por `user.name` e `user.email` na lista.
-
----
-
-## 4. (Opcional) Visual Studio Code
-
-Embora o Git funcione no terminal, recomendamos o **VSCode** para editar os arquivos do curso.
-
-1. Baixe em [code.visualstudio.com](https://code.visualstudio.com/).
-2. Instale normalmente.
-3. Ele possui integração nativa com o Git!
-
-🎉 **Pronto! Seu ambiente Windows está configurado.**
+**🎉 Pronto! Seu ambiente está configurado para o curso.**
