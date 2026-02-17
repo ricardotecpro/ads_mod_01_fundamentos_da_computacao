@@ -74,7 +74,7 @@ plugins:
       lang: pt
   - mkdocs-jupyter
   - glightbox
-  - mkdocs_quiz
+
   - git-authors:
       show_contribution: true
       show_line_count: true
