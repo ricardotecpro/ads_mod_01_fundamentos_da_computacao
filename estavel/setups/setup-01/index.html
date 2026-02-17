@@ -2264,22 +2264,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-instalando-o-git" class="md-nav__link">
+  <a href="#1-navegador-web-browser" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Instalando o Git
+        1. Navegador Web (Browser)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Instalando o Git">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-visual-studio-code-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Visual Studio Code (VS Code)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Visual Studio Code (VS Code)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#passo-1-baixar" class="md-nav__link">
+  <a href="#instalacao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Passo 1: Baixar
+        Instalação
       
     </span>
   </a>
@@ -2287,10 +2298,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#passo-2-instalar" class="md-nav__link">
+  <a href="#extensoes-recomendadas" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Passo 2: Instalar
+        Extensões Recomendadas
       
     </span>
   </a>
@@ -2303,32 +2314,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-testando-a-instalacao" class="md-nav__link">
+  <a href="#3-python-opcional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Testando a Instalação
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-configuracao-obrigatoria-identidade" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Configuração Obrigatória (Identidade)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-opcional-visual-studio-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. (Opcional) Visual Studio Code
+        3. Python (Opcional)
       
     </span>
   </a>
@@ -2393,61 +2382,34 @@
 
 
 <h1 id="configuracao-do-ambiente-windows">Configuração do Ambiente (Windows)</h1>
-<p>Este guia irá ajudá-lo a instalar e configurar o <strong>Git</strong> no Windows.</p>
-<h2 id="1-instalando-o-git">1. Instalando o Git</h2>
-<p>O Git é a ferramenta essencial que usaremos durante todo o curso.</p>
-<h3 id="passo-1-baixar">Passo 1: Baixar</h3>
+<p>Para este curso de Fundamentos da Computação, precisaremos de ferramentas simples e essenciais. Focaremos em um bom editor de texto e um navegador moderno.</p>
+<h2 id="1-navegador-web-browser">1. Navegador Web (Browser)</h2>
+<p>Você provavelmente já tem um, mas recomendamos <strong>Google Chrome</strong> ou <strong>Mozilla Firefox</strong> para melhor compatibilidade com as ferramentas de desenvolvedor que veremos.</p>
+<ul>
+<li><a href="https://www.google.com/chrome/">Baixar Google Chrome</a></li>
+<li><a href="https://www.mozilla.org/pt-BR/firefox/new/">Baixar Firefox</a></li>
+</ul>
+<h2 id="2-visual-studio-code-vs-code">2. Visual Studio Code (VS Code)</h2>
+<p>O VS Code é o editor de código mais popular do mundo. Usaremos ele para escrever nossos algoritmos e visualizar arquivos Markdown.</p>
+<h3 id="instalacao">Instalação</h3>
 <ol>
-<li>Acesse o site oficial: <a href="https://git-scm.com/download/win">git-scm.com/download/win</a>.</li>
-<li>O download deve começar automaticamente. Se não, clique em <strong>Click here to download</strong>.</li>
+<li>Acesse <a href="https://code.visualstudio.com/">code.visualstudio.com</a>.</li>
+<li>Baixe a versão para <strong>Windows</strong>.</li>
+<li>Execute o instalador e siga as instruções (pode manter as opções padrão).</li>
 </ol>
-<h3 id="passo-2-instalar">Passo 2: Instalar</h3>
+<h3 id="extensoes-recomendadas">Extensões Recomendadas</h3>
+<p>Após instalar, abra o VS Code, clique no ícone de "Extensions" (quadrado na barra lateral esquerda) e instale:
+- <strong>Portuguese (Brazil) Language Pack</strong>: Para deixar o VS Code em português.
+- <strong>Markdown All in One</strong>: Para ajudar na leitura dos materiais do curso.</p>
+<h2 id="3-python-opcional">3. Python (Opcional)</h2>
+<p>Para as aulas de algoritmos (Módulo 4), usaremos Python para demonstrar conceitos práticos.</p>
 <ol>
-<li>Execute o instalador baixado (<code>Git-2.x.x-64-bit.exe</code>).</li>
-<li>Siga o processo de instalação (clique em <strong>Next</strong> repetidamente).</li>
-<li><strong>Opções Importantes</strong>:</li>
-<li>Quando perguntar sobre o editor padrão, você pode deixar o <strong>Vim</strong> (padrão) ou escolher o <strong>Visual Studio Code</strong> se já tiver instalado.</li>
-<li>Na opção de "Adjusting your PATH environment", deixe a opção recomendada (<strong>Git from the command line and also from 3rd-party software</strong>).</li>
-<li>Nas demais telas, pode manter o padrão.</li>
-<li>Clique em <strong>Install</strong>.</li>
-<li>Aguarde e clique em <strong>Finish</strong>.</li>
-</ol>
-<hr>
-<h2 id="2-testando-a-instalacao">2. Testando a Instalação</h2>
-<p>Vamos garantir que o Git está pronto para uso.</p>
-<ol>
-<li>Abra o menu Iniciar e procure por <strong>Git Bash</strong>.</li>
-<li>Abra o aplicativo <strong>Git Bash</strong>. Ele é um terminal poderoso que simula comandos Linux no Windows.</li>
-<li>Digite o seguinte comando e aperte Enter:</li>
-</ol>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>--version
-</span></code></pre></div>
-<ol>
-<li>Se aparecer algo como <code>git version 2.40.0.windows.1</code>, parabéns! O Git está instalado.</li>
+<li>Baixe em <a href="https://www.python.org/downloads/">python.org</a>.</li>
+<li><strong>Importante</strong>: Na primeira tela da instalação, marque a opção <strong>"Add Python to PATH"</strong>.</li>
+<li>Clique em <strong>Install Now</strong>.</li>
 </ol>
 <hr>
-<h2 id="3-configuracao-obrigatoria-identidade">3. Configuração Obrigatória (Identidade)</h2>
-<p>Antes de fazer qualquer commit, você precisa dizer ao Git quem você é.</p>
-<p>No <strong>Git Bash</strong>, execute os dois comandos abaixo (substitua pelos seus dados):</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Seu Nome Completo"</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"seu.email@exemplo.com"</span>
-</span></code></pre></div>
-<blockquote>
-<p><strong>Dica</strong>: Use o mesmo email que você usou (ou usará) para criar sua conta no GitHub.</p>
-</blockquote>
-<p>Para verificar se salvou, digite:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--list
-</span></code></pre></div>
-<p>Procure por <code>user.name</code> e <code>user.email</code> na lista.</p>
-<hr>
-<h2 id="4-opcional-visual-studio-code">4. (Opcional) Visual Studio Code</h2>
-<p>Embora o Git funcione no terminal, recomendamos o <strong>VSCode</strong> para editar os arquivos do curso.</p>
-<ol>
-<li>Baixe em <a href="https://code.visualstudio.com/">code.visualstudio.com</a>.</li>
-<li>Instale normalmente.</li>
-<li>Ele possui integração nativa com o Git!</li>
-</ol>
-<p>🎉 <strong>Pronto! Seu ambiente Windows está configurado.</strong></p><style type="text/css">.quiz {
+<p><strong>🎉 Pronto! Seu ambiente está configurado para o curso.</strong></p><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -3979,7 +3941,7 @@ window.mkdocsQuizConfig = {
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="17 de fevereiro de 2026 19:43:14 UTC">17 de fevereiro de 2026 19:43:14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="17 de fevereiro de 2026 19:48:52 UTC">17 de fevereiro de 2026 19:48:52</span>
   </span>
 
     

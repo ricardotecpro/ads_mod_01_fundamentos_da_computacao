@@ -2264,60 +2264,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-instalando-o-git" class="md-nav__link">
+  <a href="#1-navegador-web" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Instalando o Git
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. Instalando o Git">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#no-ubuntu-debian-mint" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        No Ubuntu / Debian / Mint
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#no-fedora" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        No Fedora
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#no-arch-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        No Arch Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-verificando-a-versao" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Verificando a Versão
+        1. Navegador Web
       
     </span>
   </a>
@@ -2325,10 +2275,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-configuracao-de-identidade-obrigatoria" class="md-nav__link">
+  <a href="#2-visual-studio-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Configuração de Identidade (Obrigatória)
+        2. Visual Studio Code
       
     </span>
   </a>
@@ -2336,21 +2286,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-configurando-chave-ssh-opcional-mas-recomendado" class="md-nav__link">
+  <a href="#3-python" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Configurando Chave SSH (Opcional, mas Recomendado)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pronto" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ✅ Pronto!
+        3. Python
       
     </span>
   </a>
@@ -2415,73 +2354,31 @@
 
 
 <h1 id="configuracao-do-ambiente-linux">Configuração do Ambiente (Linux)</h1>
-<p>Este guia mostra como instalar e configurar o <strong>Git</strong> no Linux (Ubuntu/Debian e derivados).</p>
-<hr>
-<h2 id="1-instalando-o-git">1. Instalando o Git</h2>
-<p>O Git geralmente está disponível nos repositórios oficiais da maioria das distribuições.</p>
-<h3 id="no-ubuntu-debian-mint">No Ubuntu / Debian / Mint</h3>
-<p>Abra seu terminal (<code>Ctrl+Alt+T</code>) e execute:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>-y
+<p>Para este curso, usaremos ferramentas básicas que geralmente já vêm instaladas no Linux, mas vamos garantir que você tenha tudo pronto.</p>
+<h2 id="1-navegador-web">1. Navegador Web</h2>
+<p>Recomendamos <strong>Firefox</strong> ou <strong>Chromium/Chrome</strong>.
+Para instalar no Ubuntu/Debian:
+</p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>firefox
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># ou</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>chromium-browser
+</span></code></pre></div><p></p>
+<h2 id="2-visual-studio-code">2. Visual Studio Code</h2>
+<p>É o editor recomendado.
+1. Baixe o pacote <code>.deb</code> ou <code>.rpm</code> em <a href="https://code.visualstudio.com/">code.visualstudio.com</a>.
+2. Instale via terminal: <code>sudo apt install ./nome-do-arquivo.deb</code>.</p>
+<p>Ou instale via Snap:
+</p><div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>code<span class="w"> </span>--classic
+</span></code></pre></div><p></p>
+<h2 id="3-python">3. Python</h2>
+<p>O Python geralmente já vem instalado no Linux. Verifique:
+</p><div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>--version
 </span></code></pre></div>
-<h3 id="no-fedora">No Fedora</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>-y
-</span></code></pre></div>
-<h3 id="no-arch-linux">No Arch Linux</h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>git
-</span></code></pre></div>
-<hr>
-<h2 id="2-verificando-a-versao">2. Verificando a Versão</h2>
-<p>Após a instalação, verifique se tudo deu certo:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>--version
-</span></code></pre></div>
-<p><strong>Saída esperada:</strong>
-</p><div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git version 2.34.1 (ou superior)
+Se não estiver instalado:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3<span class="w"> </span>python3-pip
 </span></code></pre></div><p></p>
 <hr>
-<h2 id="3-configuracao-de-identidade-obrigatoria">3. Configuração de Identidade (Obrigatória)</h2>
-<p>O Git exige que você se identifique para registrar a autoria das mudanças.</p>
-<p>Execute no terminal:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"Seu Nome Completo"</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"seu.email@exemplo.com"</span>
-</span></code></pre></div>
-<blockquote>
-<p><strong>Nota</strong>: O email deve ser o mesmo da sua conta GitHub.</p>
-</blockquote>
-<p>Verifique se a configuração foi aplicada:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>config<span class="w"> </span>--list
-</span></code></pre></div>
-<hr>
-<h2 id="4-configurando-chave-ssh-opcional-mas-recomendado">4. Configurando Chave SSH (Opcional, mas Recomendado)</h2>
-<p>Para não precisar digitar senha a cada push para o GitHub, configure uma chave SSH.</p>
-<ol>
-<li>
-<p>Gerar a chave:
-   </p><div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">"seu.email@exemplo.com"</span>
-</span></code></pre></div>
-   (Pressione Enter para todas as perguntas).<p></p>
-</li>
-<li>
-<p>Iniciar o agente SSH:
-   </p><div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="k">$(</span>ssh-agent<span class="w"> </span>-s<span class="k">)</span><span class="s2">"</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>ssh-add<span class="w"> </span>~/.ssh/id_ed25519
-</span></code></pre></div><p></p>
-</li>
-<li>
-<p>Exibir a chave pública para copiar:
-   </p><div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>cat<span class="w"> </span>~/.ssh/id_ed25519.pub
-</span></code></pre></div><p></p>
-</li>
-<li>
-<p>Copie o resultado (começa com <code>ssh-ed25519...</code>) e adicione no GitHub em <strong>Settings &gt; SSH and GPG keys &gt; New SSH key</strong>.</p>
-</li>
-</ol>
-<hr>
-<h2 id="pronto">✅ Pronto!</h2>
-<p>Agora você tem um ambiente Git completo no Linux! 🐧</p>
-<p><strong>Próximos passos:</strong>
-- Vá para <a href="../../aulas/aula-01/">Aula 01</a>
-- Comece a versionar seus projetos!</p><style type="text/css">.quiz {
+<p><strong>🎉 Pronto! Ambiente Linux configurado.</strong></p><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -4013,7 +3910,7 @@ window.mkdocsQuizConfig = {
     <span class="md-icon" title="Última atualização">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="17 de fevereiro de 2026 19:43:14 UTC">17 de fevereiro de 2026 19:43:14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="17 de fevereiro de 2026 19:48:52 UTC">17 de fevereiro de 2026 19:48:52</span>
   </span>
 
     
