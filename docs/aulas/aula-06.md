@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 06 – Regras de Fixação + Revisão Geral
 date: 2026-02-16
 quiz: quiz-06
@@ -7,6 +6,9 @@ exercicios: exercicio-06
 projeto: projeto-06
 slides: slides-06.html
 ---
+
+# Aula 06 – Regras de Fixação + Revisão Geral
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -43,4 +45,4 @@ Para converter Hex direto para Octal, o jeito mais fácil é passar por Binário
 Hex $\rightarrow$ Binário $\rightarrow$ Octal.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-07)
+[Próxima Aula](aula-07.md)

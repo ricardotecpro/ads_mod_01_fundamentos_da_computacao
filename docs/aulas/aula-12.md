@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 12 – Tipos de Mídia e Sistemas Multimídia
 date: 2026-02-16
 quiz: quiz-12
@@ -7,6 +6,9 @@ exercicios: exercicio-12
 projeto: projeto-12
 slides: slides-12.html
 ---
+
+# Aula 12 – Tipos de Mídia e Sistemas Multimídia
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -31,4 +33,4 @@ Um sistema é considerado multimídia quando permite ao usuário navegar, intera
 Quando a multimídia permite navegação não linear (links), chamamos de Hipermídia. A World Wide Web é o maior exemplo de sistema hipermídia.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-13)
+[Próxima Aula](aula-13.md)

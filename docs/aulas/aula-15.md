@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 15 – Fundamentos de Lógica e Comandos Básicos
 date: 2026-02-16
 quiz: quiz-15
@@ -7,6 +6,9 @@ exercicios: exercicio-15
 projeto: projeto-15
 slides: slides-15.html
 ---
+
+# Aula 15 – Fundamentos de Lógica e Comandos Básicos
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -43,4 +45,4 @@ São espaços na memória para guardar dados temporariamente.
 Imagine uma caixa etiquetada onde você guarda um valor.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-16)
+[Próxima Aula](aula-16.md)

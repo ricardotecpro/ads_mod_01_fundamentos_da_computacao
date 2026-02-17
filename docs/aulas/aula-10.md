@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 10 – Engenharia de Software
 date: 2026-02-16
 quiz: quiz-10
@@ -7,6 +6,9 @@ exercicios: exercicio-10
 projeto: projeto-10
 slides: slides-10.html
 ---
+
+# Aula 10 – Engenharia de Software
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -37,4 +39,4 @@ slides: slides-10.html
 "Se você falhar em planejar, está planejando falhar." A maioria dos projetos de software falha não por código ruim, mas por requisitos mal compreendidos.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-11)
+[Próxima Aula](aula-11.md)

@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 14 – Áudio Digital
 date: 2026-02-16
 quiz: quiz-14
@@ -7,6 +6,9 @@ exercicios: exercicio-14
 projeto: projeto-14
 slides: slides-14.html
 ---
+
+# Aula 14 – Áudio Digital
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -30,4 +32,4 @@ O som é uma onda mecânica (analógica). Para o computador entender, precisamos
 * **MIDI**: Não é áudio gravado! São instruções musicais (notas, duração, instrumento) para o computador tocar. Arquivo minúsculo.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-15)
+[Próxima Aula](aula-15.md)

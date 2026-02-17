@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 04 – Conversão Decimal ↔ Octal
 date: 2026-02-16
 quiz: quiz-04
@@ -7,6 +6,9 @@ exercicios: exercicio-04
 projeto: projeto-04
 slides: slides-04.html
 ---
+
+# Aula 04 – Conversão Decimal ↔ Octal
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -41,4 +43,4 @@ $$ 64 + 32 + 4 = 100 $$
 O sistema octal foi muito usado em computadores antigos (mainframes) com palavras de 12, 24 ou 36 bits, que são divisíveis por 3. Hoje, o Hexadecimal é mais comum.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-05)
+[Próxima Aula](aula-05.md)

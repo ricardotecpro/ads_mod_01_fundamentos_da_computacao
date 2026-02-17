@@ -15,6 +15,8 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.indexes
+    - navigation.instant
+    - navigation.prune
     - toc.follow
     - content.code.copy
     - content.code.annotate
@@ -35,6 +37,8 @@ theme:
         name: Mudar para modo escuro
   icon:
     repo: fontawesome/brands/github
+
+copyright: 'Copyright &copy; 2026 Ricardo. Feito com <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>.'
 
 markdown_extensions:
   - pymdownx.critic
@@ -94,9 +98,12 @@ plugins:
       match_path: .*
       date_from_meta:
         datetime_format: '%Y-%m-%d %H:%M:%S'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
   - print-site:
       add_to_navigation: false
-      print_page_rel_path: 'print_page.md'
       print_page_title: 'Versão para Impressão'
       add_print_site_banner: false
       enumerate_headings: false

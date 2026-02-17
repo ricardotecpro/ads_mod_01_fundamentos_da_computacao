@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 02 – Conversão de Decimal para Binário
 date: 2026-02-16
 quiz: quiz-02
@@ -7,6 +6,9 @@ exercicios: exercicio-02
 projeto: projeto-02
 slides: slides-02.html
 ---
+
+# Aula 02 – Conversão de Decimal para Binário
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -36,4 +38,4 @@ Números pares em binário sempre terminam em **0**. Números ímpares sempre te
 * Parar a divisão antes de chegar ao quociente 0.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-03)
+[Próxima Aula](aula-03.md)

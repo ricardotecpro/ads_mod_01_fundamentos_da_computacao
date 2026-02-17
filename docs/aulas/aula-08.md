@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 08 – Software e suas Categorias
 date: 2026-02-16
 quiz: quiz-08
@@ -7,6 +6,9 @@ exercicios: exercicio-08
 projeto: projeto-08
 slides: slides-08.html
 ---
+
+# Aula 08 – Software e suas Categorias
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -41,4 +43,4 @@ Software é a parte lógica do computador. É o conjunto de instruções, dados 
 - **Open Source**: Código aberto, livre para modificar e distribuir (Linux, Firefox, Python).
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-09)
+[Próxima Aula](aula-09.md)

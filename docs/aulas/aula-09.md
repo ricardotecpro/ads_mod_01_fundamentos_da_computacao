@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 09 – Redes de Computadores
 date: 2026-02-16
 quiz: quiz-09
@@ -7,6 +6,9 @@ exercicios: exercicio-09
 projeto: projeto-09
 slides: slides-09.html
 ---
+
+# Aula 09 – Redes de Computadores
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -38,4 +40,4 @@ A Internet é uma "rede de redes". Ela conecta bilhões de dispositivos usando p
 Quando você acessa um site, você é o **cliente**. O site está hospedado em um **servidor**. A **Internet** é o caminho entre vocês.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-10)
+[Próxima Aula](aula-10.md)

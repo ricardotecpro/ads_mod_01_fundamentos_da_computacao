@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 07 – Arquitetura de Computadores
 date: 2026-02-16
 quiz: quiz-07
@@ -7,6 +6,9 @@ exercicios: exercicio-07
 projeto: projeto-07
 slides: slides-07.html
 ---
+
+# Aula 07 – Arquitetura de Computadores
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -34,4 +36,4 @@ Quase todos os computadores modernos seguem a arquitetura proposta por John von 
 O primeiro computador eletrônico, o ENIAC, pesava 30 toneladas e ocupava 180m². Hoje, seu smartphone é milhões de vezes mais poderoso e cabe no bolso.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-08)
+[Próxima Aula](aula-08.md)

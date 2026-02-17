@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 05 – Conversão Decimal ↔ Hexadecimal
 date: 2026-02-16
 quiz: quiz-05
@@ -7,6 +6,9 @@ exercicios: exercicio-05
 projeto: projeto-05
 slides: slides-05.html
 ---
+
+# Aula 05 – Conversão Decimal ↔ Hexadecimal
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -52,4 +54,4 @@ Sempre que converter grandes números binários, agrupe-os em grupos de 4 bits.
 Ex: $11110000_2 \rightarrow F0_{16}$
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-06)
+[Próxima Aula](aula-06.md)

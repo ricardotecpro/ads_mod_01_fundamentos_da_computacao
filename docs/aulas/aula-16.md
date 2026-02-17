@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 16 – Estruturas de Controle e Tipos Estruturados
 date: 2026-02-16
 quiz: quiz-16
@@ -7,6 +6,9 @@ exercicios: exercicio-16
 projeto: projeto-16
 slides: slides-16.html
 ---
+
+# Aula 16 – Estruturas de Controle e Tipos Estruturados
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -46,4 +48,4 @@ Vimos desde o bit (0 e 1) até a lógica que permite criar softwares complexos.
 O próximo passo é aprender uma linguagem de programação real (como Python, Java ou C)!
 
 ---
-[Voltar ao Início]({{ site.baseurl }}/)
+[Voltar ao Início](../index.md))

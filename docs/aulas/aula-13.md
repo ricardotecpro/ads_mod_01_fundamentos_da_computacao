@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 13 – Imagens Digitais e Compressão
 date: 2026-02-16
 quiz: quiz-13
@@ -7,6 +6,9 @@ exercicios: exercicio-13
 projeto: projeto-13
 slides: slides-13.html
 ---
+
+# Aula 13 – Imagens Digitais e Compressão
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -37,4 +39,4 @@ Cada pixel em uma tela é formado por 3 subpixels: **R**ed (Vermelho), **G**reen
 * **Lossy (Com perda)**: Descarta dados "menos importantes" que o olho humano não percebe bem, para reduzir muito o tamanho. (Ex: JPG, MP3). A imagem original nunca é recuperada 100%.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-14)
+[Próxima Aula](aula-14.md)

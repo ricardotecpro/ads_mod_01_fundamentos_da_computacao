@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 01 – Introdução à Computação e Bases Numéricas
 date: 2026-02-16
 quiz: quiz-01
@@ -7,6 +6,9 @@ exercicios: exercicio-01
 projeto: projeto-01
 slides: slides-01.html
 ---
+
+# Aula 01 – Introdução à Computação e Bases Numéricas
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -42,4 +44,4 @@ $$ 1 \times 4 + 0 \times 2 + 1 \times 1 = 5 \text{ (em decimal)} $$
 * Cada base numérica tem suas regras de posição e valor.
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-02)
+[Próxima Aula](aula-02.md)

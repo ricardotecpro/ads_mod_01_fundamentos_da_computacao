@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 11 – Banco de Dados
 date: 2026-02-16
 quiz: quiz-11
@@ -7,6 +6,9 @@ exercicios: exercicio-11
 projeto: projeto-11
 slides: slides-11.html
 ---
+
+# Aula 11 – Banco de Dados
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -46,4 +48,4 @@ O software que permite criar, manter e controlar o acesso ao banco de dados (MyS
 | 3 | Teclado | 100.00 |
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-12)
+[Próxima Aula](aula-12.md)

@@ -1,5 +1,4 @@
 ---
-layout: aula
 title: Aula 03 – Conversão de Binário para Decimal
 date: 2026-02-16
 quiz: quiz-03
@@ -7,6 +6,9 @@ exercicios: exercicio-03
 projeto: projeto-03
 slides: slides-03.html
 ---
+
+# Aula 03 – Conversão de Binário para Decimal
+
 
 ## 🎯 Objetivos de Aprendizagem
 
@@ -48,4 +50,4 @@ Memorize as primeiras potências de 2:
 1, 2, 4, 8, 16, 32, 64, 128, 256...
 
 ---
-[Próxima Aula]({{ site.baseurl }}/aulas/aula-04)
+[Próxima Aula](aula-04.md)

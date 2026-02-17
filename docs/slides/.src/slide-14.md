@@ -37,7 +37,8 @@
 
 ---
 
-## Jekyll (Bônus)
+## Geradores de Site Estático (Bônus)
 
-- O GitHub tem um motor que transforma Markdown em Site Blog automaticamente.
-- Se você não sabe HTML, pode usar um tema Jekyll e criar um site lindo apenas editando arquivos `.md`.
+- Transformam Markdown em Sites HTML automaticamente.
+- Exemplos: **MkDocs** (Python), **Hugo** (Go), **Jekyll** (Ruby).
+- Ideal para documentação e blogs simples.
