@@ -27,11 +27,11 @@ def test_homepage_structure(page: Page, base_url):
     page.goto(base_url)
     
     # Check title
-    expect(page).to_have_title("Git e GitHub - Curso Completo")
+    expect(page).to_have_title("Fundamentos da Computação - Curso Completo")
     
     # Check main heading
     heading = page.locator("h1")
-    expect(heading).to_contain_text("Git e GitHub")
+    expect(heading).to_contain_text("Fundamentos da Computação")
     
     # Check navigation cards exist
     # Material uses .md-typeset .grid.cards
@@ -96,7 +96,7 @@ def test_lesson_16_page(page: Page, base_url):
     page.goto(f"{base_url}/aulas/aula-16/")
     
     # Check title
-    expect(page).to_have_title(re.compile(r"Aula 16.*Carreira"))
+    expect(page).to_have_title(re.compile(r"Aula 16.*Estruturas"))
     
     # Check quiz containers
     quiz_containers = page.locator(".quiz-container")

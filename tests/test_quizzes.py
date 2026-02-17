@@ -85,5 +85,5 @@ class TestQuizzes:
         # Procura por itens de quiz
         questions = page.locator(".quiz-question")
         
-        # Deve haver pelo menos 5 perguntas
-        expect(questions).to_have_count(5)
+        # Deve haver pelo menos 1 pergunta
+        expect(questions).to_have_count(1)

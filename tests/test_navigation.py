@@ -13,7 +13,7 @@ class TestNavigation:
         page = page_with_base_url
         page.goto(base_url)
         
-        expect(page).to_have_title("Git e GitHub - Curso Completo")
+        expect(page).to_have_title("Fundamentos da Computação - Curso Completo")
 
     def _ensure_menu_visible(self, page: Page):
         """Helper to ensure menu is visible (opens drawer if needed)"""
