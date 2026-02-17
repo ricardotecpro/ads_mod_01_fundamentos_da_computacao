@@ -5,11 +5,18 @@ url: "https://ricardotecpro.github.io"
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - slides/*.md
+  - vendor/
+
 
 # Collections and Structure
 collections:

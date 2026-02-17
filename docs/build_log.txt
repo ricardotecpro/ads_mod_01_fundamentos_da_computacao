@@ -1,0 +1,48 @@
+Configuration file: D:/SourceCode/REPOS/github.io/ads_mod_01_fundamentos_da_computacao/docs/_config.yml
+            Source: D:/SourceCode/REPOS/github.io/ads_mod_01_fundamentos_da_computacao/docs
+       Destination: D:/SourceCode/REPOS/github.io/ads_mod_01_fundamentos_da_computacao/docs/_site/ads_mod_01_fundamentos_da_computacao
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+       Jekyll Feed: Generating feed for posts
+[31m  Liquid Exception: Could not locate the included file 'footer.html' in any of ["D:/SourceCode/REPOS/github.io/ads_mod_01_fundamentos_da_computacao/docs/_includes"]. Ensure it exists in one of those directories and, if it is a symlink, does not point outside your site source. in D:/SourceCode/REPOS/github.io/ads_mod_01_fundamentos_da_computacao/docs/_layouts/default.html[0m
+C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/tags/include.rb:219:in `locate_include_file': Could not locate the included file 'footer.html' in any of ["D:/SourceCode/REPOS/github.io/ads_mod_01_fundamentos_da_computacao/docs/_includes"]. Ensure it exists in one of those directories and, if it is a symlink, does not point outside your site source. (IOError)
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/tags/include.rb:201:in `render'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:103:in `render_node_to_output'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/liquid-4.0.4/lib/liquid/block_body.rb:91:in `render'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/liquid-4.0.4/lib/liquid/template.rb:206:in `block in render'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/liquid-4.0.4/lib/liquid/template.rb:240:in `with_profiling'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/liquid-4.0.4/lib/liquid/template.rb:205:in `render'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/liquid-4.0.4/lib/liquid/template.rb:218:in `render!'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/liquid_renderer/file.rb:39:in `block (3 levels) in render!'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/liquid_renderer/file.rb:59:in `measure_counts'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/liquid_renderer/file.rb:38:in `block (2 levels) in render!'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/liquid_renderer/file.rb:63:in `measure_bytes'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/liquid_renderer/file.rb:37:in `block in render!'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/liquid_renderer/file.rb:70:in `measure_time'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/liquid_renderer/file.rb:36:in `render!'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/renderer.rb:129:in `render_liquid'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/renderer.rb:192:in `render_layout'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/renderer.rb:161:in `place_in_layouts'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/renderer.rb:93:in `render_document'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/renderer.rb:63:in `run'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:572:in `render_regenerated'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:564:in `block in render_pages'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:563:in `each'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:563:in `render_pages'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:211:in `render'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/site.rb:80:in `process'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:28:in `process_site'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/commands/build.rb:65:in `build'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/commands/build.rb:36:in `process'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `block in process_with_graceful_fail'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `each'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/command.rb:91:in `process_with_graceful_fail'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/lib/jekyll/commands/build.rb:18:in `block (2 levels) in init_with_program'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `block in execute'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `each'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/command.rb:221:in `execute'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary/program.rb:44:in `go'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/mercenary-0.4.0/lib/mercenary.rb:21:in `program'
+	from C:/Ruby/32-x64/lib/ruby/gems/3.2.0/gems/jekyll-4.3.4/exe/jekyll:15:in `<top (required)>'
+	from C:/Ruby/32-x64/bin/jekyll:25:in `load'
+	from C:/Ruby/32-x64/bin/jekyll:25:in `<main>'
