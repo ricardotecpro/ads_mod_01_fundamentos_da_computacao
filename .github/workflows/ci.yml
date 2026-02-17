@@ -25,9 +25,13 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-          bundler-cache: true
+          bundler-cache: false
           cache-version: 0
           working-directory: 'docs'
+          
+      - name: Install dependencies
+        run: bundle install
+        working-directory: docs
 
       - name: Setup Node
         uses: actions/setup-node@v4
