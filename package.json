@@ -6,6 +6,8 @@
     "build:slides": "marp docs/slides/ --html --allow-local-files"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "^3.4.0"
+    "@marp-team/marp-cli": "^3.4.0",
+    "@playwright/test": "^1.58.2",
+    "http-server": "^14.1.1"
   }
 }

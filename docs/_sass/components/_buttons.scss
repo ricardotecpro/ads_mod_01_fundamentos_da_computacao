@@ -1,0 +1,33 @@
+/* --- Buttons --- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: white;
+    color: #2563eb !important;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn:hover {
+    background-color: #2563eb;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+}
+
+/* --- Lesson Navigation Buttons --- */
+.lesson-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #e5e7eb;
+    flex-wrap: wrap;
+}

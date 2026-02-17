@@ -1,0 +1,55 @@
+/* --- Card --- */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e5e7eb;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-color: #3b82f6;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f3f4f6;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+.card li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    color: #4b5563;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.card li a:hover {
+    background-color: #eff6ff;
+    color: #2563eb;
+    padding-left: 20px;
+    /* Slide effect */
+    text-decoration: none;
+}
