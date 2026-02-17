@@ -3,37 +3,57 @@ layout: default
 title: Home
 ---
 
-# Fundamentos da Computação e Lógica de Programação
+<div class="hero">
+    <h1>Fundamentos da Computação</h1>
+    <p>Domine os pilares do mundo digital: das bases binárias à lógica de programação.</p>
+</div>
 
-Bem-vindo ao curso introdutório de Computação. Este curso é dividido em 16 aulas que cobrem desde bases numéricas até lógica de programação básica.
+<div class="grid-container">
 
-## Estrutura do Curso
+    <div class="card">
+        <h3>1. Bases Numéricas</h3>
+        <ul>
+            <li><a href="{{ site.baseurl }}/aulas/aula-01">Aula 01: Introdução e Binário</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-02">Aula 02: Decimal para Binário</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-03">Aula 03: Binário para Decimal</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-04">Aula 04: Base Octal</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-05">Aula 05: Base Hexadecimal</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-06">Aula 06: Revisão do Bloco</a></li>
+        </ul>
+    </div>
 
-### Bloco 1 – Bases Numéricas e Fundamentos
-* [Aula 01: Introdução e Bases Numéricas]({{ site.baseurl }}/aulas/aula-01)
-* [Aula 02: Conversão Decimal para Binário]({{ site.baseurl }}/aulas/aula-02)
-* [Aula 03: Conversão Binário para Decimal]({{ site.baseurl }}/aulas/aula-03)
-* [Aula 04: Base Octal]({{ site.baseurl }}/aulas/aula-04)
-* [Aula 05: Base Hexadecimal]({{ site.baseurl }}/aulas/aula-05)
-* [Aula 06: Revisão de Bases]({{ site.baseurl }}/aulas/aula-06)
+    <div class="card">
+        <h3>2. Bases Computacionais</h3>
+        <ul>
+            <li><a href="{{ site.baseurl }}/aulas/aula-07">Aula 07: Arquitetura</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-08">Aula 08: Software</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-09">Aula 09: Redes</a></li>
+        </ul>
+    </div>
 
-### Bloco 2 – Bases Computacionais
-* [Aula 07: Arquitetura de Computadores]({{ site.baseurl }}/aulas/aula-07)
-* [Aula 08: Software e Categorias]({{ site.baseurl }}/aulas/aula-08)
-* [Aula 09: Redes de Computadores]({{ site.baseurl }}/aulas/aula-09)
+    <div class="card">
+        <h3>3. Suportes</h3>
+        <ul>
+            <li><a href="{{ site.baseurl }}/aulas/aula-10">Aula 10: Eng. de Software</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-11">Aula 11: Banco de Dados</a></li>
+        </ul>
+    </div>
 
-### Bloco 3 – Suportes Computacionais
-* [Aula 10: Engenharia de Software]({{ site.baseurl }}/aulas/aula-10)
-* [Aula 11: Banco de Dados]({{ site.baseurl }}/aulas/aula-11)
+    <div class="card">
+        <h3>4. Multimídia</h3>
+        <ul>
+            <li><a href="{{ site.baseurl }}/aulas/aula-12">Aula 12: Sistemas MM</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-13">Aula 13: Imagens</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-14">Aula 14: Áudio</a></li>
+        </ul>
+    </div>
 
-### Bloco 4 – Multimídia
-* [Aula 12: Sistemas Multimídia]({{ site.baseurl }}/aulas/aula-12)
-* [Aula 13: Imagens Digitais]({{ site.baseurl }}/aulas/aula-13)
-* [Aula 14: Áudio Digital]({{ site.baseurl }}/aulas/aula-14)
+    <div class="card">
+        <h3>5. Lógica</h3>
+        <ul>
+            <li><a href="{{ site.baseurl }}/aulas/aula-15">Aula 15: Algoritmos</a></li>
+            <li><a href="{{ site.baseurl }}/aulas/aula-16">Aula 16: Estruturas</a></li>
+        </ul>
+    </div>
 
-### Bloco 5 – Lógica de Programação
-* [Aula 15: Algoritmos e Comandos Básicos]({{ site.baseurl }}/aulas/aula-15)
-* [Aula 16: Estruturas de Controle]({{ site.baseurl }}/aulas/aula-16)
-
----
-*Este conteúdo foi migrado e reestruturado para format 'Jekyll + Marp'.*
+</div>
