@@ -1,12 +1,13 @@
 /* --- Header --- */
 .site-header {
-    background-color: #1e3a8a;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     padding: 15px 0;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: background-color 0.3s;
 }
 
 .site-header .wrapper {
@@ -18,24 +19,25 @@
 .site-title {
     font-size: 1.5rem;
     font-weight: 800;
-    color: white !important;
+    color: var(--header-text) !important;
     text-decoration: none !important;
 }
 
 .site-nav {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .site-nav .page-link {
-    color: #bfdbfe !important;
+    color: rgba(255, 255, 255, 0.8) !important;
     font-weight: 500;
     font-size: 0.95rem;
     text-decoration: none;
 }
 
 .site-nav .page-link:hover {
-    color: white !important;
+    color: #ffffff !important;
 }
 
 @media (max-width: 768px) {

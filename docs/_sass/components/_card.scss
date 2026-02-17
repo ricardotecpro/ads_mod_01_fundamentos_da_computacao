@@ -1,27 +1,27 @@
 /* --- Card --- */
 .card {
-    background: white;
+    background: var(--bg-card);
     border-radius: 12px;
     padding: 25px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e5e7eb;
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s, border-color 0.3s;
     display: flex;
     flex-direction: column;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    border-color: #3b82f6;
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-hover);
 }
 
 .card h3 {
     margin-top: 0;
-    color: #1e3a8a;
+    color: var(--primary-color);
     font-size: 1.4rem;
     padding-bottom: 15px;
-    border-bottom: 2px solid #f3f4f6;
+    border-bottom: 2px solid var(--border-color);
     margin-bottom: 20px;
 }
 
@@ -39,16 +39,16 @@
 .card li a {
     display: block;
     padding: 10px 15px;
-    background-color: #f9fafb;
+    background-color: Var(--bg-body);
     border-radius: 8px;
-    color: #4b5563;
+    color: var(--text-muted);
     font-weight: 500;
     transition: all 0.2s;
 }
 
 .card li a:hover {
-    background-color: #eff6ff;
-    color: #2563eb;
+    background-color: var(--sidebar-hover-bg);
+    color: var(--secondary-color);
     padding-left: 20px;
     /* Slide effect */
     text-decoration: none;

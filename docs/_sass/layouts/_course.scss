@@ -10,7 +10,7 @@
 .course-sidebar {
     width: 280px;
     flex-shrink: 0;
-    border-right: 1px solid #e5e7eb;
+    border-right: 1px solid var(--border-color);
     padding-right: 20px;
     align-self: flex-start;
     position: sticky;
@@ -33,7 +33,7 @@
     .course-sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid #e5e7eb;
+        border-bottom: 1px solid var(--border-color);
         margin-bottom: 20px;
         max-height: 300px;
         position: static;
