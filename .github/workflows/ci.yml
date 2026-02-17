@@ -1,0 +1,71 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+          cache-version: 0
+          working-directory: 'docs'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Marp CLI
+        run: npm install -g @marp-team/marp-cli
+
+      - name: Build Slides
+        run: |
+          mkdir -p docs/slides
+          # Convert all slide markdown files to HTML
+          find docs/slides -name "slides-*.md" -exec marp "{}" --html --allow-local-files -o "{}.html" \;
+          # Rename output files to remove .md extension (slides-01.md.html -> slides-01.html)
+          # Actually marp output logic: if input is slides-01.md, output is slides-01.html automatically if we don't specify exact name but use directory.
+          # Let's use the explicit folder build which is safer
+          marp docs/slides/ --html --allow-local-files
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
+          destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

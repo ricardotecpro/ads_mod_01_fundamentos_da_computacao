@@ -1,0 +1,29 @@
+title: "Fundamentos da Computação"
+description: "Curso completo de Introdução à Computação e Lógica de Programação"
+baseurl: "/ads_mod_01_fundamentos_da_computacao"
+url: "https://ricardotecpro.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections and Structure
+collections:
+  aulas:
+    output: true
+    permalink: /aulas/:slug/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "aulas"
+      type: "aulas"
+    values:
+      layout: aula
