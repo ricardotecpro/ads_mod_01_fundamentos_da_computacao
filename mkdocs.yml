@@ -1,0 +1,187 @@
+site_name: Fundamentos da Computação - Curso Completo
+site_url: https://ricardotecpro.github.io/ads_mod_01_fundamentos_da_computacao
+repo_url: https://github.com/ricardotecpro/ads_mod_01_fundamentos_da_computacao
+repo_name: ricardotecpro/ads_mod_01_fundamentos_da_computacao
+theme:
+  name: material
+  language: pt-BR
+  favicon: assets/images/python-logo-notext.svg
+  logo: assets/images/python-logo-notext.svg
+  custom_dir: overrides
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Mudar para modo claro
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para modo escuro
+  icon:
+    repo: fontawesome/brands/github
+
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - footnotes
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.snippets:
+      base_path: docs
+
+plugins:
+  - mkdocs-revealjs
+  - search:
+      lang: pt
+  - mkdocs-jupyter
+  - glightbox
+  - mkdocs_quiz
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      count_empty_lines: false
+      fallback_to_empty: false
+      sort_authors_by: contribution
+      authorship_threshold_percent: 10
+      exclude:
+        - index.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+  - macros
+  - mkdocs-video
+  - termynal:
+      title: shell
+      buttons: macos
+      prompt_literal_start:
+        - "$"
+  - rss:
+      match_path: .*
+      date_from_meta:
+        datetime_format: '%Y-%m-%d %H:%M:%S'
+  - print-site:
+      add_to_navigation: false
+      print_page_rel_path: 'print_page.md'
+      print_page_title: 'Versão para Impressão'
+      add_print_site_banner: false
+      enumerate_headings: false
+      enumerate_figures: false
+
+hooks:
+  - hooks/copy_slides.py
+
+extra_css:
+  - assets/css/quiz.css
+  - assets/css/home.css
+  - assets/css/extra.css
+
+extra_javascript:
+  - assets/js/quiz.js
+  - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
+  - assets/js/mermaid-init.js
+  - assets/js/custom_termynal.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ricardotecpro
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ricardotecpro
+    - icon: fontawesome/solid/globe
+      link: https://ricardotecpro.github.io/
+  version:
+    provider: mike
+    default: estavel
+
+hooks:
+  - hooks/copy_slides.py
+
+nav:
+  - Home: index.md
+  - Sobre: sobre.md
+  - Aulas:
+    - aulas/index.md
+    - Módulo 1 – Conceitos Básicos:
+      - 'Aula 01 - Introdução à Computação e Bases Numéricas': aulas/aula-01.md
+      - 'Aula 02 - Conversão de Decimal para Binário': aulas/aula-02.md
+      - 'Aula 03 - Conversão Binário para Decimal': aulas/aula-03.md
+      - 'Aula 04 - Sistema Octal': aulas/aula-04.md
+    - Módulo 2 – Hexadecimal e Aritmética:
+      - 'Aula 05 - Conversão Decimal Hexadecimal': aulas/aula-05.md
+      - 'Aula 06 - Conversão Binário Hexadecimal': aulas/aula-06.md
+      - 'Aula 07 - Aritmética Binária': aulas/aula-07.md
+      - 'Aula 08 - Representação de Dados': aulas/aula-08.md
+    - Módulo 3 – Lógica Digital:
+      - 'Aula 09 - Lógica Booleana': aulas/aula-09.md
+      - 'Aula 10 - Tabelas Verdade': aulas/aula-10.md
+      - 'Aula 11 - Circuitos Lógicos': aulas/aula-11.md
+      - 'Aula 12 - Arquitetura de Computadores': aulas/aula-12.md
+    - Módulo 4 – Software e Algoritmos:
+      - 'Aula 13 - Memória e Armazenamento': aulas/aula-13.md
+      - 'Aula 14 - Sistemas Operacionais': aulas/aula-14.md
+      - 'Aula 15 - Algoritmos e Fluxogramas': aulas/aula-15.md
+      - 'Aula 16 - Introdução à Programação': aulas/aula-16.md
+  - Materiais:
+      - materiais.md
+      - Slides:
+          - slides/index.md
+          - 'Slide 01 - Introdução': slides/slide-01.html
+          - 'Slide 02 - Dec2Bin': slides/slide-02.html
+          - 'Slide 03 - Bin2Dec': slides/slide-03.html
+          - 'Slide 04 - Octal': slides/slide-04.html
+          - 'Slide 05 - Hexadecimal': slides/slide-05.html
+          - 'Slide 06 - Bin2Hex': slides/slide-06.html
+          - 'Slide 07 - Aritmética': slides/slide-07.html
+          - 'Slide 08 - Dados': slides/slide-08.html
+          - 'Slide 09 - Booleana': slides/slide-09.html
+          - 'Slide 10 - Tabelas': slides/slide-10.html
+          - 'Slide 11 - Circuitos': slides/slide-11.html
+          - 'Slide 12 - Arquitetura': slides/slide-12.html
+          - 'Slide 13 - Memória': slides/slide-13.html
+          - 'Slide 14 - SO': slides/slide-14.html
+          - 'Slide 15 - Algoritmos': slides/slide-15.html
+          - 'Slide 16 - Programação': slides/slide-16.html
+      - Exercícios:
+          - exercicios/index.md
+      - Quizzes:
+          - quizzes/index.md
+      - Projetos:
+          - projetos/index.md
+      - Configuração:
+          - setups/index.md
+  - Impressão: print_page.md

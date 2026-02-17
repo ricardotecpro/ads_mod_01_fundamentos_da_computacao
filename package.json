@@ -1,13 +1,5 @@
 {
-  "name": "ads-mod-01-fundamentos",
-  "version": "1.0.0",
-  "description": "Curso de Fundamentos da Computação",
-  "scripts": {
-    "build:slides": "marp docs/slides/ --html --allow-local-files"
-  },
-  "devDependencies": {
-    "@marp-team/marp-cli": "^3.4.0",
-    "@playwright/test": "^1.58.2",
-    "http-server": "^14.1.1"
+  "dependencies": {
+    "reveal.js": "^5.2.1"
   }
 }

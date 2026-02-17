@@ -1,8 +1,0 @@
-#  The contact options.
-- type: github
-  url: https://github.com/ricardotecpro
-- type: linkedin
-  url: https://linkedin.com/in/username
-- type: rss
-  url: /feed.xml
-  noblank: true

@@ -1,60 +1,87 @@
----
-layout: home
-title: Fundamentos da Computação
-icon: fas fa-graduation-cap
----
+# Bem-vindo ao Curso de Fundamentos da Computação
 
-<div class="hero">
-    <h1>Fundamentos da Computação</h1>
-    <p>Domine os pilares do mundo digital: das bases binárias à lógica de programação.</p>
+Domine os conceitos essenciais da tecnologia, do binário aos algoritmos!
+
+## 🎯 Sobre o Curso
+
+Este curso foi desenvolvido para quem deseja iniciar na área de TI com uma base sólida. Você aprenderá como os computadores funcionam "por baixo do capô", bases numéricas, lógica digital e introdução à programação.
+
+**O que você vai aprender:**
+- **Bases Numéricas**: Binário, Octal e Hexadecimal.
+- **Hardware**: Como a CPU e a Memória funcionam.
+- **Lógica Digital**: Portas lógicas e circuitos.
+- **Software**: Sistemas Operacionais e Algoritmos.
+- **Programação**: Estruturas de controle e lógica.
+
+## 🚀 Comece Agora
+
+<div class="grid cards" markdown>
+
+-   :material-book-open-page-variant: **Aulas**
+    
+    ---
+    
+    16 aulas completas organizadas em 4 módulos.
+    
+    [:octicons-arrow-right-24: Ver todas as aulas](aulas/index.md)
+
+-   :material-presentation: **Slides**
+    
+    ---
+    
+    Slides interativos para acompanhar cada aula.
+    
+    [:octicons-arrow-right-24: Acessar slides](slides/index.md)
+
+-   :material-dumbbell: **Exercícios**
+    
+    ---
+    
+    Pratique com exercícios focados em cada tópico.
+    
+    [:octicons-arrow-right-24: Ver exercícios](exercicios/index.md)
+
+-   :material-school: **Quizzes**
+    
+    ---
+    
+    Teste seus conhecimentos com quizzes rápidos.
+    
+    [:octicons-arrow-right-24: Fazer quizzes](quizzes/index.md)
+
+-   :material-rocket: **Projetos**
+    
+    ---
+    
+    Projetos práticos para aplicar o conhecimento.
+    
+    [:octicons-arrow-right-24: Ver projetos](projetos/index.md)
+
+-   :material-cog: **Configuração**
+    
+    ---
+    
+    Guias de configuração do ambiente.
+    
+    [:octicons-arrow-right-24: Configurar ambiente](setups/index.md)
+
 </div>
 
-<div class="grid-container">
+## 📚 Estrutura do Curso
 
-    <div class="card">
-        <h3>1. Bases Numéricas</h3>
-        <ul>
-            <li><a href="{{ site.baseurl }}/aulas/aula-01">Aula 01: Introdução e Binário</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-02">Aula 02: Decimal para Binário</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-03">Aula 03: Binário para Decimal</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-04">Aula 04: Base Octal</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-05">Aula 05: Base Hexadecimal</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-06">Aula 06: Revisão do Bloco</a></li>
-        </ul>
-    </div>
+O curso está organizado em **4 módulos**:
 
-    <div class="card">
-        <h3>2. Bases Computacionais</h3>
-        <ul>
-            <li><a href="{{ site.baseurl }}/aulas/aula-07">Aula 07: Arquitetura</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-08">Aula 08: Software</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-09">Aula 09: Redes</a></li>
-        </ul>
-    </div>
+1. **Módulo 1 – Conceitos Básicos** (Aulas 01-04)
+2. **Módulo 2 – Hexadecimal e Aritmética** (Aulas 05-08)
+3. **Módulo 3 – Lógica Digital** (Aulas 09-12)
+4. **Módulo 4 – Software e Algoritmos** (Aulas 13-16)
 
-    <div class="card">
-        <h3>3. Suportes</h3>
-        <ul>
-            <li><a href="{{ site.baseurl }}/aulas/aula-10">Aula 10: Eng. de Software</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-11">Aula 11: Banco de Dados</a></li>
-        </ul>
-    </div>
+## 🎓 Como Usar Este Curso
 
-    <div class="card">
-        <h3>4. Multimídia</h3>
-        <ul>
-            <li><a href="{{ site.baseurl }}/aulas/aula-12">Aula 12: Sistemas MM</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-13">Aula 13: Imagens</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-14">Aula 14: Áudio</a></li>
-        </ul>
-    </div>
+1. **Siga a ordem** - Comece pela Aula 01 e avance progressivamente.
+2. **Faça os quizzes** - Eles ajudam a fixar o conteúdo teórico.
+3. **Pratique as conversões** - Matemática binária exige treino!
 
-    <div class="card">
-        <h3>5. Lógica</h3>
-        <ul>
-            <li><a href="{{ site.baseurl }}/aulas/aula-15">Aula 15: Algoritmos</a></li>
-            <li><a href="{{ site.baseurl }}/aulas/aula-16">Aula 16: Estruturas</a></li>
-        </ul>
-    </div>
+---
 
-</div>
+**Pronto para começar?** [:material-rocket: Ir para Aula 01](aulas/aula-01.md){ .md-button .md-button--primary }
