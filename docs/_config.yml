@@ -5,17 +5,49 @@ url: "https://ricardotecpro.github.io"
 
 # Build settings
 markdown: kramdown
-# theme: minima
+theme: jekyll-theme-chirpy
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-redirect-from
+  - jekyll-include-cache
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - slides/*.md
   - vendor/
+  - node_modules/
+
+# Chirpy Theme Settings
+timezone: America/Sao_Paulo
+lang: pt-BR
+
+img_cdn: ""
+avatar: "/assets/img/avatar.png" # You can change this later
+
+social:
+  name: Ricardo L. P.
+  email: ricardo@example.com
+  links:
+    - https://github.com/ricardotecpro
+    - https://twitter.com/username
+    - https://linkedin.com/in/username
+
+google_analytics:
+  id: "" # Add ID here
+  pv:
+    proxy_url: ""
+    cache_path: ""
+
+search:
+  provider: google # or 'algolia'
+  google:
+    custom_search_id: "" # Add CSE ID here
+
 
 
 # Collections and Structure

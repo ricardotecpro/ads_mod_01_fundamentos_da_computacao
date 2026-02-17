@@ -1,23 +1,41 @@
-/* --- Reset & Base --- */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+@use '../abstracts/mixins' as *;
+
+::-webkit-input-placeholder {
+  @include placeholder;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    transition: background-color 0.3s, color 0.3s;
+::-moz-placeholder {
+  @include placeholder;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+:-ms-input-placeholder {
+  @include placeholder;
+}
+
+::-ms-input-placeholder {
+  @include placeholder;
+}
+
+::placeholder {
+  @include placeholder;
+}
+
+:focus::-webkit-input-placeholder {
+  @include placeholder-focus;
+}
+
+:focus::-moz-placeholder {
+  @include placeholder-focus;
+}
+
+:focus:-ms-input-placeholder {
+  @include placeholder-focus;
+}
+
+:focus::-ms-input-placeholder {
+  @include placeholder-focus;
+}
+
+:focus::placeholder {
+  @include placeholder-focus;
 }

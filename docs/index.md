@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Home
+layout: home
+title: Fundamentos da Computação
+icon: fas fa-graduation-cap
 ---
 
 <div class="hero">

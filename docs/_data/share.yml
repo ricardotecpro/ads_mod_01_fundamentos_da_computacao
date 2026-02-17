@@ -1,0 +1,7 @@
+#  The share options.
+- type: twitter
+  url: "https://twitter.com/intent/tweet?text={title}&url={url}"
+- type: facebook
+  url: "https://www.facebook.com/sharer/sharer.php?u={url}"
+- type: linkedin
+  url: "https://www.linkedin.com/sharing/share-offsite/?url={url}"
