@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // we might want to respect it if added by other means)
         if (option.classList.contains('disabled')) return;
 
-        const item = option.closest('.quiz-item');
+        // Find the closest container - checking both item and container classes
+        const container = option.closest('.quiz-item') || option.closest('.quiz-container');
         const parent = option.parentElement; // keep for sibling logic if needed, or just use item.querySelectorAll
 
         // Allow changing answer: Remove state from siblings
@@ -26,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Check answer
         const isCorrect = option.getAttribute('data-correct') === 'true';
         const feedbackText = option.getAttribute('data-feedback');
-        const feedbackEl = item.querySelector('.quiz-feedback');
+        
+        // Find feedback element in the container
+        const feedbackEl = container ? container.querySelector('.quiz-feedback') : null;
 
         // Apply visual state to the option
         option.classList.add(isCorrect ? 'correct' : 'incorrect');

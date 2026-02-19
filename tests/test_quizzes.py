@@ -86,4 +86,4 @@ class TestQuizzes:
         questions = page.locator(".quiz-question")
         
         # Deve haver pelo menos 1 pergunta
-        expect(questions).to_have_count(1)
+        expect(questions).to_have_count(5)
