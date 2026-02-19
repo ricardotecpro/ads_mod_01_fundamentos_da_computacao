@@ -1,0 +1,2783 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ricardotecpro.github.io/ads_mod_01_fundamentos_da_computacao/estavel/print_page/">
+      
+      
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed de conteúdo atualizado" href="../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../assets/images/python-logo-notext.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Versão para Impressão - Fundamentos da Computação - Curso Completo</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../assets/css/quiz.css">
+    
+      <link rel="stylesheet" href="../assets/css/home.css">
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+      <link rel="stylesheet" href="../termynal.css">
+    
+    <script>__md_scope=new URL("/ads_mod_01_fundamentos_da_computacao/estavel",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#index" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Fundamentos da Computação - Curso Completo" class="md-header__button md-logo" aria-label="Fundamentos da Computação - Curso Completo" data-md-component="logo">
+      
+  <img src="../assets/images/python-logo-notext.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fundamentos da Computação - Curso Completo
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Versão para Impressão
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ricardotecpro/ads_mod_01_fundamentos_da_computacao" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ricardotecpro/ads_mod_01_fundamentos_da_computacao
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../sobre/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Sobre
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../aulas/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Aulas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../materiais/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Materiais
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Impressão
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Fundamentos da Computação - Curso Completo" class="md-nav__button md-logo" aria-label="Fundamentos da Computação - Curso Completo" data-md-component="logo">
+      
+  <img src="../assets/images/python-logo-notext.svg" alt="logo">
+
+    </a>
+    Fundamentos da Computação - Curso Completo
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ricardotecpro/ads_mod_01_fundamentos_da_computacao" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ricardotecpro/ads_mod_01_fundamentos_da_computacao
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sobre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../aulas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aulas
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../materiais/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Materiais
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Impressão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aulas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aulas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aulas do Curso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 1 – Conceitos Básicos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 1 – Conceitos Básicos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 01 - Introdução à Computação e Bases Numéricas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 02 - Conversão de Decimal para Binário
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 03 - Conversão Binário para Decimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 04 - Sistema Octal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 2 – Hexadecimal e Aritmética
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 2 – Hexadecimal e Aritmética">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 05 - Conversão Decimal Hexadecimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 06 - Conversão Binário Hexadecimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 07 - Aritmética Binária
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 08 - Representação de Dados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 3 – Lógica Digital
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 3 – Lógica Digital">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 09 - Lógica Booleana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 10 - Tabelas Verdade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 11 - Circuitos Lógicos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 12 - Arquitetura de Computadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 4 – Software e Algoritmos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 4 – Software e Algoritmos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 13 - Memória e Armazenamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 14 - Sistemas Operacionais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 15 - Algoritmos e Fluxogramas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 16 - Introdução à Programação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materiais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Materiais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#materiais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materiais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slides
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Slides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slides das Aulas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 01 - Introdução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 02 - Dec2Bin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 03 - Bin2Dec
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 04 - Octal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 05 - Hexadecimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 06 - Bin2Hex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 07 - Aritmética
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 08 - Dados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 09 - Booleana
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 10 - Tabelas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 11 - Circuitos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 12 - Arquitetura
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 13 - Memória
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 14 - SO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 15 - Algoritmos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 16 - Programação
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercícios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercícios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercícios
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quizzes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quizzes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quizzes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quizzes Interativos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projetos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projetos Práticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração do Ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print_page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impressão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="print-site-page" class="">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index" heading-number="1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="bem-vindo-ao-curso-de-fundamentos-da-computacao">Bem-vindo ao Curso de Fundamentos da Computação</h1>
+<p>Domine os conceitos essenciais da tecnologia, do binário aos algoritmos!</p>
+<h2 id="index-sobre-o-curso">🎯 Sobre o Curso</h2>
+<p>Este curso foi desenvolvido para quem deseja iniciar na área de TI com uma base sólida. Você aprenderá como os computadores funcionam "por baixo do capô", bases numéricas, lógica digital e introdução à programação.</p>
+<p><strong>O que você vai aprender:</strong>
+- <strong>Bases Numéricas</strong>: Binário, Octal e Hexadecimal.
+- <strong>Hardware</strong>: Como a CPU e a Memória funcionam.
+- <strong>Lógica Digital</strong>: Portas lógicas e circuitos.
+- <strong>Software</strong>: Sistemas Operacionais e Algoritmos.
+- <strong>Programação</strong>: Estruturas de controle e lógica.</p>
+<h2 id="index-comece-agora">🚀 Comece Agora</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"></path></svg></span> <strong>Aulas</strong></p>
+<hr>
+<p>16 aulas completas organizadas em 4 módulos.</p>
+<p><a href="#aulas"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver todas as aulas</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides</strong></p>
+<hr>
+<p>Slides interativos para acompanhar cada aula.</p>
+<p><a href="#slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Acessar slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Exercícios</strong></p>
+<hr>
+<p>Pratique com exercícios focados em cada tópico.</p>
+<p><a href="#exercicios"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver exercícios</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quizzes</strong></p>
+<hr>
+<p>Teste seus conhecimentos com quizzes rápidos.</p>
+<p><a href="#quizzes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Fazer quizzes</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> <strong>Projetos</strong></p>
+<hr>
+<p>Projetos práticos para aplicar o conhecimento.</p>
+<p><a href="#projetos"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver projetos</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"></path></svg></span> <strong>Configuração</strong></p>
+<hr>
+<p>Guias de configuração do ambiente.</p>
+<p><a href="#setups"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Configurar ambiente</a></p>
+</li>
+</ul>
+</div>
+<h2 id="index-estrutura-do-curso">📚 Estrutura do Curso</h2>
+<p>O curso está organizado em <strong>4 módulos</strong>:</p>
+<ol>
+<li><strong>Módulo 1 – Conceitos Básicos</strong> (Aulas 01-04)</li>
+<li><strong>Módulo 2 – Hexadecimal e Aritmética</strong> (Aulas 05-08)</li>
+<li><strong>Módulo 3 – Lógica Digital</strong> (Aulas 09-12)</li>
+<li><strong>Módulo 4 – Software e Algoritmos</strong> (Aulas 13-16)</li>
+</ol>
+<h2 id="index-como-usar-este-curso">🎓 Como Usar Este Curso</h2>
+<ol>
+<li><strong>Siga a ordem</strong> - Comece pela Aula 01 e avance progressivamente.</li>
+<li><strong>Faça os quizzes</strong> - Eles ajudam a fixar o conteúdo teórico.</li>
+<li><strong>Pratique as conversões</strong> - Matemática binária exige treino!</li>
+</ol>
+<hr>
+<p><strong>Pronto para começar?</strong> <a class="md-button md-button--primary" href="#aulas-aula-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> Ir para Aula 01</a></p></body></html></section><section class="print-page" id="sobre" heading-number="2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="sobre-o-curso">Sobre o Curso</h1>
+<h2 id="sobre-git-e-github-do-zero-ao-profissional">🎓 Git e GitHub - Do Zero ao Profissional</h2>
+<p>Este é um curso completo e estruturado de Versionamento de Código com Git e GitHub. Desenvolvido para levar você do básico ao avançado, com uma abordagem prática e focada nas necessidades reais do mercado de desenvolvimento de software.</p>
+<h2 id="sobre-objetivos-do-curso">🎯 Objetivos do Curso</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M11 2v2.07A8 8 0 0 0 4.07 11H2v2h2.07A8 8 0 0 0 11 19.93V22h2v-2.07A8 8 0 0 0 19.93 13H22v-2h-2.07A8 8 0 0 0 13 4.07V2m-2 4.08V8h2V6.09c2.5.41 4.5 2.41 4.92 4.91H16v2h1.91c-.41 2.5-2.41 4.5-4.91 4.92V16h-2v1.91C8.5 17.5 6.5 15.5 6.08 13H8v-2H6.09C6.5 8.5 8.5 6.5 11 6.08M12 11a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"></path></svg></span> <strong>Dominar Git</strong></p>
+<hr>
+<p>Aprender os comandos fundamentais, fluxo de trabalho local e como o Git funciona por baixo dos panos.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"></path></svg></span> <strong>GitHub Profissional</strong></p>
+<hr>
+<p>Utilizar o GitHub não apenas como repositório, mas como plataforma de colaboração, gestão de projetos e portfólio.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"></path></svg></span> <strong>Colaboração</strong></p>
+<hr>
+<p>Trabalhar em equipe utilizando Branches, Pull Requests, Code Reviews e resolvendo conflitos de forma eficiente.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7 2v2h1v14a4 4 0 0 0 4 4 4 4 0 0 0 4-4V4h1V2zm4 14c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m2-4c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m1-5h-4V4h4z"></path></svg></span> <strong>Boas Práticas</strong></p>
+<hr>
+<p>Criar um histórico de commits limpo, escrever mensagens significativas e manter repositórios organizados.</p>
+</li>
+</ul>
+</div>
+<h2 id="sobre-o-que-voce-vai-aprender">📚 O Que Você Vai Aprender</h2>
+<h3 id="sobre-modulo-1-conceitos-basicos">Módulo 1 – Conceitos Básicos</h3>
+<ul>
+<li>Instalação e configuração do Git</li>
+<li>Ciclo de vida dos arquivos (Tracked to Committed)</li>
+<li>Histórico e navegação no tempo</li>
+<li>Ramificação (Branching) e Fusão (Merging)</li>
+</ul>
+<h3 id="sobre-modulo-2-trabalhando-com-github">Módulo 2 – Trabalhando com GitHub</h3>
+<ul>
+<li>Repositórios Remotos</li>
+<li>Sincronização (Push/Pull)</li>
+<li>Resolução de Conflitos</li>
+<li>Pull Requests e Code Review</li>
+</ul>
+<h3 id="sobre-modulo-3-fluxos-e-organizacao">Módulo 3 – Fluxos e Organização</h3>
+<ul>
+<li>GitHub Flow</li>
+<li>Issues e Projects (Kanban)</li>
+<li>Markdown para documentação</li>
+<li>README profissional</li>
+</ul>
+<h3 id="sobre-modulo-4-colaboracao-e-carreira">Módulo 4 – Colaboração e Carreira</h3>
+<ul>
+<li>Forks e contribuição Open Source</li>
+<li>GitHub Pages para hospedagem</li>
+<li>Tratamento de erros comuns (Detached HEAD, etc.)</li>
+<li>Construção de portfólio</li>
+</ul>
+<h2 id="sobre-metodologia">🛠️ Metodologia</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"></path></svg></span> <strong>Aulas Teóricas</strong></p>
+<hr>
+<p>Conteúdo explicativo com exemplos práticos e slides interativos.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"></path></svg></span> <strong>Exercícios Práticos</strong></p>
+<hr>
+<p>Listas de exercícios para fixar o conteúdo de cada aula.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39S16.66.269 11 5.93c-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.55.56 1.37.74 2.12.46A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61m-7.07 7.07c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"></path></svg></span> <strong>Projetos Reais</strong></p>
+<hr>
+<p>Desenvolva projetos práticos aplicando os conceitos aprendidos.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 3C9.23 3 6.19 5.95 6 9.66l-1.92 2.53c-.24.31 0 .81.42.81H6v3c0 1.11.89 2 2 2h1v3h7v-4.69c2.37-1.12 4-3.51 4-6.31 0-3.86-3.12-7-7-7m1 11h-2v-2h2zm1.75-5.19c-.29.4-.66.69-1.11.93-.25.16-.42.33-.51.52-.09.18-.13.43-.13.74h-2c0-.5.11-.92.31-1.18.19-.27.54-.57 1.05-.91.26-.16.47-.36.61-.59.16-.23.23-.5.23-.82 0-.3-.08-.56-.26-.75-.18-.18-.44-.28-.75-.28a1 1 0 0 0-.66.23c-.18.16-.27.39-.28.69h-1.93l-.01-.03c-.01-.79.25-1.36.77-1.77.54-.39 1.24-.59 2.11-.59.93 0 1.66.23 2.19.68.54.45.81 1.06.81 1.82 0 .5-.15.91-.44 1.31"></path></svg></span> <strong>Quizzes Interativos</strong></p>
+<hr>
+<p>Teste seus conhecimentos com quizzes ao final de cada módulo.</p>
+</li>
+</ul>
+</div>
+<h2 id="sobre-para-quem-e-este-curso">👨‍🎓 Para Quem é Este Curso</h2>
+<ul>
+<li><strong>Iniciantes</strong> que nunca usaram controle de versão</li>
+<li><strong>Desenvolvedores</strong> que usam Git apenas no básico ("add, commit, push")</li>
+<li><strong>Estudantes</strong> que precisam organizar seus trabalhos acadêmicos</li>
+<li><strong>Profissionais</strong> que querem melhorar seu fluxo de trabalho em equipe</li>
+</ul>
+<h2 id="sobre-pre-requisitos">📋 Pré-requisitos</h2>
+<ul>
+<li>Computador com Windows, Linux ou macOS</li>
+<li>Instalação do Git (coberta no curso)</li>
+<li>Conta no GitHub (gratuita)</li>
+<li><strong>Não é necessário conhecimento prévio de programação!</strong></li>
+</ul>
+<h2 id="sobre-o-que-voce-recebera">🎖️ O Que Você Receberá</h2>
+<ul>
+<li>✅ 16 aulas completas e estruturadas</li>
+<li>✅ Slides interativos para todas as aulas</li>
+<li>✅ Exercícios práticos com soluções</li>
+<li>✅ Projetos reais para portfólio</li>
+<li>✅ Quizzes para autoavaliação</li>
+<li>✅ Guias de configuração de ambiente</li>
+</ul>
+<h2 id="sobre-comece-agora">🚀 Comece Agora</h2>
+<p>Pronto para dominar o Git?</p>
+<p><a class="md-button md-button--primary" href="#aulas-aula-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> Ir para Aula 01</a>
+<a class="md-button" href="#setups"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"></path></svg></span> Configurar Ambiente</a></p>
+<hr>
+<p><strong>Dúvidas?</strong> Entre em contato ou acesse a <a href="#materiais">documentação completa</a>.</p></body></html></section>
+                    <section class='print-page md-section' id='section-3' heading-number='3'>
+                        <h1>Aulas<a class='headerlink' href='#section-3' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas" heading-number="3.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aulas-do-curso">Aulas do Curso</h1>
+<p>Bem-vindo à seção de aulas! Aqui você encontra todo o conteúdo do curso organizado por módulos.</p>
+<h2 id="aulas-modulos-do-curso">📚 Módulos do Curso</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 1 – Conceitos Básicos</strong></p>
+<ul>
+<li><a href="#aulas-aula-01">Aula 01 - Introdução à Computação e Bases Numéricas</a></li>
+<li><a href="#aulas-aula-02">Aula 02 - Conversão de Decimal para Binário</a></li>
+<li><a href="#aulas-aula-03">Aula 03 - Conversão Binário para Decimal</a></li>
+<li><a href="#aulas-aula-04">Aula 04 - Sistema Octal</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 2 – Hexadecimal e Aritmética</strong></p>
+<ul>
+<li><a href="#aulas-aula-05">Aula 05 - Conversão Decimal ↔ Hexadecimal</a></li>
+<li><a href="#aulas-aula-06">Aula 06 - Conversão Binário ↔ Hexadecimal</a></li>
+<li><a href="#aulas-aula-07">Aula 07 - Aritmética Binária (Soma e Subtração)</a></li>
+<li><a href="#aulas-aula-08">Aula 08 - Representação de Dados (Texto/ASCII/Unicode)</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 3 – Lógica Digital</strong></p>
+<ul>
+<li><a href="#aulas-aula-09">Aula 09 - Lógica Booleana (E, OU, NÃO)</a></li>
+<li><a href="#aulas-aula-10">Aula 10 - Tabelas Verdade e Portas Lógicas</a></li>
+<li><a href="#aulas-aula-11">Aula 11 - Circuitos Lógicos Básicos</a></li>
+<li><a href="#aulas-aula-12">Aula 12 - Arquitetura de Computadores (Von Neumann)</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 4 – Software e Algoritmos</strong></p>
+<ul>
+<li><a href="#aulas-aula-13">Aula 13 - Memória e Armazenamento</a></li>
+<li><a href="#aulas-aula-14">Aula 14 - Sistemas Operacionais (Conceitos)</a></li>
+<li><a href="#aulas-aula-15">Aula 15 - Algoritmos e Fluxogramas</a></li>
+<li><a href="#aulas-aula-16">Aula 16 - Estruturas de Controle e Tipos Estruturados</a></li>
+</ul>
+</li>
+</ul>
+</div></body></html></section>
+                    <section class='print-page md-section' id='section-3-2' heading-number='3.2'>
+                        <h1>Módulo 1 – Conceitos Básicos<a class='headerlink' href='#section-3-2' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas-aula-01" heading-number="3.2.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-01-introducao-a-computacao-e-bases-numericas">Aula 01 – Introdução à Computação e Bases Numéricas</h1>
+<h2 id="aulas-aula-01-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Compreender o conceito de computação.</li>
+<li>Entender a necessidade de diferentes bases numéricas.</li>
+<li>Diferenciar sistema decimal, binário, octal e hexadecimal.</li>
+</ul>
+<h2 id="aulas-aula-01-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-01-o-que-e-computacao">O que é Computação?</h3>
+<p>A computação é a ciência que estuda o processamento automático de informações. Ela envolve o desenvolvimento de algoritmos e o uso de máquinas (computadores) para resolver problemas.</p>
+<h3 id="aulas-aula-01-por-que-bases-numericas">Por que Bases Numéricas?</h3>
+<p>Nós humanos usamos o sistema <strong>decimal</strong> (base 10) porque temos 10 dedos. Computadores, no entanto, funcionam com eletricidade, que tem dois estados básicos: ligado e desligado. Por isso, o sistema <strong>binário</strong> (base 2) é natural para eles.</p>
+<p>Existem outras bases úteis na computação:
+* <strong>Octal (Base 8)</strong>: Agrupa 3 bits.
+* <strong>Hexadecimal (Base 16)</strong>: Agrupa 4 bits, muito usado para representar cores e endereços de memória.</p>
+<h2 id="aulas-aula-01-exemplo-pratico">💡 Exemplo Prático</h2>
+<p>No sistema decimal, o número 157 significa:
+$$ 1 \times 100 + 5 \times 10 + 7 \times 1 $$</p>
+<p>No sistema binário, o número 101 significa:
+$$ 1 \times 4 + 0 \times 2 + 1 \times 1 = 5 \text{ (em decimal)} $$</p>
+<h2 id="aulas-aula-01-erros-comuns">⚠️ Erros Comuns</h2>
+<ul>
+<li><strong>Confundir valor com representação</strong>: O número "cinco" é uma quantidade. "5" é a representação decimal, "101" é a representação binária, mas a quantidade é a mesma.</li>
+</ul>
+<h2 id="aulas-aula-01-resumo">📝 Resumo</h2>
+<ul>
+<li>Computadores usam binário (0 e 1).</li>
+<li>Cada base numérica tem suas regras de posição e valor.</li>
+</ul>
+<hr>
+<p><a href="#aulas-aula-02">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-02" heading-number="3.2.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-02-conversao-de-decimal-para-binario">Aula 02 – Conversão de Decimal para Binário</h1>
+<h2 id="aulas-aula-02-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Aprender o algoritmo de divisões sucessivas.</li>
+<li>Converter números inteiros positivos de decimal para binário.</li>
+</ul>
+<h2 id="aulas-aula-02-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-02-algoritmo-de-divisoes-sucessivas">Algoritmo de Divisões Sucessivas</h3>
+<p>Para converter um número decimal para binário (ou qualquer outra base), dividimos o número sucessivamente pela base de destino (2) até que o quociente seja zero. O resultado é a sequência dos <strong>restos</strong> lidos de trás para frente (do último para o primeiro).</p>
+<h3 id="aulas-aula-02-passo-a-passo-convertendo-25-para-binario">Passo a Passo: Convertendo 25 para Binário</h3>
+<ol>
+<li>$25 \div 2 = 12$, resto <strong>1</strong> (bit menos significativo - LSB)</li>
+<li>$12 \div 2 = 6$, resto <strong>0</strong></li>
+<li>$6 \div 2 = 3$, resto <strong>0</strong></li>
+<li>$3 \div 2 = 1$, resto <strong>1</strong></li>
+<li>$1 \div 2 = 0$, resto <strong>1</strong> (bit mais significativo - MSB)</li>
+</ol>
+<p>Lendo os restos de baixo para cima (ou do último para o primeiro): <strong>11001</strong></p>
+<h2 id="aulas-aula-02-dica">💡 Dica</h2>
+<p>Números pares em binário sempre terminam em <strong>0</strong>. Números ímpares sempre terminam em <strong>1</strong>.</p>
+<h2 id="aulas-aula-02-erros-comuns">⚠️ Erros Comuns</h2>
+<ul>
+<li>Esquecer de ler os restos na ordem inversa (baixo para cima).</li>
+<li>Parar a divisão antes de chegar ao quociente 0.</li>
+</ul>
+<hr>
+<p><a href="#aulas-aula-03">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-03" heading-number="3.2.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-03-conversao-de-binario-para-decimal">Aula 03 – Conversão de Binário para Decimal</h1>
+<h2 id="aulas-aula-03-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Compreender o conceito de notação posicional.</li>
+<li>Converter números binários para decimais usando potências de 2.</li>
+</ul>
+<h2 id="aulas-aula-03-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-03-notacao-posicional">Notação Posicional</h3>
+<p>Em qualquer base numérica, a posição de um dígito determina seu valor.
+No sistema decimal:
+$$ 143 = 1 \times 100 + 4 \times 10 + 3 \times 1 $$
+$$ 143 = 1 \times 10^2 + 4 \times 10^1 + 3 \times 10^0 $$</p>
+<p>No sistema binário, usamos potências de 2:
+$$ 1010_2 = 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 0 \times 2^0 $$
+$$ 1010_2 = 8 + 0 + 2 + 0 = 10_{10} $$</p>
+<h3 id="aulas-aula-03-passo-a-passo">Passo a Passo</h3>
+<ol>
+<li>Escreva o número binário.</li>
+<li>Identifique a posição de cada bit (da direita para a esquerda, começando em 0).</li>
+<li>Multiplique cada bit (0 ou 1) por 2 elevado à sua posição.</li>
+<li>Some os resultados.</li>
+</ol>
+<h3 id="aulas-aula-03-exemplo-11001">Exemplo: 11001</h3>
+<table>
+<thead>
+<tr>
+<th>Bit</th>
+<th>1</th>
+<th>1</th>
+<th>0</th>
+<th>0</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Posição</td>
+<td>$2^4$</td>
+<td>$2^3$</td>
+<td>$2^2$</td>
+<td>$2^1$</td>
+<td>$2^0$</td>
+</tr>
+<tr>
+<td>Valor</td>
+<td>16</td>
+<td>8</td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Produto</td>
+<td>$1 \times 16$</td>
+<td>$1 \times 8$</td>
+<td>$0 \times 4$</td>
+<td>$0 \times 2$</td>
+<td>$1 \times 1$</td>
+</tr>
+<tr>
+<td>Resultado</td>
+<td>16</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Total: $16 + 8 + 1 = 25$</p>
+<h2 id="aulas-aula-03-dica">💡 Dica</h2>
+<p>Memorize as primeiras potências de 2:
+1, 2, 4, 8, 16, 32, 64, 128, 256...</p>
+<hr>
+<p><a href="#aulas-aula-04">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-04" heading-number="3.2.4"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-04-conversao-decimal-octal">Aula 04 – Conversão Decimal ↔ Octal</h1>
+<h2 id="aulas-aula-04-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Entender o sistema Octal (Base 8).</li>
+<li>Realizar conversões entre Decimal e Octal.</li>
+</ul>
+<h2 id="aulas-aula-04-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-04-o-sistema-octal">O Sistema Octal</h3>
+<p>O sistema octal usa 8 dígitos: <strong>0, 1, 2, 3, 4, 5, 6, 7</strong>.
+Ele é útil porque cada dígito octal representa exatamente <strong>3 bits</strong> ($2^3 = 8$). Isso facilita a representação compacta de números binários.</p>
+<h3 id="aulas-aula-04-conversao-decimal-para-octal">Conversão Decimal para Octal</h3>
+<p>Similar ao binário, usamos <strong>divisões sucessivas</strong>, mas agora por <strong>8</strong>.</p>
+<p><strong>Exemplo: 100 para Octal</strong>
+1. $100 \div 8 = 12$, resto <strong>4</strong>
+2. $12 \div 8 = 1$, resto <strong>4</strong>
+3. $1 \div 8 = 0$, resto <strong>1</strong></p>
+<p>Lendo de baixo para cima: <strong>144</strong> (em octal)</p>
+<h3 id="aulas-aula-04-conversao-octal-para-decimal">Conversão Octal para Decimal</h3>
+<p>Usamos potências de 8.</p>
+<p><strong>Exemplo: 144 (Octal) para Decimal</strong>
+$$ 1 \times 8^2 + 4 \times 8^1 + 4 \times 8^0 $$
+$$ 1 \times 64 + 4 \times 8 + 4 \times 1 $$
+$$ 64 + 32 + 4 = 100 $$</p>
+<h2 id="aulas-aula-04-curiosidade">💡 Curiosidade</h2>
+<p>O sistema octal foi muito usado em computadores antigos (mainframes) com palavras de 12, 24 ou 36 bits, que são divisíveis por 3. Hoje, o Hexadecimal é mais comum.</p>
+<hr>
+<p><a href="#aulas-aula-05">Próxima Aula</a></p></body></html></section></section>
+                    <section class='print-page md-section' id='section-3-3' heading-number='3.3'>
+                        <h1>Módulo 2 – Hexadecimal e Aritmética<a class='headerlink' href='#section-3-3' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas-aula-05" heading-number="3.3.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-05-conversao-decimal-hexadecimal">Aula 05 – Conversão Decimal ↔ Hexadecimal</h1>
+<h2 id="aulas-aula-05-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Compreender a Base 16 (Hexadecimal).</li>
+<li>Usar letras (A-F) para representar dígitos acima de 9.</li>
+<li>Realizar conversões envolvendo hexadecimal.</li>
+</ul>
+<h2 id="aulas-aula-05-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-05-o-sistema-hexadecimal">O Sistema Hexadecimal</h3>
+<p>O sistema hexadecimal usa 16 dígitos: <strong>0-9 e A-F</strong>.
+Ele é extremamente comum na computação para representar endereços de memória, cores (RGB) e agrupamento de bits, pois cada dígito hexadecimal corresponde exatamente a <strong>4 bits</strong> ($2^4 = 16$).</p>
+<table>
+<thead>
+<tr>
+<th>Decimal</th>
+<th>Binário</th>
+<th>Hexadecimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-9</td>
+<td>0000-1001</td>
+<td>0-9</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1010</td>
+<td>A</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1011</td>
+<td>B</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1100</td>
+<td>C</td>
+</tr>
+<tr>
+<td>13</td>
+<td>1101</td>
+<td>D</td>
+</tr>
+<tr>
+<td>14</td>
+<td>1110</td>
+<td>E</td>
+</tr>
+<tr>
+<td>15</td>
+<td>1111</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aulas-aula-05-conversao-decimal-para-hexadecimal">Conversão Decimal para Hexadecimal</h3>
+<p>Divisões sucessivas por <strong>16</strong>. Lembre-se de converter restos maiores que 9 para letras.</p>
+<p><strong>Exemplo: 255 para Hex</strong>
+1. $255 \div 16 = 15$, resto <strong>15</strong> (F)
+2. $15 \div 16 = 0$, resto <strong>15</strong> (F)</p>
+<p>Resultado: <strong>FF</strong></p>
+<h3 id="aulas-aula-05-conversao-hexadecimal-para-decimal">Conversão Hexadecimal para Decimal</h3>
+<p>Soma ponderada por potências de 16.</p>
+<p><strong>Exemplo: 1A (Hex) para Decimal</strong>
+$$ 1 \times 16^1 + A \times 16^0 $$
+$$ 1 \times 16 + 10 \times 1 $$
+$$ 16 + 10 = 26 $$</p>
+<h2 id="aulas-aula-05-dica">💡 Dica</h2>
+<p>Sempre que converter grandes números binários, agrupe-os em grupos de 4 bits.
+Ex: $11110000_2 \rightarrow F0_{16}$</p>
+<hr>
+<p><a href="#aulas-aula-06">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-06" heading-number="3.3.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-06-regras-de-fixacao-revisao-geral">Aula 06 – Regras de Fixação + Revisão Geral</h1>
+<h2 id="aulas-aula-06-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Consolidar o conhecimento sobre conversões de bases.</li>
+<li>Praticar com exercícios mistos.</li>
+<li>Resolver dúvidas comuns.</li>
+</ul>
+<h2 id="aulas-aula-06-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-06-resumo-das-regras">Resumo das Regras</h3>
+<ol>
+<li><strong>Decimal para Qualquer Base</strong>: Divisões sucessivas pela base de destino.</li>
+<li><strong>Qualquer Base para Decimal</strong>: Soma ponderada (Notação Posicional).</li>
+<li><strong>Binário $\leftrightarrow$ Octal</strong>: Agrupar de 3 em 3 bits.</li>
+<li><strong>Binário $\leftrightarrow$ Hexadecimal</strong>: Agrupar de 4 em 4 bits.</li>
+</ol>
+<h3 id="aulas-aula-06-tabela-de-referencia-rapida">Tabela de Referência Rápida</h3>
+<table>
+<thead>
+<tr>
+<th>Binário (3 bits)</th>
+<th>Octal</th>
+<th>Binário (4 bits)</th>
+<th>Hex</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>000</td>
+<td>0</td>
+<td>0000</td>
+<td>0</td>
+</tr>
+<tr>
+<td>001</td>
+<td>1</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>010</td>
+<td>2</td>
+<td>1010</td>
+<td>A</td>
+</tr>
+<tr>
+<td>011</td>
+<td>3</td>
+<td>1111</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aulas-aula-06-exercicios-de-fixacao-em-sala">Exercícios de Fixação (Em Sala)</h3>
+<ol>
+<li>Converta <strong>2024 (Decimal)</strong> para Hexadecimal.</li>
+<li>Converta <strong>ACE (Hex)</strong> para Binário.</li>
+<li>Converta <strong>101010 (Binário)</strong> para Decimal.</li>
+</ol>
+<h2 id="aulas-aula-06-dica-de-mestre">💡 Dica de Mestre</h2>
+<p>Para converter Hex direto para Octal, o jeito mais fácil é passar por Binário no meio do caminho!
+Hex $\rightarrow$ Binário $\rightarrow$ Octal.</p>
+<hr>
+<p><a href="#aulas-aula-07">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-07" heading-number="3.3.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-07-arquitetura-de-computadores">Aula 07 – Arquitetura de Computadores</h1>
+<h2 id="aulas-aula-07-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Entender como o computador funciona internamente (Modelo de Von Neumann).</li>
+<li>Identificar os principais componentes de hardware.</li>
+</ul>
+<h2 id="aulas-aula-07-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-07-o-modelo-de-von-neumann">O Modelo de Von Neumann</h3>
+<p>Quase todos os computadores modernos seguem a arquitetura proposta por John von Neumann em 1945. Ela descreve um computador com:</p>
+<ol>
+<li><strong>Unidade Central de Processamento (CPU)</strong>: O "cérebro". Contém a Unidade Lógica e Aritmética (ULA) e a Unidade de Controle.</li>
+<li><strong>Memória</strong>: Onde dados e instruções são armazenados.</li>
+<li><strong>Dispositivos de Entrada e Saída (E/S)</strong>: A forma como o computador interage com o mundo (Teclado, Monitor, Mouse).</li>
+<li><strong>Barramento (Bus)</strong>: O sistema de comunicação que conecta tudo.</li>
+</ol>
+<h3 id="aulas-aula-07-componentes-chave">Componentes Chave</h3>
+<ul>
+<li><strong>CPU</strong>: Executa instruções. Medida em GHz (bilhões de ciclos por segundo).</li>
+<li><strong>RAM (Random Access Memory)</strong>: Memória volátil (apaga quando desliga). Rápida, usada para programas em execução.</li>
+<li><strong>Armazenamento (HDD/SSD)</strong>: Memória não-volátil (permanente). Mais lenta que a RAM, mas armazena arquivos e o SO.</li>
+<li><strong>Placa-mãe</strong>: A placa de circuito principal que conecta todos os componentes.</li>
+</ul>
+<h2 id="aulas-aula-07-curiosidade">💡 Curiosidade</h2>
+<p>O primeiro computador eletrônico, o ENIAC, pesava 30 toneladas e ocupava 180m². Hoje, seu smartphone é milhões de vezes mais poderoso e cabe no bolso.</p>
+<hr>
+<p><a href="#aulas-aula-08">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-08" heading-number="3.3.4"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-08-software-e-suas-categorias">Aula 08 – Software e suas Categorias</h1>
+<h2 id="aulas-aula-08-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Definir o que é software.</li>
+<li>Classificar softwares em categorias: Sistema, Aplicativo e Utilitário.</li>
+<li>Reconhecer exemplos comuns de cada tipo.</li>
+</ul>
+<h2 id="aulas-aula-08-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-08-o-que-e-software">O que é Software?</h3>
+<p>Software é a parte lógica do computador. É o conjunto de instruções, dados e programas que dizem ao hardware o que fazer. Se o Hardware é o corpo (o que você chuta), o Software é a mente (o que você xinga).</p>
+<h3 id="aulas-aula-08-categorias-de-software">Categorias de Software</h3>
+<ol>
+<li><strong>Software de Sistema</strong>:</li>
+<li>Fornece a plataforma para outros softwares.</li>
+<li>
+<p>Ex: <strong>Sistemas Operacionais</strong> (Windows, Linux, macOS, Android), Drivers de dispositivos.</p>
+</li>
+<li>
+<p><strong>Software de Aplicação (Aplicativos)</strong>:</p>
+</li>
+<li>Realiza tarefas específicas para o usuário final.</li>
+<li>
+<p>Ex: Processadores de texto (Word), Navegadores (Chrome), Jogos, Editores de imagem.</p>
+</li>
+<li>
+<p><strong>Software de Programação (Ferramentas de Desenvolvimento)</strong>:</p>
+</li>
+<li>Usado por programadores para criar outros softwares.</li>
+<li>
+<p>Ex: Compiladores, Editores de código (VS Code), Depuradores.</p>
+</li>
+<li>
+<p><strong>Malwares (Software Malicioso)</strong>:</p>
+</li>
+<li>Softwares criados para causar danos. Vírus, worms, trojans.</li>
+</ol>
+<h3 id="aulas-aula-08-codigo-aberto-vs-proprietario">Código Aberto vs. Proprietário</h3>
+<ul>
+<li><strong>Proprietário</strong>: Código fechado, pertence a uma empresa, geralmente pago (Windows, Photoshop).</li>
+<li><strong>Open Source</strong>: Código aberto, livre para modificar e distribuir (Linux, Firefox, Python).</li>
+</ul>
+<hr>
+<p><a href="#aulas-aula-09">Próxima Aula</a></p></body></html></section></section>
+                    <section class='print-page md-section' id='section-3-4' heading-number='3.4'>
+                        <h1>Módulo 3 – Lógica Digital<a class='headerlink' href='#section-3-4' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas-aula-09" heading-number="3.4.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-09-redes-de-computadores">Aula 09 – Redes de Computadores</h1>
+<h2 id="aulas-aula-09-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Compreender o conceito de rede.</li>
+<li>Diferenciar LAN, WAN e Internet.</li>
+<li>Entender o modelo Cliente-Servidor.</li>
+</ul>
+<h2 id="aulas-aula-09-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-09-o-que-e-uma-rede">O que é uma Rede?</h3>
+<p>Uma rede de computadores são dois ou mais dispositivos conectados para compartilhar recursos (arquivos, impressoras, internet).</p>
+<h3 id="aulas-aula-09-tipos-de-redes-por-abrangencia">Tipos de Redes (por abrangência)</h3>
+<ul>
+<li><strong>LAN (Local Area Network)</strong>: Rede Local. Restrita a um local geográfico pequeno, como uma casa, escritório ou prédio. Geralmente rápida.</li>
+<li><strong>WAN (Wide Area Network)</strong>: Rede de Longa Distância. Conecta LANs distantes. A Internet é a maior WAN do mundo.</li>
+<li><strong>WLAN</strong>: Wireless LAN (Rede Local Sem Fio/Wi-Fi).</li>
+</ul>
+<h3 id="aulas-aula-09-como-a-internet-funciona">Como a Internet Funciona?</h3>
+<p>A Internet é uma "rede de redes". Ela conecta bilhões de dispositivos usando protocolos padrão (TCP/IP).</p>
+<ul>
+<li><strong>Endereço IP</strong>: O identificador único de cada dispositivo na rede (ex: 192.168.0.1).</li>
+<li><strong>Cliente-Servidor</strong>:</li>
+<li><strong>Cliente</strong>: Quem pede algo (seu navegador pedindo uma página web).</li>
+<li><strong>Servidor</strong>: Quem atende e fornece o recurso (o computador do Google enviando a página).</li>
+</ul>
+<h2 id="aulas-aula-09-dica">💡 Dica</h2>
+<p>Quando você acessa um site, você é o <strong>cliente</strong>. O site está hospedado em um <strong>servidor</strong>. A <strong>Internet</strong> é o caminho entre vocês.</p>
+<hr>
+<p><a href="#aulas-aula-10">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-10" heading-number="3.4.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-10-engenharia-de-software">Aula 10 – Engenharia de Software</h1>
+<h2 id="aulas-aula-10-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Compreender o ciclo de vida do desenvolvimento de software (SDLC).</li>
+<li>Conhecer modelos de processo (Cascata vs. Ágil).</li>
+<li>Entender a importância de requisitos, testes e manutenção.</li>
+</ul>
+<h2 id="aulas-aula-10-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-10-o-que-e-engenharia-de-software">O que é Engenharia de Software?</h3>
+<p>É a aplicação de uma abordagem sistemática, disciplinada e quantificável ao desenvolvimento, operação e manutenção de software.</p>
+<h3 id="aulas-aula-10-ciclo-de-vida-do-software-sdlc">Ciclo de Vida do Software (SDLC)</h3>
+<ol>
+<li><strong>Levantamento de Requisitos</strong>: Entender o que o cliente precisa. (A fase mais crítica!).</li>
+<li><strong>Análise e Design</strong>: Planejar como o sistema será construído (Arquitetura, Banco de Dados, UI).</li>
+<li><strong>Implementação (Codificação)</strong>: Escrever o código.</li>
+<li><strong>Testes</strong>: Verificar se o software faz o que deveria e encontrar bugs.</li>
+<li><strong>Implantação (Deploy)</strong>: Colocar o sistema em produção para o usuário.</li>
+<li><strong>Manutenção</strong>: Corrigir falhas e adicionar novas funcionalidades.</li>
+</ol>
+<h3 id="aulas-aula-10-modelos-de-processo">Modelos de Processo</h3>
+<ul>
+<li><strong>Cascata (Waterfall)</strong>: Modelo linear e sequencial. Uma fase só começa quando a anterior termina. Rígido.</li>
+<li><strong>Ágil (Agile)</strong>: Desenvolvimento iterativo e incremental. Entrega de valor contínua. Flexível a mudanças (Scrum, Kanban).</li>
+</ul>
+<h2 id="aulas-aula-10-dica">💡 Dica</h2>
+<p>"Se você falhar em planejar, está planejando falhar." A maioria dos projetos de software falha não por código ruim, mas por requisitos mal compreendidos.</p>
+<hr>
+<p><a href="#aulas-aula-11">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-11" heading-number="3.4.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-11-banco-de-dados">Aula 11 – Banco de Dados</h1>
+<h2 id="aulas-aula-11-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Compreender o conceito de Banco de Dados (BD) e SGBD.</li>
+<li>Entender a estrutura básica de Tabelas, Registros e Campos.</li>
+<li>Diferenciar Dados de Informação.</li>
+</ul>
+<h2 id="aulas-aula-11-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-11-dados-vs-informacao">Dados vs. Informação</h3>
+<ul>
+<li><strong>Dado</strong>: Fato bruto, sem contexto. (Ex: "25", "Vermelho").</li>
+<li><strong>Informação</strong>: Dado processado, organizado e com significado. (Ex: "Idade: 25 anos", "Cor do carro: Vermelho").</li>
+</ul>
+<h3 id="aulas-aula-11-o-que-e-um-banco-de-dados">O que é um Banco de Dados?</h3>
+<p>Uma coleção organizada de dados, geralmente armazenados eletronicamente.</p>
+<h3 id="aulas-aula-11-sgbd-sistema-gerenciador-de-banco-de-dados">SGBD (Sistema Gerenciador de Banco de Dados)</h3>
+<p>O software que permite criar, manter e controlar o acesso ao banco de dados (MySQL, PostgreSQL, Oracle, SQLite).</p>
+<h3 id="aulas-aula-11-estrutura-modelo-relacional">Estrutura (Modelo Relacional)</h3>
+<p>É o modelo mais comum, baseado em tabelas.</p>
+<ul>
+<li><strong>Tabela (Entidade)</strong>: Conjunto de dados sobre um tema (ex: Alunos).</li>
+<li><strong>Campo (Atributo/Coluna)</strong>: Uma característica (ex: Nome, Idade, Matrícula).</li>
+<li><strong>Registro (Tupla/Linha)</strong>: Uma instância única (ex: Aluno João, 20 anos, mat 123).</li>
+<li><strong>Chave Primária (PK)</strong>: Identificador único de um registro (ex: CPF, ID).</li>
+</ul>
+<h2 id="aulas-aula-11-exemplo">💡 Exemplo</h2>
+<p><strong>Tabela: Produtos</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID (PK)</th>
+<th>Nome</th>
+<th>Preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Notebook</td>
+<td>2500.00</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mouse</td>
+<td>50.00</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Teclado</td>
+<td>100.00</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="#aulas-aula-12">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-12" heading-number="3.4.4"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-12-tipos-de-midia-e-sistemas-multimidia">Aula 12 – Tipos de Mídia e Sistemas Multimídia</h1>
+<h2 id="aulas-aula-12-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Definir multimídia.</li>
+<li>Classificar tipos de mídia (estática vs. dinâmica).</li>
+<li>Entender a interação humano-computador através da multimídia.</li>
+</ul>
+<h2 id="aulas-aula-12-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-12-o-que-e-multimidia">O que é Multimídia?</h3>
+<p>É a combinação de diferentes tipos de conteúdo (texto, áudio, vídeo, animação, imagem) para transmitir informação ou entreter.
+Um sistema é considerado multimídia quando permite ao usuário navegar, interagir, criar e se comunicar com esse conteúdo.</p>
+<h3 id="aulas-aula-12-tipos-de-midia">Tipos de Mídia</h3>
+<ol>
+<li><strong>Mídia Estática (Discreta)</strong>: Não muda com o tempo.</li>
+<li>Texto, Imagem, Gráficos.</li>
+<li><strong>Mídia Dinâmica (Contínua)</strong>: Depende do tempo para existir.</li>
+<li>Áudio, Vídeo, Animação.</li>
+</ol>
+<h3 id="aulas-aula-12-hipermidia">Hipermídia</h3>
+<p>Quando a multimídia permite navegação não linear (links), chamamos de Hipermídia. A World Wide Web é o maior exemplo de sistema hipermídia.</p>
+<hr>
+<p><a href="#aulas-aula-13">Próxima Aula</a></p></body></html></section></section>
+                    <section class='print-page md-section' id='section-3-5' heading-number='3.5'>
+                        <h1>Módulo 4 – Software e Algoritmos<a class='headerlink' href='#section-3-5' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas-aula-13" heading-number="3.5.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-13-imagens-digitais-e-compressao">Aula 13 – Imagens Digitais e Compressão</h1>
+<h2 id="aulas-aula-13-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Entender como imagens são representadas (Pixels, RGB).</li>
+<li>Diferenciar imagem Vetorial de Bitmap (Raster).</li>
+<li>Compreender compactação (Lossy vs. Lossless).</li>
+</ul>
+<h2 id="aulas-aula-13-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-13-bitmap-vs-vetorial">Bitmap vs. Vetorial</h3>
+<ul>
+<li><strong>Bitmap (Raster)</strong>: Formada por uma grade de pixels.</li>
+<li>Vantagem: Riqueza de detalhes (Fotos).</li>
+<li>Desvantagem: Perde qualidade ao ampliar (fica "pixelada").</li>
+<li>
+<p>Formatos: JPG, PNG, GIF, BMP.</p>
+</li>
+<li>
+<p><strong>Vetorial</strong>: Formada por cálculos matemáticos (linhas, curvas, formas).</p>
+</li>
+<li>Vantagem: Não perde qualidade ao ampliar (Infinito zoom). Leve.</li>
+<li>Desvantagem: Difícil representar fotos realistas.</li>
+<li>Formatos: SVG, AI, CDR.</li>
+</ul>
+<h3 id="aulas-aula-13-cores-rgb">Cores (RGB)</h3>
+<p>Cada pixel em uma tela é formado por 3 subpixels: <strong>R</strong>ed (Vermelho), <strong>G</strong>reen (Verde) e <strong>B</strong>lue (Azul). Variando a intensidade de cada um (0-255), formamos mais de 16 milhões de cores.</p>
+<h3 id="aulas-aula-13-compressao">Compressão</h3>
+<ul>
+<li><strong>Lossless (Sem perda)</strong>: Reduz o tamanho sem perder nenhum dado. (Ex: PNG, ZIP). A imagem original é reconstruída perfeitamente.</li>
+<li><strong>Lossy (Com perda)</strong>: Descarta dados "menos importantes" que o olho humano não percebe bem, para reduzir muito o tamanho. (Ex: JPG, MP3). A imagem original nunca é recuperada 100%.</li>
+</ul>
+<hr>
+<p><a href="#aulas-aula-14">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-14" heading-number="3.5.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-14-audio-digital">Aula 14 – Áudio Digital</h1>
+<h2 id="aulas-aula-14-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Entender como o som analógico vira digital (Amostragem).</li>
+<li>Conhecer formatos de áudio.</li>
+</ul>
+<h2 id="aulas-aula-14-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-14-som-analogico-vs-digital">Som: Analógico vs. Digital</h3>
+<p>O som é uma onda mecânica (analógica). Para o computador entender, precisamos digitalizá-lo.</p>
+<ol>
+<li><strong>Amostragem (Sampling)</strong>: Medir a altura da onda sonora milhares de vezes por segundo (Hertz).</li>
+<li>CD Quality: 44.100 amostras por segundo (44.1 kHz).</li>
+<li><strong>Quantização</strong>: Atribuir um valor numérico (bits) para cada amostra.</li>
+</ol>
+<h3 id="aulas-aula-14-formatos-de-arquivo">Formatos de Arquivo</h3>
+<ul>
+<li><strong>WAV</strong>: Áudio bruto (sem compressão). Qualidade máxima, arquivo gigante.</li>
+<li><strong>MP3</strong>: Áudio comprimido (com perda - lossy). Remove frequências que o ouvido humano quase não escuta. Arquivo pequeno, boa qualidade.</li>
+<li><strong>FLAC</strong>: Áudio comprimido (sem perda - lossless). Qualidade de CD, arquivo médio.</li>
+<li><strong>MIDI</strong>: Não é áudio gravado! São instruções musicais (notas, duração, instrumento) para o computador tocar. Arquivo minúsculo.</li>
+</ul>
+<hr>
+<p><a href="#aulas-aula-15">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-15" heading-number="3.5.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-15-fundamentos-de-logica-e-comandos-basicos">Aula 15 – Fundamentos de Lógica e Comandos Básicos</h1>
+<h2 id="aulas-aula-15-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Compreender o que é um Algoritmo.</li>
+<li>Entender o fluxo de Entrada, Processamento e Saída.</li>
+<li>Conhecer ferramentas para desenhar lógica (Fluxogramas).</li>
+</ul>
+<h2 id="aulas-aula-15-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-15-o-que-e-um-algoritmo">O que é um Algoritmo?</h3>
+<p>É uma sequência finita de passos bem definidos para resolver um problema.
+Exemplo: Receita de bolo, trocar pneu, manual de instruções.</p>
+<h3 id="aulas-aula-15-componentes-de-um-programa">Componentes de um Programa</h3>
+<p>Todo programa de computador segue este ciclo básico:</p>
+<ol>
+<li><strong>Entrada (Input)</strong>: Dados que o programa recebe (Teclado, Arquivo, Sensor).</li>
+<li><strong>Processamento</strong>: O cálculo ou lógica aplicada aos dados.</li>
+<li><strong>Saída (Output)</strong>: O resultado mostrado ou salvo (Tela, Impressora, Arquivo).</li>
+</ol>
+<h3 id="aulas-aula-15-exemplo-em-pseudocodigo">Exemplo em Pseudocódigo</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-15-__codelineno-0-1"></a>INÍCIO
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-15-__codelineno-0-2"></a>    ESCREVA "Digite seu nome:"
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-15-__codelineno-0-3"></a>    LEIA nome
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-15-__codelineno-0-4"></a>    ESCREVA "Olá, " + nome
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-15-__codelineno-0-5"></a>FIM
+</span></code></pre></div>
+<h3 id="aulas-aula-15-variaveis">Variáveis</h3>
+<p>São espaços na memória para guardar dados temporariamente.
+Imagine uma caixa etiquetada onde você guarda um valor.</p>
+<hr>
+<p><a href="#aulas-aula-16">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-16" heading-number="3.5.4"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-16-estruturas-de-controle-e-tipos-estruturados">Aula 16 – Estruturas de Controle e Tipos Estruturados</h1>
+<h2 id="aulas-aula-16-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
+<ul>
+<li>Entender Estruturas de Decisão (Se/Senão).</li>
+<li>Entender Estruturas de Repetição (Loop).</li>
+<li>Introdução a Vetores (Listas).</li>
+</ul>
+<h2 id="aulas-aula-16-conteudo">📘 Conteúdo</h2>
+<h3 id="aulas-aula-16-estruturas-de-decisao-condicionais">Estruturas de Decisão (Condicionais)</h3>
+<p>Permitem que o programa escolha caminhos diferentes baseado em uma condição.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-16-__codelineno-0-1"></a>SE (nota &gt;= 7) ENTÃO
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-16-__codelineno-0-2"></a>    ESCREVA "Aprovado"
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-16-__codelineno-0-3"></a>SENÃO
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-16-__codelineno-0-4"></a>    ESCREVA "Reprovado"
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-16-__codelineno-0-5"></a>FIM_SE
+</span></code></pre></div>
+<h3 id="aulas-aula-16-estruturas-de-repeticao-loops">Estruturas de Repetição (Loops)</h3>
+<p>Permitem executar o mesmo bloco de código várias vezes.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#aulas-aula-16-__codelineno-1-1"></a>PARA i DE 1 ATÉ 10 FAÇA
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#aulas-aula-16-__codelineno-1-2"></a>    ESCREVA i
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#aulas-aula-16-__codelineno-1-3"></a>FIM_PARA
+</span></code></pre></div>
+<h3 id="aulas-aula-16-vetores-arrays">Vetores (Arrays)</h3>
+<p>Uma variável que guarda vários valores do mesmo tipo. Como uma lista de chamada.
+<code>notas = [8.5, 9.0, 7.5]</code></p>
+<h2 id="aulas-aula-16-conclusao-do-curso">📝 Conclusão do Curso</h2>
+<p>Chegamos ao fim da disciplina "Fundamentos da Computação".
+Vimos desde o bit (0 e 1) até a lógica que permite criar softwares complexos.
+O próximo passo é aprender uma linguagem de programação real (como Python, Java ou C)!</p>
+<hr>
+<p><a href="#.">Voltar ao Início</a>)</p></body></html></section></section></section>
+                    <section class='print-page md-section' id='section-4' heading-number='4'>
+                        <h1>Materiais<a class='headerlink' href='#section-4' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="materiais" heading-number="4.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="materiais">Materiais</h1>
+<p>Bem-vindo à seção de materiais complementares do curso. Aqui você encontra recursos adicionais para apoiar seus estudos.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <a href="#slides"><strong>Slides</strong></a></p>
+<ul>
+<li>Acesse os slides de todas as aulas para revisão.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <a href="#exercicios"><strong>Exercícios</strong></a></p>
+<ul>
+<li>Pratique com listas de exercícios para cada módulo.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <a href="#quizzes"><strong>Quizzes</strong></a></p>
+<ul>
+<li>Teste seus conhecimentos com quizzes interativos.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> <a href="#projetos"><strong>Projetos</strong></a></p>
+<ul>
+<li>Desenvolva projetos práticos para aplicar o que aprendeu.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"></path></svg></span> <a href="#setups"><strong>Setup</strong></a></p>
+<ul>
+<li>Guias de instalação e configuração do ambiente.</li>
+</ul>
+</li>
+</ul>
+</div></body></html></section>
+                    <section class='print-page md-section' id='section-4-2' heading-number='4.2'>
+                        <h1>Slides<a class='headerlink' href='#section-4-2' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="slides" heading-number="4.2.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="slides-das-aulas">Slides das Aulas</h1>
+<p>Aqui você encontra os slides apresentados em cada aula, prontos para revisão ou apresentação.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 1 – Conceitos Básicos</strong></p>
+<ul>
+<li><a href="#slides-slide-01">Slide 01 - Introdução à Computação</a></li>
+<li><a href="#slides-slide-02">Slide 02 - Conversão Decimal &gt; Binário</a></li>
+<li><a href="#slides-slide-03">Slide 03 - Conversão Binário &gt; Decimal</a></li>
+<li><a href="#slides-slide-04">Slide 04 - Sistema Octal</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 2 – Hexadecimal e Aritmética</strong></p>
+<ul>
+<li><a href="#slides-slide-05">Slide 05 - Conversão Hexadecimal</a></li>
+<li><a href="#slides-slide-06">Slide 06 - Binário e Hexadecimal</a></li>
+<li><a href="#slides-slide-07">Slide 07 - Aritmética Binária</a></li>
+<li><a href="#slides-slide-08">Slide 08 - Representação de Dados</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 3 – Lógica Digital</strong></p>
+<ul>
+<li><a href="#slides-slide-09">Slide 09 - Lógica Booleana</a></li>
+<li><a href="#slides-slide-10">Slide 10 - Tabelas Verdade</a></li>
+<li><a href="#slides-slide-11">Slide 11 - Circuitos Lógicos</a></li>
+<li><a href="#slides-slide-12">Slide 12 - Arquitetura de Computadores</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 4 – Software e Algoritmos</strong></p>
+<ul>
+<li><a href="#slides-slide-13">Slide 13 - Memória e Armazenamento</a></li>
+<li><a href="#slides-slide-14">Slide 14 - Sistemas Operacionais</a></li>
+<li><a href="#slides-slide-15">Slide 15 - Algoritmos e Fluxogramas</a></li>
+<li><a href="#slides-slide-16">Slide 16 - Introdução à Programação</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="slides-como-usar"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Como Usar</h2>
+<ul>
+<li>Os slides usam <strong>RevealJS</strong> para interatividade.</li>
+<li>Clique nos links acima para abrir em tela cheia.</li>
+<li>Use as setas do teclado (⬅️ ➡️) para navegar.</li>
+<li>Pressione <code>F</code> para entrar em modo tela cheia.</li>
+</ul></body></html></section></section>
+                    <section class='print-page md-section' id='section-4-3' heading-number='4.3'>
+                        <h1>Exercícios<a class='headerlink' href='#section-4-3' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="exercicios" heading-number="4.3.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="exercicios">Exercícios</h1>
+<p>Bem-vindo à seção de exercícios! Aqui você encontra listas de exercícios práticos para cada aula do curso.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 1 – Conceitos Básicos</strong></p>
+<ul>
+<li><a href="#exercicios-exercicio-01">Exercício 01 - Introdução</a></li>
+<li><a href="#exercicios-exercicio-02">Exercício 02 - Dec2Bin</a></li>
+<li><a href="#exercicios-exercicio-03">Exercício 03 - Bin2Dec</a></li>
+<li><a href="#exercicios-exercicio-04">Exercício 04 - Octal</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 2 – Hexadecimal e Aritmética</strong></p>
+<ul>
+<li><a href="#exercicios-exercicio-05">Exercício 05 - Hexadecimal</a></li>
+<li><a href="#exercicios-exercicio-06">Exercício 06 - Bin2Hex</a></li>
+<li><a href="#exercicios-exercicio-07">Exercício 07 - Aritmética</a></li>
+<li><a href="#exercicios-exercicio-08">Exercício 08 - Dados</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 3 – Lógica Digital</strong></p>
+<ul>
+<li><a href="#exercicios-exercicio-09">Exercício 09 - Booleana</a></li>
+<li><a href="#exercicios-exercicio-10">Exercício 10 - Tabelas Verdade</a></li>
+<li><a href="#exercicios-exercicio-11">Exercício 11 - Circuitos</a></li>
+<li><a href="#exercicios-exercicio-12">Exercício 12 - Arquitetura</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 4 – Software e Algoritmos</strong></p>
+<ul>
+<li><a href="#exercicios-exercicio-13">Exercício 13 - Memória</a></li>
+<li><a href="#exercicios-exercicio-14">Exercício 14 - SO</a></li>
+<li><a href="#exercicios-exercicio-15">Exercício 15 - Algoritmos</a></li>
+<li><a href="#exercicios-exercicio-16">Exercício 16 - Programação</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="exercicios-dicas"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"></path></svg></span> Dicas</h2>
+<ul>
+<li>Tente resolver os exercícios sem consultar a solução</li>
+<li>Pratique regularmente para fixar o conteúdo</li>
+<li>Não tenha medo de errar, faz parte do aprendizado!</li>
+</ul></body></html></section></section>
+                    <section class='print-page md-section' id='section-4-4' heading-number='4.4'>
+                        <h1>Quizzes<a class='headerlink' href='#section-4-4' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="quizzes" heading-number="4.4.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="quizzes-interativos">Quizzes Interativos</h1>
+<p>Teste seus conhecimentos com quizzes interativos para cada aula!</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 1 – Conceitos Básicos</strong></p>
+<ul>
+<li><a href="#quizzes-quiz-01">Quiz 01 - Introdução</a></li>
+<li><a href="#quizzes-quiz-02">Quiz 02 - Dec2Bin</a></li>
+<li><a href="#quizzes-quiz-03">Quiz 03 - Bin2Dec</a></li>
+<li><a href="#quizzes-quiz-04">Quiz 04 - Octal</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 2 – Hexadecimal e Aritmética</strong></p>
+<ul>
+<li><a href="#quizzes-quiz-05">Quiz 05 - Hexadecimal</a></li>
+<li><a href="#quizzes-quiz-06">Quiz 06 - Bin2Hex</a></li>
+<li><a href="#quizzes-quiz-07">Quiz 07 - Aritmética</a></li>
+<li><a href="#quizzes-quiz-08">Quiz 08 - Dados</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 3 – Lógica Digital</strong></p>
+<ul>
+<li><a href="#quizzes-quiz-09">Quiz 09 - Booleana</a></li>
+<li><a href="#quizzes-quiz-10">Quiz 10 - Tabelas Verdade</a></li>
+<li><a href="#quizzes-quiz-11">Quiz 11 - Circuitos</a></li>
+<li><a href="#quizzes-quiz-12">Quiz 12 - Arquitetura</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 4 – Software e Algoritmos</strong></p>
+<ul>
+<li><a href="#quizzes-quiz-13">Quiz 13 - Memória</a></li>
+<li><a href="#quizzes-quiz-14">Quiz 14 - SO</a></li>
+<li><a href="#quizzes-quiz-15">Quiz 15 - Algoritmos</a></li>
+<li><a href="#quizzes-quiz-16">Quiz 16 - Programação</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="quizzes-como-usar">🎯 Como Usar</h2>
+<ul>
+<li>Responda todas as perguntas antes de verificar o resultado</li>
+<li>Use os quizzes para revisar o conteúdo das aulas</li>
+<li>Refaça os quizzes até acertar 100%!</li>
+</ul></body></html></section></section>
+                    <section class='print-page md-section' id='section-4-5' heading-number='4.5'>
+                        <h1>Projetos<a class='headerlink' href='#section-4-5' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="projetos" heading-number="4.5.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="projetos-praticos">Projetos Práticos</h1>
+<p>Aprenda Git criando um projeto real do zero até a publicação!</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 1 – Conceitos Básicos</strong></p>
+<ul>
+<li><a href="#projetos-projeto-01">Projeto 01 - História Computação</a></li>
+<li><a href="#projetos-projeto-02">Projeto 02 - Conversor Binário</a></li>
+<li><a href="#projetos-projeto-03">Projeto 03 - Calculadora Dec/Bin</a></li>
+<li><a href="#projetos-projeto-04">Projeto 04 - Sistema Octal</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 2 – Hexadecimal e Aritmética</strong></p>
+<ul>
+<li><a href="#projetos-projeto-05">Projeto 05 - Conversor Hex</a></li>
+<li><a href="#projetos-projeto-06">Projeto 06 - Editor Hex</a></li>
+<li><a href="#projetos-projeto-07">Projeto 07 - Calculadora Binária</a></li>
+<li><a href="#projetos-projeto-08">Projeto 08 - Tabela ASCII</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 3 – Lógica Digital</strong></p>
+<ul>
+<li><a href="#projetos-projeto-09">Projeto 09 - Simulador Lógico</a></li>
+<li><a href="#projetos-projeto-10">Projeto 10 - Validador Verdade</a></li>
+<li><a href="#projetos-projeto-11">Projeto 11 - Somador Lógico</a></li>
+<li><a href="#projetos-projeto-12">Projeto 12 - CPU Simples</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 4 – Software e Algoritmos</strong></p>
+<ul>
+<li><a href="#projetos-projeto-13">Projeto 13 - Gerenciador Memória</a></li>
+<li><a href="#projetos-projeto-14">Projeto 14 - Mini SO</a></li>
+<li><a href="#projetos-projeto-15">Projeto 15 - Fluxograma Auto</a></li>
+<li><a href="#projetos-projeto-16">Projeto 16 - Primeiro Programa</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="projetos-sobre-o-projeto-do-curso">🚀 Sobre o Projeto do Curso</h2>
+<p>Neste curso, você não fará projetos aleatórios. Você construirá, passo a passo, seu <strong>Portfólio Profissional</strong> hospedado no GitHub Pages. Cada aula adiciona uma nova camada de conhecimento e funcionalidade ao seu portfólio.</p></body></html></section></section>
+                    <section class='print-page md-section' id='section-4-6' heading-number='4.6'>
+                        <h1>Configuração<a class='headerlink' href='#section-4-6' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="setups" heading-number="4.6.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="configuracao-do-ambiente">Configuração do Ambiente</h1>
+<p>Bem-vindo à seção de configuração! Aqui você encontra guias para instalar e configurar o Git no seu sistema.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 12V6.75l6-1.32v6.48zm17-9v8.75l-10 .15V5.21zM3 13l6 .09v6.81l-6-1.15zm17 .25V22l-10-1.91V13.1z"></path></svg></span> <strong>Windows</strong></p>
+<ul>
+<li><a href="#setups-setup-01">Setup Windows</a></li>
+<li>Instalação do Git</li>
+<li>Git Bash</li>
+<li>Configuração de SSH (Opcional)</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M14.62 8.35c-.42.28-1.75 1.04-1.95 1.19-.39.31-.75.29-1.14-.01-.2-.16-1.53-.92-1.95-1.19-.48-.31-.45-.7.08-.92 1.64-.69 3.28-.64 4.91.03.49.21.51.6.05.9m7.22 7.28c-.93-2.09-2.2-3.99-3.84-5.66a4.3 4.3 0 0 1-1.06-1.88c-.1-.33-.17-.67-.24-1.01-.2-.88-.29-1.78-.7-2.61-.73-1.58-2-2.4-3.84-2.47-1.81.05-3.16.81-3.95 2.4-.21.43-.36.88-.46 1.34-.17.76-.32 1.55-.5 2.32-.15.65-.45 1.21-.96 1.71-1.61 1.57-2.9 3.37-3.88 5.35-.14.29-.28.58-.37.88-.19.66.29 1.12.99.96.44-.09.88-.18 1.3-.31.41-.15.57-.05.67.35.65 2.15 2.07 3.66 4.24 4.5 4.12 1.56 8.93-.66 9.97-4.58.07-.27.17-.37.47-.27.46.14.93.24 1.4.35.49.09.85-.16.92-.64.03-.26-.06-.49-.16-.73"></path></svg></span> <strong>Linux</strong></p>
+<ul>
+<li><a href="#setups-setup-02">Setup Linux</a></li>
+<li>Instalação via apt/dnf</li>
+<li>Configuração de Terminal</li>
+<li>Credenciais</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="setups-proximos-passos">📋 Próximos Passos</h2>
+<p>Após configurar seu ambiente:</p>
+<ol>
+<li>✅ <strong>Teste a instalação</strong>: <code>git --version</code></li>
+<li>📚 <strong>Comece as aulas</strong>: <a href="#aulas-aula-01">Aula 01</a></li>
+<li>🚀 <strong>Configure sua identidade</strong>: <code>git config --global user.name</code></li>
+</ol></body></html></section></section></section><section class="print-page" id="print_page" heading-number="5"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="versao-para-impressao">Versão para Impressão</h1>
+<p>Esta página foi gerada automaticamente para impressão.</p></body></html></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
+            
+                .print-site-enumerate-headings #index h3:before { content: '1.' counter(counter-index-2) '.' counter(counter-index-3) ' ' }
+                .print-site-enumerate-headings #index h3 {  counter-increment: counter-index-3 }
+            
+.print-site-enumerate-headings #sobre > h1:before { content: '2 ' }
+
+                .print-site-enumerate-headings #sobre h2:before { content: '2.' counter(counter-sobre-2) ' ' }
+                .print-site-enumerate-headings #sobre h2 {  counter-reset: counter-sobre-3 ;  counter-increment: counter-sobre-2 }
+            
+                .print-site-enumerate-headings #sobre h3:before { content: '2.' counter(counter-sobre-2) '.' counter(counter-sobre-3) ' ' }
+                .print-site-enumerate-headings #sobre h3 {  counter-increment: counter-sobre-3 }
+            
+.print-site-enumerate-headings #section-3 > h1:before { content: '3 ' }
+.print-site-enumerate-headings #aulas > h1:before { content: '3.1 ' }
+
+                .print-site-enumerate-headings #aulas h2:before { content: '3.1.' counter(counter-aulas-2) ' ' }
+                .print-site-enumerate-headings #aulas h2 {  counter-increment: counter-aulas-2 }
+            
+.print-site-enumerate-headings #section-3-2 > h1:before { content: '3.2 ' }
+.print-site-enumerate-headings #aulas-aula-01 > h1:before { content: '3.2.1 ' }
+
+.print-site-enumerate-headings #aulas-aula-02 > h1:before { content: '3.2.2 ' }
+
+.print-site-enumerate-headings #aulas-aula-03 > h1:before { content: '3.2.3 ' }
+
+.print-site-enumerate-headings #aulas-aula-04 > h1:before { content: '3.2.4 ' }
+
+.print-site-enumerate-headings #section-3-3 > h1:before { content: '3.3 ' }
+.print-site-enumerate-headings #aulas-aula-05 > h1:before { content: '3.3.1 ' }
+
+.print-site-enumerate-headings #aulas-aula-06 > h1:before { content: '3.3.2 ' }
+
+.print-site-enumerate-headings #aulas-aula-07 > h1:before { content: '3.3.3 ' }
+
+.print-site-enumerate-headings #aulas-aula-08 > h1:before { content: '3.3.4 ' }
+
+.print-site-enumerate-headings #section-3-4 > h1:before { content: '3.4 ' }
+.print-site-enumerate-headings #aulas-aula-09 > h1:before { content: '3.4.1 ' }
+
+.print-site-enumerate-headings #aulas-aula-10 > h1:before { content: '3.4.2 ' }
+
+.print-site-enumerate-headings #aulas-aula-11 > h1:before { content: '3.4.3 ' }
+
+.print-site-enumerate-headings #aulas-aula-12 > h1:before { content: '3.4.4 ' }
+
+.print-site-enumerate-headings #section-3-5 > h1:before { content: '3.5 ' }
+.print-site-enumerate-headings #aulas-aula-13 > h1:before { content: '3.5.1 ' }
+
+.print-site-enumerate-headings #aulas-aula-14 > h1:before { content: '3.5.2 ' }
+
+.print-site-enumerate-headings #aulas-aula-15 > h1:before { content: '3.5.3 ' }
+
+.print-site-enumerate-headings #aulas-aula-16 > h1:before { content: '3.5.4 ' }
+
+.print-site-enumerate-headings #section-4 > h1:before { content: '4 ' }
+.print-site-enumerate-headings #materiais > h1:before { content: '4.1 ' }
+
+                .print-site-enumerate-headings #materiais h2:before { content: '4.1.' counter(counter-materiais-2) ' ' }
+                .print-site-enumerate-headings #materiais h2 {  counter-increment: counter-materiais-2 }
+            
+.print-site-enumerate-headings #section-4-2 > h1:before { content: '4.2 ' }
+.print-site-enumerate-headings #slides > h1:before { content: '4.2.1 ' }
+
+.print-site-enumerate-headings #slides-slide-01 > h1:before { content: '4.2.2 ' }
+.print-site-enumerate-headings #slides-slide-02 > h1:before { content: '4.2.3 ' }
+.print-site-enumerate-headings #slides-slide-03 > h1:before { content: '4.2.4 ' }
+.print-site-enumerate-headings #slides-slide-04 > h1:before { content: '4.2.5 ' }
+.print-site-enumerate-headings #slides-slide-05 > h1:before { content: '4.2.6 ' }
+.print-site-enumerate-headings #slides-slide-06 > h1:before { content: '4.2.7 ' }
+.print-site-enumerate-headings #slides-slide-07 > h1:before { content: '4.2.8 ' }
+.print-site-enumerate-headings #slides-slide-08 > h1:before { content: '4.2.9 ' }
+.print-site-enumerate-headings #slides-slide-09 > h1:before { content: '4.2.10 ' }
+.print-site-enumerate-headings #slides-slide-10 > h1:before { content: '4.2.11 ' }
+.print-site-enumerate-headings #slides-slide-11 > h1:before { content: '4.2.12 ' }
+.print-site-enumerate-headings #slides-slide-12 > h1:before { content: '4.2.13 ' }
+.print-site-enumerate-headings #slides-slide-13 > h1:before { content: '4.2.14 ' }
+.print-site-enumerate-headings #slides-slide-14 > h1:before { content: '4.2.15 ' }
+.print-site-enumerate-headings #slides-slide-15 > h1:before { content: '4.2.16 ' }
+.print-site-enumerate-headings #slides-slide-16 > h1:before { content: '4.2.17 ' }
+.print-site-enumerate-headings #section-4-3 > h1:before { content: '4.3 ' }
+.print-site-enumerate-headings #exercicios > h1:before { content: '4.3.1 ' }
+
+.print-site-enumerate-headings #section-4-4 > h1:before { content: '4.4 ' }
+.print-site-enumerate-headings #quizzes > h1:before { content: '4.4.1 ' }
+
+.print-site-enumerate-headings #section-4-5 > h1:before { content: '4.5 ' }
+.print-site-enumerate-headings #projetos > h1:before { content: '4.5.1 ' }
+
+.print-site-enumerate-headings #section-4-6 > h1:before { content: '4.6 ' }
+.print-site-enumerate-headings #setups > h1:before { content: '4.6.1 ' }
+
+.print-site-enumerate-headings #print_page > h1:before { content: '5 ' }
+
+                .print-site-enumerate-headings #print_page h2:before { content: '5.' counter(counter-print_page-2) ' ' }
+                .print-site-enumerate-headings #print_page h2 {  counter-reset: counter-print_page-3 ;  counter-increment: counter-print_page-2 }
+            
+                .print-site-enumerate-headings #print_page h3:before { content: '5.' counter(counter-print_page-2) '.' counter(counter-print_page-3) ' ' }
+                .print-site-enumerate-headings #print_page h3 {  counter-increment: counter-print_page-3 }
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Ricardo. Feito com <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ricardotecpro" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ricardotecpro" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://ricardotecpro.github.io/" target="_blank" rel="noopener" title="ricardotecpro.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "/ads_mod_01_fundamentos_da_computacao/estavel", "features": ["navigation.tracking", "navigation.tabs", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.prune", "toc.follow", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"default": "estavel", "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../assets/js/quiz.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/js/mermaid-init.js"></script>
+      
+        <script src="../assets/js/custom_termynal.js"></script>
+      
+        <script src="../termynal.js"></script>
+      
+    
+  </body>
+</html>
