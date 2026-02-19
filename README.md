@@ -1,6 +1,6 @@
-# 💻 Fundamentos da Computação - Curso Completo
+# 💻 Fundamentos da Computação - Curso
 
-Curso completo de Fundamentos da Computação, abordando desde bases numéricas até introdução a algoritmos e lógica.
+Curso de Fundamentos da Computação, abordando desde bases numéricas até introdução a algoritmos e lógica.
 
 ## 🎯 Sobre o Curso
 
