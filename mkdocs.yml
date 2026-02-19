@@ -25,15 +25,15 @@ theme:
   palette:
     # Light Mode (Default)
     - scheme: default
-      primary: brown
-      accent: brown
+      primary: amber
+      accent: amber
       toggle:
         icon: material/weather-sunny
         name: Mudar para modo escuro
     # Dark Mode
     - scheme: slate
-      primary: brown
-      accent: brown
+      primary: amber
+      accent: amber
       toggle:
         icon: material/weather-night
         name: Mudar para modo claro
