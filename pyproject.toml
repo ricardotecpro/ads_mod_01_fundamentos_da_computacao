@@ -1,9 +1,9 @@
 [project]
 name = "ads_mod_01_fundamentos_da_computacao"
 version = "1.0.0"
-description = "Fundamentos da Computação"
+description = "Curso de Fundamentos da Computação"
 authors = [
-    {name = "Ricardo", email = "ricardo@example.com"}
+    {name = "Ricardo Tec Pro", email = "ricardotecpro@hotmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
