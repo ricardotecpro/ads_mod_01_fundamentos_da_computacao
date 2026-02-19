@@ -1,7 +1,7 @@
 [project]
-name = "ads-spec-backend-com-python"
+name = "Fundamentos da Computação"
 version = "1.0.0"
-description = "Curso de Python - Backend"
+description = "Fundamentos da Computação"
 authors = [
     {name = "Ricardo", email = "ricardo@example.com"}
 ]
