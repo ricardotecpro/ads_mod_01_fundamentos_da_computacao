@@ -1,125 +1,122 @@
 # Sobre o Curso
 
-## 🎓 Git e GitHub - Do Zero ao Profissional
+## 🎓 Fundamentos da Computação - A Base para sua Carreira em TI
 
-Este é um curso completo e estruturado de Versionamento de Código com Git e GitHub. Desenvolvido para levar você do básico ao avançado, com uma abordagem prática e focada nas necessidades reais do mercado de desenvolvimento de software.
+Este curso foi desenvolvido para levar você do zero absoluto até a compreensão clara de como a tecnologia funciona. Através de 16 aulas estruturadas, você dominará desde a lógica binária até a construção dos primeiros algoritmos, criando uma base sólida para qualquer linguagem de programação.
 
 ## 🎯 Objetivos do Curso
 
 <div class="grid cards" markdown>
 
--   :material-target: **Dominar Git**
+-   :material-numeric-binary: **Bases Numéricas**
     
     ---
     
-    Aprender os comandos fundamentais, fluxo de trabalho local e como o Git funciona por baixo dos panos.
+    Compreender como os computadores representam números e dados usando binário, octal e hexadecimal.
 
--   :material-code-braces: **GitHub Profissional**
+-   :material-cpu: **Hardware e Arquitetura**
     
     ---
     
-    Utilizar o GitHub não apenas como repositório, mas como plataforma de colaboração, gestão de projetos e portfólio.
+    Entender o papel da CPU, memória e periféricos, e como eles se comunicam através de barramentos.
 
--   :material-api: **Colaboração**
+-   :material-gate: **Lógica Digital**
     
     ---
     
-    Trabalhar em equipe utilizando Branches, Pull Requests, Code Reviews e resolvendo conflitos de forma eficiente.
+    Aprender sobre portas lógicas (AND, OR, NOT) e como construir circuitos que realizam cálculos.
 
--   :material-test-tube: **Boas Práticas**
+-   :material-xml: **Sistemas e Algoritmos**
     
     ---
     
-    Criar um histórico de commits limpo, escrever mensagens significativas e manter repositórios organizados.
+    Dominar a lógica de programação, fluxogramas e a estrutura básica de um sistema operacional.
 
 </div>
 
 ## 📚 O Que Você Vai Aprender
 
 ### Módulo 1 – Conceitos Básicos
-- Instalação e configuração do Git
-- Ciclo de vida dos arquivos (Tracked to Committed)
-- Histórico e navegação no tempo
-- Ramificação (Branching) e Fusão (Merging)
+- Introdução à Computação
+- Conversão Decimal/Binário
+- Conversão Binário/Decimal
+- Sistema Octal
 
-### Módulo 2 – Trabalhando com GitHub
-- Repositórios Remotos
-- Sincronização (Push/Pull)
-- Resolução de Conflitos
-- Pull Requests e Code Review
+### Módulo 2 – Hexadecimal e Aritmética
+- Sistema Hexadecimal e Conversões
+- Aritmética Binária (Soma e Subtração)
+- Representação de Dados (ASCII, UTF-8)
 
-### Módulo 3 – Fluxos e Organização
-- GitHub Flow
-- Issues e Projects (Kanban)
-- Markdown para documentação
-- README profissional
+### Módulo 3 – Lógica Digital
+- Lógica Booleana e Operadores
+- Tabelas Verdade
+- Circuitos Lógicos e Somadores
+- Arquitetura de Von Neumann
 
-### Módulo 4 – Colaboração e Carreira
-- Forks e contribuição Open Source
-- GitHub Pages para hospedagem
-- Tratamento de erros comuns (Detached HEAD, etc.)
-- Construção de portfólio
+### Módulo 4 – Software e Algoritmos
+- Hierarquia de Memória e Armazenamento
+- Funcionamento de Sistemas Operacionais
+- Algoritmos e Fluxogramas
+- Estruturas de Programação (Se, Enquanto, Para)
 
 ## 🛠️ Metodologia
 
 <div class="grid cards" markdown>
 
--   :material-book-open-variant: **Aulas Teóricas**
+-   :material-book-open-variant: **Aulas Didáticas**
     
     ---
     
-    Conteúdo explicativo com exemplos práticos e slides interativos.
+    Conteúdo visual com slides interativos em Reveal.js.
 
--   :material-code-tags: **Exercícios Práticos**
+-   :material-code-tags: **Exercícios Progressivos**
     
     ---
     
-    Listas de exercícios para fixar o conteúdo de cada aula.
+    Listas de exercícios com níveis de dificuldade variados.
 
--   :material-rocket-launch: **Projetos Reais**
+-   :material-rocket-launch: **Projetos Práticos**
     
     ---
     
-    Desenvolva projetos práticos aplicando os conceitos aprendidos.
+    Construa simuladores e conversores passo a passo.
 
 -   :material-head-question: **Quizzes Interativos**
     
     ---
     
-    Teste seus conhecimentos com quizzes ao final de cada módulo.
+    Valide seu aprendizado com quizzes auto-corrigíveis.
 
 </div>
 
 ## 👨‍🎓 Para Quem é Este Curso
 
-- **Iniciantes** que nunca usaram controle de versão
-- **Desenvolvedores** que usam Git apenas no básico ("add, commit, push")
-- **Estudantes** que precisam organizar seus trabalhos acadêmicos
-- **Profissionais** que querem melhorar seu fluxo de trabalho em equipe
+- **Iniciantes** que querem entrar na área de TI sem "pular etapas".
+- **Estudantes de ADS e Ciência da Computação** que precisam reforçar a base.
+- **Entusiastas** que têm curiosidade sobre como os computadores pensam.
+- **Transição de carreira**: profissionais de outras áreas buscando fundamentos sólidos.
 
 ## 📋 Pré-requisitos
 
-- Computador com Windows, Linux ou macOS
-- Instalação do Git (coberta no curso)
-- Conta no GitHub (gratuita)
-- **Não é necessário conhecimento prévio de programação!**
+- **Zero conhecimento prévio** requerido.
+- Curiosidade e vontade de aprender.
+- Acesso a um computador para os exercícios práticos.
 
 ## 🎖️ O Que Você Receberá
 
-- ✅ 16 aulas completas e estruturadas
-- ✅ Slides interativos para todas as aulas
-- ✅ Exercícios práticos com soluções
-- ✅ Projetos reais para portfólio
-- ✅ Quizzes para autoavaliação
-- ✅ Guias de configuração de ambiente
+- ✅ 16 aulas completas e atualizadas.
+- ✅ Slides técnicos interativos.
+- ✅ Listas de exercícios com gabarito sugerido.
+- ✅ Projetos práticos para seu portfólio.
+- ✅ Ambiente de aprendizado moderno e rápido.
 
 ## 🚀 Comece Agora
 
-Pronto para dominar o Git?
+Pronto para descobrir o que acontece dentro do processador?
 
 [:material-rocket: Ir para Aula 01](aulas/aula-01.md){ .md-button .md-button--primary }
 [:material-cog: Configurar Ambiente](setups/index.md){ .md-button }
 
 ---
 
-**Dúvidas?** Entre em contato ou acesse a [documentação completa](materiais.md).
+**Dúvidas?** Consulte os [materiais complementares](materiais.md).

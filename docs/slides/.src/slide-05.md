@@ -1,51 +1,207 @@
-# Roteiro de Slides - Aula 05
+# 🔢 Aula 05: Sistema Hexadecimal (Base 16)
+## Fundamentos da Computação
 
 ---
 
-## O Temido "Conflict"
+## 🎯 Objetivos de Hoje
 
-- Acontece nas melhores famílias (e equipes).
-- Não é um erro grave, é apenas uma **pergunta do Git**:
-  - "Ei, vocês dois mexeram na mesma linha. Qual eu devo manter?"
-
----
-
-## Anatomia do Conflito
-
-```text
-<<<<<<< HEAD
-Eu gosto de café.
-=======
-Eu gosto de chá.
->>>>>>> nova-branch
-```
-- **HEAD (Topo)**: Onde você estava (branch atual).
-- **Separator (===)**: A fronteira.
-- **Botton (>>>)**: O que está chegando (branch vindo do merge).
+- Compreender a base 16 e o uso de letras A-F { .fragment }
+- Aprender o agrupamento de bits em quartetos (Nibbles) { .fragment }
+- Converter entre Decimal, Binário e Hexadecimal { .fragment }
+- Ver aplicações reais (Cores CSS, Endereços de Memória) { .fragment }
 
 ---
 
-## Como Resolver?
+## 🔄 Revisão: Por que mais uma base?
 
-1. **Mantenha a Calma**.
-2. Abra o arquivo em um editor de texto.
-3. Escolha: Cafe? Chá? Ou "Eu gosto de café e chá"?
-4. **Apague os marcadores**. O arquivo final deve ser código limpo.
-5. Salve.
-6. `git add arquivo` (Diz que está pronto).
-7. `git commit` (Finaliza).
+- Binário é muito longo: `11001010` { .fragment }
+- Octal agrupa de 3 em 3. { .fragment }
+- **Hexadecimal** agrupa de 4 em 4. { .fragment }
+
+Como a maioria dos computadores modernos usa múltiplos de 8 bits (Bytes), o Hexadecimal é perfeito! { .fragment }
 
 ---
 
-## Como Evitar?
+## 🧩 Os 16 Símbolos
 
-- Commits pequenos e frequentes.
-- Puxe as mudanças dos colegas (`git pull`) com frequência.
-- Evite arquivos gigantes ("God Classes").
-- Comunique-se: "Ei, vou mexer no Header, ok?"
+Usamos dígitos e as primeiras letras do alfabeto:
+
+**0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F** { .fragment }
+
+- **A** = 10 { .fragment }
+- **B** = 11 { .fragment }
+- **C** = 12 { .fragment }
+- **D** = 13 { .fragment }
+- **E** = 14 { .fragment }
+- **F** = 15 { .fragment }
 
 ---
 
-## Resumo
+## 🤝 A Relação Mágica: 2 e 16
 
-Conflito não é bug. É o Git protegendo seu código de ser sobrescrito sem querer.
+Cada um dígito Hex representa exatamente **4 bits**.
+
+- 4 bits = 1 **Nibble** (Metade de um Byte). { .fragment }
+- Isso significa que 2 dígitos Hex representam **1 Byte** inteiro. { .fragment }
+- Ex: `1111 1111` binário = `FF` em hex. { .fragment }
+
+---
+
+## 📊 Tabela de Equivalência (0-7)
+
+| Decimal | Binário | Hex |
+| :--- | :--- | :--- |
+| 0 | 0000 | 0 |
+| 1 | 0001 | 1 |
+| 2 | 0010 | 2 |
+| 3 | 0011 | 3 |
+| 4 | 0100 | 4 |
+| 5 | 0101 | 5 |
+| 6 | 0110 | 6 |
+| 7 | 0111 | 7 |
+
+---
+
+## 📊 Tabela de Equivalência (8-F)
+
+| Decimal | Binário | Hex |
+| :--- | :--- | :--- |
+| 8 | 1000 | 8 |
+| 9 | 1001 | 9 |
+| 10 | 1010 | A |
+| 11 | 1011 | B |
+| 12 | 1100 | C |
+| 13 | 1101 | D |
+| 14 | 1110 | E |
+| 15 | 1111 | F |
+
+---
+
+## 🛠️ Método: Binário para Hex
+
+1. Separe o binário em grupos de **4 bits** (da direita para a esquerda). { .fragment }
+2. Converta cada quarteto usando a tabela. { .fragment }
+
+Exemplo: `11011010` { .fragment }
+- `1101` | `1010` { .fragment }
+- $D$ | $A$ { .fragment }
+- Resultado: **DA₁₆** { .fragment }
+
+---
+
+## ⚠️ Preenchimento com Zeros
+
+Se sobrar bits à esquerda, complete o quarteto com zeros.
+
+Exemplo: `10111` { .fragment }
+- `0001` | `0111` { .fragment }
+- $1$ | $7$ { .fragment }
+- Resultado: **17₁₆** { .fragment }
+
+---
+
+## 🔄 Método: Hex para Binário
+
+Cada dígito Hex vira exatamente 4 bits. **Nunca menos que 4!**
+
+Exemplo: $B3₁₆$ { .fragment }
+- $B \rightarrow 1011$ { .fragment }
+- $3 \rightarrow 0011$ (não apenas `11`) { .fragment }
+- Resultado: **10110011** { .fragment }
+
+---
+
+## 🔢 Hexadecimal para Decimal
+
+Usamos a soma de potências de **16**.
+
+Exemplo: $1A₁₆$ { .fragment }
+- $1 \times 16^1 + A \times 16^0$ { .fragment }
+- $16 + 10 = 26_{10}$ { .fragment }
+
+---
+
+## 📏 Pesos da Base 16
+
+| Posição | $16^2$ | $16^1$ | $16^0$ |
+| :--- | :--- | :--- | :--- |
+| Valor | 256 | 16 | 1 |
+
+$FF₁₆ = 15 \times 16 + 15 = 240 + 15 = 255_{10}$ { .fragment }
+
+---
+
+## ➗ Decimal para Hexadecimal
+
+Divisões sucessivas por **16**.
+
+Exemplo: $157_{10}$ { .fragment }
+- $157 \div 16 = 9$ (Resto **13**) { .fragment }
+- 13 no Hexadecimal é **D**. { .fragment }
+- $9 \div 16 = 0$ (Resto **9**) { .fragment }
+
+Resultado: **9D₁₆** { .fragment }
+
+---
+
+## 🎨 Aplicação Real: Cores CSS
+
+As cores na web são representadas por 3 canais (RGB) em Hexadecimal.
+`#FF5733`
+
+- **FF**: Vermelho (Máximo) { .fragment }
+- **57**: Verde { .fragment }
+- **33**: Azul { .fragment }
+
+Ao todo, são mais de 16 milhões de cores! { .fragment }
+
+---
+
+## 💻 Outras Aplicações
+
+- **Endereços de Memória**: `0x7FFF` { .fragment }
+- **Endereços MAC**: `00:1A:2B:3C:4D:5E` { .fragment }
+- **IPv6**: `2001:0db8:85a3...` { .fragment }
+
+---
+
+## ✍️ Exercício Rápido 1
+
+Converta `10101111` para Hexadecimal.
+
+- `1010` | `1111` { .fragment }
+- Resposta: **AF₁₆** { .fragment }
+
+---
+
+## ✍️ Exercício Rápido 2
+
+Qual o binário de $C₁₆$?
+
+- $C$ é 12 em decimal.
+- $12$ em binário é $1100$.
+- Resposta: **1100** { .fragment }
+
+---
+
+## 📝 Resumo da Aula
+
+1. Base Hexadecimal usa dígitos **0-9 e A-F**. { .fragment }
+2. 1 dígito Hex = 4 bits (Nibble). { .fragment }
+3. A conversão de Binário é feita por agrupamento. { .fragment }
+4. É a base padrão para cores e endereços de hardware. { .fragment }
+
+---
+
+## 🚀 Próxima Aula...
+
+**Conversão Binário para Hexadecimal Direto!**
+
+Vamos aprofundar a prática de converter strings binárias longas em hex sem passar pelo decimal. { .fragment }
+
+---
+
+## ❓ Dúvidas?
+
+"Linguagens de programação são como as religiões: algumas são baseadas na Bíblia, outras no Hexadecimal."
+— *Humor Nerd* { .fragment }

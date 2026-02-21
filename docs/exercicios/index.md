@@ -4,32 +4,32 @@ Bem-vindo à seção de exercícios! Aqui você encontra listas de exercícios p
 
 <div class="grid cards" markdown>
 
--   :material-numeric-1-box: **Módulo 1 – Conceitos Básicos**
-    
-    - [Exercício 01 - Introdução](exercicio-01.md)
-    - [Exercício 02 - Dec2Bin](exercicio-02.md)
-    - [Exercício 03 - Bin2Dec](exercicio-03.md)
-    - [Exercício 04 - Octal](exercicio-04.md)
+-   :material-numeric-1-box: **Módulo 1: O Coração Digital**
+    ---
+    - [Exercício 01 - Intro e Bases](exercicio-01.md)
+    - [Exercício 02 - Para Binário](exercicio-02.md)
+    - [Exercício 03 - Para Decimal](exercicio-03.md)
+    - [Exercício 04 - Octal Prático](exercicio-04.md)
 
--   :material-numeric-2-box: **Módulo 2 – Hexadecimal e Aritmética**
-    
+-   :material-numeric-2-box: **Módulo 2: Arquitetura e Aritmética**
+    ---
     - [Exercício 05 - Hexadecimal](exercicio-05.md)
-    - [Exercício 06 - Bin2Hex](exercicio-06.md)
+    - [Exercício 06 - Agrupamento](exercicio-06.md)
     - [Exercício 07 - Aritmética](exercicio-07.md)
-    - [Exercício 08 - Dados](exercicio-08.md)
+    - [Exercício 08 - Repr. Dados](exercicio-08.md)
 
--   :material-numeric-3-box: **Módulo 3 – Lógica Digital**
-    
-    - [Exercício 09 - Booleana](exercicio-09.md)
-    - [Exercício 10 - Tabelas Verdade](exercicio-10.md)
+-   :material-numeric-3-box: **Módulo 3: Lógica e Engenharia**
+    ---
+    - [Exercício 09 - Lógica Básica](exercicio-09.md)
+    - [Exercício 10 - Provando Lógica](exercicio-10.md)
     - [Exercício 11 - Circuitos](exercicio-11.md)
-    - [Exercício 12 - Arquitetura](exercicio-12.md)
+    - [Exercício 12 - Org. Computadores](exercicio-12.md)
 
--   :material-numeric-4-box: **Módulo 4 – Software e Algoritmos**
-    
-    - [Exercício 13 - Memória](exercicio-13.md)
-    - [Exercício 14 - SO](exercicio-14.md)
-    - [Exercício 15 - Algoritmos](exercicio-15.md)
+-   :material-numeric-4-box: **Módulo 4: Software e Algoritmos**
+    ---
+    - [Exercício 13 - Armazenamento](exercicio-13.md)
+    - [Exercício 14 - Gestão de S.O.](exercicio-14.md)
+    - [Exercício 15 - Fluxogramas](exercicio-15.md)
     - [Exercício 16 - Programação](exercicio-16.md)
 
 </div>

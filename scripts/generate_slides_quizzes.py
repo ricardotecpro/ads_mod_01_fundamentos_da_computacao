@@ -14,7 +14,7 @@ def generate_slide_html(lesson_number: int) -> str:
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula {lesson_number:02d} - Python Backend</title>
+    <title>Aula {lesson_number:02d} - Fundamentos da Computação</title>
     
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reset.css">
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
@@ -48,6 +48,9 @@ def generate_slide_html(lesson_number: int) -> str:
             showSlideNumber: 'all',
             controls: true,
             progress: true,
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
             plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
         }});
 
@@ -130,12 +133,16 @@ def generate_all_slides():
                 parts = content.split('---', 2)
                 if len(parts) >= 3:
                     content = parts[2].lstrip()
-                    lines = content.split('\n')
-                    cleaned_lines = [line for line in lines if not line.strip().startswith('<!-- _class:')]
-                    content = '\n'.join(cleaned_lines)
+            
+            # Remove classes Marp (legado)
+            lines = content.split('\n')
+            content = '\n'.join([l for l in lines if not l.strip().startswith('<!-- _class:')])
+            
+            # Converte fragmentos: { .fragment } -> <!-- .element: class="fragment" -->
+            content = content.replace('{ .fragment }', '<!-- .element: class="fragment" -->')
             
             # 3. Escrever Markdown runtime em docs/slides/
-            dst_md_path.write_text(content, encoding='utf-8')
+            dst_md_path.write_text(content.strip(), encoding='utf-8')
             
             # 4. Gerar HTML referenciando este markdown
             html_content = generate_slide_html(i)

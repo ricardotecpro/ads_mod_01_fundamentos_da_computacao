@@ -4,233 +4,95 @@ Curso de Fundamentos da Computação, abordando desde bases numéricas até intr
 
 ## 🎯 Sobre o Curso
 
-Este curso oferece uma base sólida para quem está iniciando na área de tecnologia, cobrindo conceitos essenciais de hardware, software e lógica de programação.
+Este curso oferece uma base sólida para quem está iniciando na área de tecnologia, cobrindo conceitos essenciais de hardware, software e lógica de programação. Através de uma abordagem prática e visual, os alunos aprendem o funcionamento interno dos computadores.
 
 ### ✨ Destaques
 
-- ✅ **16 Aulas Completas** - Conceitos fundamentais explicados
-- ✅ **Slides Profissionais** - Material visual de apoio
-- ✅ **Quizzes Interativos** - Teste seus conhecimentos a cada aula
-- ✅ **Exercícios Práticos** - Fixação de conteúdo
-- ✅ **Projetos** - Aplicação prática dos conceitos
-- ✅ **Slides Profissionais** - Apresentações com Marp
-- ✅ **Quizzes Interativos** - Teste seus conhecimentos
-- ✅ **Exercícios Práticos** - Mão na massa
-- ✅ **Projetos Reais** - Construa seu portfólio
+- ✅ **16 Aulas Completas** - Do bit ao algoritmo.
+- ✅ **Slides Modernos** - Apresentações interativas com Reveal.js.
+- ✅ **Quizzes Interativos** - Teste seus conhecimentos a cada aula.
+- ✅ **Exercícios Práticos** - Fixação de conteúdo com conversões e lógica.
+- ✅ **Projetos Semanais** - Aplicação prática dos conceitos.
+- ✅ **Design Premium** - Interface moderna com MkDocs Material.
 
 ## 🚀 Começando
 
 ### Pré-requisitos
 
-- Python 3.11+
-- Poetry
-- Node.js (para Marp CLI)
+- **Python 3.11+**
+- **Poetry** (Gerenciador de dependências)
 
 ### Instalação
 
 ```bash
 # Clonar repositório
-git clone https://github.com/ricardotecpro/ads_spec_backend_com_python.git
-cd ads_spec_backend_com_python
+git clone https://github.com/ricardotecpro/ads_mod_01_fundamentos_da_computacao.git
+cd ads_mod_01_fundamentos_da_computacao
 
-# Instalar Poetry (se não tiver)
-pip install poetry
-
-# Instalar dependências
+# Instalar dependências e ambiente
 poetry install
-
-# Instalar Marp CLI (opcional, para slides)
-npm install -g @marp-team/marp-cli
 ```
 
 ## 📚 Comandos Disponíveis
 
-### Com Poetry/Taskipy
+O projeto utiliza **Taskipy** para atalhos de comandos comuns:
 
 ```bash
-# Servidor local
-poetry run task serve
+# Iniciar servidor local (MkDocs)
+poetry run task docs
 
-# Build do site
-poetry run task build
-
-# Gerar slides
+# Regenerar slides (Reveal.js)
 poetry run task slides
 
-# Executar testes
+# Converter/Regenerar quizzes
+poetry run task quizzes
+
+# Executar testes de integridade
 poetry run task test
 
-# Deploy (com Mike)
-poetry run task deploy
-```
-
-### Com Invoke
-
-```bash
-# Limpar arquivos gerados
-invoke clean
-
-# Build completo (slides + site)
-invoke build-all
-
-# Servidor local
-invoke serve-all
-
-# Atualizar dependências
-invoke update-deps
-
-# Ver todos os comandos
-invoke help-tasks
+# Build do site estático
+poetry run task build
 ```
 
 ## 📁 Estrutura do Projeto
 
 ```
-ads_spec_backend_com_python/
-├── aulas/                      # Conteúdo das aulas
-│   ├── assets/                # Imagens, CSS, JS
-│   ├── aulas/                 # Aulas (Python Básico, Avançado)
-│   ├── quiz/                  # Quizzes interativos
-│   ├── setup/                 # Guias de instalação
-│   └── index.md               # Homepage
-├── slides/                    # Slides Marp
-│   ├── brutos/               # Slides fonte (.md)
-│   │   ├── python-theme.css # Tema customizado
-│   │   └── *.md             # Slides
-│   └── html/                 # Slides gerados (.html)
-├── hooks/                     # Hooks customizados MkDocs
-│   ├── copy_slides.py        # Copia slides para site
-│   └── quiz_hook.py          # Processa quizzes
-├── .github/workflows/         # CI/CD
-│   ├── deploy.yml            # Deploy automático
-│   └── test.yml              # Testes automáticos
-├── pyproject.toml            # Poetry + Taskipy
-├── tasks.py                  # Invoke tasks
-└── mkdocs.yml                # Configuração MkDocs
+ads_mod_01_fundamentos_da_computacao/
+├── docs/                      # Documentação e Conteúdo
+│   ├── assets/                # Imagens, CSS, JS customizados
+│   ├── aulas/                 # Conteúdo das 16 aulas
+│   ├── exercicios/            # Listas de exercícios
+│   ├── projetos/              # Projetos práticos
+│   ├── quizzes/               # Quizzes interativos (.src e .md)
+│   ├── slides/                # Slides Reveal.js (.src, .md e .html)
+│   ├── setups/                # Guias de configuração de ambiente
+│   └── index.md               # Homepage do site
+├── scripts/                   # Scripts de automação (Python)
+├── hooks/                     # Hooks customizados para MkDocs
+├── pyproject.toml            # Configuração do Poetry e Tasks
+└── mkdocs.yml                # Configuração principal do MkDocs
 ```
 
 ## 🎨 Tecnologias
 
-### Documentação
-- **MkDocs** - Gerador de sites estáticos
-- **Material for MkDocs** - Tema moderno
-- **Mike** - Versionamento de docs
-
-### Slides
-- **Marp** - Slides profissionais em Markdown
-- **Tema Python** - Cores oficiais Python.org
-
-### Automação
-- **Poetry** - Gerenciamento de dependências
-- **Taskipy** - Tasks simples
-- **Invoke** - Tasks complexas
-
-### Plugins
-- **mkdocs-quiz** - Quizzes interativos
-- **git-authors** - Autores por arquivo
-- **git-revision-date** - Data de modificação
-- **glightbox** - Lightbox para imagens
-- **macros** - Variáveis e macros
-
-### CI/CD
-- **GitHub Actions** - Deploy e testes automáticos
-
-## 🎓 Conteúdo
-
-### Instalação
-- Windows Setup
-- VSCode Configuration
-
-### Python Básico
-- Sintaxe
-- Tipos de dados
-- Estruturas de controle
-- Funções
-- Módulos
-
-### Python Avançado
-- Ambientes virtuais
-- Gerenciamento de pacotes (Poetry)
-- POO avançada
-- Decoradores
-- Context managers
-
-### Projetos
-- API REST com FastAPI
-- CRUD completo
-- Autenticação
-- Deploy
-
-## 🧪 Testes
-
-```bash
-# Executar testes
-poetry run task test
-
-# Testar links
-invoke test-links
-```
-
-## 🚀 Deploy
-
-### GitHub Pages (Automático)
-
-O deploy é automático via GitHub Actions quando você faz push para `main`.
-
-### Manual
-
-```bash
-# Deploy com Mike
-poetry run task deploy
-
-# Ou
-poetry run mike deploy estavel --push
-```
-
-## 🎨 Slides
-
-### Gerar Slides
-
-```bash
-# Com Taskipy
-poetry run task slides
-
-# Com Marp diretamente
-marp -I slides/brutos --html --theme slides/brutos/python-theme.css -o slides/html
-```
-
-### Visualizar Slides
-
-Após gerar, abra os arquivos em `slides/html/` no navegador.
+- **MkDocs Material** - Documentação moderna e responsiva.
+- **Reveal.js** - Slides baseados em web.
+- **MathJax** - Renderização de fórmulas matemáticas.
+- **Mermaid.js** - Diagramas e fluxogramas via código.
+- **Termynal.js** - Simulação de terminal interativo.
 
 ## 🤝 Contribuindo
 
-Contribuições são bem-vindas! Por favor:
-
-1. Fork o projeto
-2. Crie uma branch (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -m 'Add nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
+Contribuições são bem-vindas! Por favor, siga o fluxo de Pull Request padrão do GitHub.
 
 ## 📝 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença [MIT](LICENSE).
 
 ## 👤 Autor
 
-**Ricardo**
+**Ricardo Tec Pro**
 
 - GitHub: [@ricardotecpro](https://github.com/ricardotecpro)
 - LinkedIn: [ricardotecpro](https://linkedin.com/in/ricardotecpro)
-
-## 🙏 Agradecimentos
-
-- [FastAPI do Zero](https://github.com/dunossauro/fastapi-do-zero) - Inspiração para estrutura e automação
-- [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) - Tema incrível
-- [Marp](https://marp.app/) - Slides profissionais
-- Comunidade Python Brasil
-
----
-
-⭐ Se este projeto te ajudou, considere dar uma estrela!
+- Portfólio: [ricardotecpro.github.io](https://ricardotecpro.github.io/)
