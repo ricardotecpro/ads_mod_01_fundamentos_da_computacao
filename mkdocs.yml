@@ -7,8 +7,8 @@ site_description: Curso completo de Fundamentos da Computação para iniciantes 
 theme:
   name: material
   language: pt-BR
-  favicon: assets/images/python-logo-notext.svg
-  logo: assets/images/python-logo-notext.svg
+  favicon: assets/images/logo.png
+  logo: assets/images/logo.png
   custom_dir: overrides
   features:
     - navigation.tracking
