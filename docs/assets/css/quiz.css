@@ -83,13 +83,19 @@
 
 .quiz-option::before {
     content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
     margin-right: 12px;
     border: 2px solid var(--quiz-border);
     border-radius: 50%;
     transition: all 0.2s ease;
+    box-sizing: border-box;
 }
 
 .quiz-option.selected::before {

@@ -42,10 +42,21 @@ def parse_quiz_markdown(content: str) -> list:
         
         for opt_match in re.finditer(option_pattern, options_text, re.DOTALL):
             is_correct = opt_match.group(1) == 'x'
-            option_text = opt_match.group(2).strip()
+            raw_text = opt_match.group(2).strip()
+            
+            # Separar feedback se existir
+            feedback_match = re.search(r'\*feedback:\s*(.+)$', raw_text, re.MULTILINE | re.IGNORECASE)
+            option_text = raw_text
+            feedback = None
+            
+            if feedback_match:
+                feedback = feedback_match.group(1).strip()
+                option_text = raw_text[:feedback_match.start()].strip()
+            
             options.append({
                 'text': option_text,
-                'correct': is_correct
+                'correct': is_correct,
+                'feedback': feedback
             })
         
         if options:  # Só adiciona se encontrou opções
@@ -74,7 +85,12 @@ def generate_quiz_html(quiz_number: int, questions: list) -> str:
         
         for opt in q['options']:
             correct_attr = 'true' if opt['correct'] else 'false'
-            feedback = f"✅ Correto! {opt['text']}" if opt['correct'] else f"Incorreto. Tente novamente."
+            
+            # Usar feedback customizado se existir, caso contrário usar padrão
+            if opt.get('feedback'):
+                feedback = opt['feedback']
+            else:
+                feedback = f"✅ Correto! {opt['text']}" if opt['correct'] else f"Incorreto. Tente novamente."
             
             html_parts.append(
                 f'  <div class="quiz-option" data-correct="{correct_attr}" '
