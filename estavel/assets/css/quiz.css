@@ -179,3 +179,10 @@
     /* Light red/pink for better readability */
     border-left-color: #ffb3ba;
 }
+/* Fix visual: garantir circulos perfeitos nos quizzes */
+.quiz-option input[type="radio"],
+.quiz-option input[type="checkbox"] {
+  flex-shrink: 0;
+  min-width: 1rem;
+  min-height: 1rem;
+}
