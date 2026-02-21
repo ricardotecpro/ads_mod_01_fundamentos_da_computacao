@@ -27,13 +27,14 @@ A computação é o **processamento automático da informação**. Todo computad
 
 ```mermaid
 graph LR
-    A["📥 Entrada (Dados)"] --> B{{"⚙️ Processamento"}}
+    A["📥 Entrada (Dados)"] --> B(["⚙️ Processamento"])
     B --> C["📤 Saída (Informação)"]
     B -.-> D[("💾 Armazenamento")]
     style B fill:#2fa,stroke:#333,stroke-width:2px
 ```
 
 !!! info "Diferença Fundamental"
+
     === "Conceito"
         **Dado** é o elemento bruto, sem significado isolado (ex: "42"). **Informação** é o dado processado e contextualizado (ex: "42°C é a temperatura febril").
     === "Exemplo Prático"
@@ -52,13 +53,15 @@ Máquinas não entendem letras ou cores diretamente; elas entendem **níveis de 
 Este é o **Sistema Binário**. A menor unidade de informação que um computador pode manipular é o **BIT** (*Binary Digit*).
 
 === "Representação Visual"
-    <div class="termy">
+    <div class="termy" markdown>
+
     ```console
     $ bin-view --visualize
     Estado dos Pulsos:
     [█] [ ] [█] [█] [ ] [ ] [█] [ ]
      1   0   1   1   0   0   1   0
     ```
+
     </div>
 === "Hierarquia"
     - **1 Bit**: 0 ou 1.
