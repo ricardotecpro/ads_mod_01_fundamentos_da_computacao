@@ -42,7 +42,8 @@ flowchart TD
 Vamos ver como o número **13** se transforma em código de máquina.
 
 === "Divisões Sucessivas"
-    <div class="termy">
+    <div class="termy" markdown>
+
     ```console
     $ calc-convert 13 --to-binary
     1) 13 / 2 = 6  | Resto: 1  (LSB)
@@ -52,6 +53,7 @@ Vamos ver como o número **13** se transforma em código de máquina.
 
     🏁 Resultado (Baixo para Cima): 1101
     ```
+
     </div>
 === "Método das Potências"
     | 128 | 64 | 32 | 16 | **8** | **4** | 2 | **1** |

@@ -46,12 +46,14 @@ graph TD
 === "CLI (Linha de Comando)"
     O famoso terminal. Ferramenta favorita de desenvolvedores pela velocidade e poder de **automação**.
     
-    <div class="termy">
+    <div class="termy" markdown>
+
     ```console
     $ ls -l /documents
     $ cd /projects/ads
     $ echo "Iniciando estudos de SO..." > log.txt
     ```
+
     </div>
 
 ---

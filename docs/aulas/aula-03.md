@@ -57,7 +57,8 @@ graph TD
 Para converter, basta identificar onde estão os bits **1** e somar os seus pesos correspondentes.
 
 === "Exemplo: 1101"
-    <div class="termy">
+    <div class="termy" markdown>
+
     ```console
     $ bin-convert 1101 --to-decimal
     Análise de Pesos:
@@ -65,6 +66,7 @@ Para converter, basta identificar onde estão os bits **1** e somar os seus peso
     
     🏁 Soma: 8 + 4 + 0 + 1 = 13
     ```
+
     </div>
 === "Exemplo: 10101010"
     - $1 \times 128 = 128$

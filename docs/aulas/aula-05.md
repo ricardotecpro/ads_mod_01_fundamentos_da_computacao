@@ -57,7 +57,8 @@ graph TD
 Para converter decimal para hexa, dividimos por **16**.
 
 === "Cálculo Passo a Passo"
-    <div class="termy">
+    <div class="termy" markdown>
+
     ```console
     $ calc-convert 250 --to-hex
     1) 250 / 16 = 15 | Resto: 10 -> [A]
@@ -65,6 +66,7 @@ Para converter decimal para hexa, dividimos por **16**.
 
     🏁 Resultado (Baixo para Cima): FA
     ```
+
     </div>
 === "A Regra do Quarteto"
     A razão do sucesso do Hexa é que **1 dígito hexa** representa exatamente **4 bits** (1 nibble).

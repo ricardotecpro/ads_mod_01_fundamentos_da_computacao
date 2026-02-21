@@ -34,7 +34,7 @@ Como o texto que você digita vira pulsos elétricos? Existem dois "tradutores" 
 
 ```mermaid
 graph LR
-    A["⌨️ Código Fonte"] --> B{{"🛠️ Tradutor"}}
+    A["⌨️ Código Fonte"] --> B(["🛠️ Tradutor"])
     B --> C["⚙️ Código Máquina"]
     C --> D["💻 CPU Executa"]
     style B fill:#f96,stroke:#333

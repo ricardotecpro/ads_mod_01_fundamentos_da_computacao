@@ -29,7 +29,6 @@ A soma binária é quase igual à decimal, mas você "fecha uma casa" (vai-um) m
 | :---: | :---: | :--- |
 | **0 + 0** | **0** | Normal |
 | **0 + 1** | **1** | Normal |
-| **1 + 0** | **1** | Normal |
 | **1 + 1** | **0** | **Vai 1 (Carry)** para a próxima coluna! |
 
 ---
@@ -37,7 +36,8 @@ A soma binária é quase igual à decimal, mas você "fecha uma casa" (vai-um) m
 ## 📝 Prática de Cálculo
 
 === "Soma Com Carry"
-    <div class="termy">
+    <div class="termy" markdown>
+
     ```console
     $ bin-math sum 1011 0111
        [1][1][1]  <-- Carry (vai-um)
@@ -46,6 +46,7 @@ A soma binária é quase igual à decimal, mas você "fecha uma casa" (vai-um) m
        ---------
        1 0 0 1 0  (18 em decimal)
     ```
+
     </div>
 === "O Perigo do Overflow"
     !!! warning "Cuidado com o Transbordamento"

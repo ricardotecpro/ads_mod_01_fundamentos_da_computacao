@@ -55,9 +55,9 @@ Veja como uma expressão como `(A OR B) AND C` pode ser visualizada em um fluxo 
 
 ```mermaid
 graph LR
-    A["Entrada A"] --> OR{{"OR"}}
+    A["Entrada A"] --> OR(["OR"])
     B["Entrada B"] --> OR
-    OR --> AND{{"AND"}}
+    OR --> AND(["AND"])
     C["Entrada C"] --> AND
     AND --> S(("Saída Final"))
     style OR fill:#f96,stroke:#333

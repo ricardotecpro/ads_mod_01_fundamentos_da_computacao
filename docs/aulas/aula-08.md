@@ -47,7 +47,8 @@ Para o computador, a letra "A" não existe; o que existe é o número **65**.
 | **ASCII** | 7/8 | Apenas caracteres básicos (inglês). |
 | **UTF-8** | 8-32 | Padrão da Web: Suporta todos os idiomas e **Emojis** 🚀. |
 
-<div class="termy">
+<div class="termy" markdown>
+
 ```console
 $ hex-dump "Ads"
 Texto:       A          d          s
@@ -55,6 +56,7 @@ Decimal:     65         100        115
 Hexa:        41         64         73
 Binário:     01000001   01100100   01110011
 ```
+
 </div>
 
 ---
