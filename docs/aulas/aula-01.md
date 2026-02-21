@@ -1,116 +1,115 @@
----
-title: Aula 01 – Introdução à Computação e Bases Numéricas
-date: 2026-02-16
-quiz: quiz-01
-exercicios: exercicio-01
-projeto: projeto-01
-slides: slide-01.html
----
-
 # 💻 Aula 01 – Introdução à Computação e Bases Numéricas
 
-Bem-vindo à primeira aula do curso! Hoje vamos descobrir como os computadores "pensam" e por que eles usam uma linguagem tão diferente da nossa.
+Bem-vindo à sua primeira lição! Vamos desvendar como a computação funciona e como transformamos impulsos elétricos em inteligência digital.
 
 ---
 
 ## 🎯 Objetivos de Aprendizagem
 
 Ao final desta aula, você será capaz de:
--   [x] Compreender o conceito fundamental de computação.
--   [x] Diferenciar **Dado** de **Informação**.
--   [x] Entender por que usamos diferentes bases numéricas (Binário, Octal, Hexa).
--   [x] Compreender o funcionamento do sistema posicional.
+- [x] Compreender o conceito fundamental de computação (Ciclo de Dados).
+- [x] Diferenciar **Dado** de **Informação** com exemplos práticos.
+- [x] Entender a necessidade biológica e técnica das bases numéricas.
+- [x] Compreender o funcionamento do sistema posicional.
 
 ---
 
 ## 🧩 O que é Computação?
 
-A computação não é apenas sobre usar computadores; é sobre o **processamento automático da informação**. No nível mais básico, todo computador segue um ciclo simples:
+A computação é o **processamento automático da informação**. Todo computador, do smartphone ao supercomputador, opera baseado em um ciclo fundamental:
 
 ```mermaid
 graph LR
-    A[📥 Entrada de Dados] --> B{⚙️ Processamento}
-    B --> C[📤 Saída de Informação]
-    B -.-> D[(💾 Armazenamento)]
+    A["📥 Entrada (Dados)"] --> B{{"⚙️ Processamento"}}
+    B --> C["📤 Saída (Informação)"]
+    B -.-> D[("💾 Armazenamento")]
+    style B fill:#2fa,stroke:#333,stroke-width:2px
 ```
 
-!!! note "Dado vs Informação"
-    **Dado** é o elemento bruto (ex: "42"). **Informação** é o dado com contexto (ex: "42°C é a temperatura febril"). A computação transforma dados brutos em inteligência útil.
+!!! info "Diferença Fundamental"
+    === "Conceito"
+        **Dado** é o elemento bruto, sem significado isolado (ex: "42"). **Informação** é o dado processado e contextualizado (ex: "42°C é a temperatura febril").
+    === "Exemplo Prático"
+        - **Dados**: Nomes e notas de alunos em uma planilha.
+        - **Informação**: A média da turma e a lista de aprovados.
 
 ---
 
 ## ⚡ Como as máquinas "falam"?
 
-Humanos usam palavras e números de 0 a 9. Máquinas usam **eletricidade**.
+Máquinas não entendem letras ou cores diretamente; elas entendem **níveis de tensão elétrica**.
 
--   **Nível Alto (On)**: Representado pelo dígito **1**.
--   **Nível Baixo (Off)**: Representado pelo dígito **0**.
+- **Nível Alto (On)**: Dígito **1**.
+- **Nível Baixo (Off)**: Dígito **0**.
 
-Esse sistema de dois estados é o **Sistema Binário**. Cada dígito (0 ou 1) é chamado de **BIT** (*Binary Digit*).
+Este é o **Sistema Binário**. A menor unidade de informação que um computador pode manipular é o **BIT** (*Binary Digit*).
 
-<div class="termy">
-```console
-$ bin-view --visualize
-Representação Interna:
-[█] [ ] [█] [█] [ ] [ ] [█] [ ]
- 1   0   1   1   0   0   1   0
-```
-</div>
+=== "Representação Visual"
+    <div class="termy">
+    ```console
+    $ bin-view --visualize
+    Estado dos Pulsos:
+    [█] [ ] [█] [█] [ ] [ ] [█] [ ]
+     1   0   1   1   0   0   1   0
+    ```
+    </div>
+=== "Hierarquia"
+    - **1 Bit**: 0 ou 1.
+    - **1 Byte**: Conjunto de 8 bits.
+    - **1 KB**: ~1.000 Bytes.
 
 ---
 
 ## 🔢 Sistemas de Numeração
 
-Dependendo do contexto, usamos diferentes "bases" para representar quantidades.
+Para facilitar a comunicação entre humanos e máquinas, agrupamos os bits em diferentes bases:
 
-| Sistema | Base | Dígitos Disponíveis | Uso Comum |
+| Sistema | Base | Dignidade | Uso Principal |
 | :--- | :--- | :--- | :--- |
-| **Decimal** | 10 | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 | Cotidiano Humano |
-| **Binário** | 2 | 0, 1 | Hardware e Lógica |
-| **Octal** | 8 | 0, 1, 2, 3, 4, 5, 6, 7 | Permissões Unix |
-| **Hexadecimal** | 16 | 0-9, A, B, C, D, E, F | Cores, Memória |
+| **Decimal** | 10 | 0 a 9 | Vida cotidiana |
+| **Binário** | 2 | 0 e 1 | Circuitos e Lógica |
+| **Octal** | 8 | 0 a 7 | Permissões de Arquivos |
+| **Hexadecimal** | 16 | 0-9 e A-F | Endereçamento e Cores |
 
 ---
 
 ## ⚙️ Notação Posicional
 
-Em qualquer base, o valor de um dígito depende da sua **posição**. No sistema decimal, usamos potências de 10:
+Em qualquer base tecnológica, o valor de um algarismo depende da sua posição.
 
-$$ 157_{10} = (1 \times 10^2) + (5 \times 10^1) + (7 \times 10^0) $$
-
-No sistema binário, usamos potências de 2:
-
-$$ 101_{2} = (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) = 4 + 0 + 1 = 5_{10} $$
-
----
-
-## 🎨 Por que usar Hexadecimal?
-
-Binários ficam muito longos rapidamente (ex: `111110101100`). O Hexadecimal agrupa **4 bits** em um único dígito, facilitando a leitura humana.
-
--   `1111` em binário vira `F` em Hexa.
--   `1010` em binário vira `A` em Hexa.
-
-> [!TIP]
-> Um Byte (8 bits) pode ser representado por apenas **2 dígitos hexadecimais** (ex: `FF` = 255).
-
----
-
-## ✍️ Exercícios Rápidos
-
-1. Qual a base preferida para representar cores na Web (ex: `#FF5733`)?
-2. Quantos estados diferentes um **Bit** pode assumir?
+!!! tip "A Fórmula da Posição"
+    No sistema binário, usamos potências de 2:
+    $$ 101_{2} = (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) = 4 + 0 + 1 = 5_{10} $$
 
 ---
 
 ## 🚀 Desafio da Semana
-Tente encontrar em seu computador um "Endereço MAC" ou um "Endereço IPv6". Observe se eles utilizam letras e números e tente identificar a base numérica utilizada!
+
+Tente encontrar o **Endereço MAC** da placa de rede do seu computador (use o comando `ipconfig /all` no Windows ou `ifconfig` no Linux). 
+- Ele usa letras? 
+- Quantos grupos de caracteres ele possui?
+- Identifique se ele está em Hexadecimal!
 
 ---
 
-[:material-presentation: Ver Slides](lesson-01-slides){ .md-button }
-[:material-school: Responder Quiz](quiz-01){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-01){ .md-button }
+<div class="grid cards" markdown>
+
+-   :material-presentation: **Slides Interativos**
+    ---
+    Revise os visuais e animações desta aula.
+    [:octicons-arrow-right-24: Ver Slides](../slides/slide-01.html)
+
+-   :material-school: **Quiz de Nivelamento**
+    ---
+    Teste o que você aprendeu com 10 questões.
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-01.md)
+
+-   :material-dumbbell: **Mão na Massa**
+    ---
+    5 exercícios do básico ao desafio master.
+    [:octicons-arrow-right-24: Praticar](../exercicios/exercicio-01.md)
+
+</div>
 
 ---
-[Próxima Aula :material-arrow-right:](aula-02.md)
+[:material-arrow-right: Próxima Aula: De Decimal para Binário](aula-02.md)

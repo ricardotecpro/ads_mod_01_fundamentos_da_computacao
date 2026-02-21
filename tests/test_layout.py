@@ -96,7 +96,7 @@ def test_lesson_16_page(page: Page, base_url):
     page.goto(f"{base_url}/aulas/aula-16/")
     
     # Check title
-    expect(page).to_have_title(re.compile(r"Aula 16.*Estruturas"))
+    expect(page).to_have_title(re.compile(r"Aula 16.*Introdução"))
     
     # Check quiz containers
     quiz_containers = page.locator(".quiz-container")
