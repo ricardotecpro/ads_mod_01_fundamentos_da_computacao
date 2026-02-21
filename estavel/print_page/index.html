@@ -1588,11 +1588,11 @@ $$ 1 \times 4 + 0 \times 2 + 1 \times 1 = 5 \text{ (em decimal)} $$</p>
 <p>Para converter um número decimal para binário (ou qualquer outra base), dividimos o número sucessivamente pela base de destino (2) até que o quociente seja zero. O resultado é a sequência dos <strong>restos</strong> lidos de trás para frente (do último para o primeiro).</p>
 <h3 id="aulas-aula-02-passo-a-passo-convertendo-25-para-binario">Passo a Passo: Convertendo 25 para Binário</h3>
 <ol>
-<li>$25 \div 2 = 12$, resto <strong>1</strong> (bit menos significativo - LSB)</li>
-<li>$12 \div 2 = 6$, resto <strong>0</strong></li>
-<li>$6 \div 2 = 3$, resto <strong>0</strong></li>
-<li>$3 \div 2 = 1$, resto <strong>1</strong></li>
-<li>$1 \div 2 = 0$, resto <strong>1</strong> (bit mais significativo - MSB)</li>
+<li><span class="arithmatex">\(25 \div 2 = 12\)</span>, resto <strong>1</strong> (bit menos significativo - LSB)</li>
+<li><span class="arithmatex">\(12 \div 2 = 6\)</span>, resto <strong>0</strong></li>
+<li><span class="arithmatex">\(6 \div 2 = 3\)</span>, resto <strong>0</strong></li>
+<li><span class="arithmatex">\(3 \div 2 = 1\)</span>, resto <strong>1</strong></li>
+<li><span class="arithmatex">\(1 \div 2 = 0\)</span>, resto <strong>1</strong> (bit mais significativo - MSB)</li>
 </ol>
 <p>Lendo os restos de baixo para cima (ou do último para o primeiro): <strong>11001</strong></p>
 <h2 id="aulas-aula-02-dica">💡 Dica</h2>
@@ -1646,11 +1646,11 @@ $$ 1010_2 = 8 + 0 + 2 + 0 = 10_{10} $$</p>
 <tbody>
 <tr>
 <td>Posição</td>
-<td>$2^4$</td>
-<td>$2^3$</td>
-<td>$2^2$</td>
-<td>$2^1$</td>
-<td>$2^0$</td>
+<td><span class="arithmatex">\(2^4\)</span></td>
+<td><span class="arithmatex">\(2^3\)</span></td>
+<td><span class="arithmatex">\(2^2\)</span></td>
+<td><span class="arithmatex">\(2^1\)</span></td>
+<td><span class="arithmatex">\(2^0\)</span></td>
 </tr>
 <tr>
 <td>Valor</td>
@@ -1662,11 +1662,11 @@ $$ 1010_2 = 8 + 0 + 2 + 0 = 10_{10} $$</p>
 </tr>
 <tr>
 <td>Produto</td>
-<td>$1 \times 16$</td>
-<td>$1 \times 8$</td>
-<td>$0 \times 4$</td>
-<td>$0 \times 2$</td>
-<td>$1 \times 1$</td>
+<td><span class="arithmatex">\(1 \times 16\)</span></td>
+<td><span class="arithmatex">\(1 \times 8\)</span></td>
+<td><span class="arithmatex">\(0 \times 4\)</span></td>
+<td><span class="arithmatex">\(0 \times 2\)</span></td>
+<td><span class="arithmatex">\(1 \times 1\)</span></td>
 </tr>
 <tr>
 <td>Resultado</td>
@@ -1678,7 +1678,7 @@ $$ 1010_2 = 8 + 0 + 2 + 0 = 10_{10} $$</p>
 </tr>
 </tbody>
 </table>
-<p>Total: $16 + 8 + 1 = 25$</p>
+<p>Total: <span class="arithmatex">\(16 + 8 + 1 = 25\)</span></p>
 <h2 id="aulas-aula-03-dica">💡 Dica</h2>
 <p>Memorize as primeiras potências de 2:
 1, 2, 4, 8, 16, 32, 64, 128, 256...</p>
@@ -1698,13 +1698,13 @@ $$ 1010_2 = 8 + 0 + 2 + 0 = 10_{10} $$</p>
 <h2 id="aulas-aula-04-conteudo">📘 Conteúdo</h2>
 <h3 id="aulas-aula-04-o-sistema-octal">O Sistema Octal</h3>
 <p>O sistema octal usa 8 dígitos: <strong>0, 1, 2, 3, 4, 5, 6, 7</strong>.
-Ele é útil porque cada dígito octal representa exatamente <strong>3 bits</strong> ($2^3 = 8$). Isso facilita a representação compacta de números binários.</p>
+Ele é útil porque cada dígito octal representa exatamente <strong>3 bits</strong> (<span class="arithmatex">\(2^3 = 8\)</span>). Isso facilita a representação compacta de números binários.</p>
 <h3 id="aulas-aula-04-conversao-decimal-para-octal">Conversão Decimal para Octal</h3>
 <p>Similar ao binário, usamos <strong>divisões sucessivas</strong>, mas agora por <strong>8</strong>.</p>
 <p><strong>Exemplo: 100 para Octal</strong>
-1. $100 \div 8 = 12$, resto <strong>4</strong>
-2. $12 \div 8 = 1$, resto <strong>4</strong>
-3. $1 \div 8 = 0$, resto <strong>1</strong></p>
+1. <span class="arithmatex">\(100 \div 8 = 12\)</span>, resto <strong>4</strong>
+2. <span class="arithmatex">\(12 \div 8 = 1\)</span>, resto <strong>4</strong>
+3. <span class="arithmatex">\(1 \div 8 = 0\)</span>, resto <strong>1</strong></p>
 <p>Lendo de baixo para cima: <strong>144</strong> (em octal)</p>
 <h3 id="aulas-aula-04-conversao-octal-para-decimal">Conversão Octal para Decimal</h3>
 <p>Usamos potências de 8.</p>
@@ -1735,7 +1735,7 @@ $$ 64 + 32 + 4 = 100 $$</p>
 <h2 id="aulas-aula-05-conteudo">📘 Conteúdo</h2>
 <h3 id="aulas-aula-05-o-sistema-hexadecimal">O Sistema Hexadecimal</h3>
 <p>O sistema hexadecimal usa 16 dígitos: <strong>0-9 e A-F</strong>.
-Ele é extremamente comum na computação para representar endereços de memória, cores (RGB) e agrupamento de bits, pois cada dígito hexadecimal corresponde exatamente a <strong>4 bits</strong> ($2^4 = 16$).</p>
+Ele é extremamente comum na computação para representar endereços de memória, cores (RGB) e agrupamento de bits, pois cada dígito hexadecimal corresponde exatamente a <strong>4 bits</strong> (<span class="arithmatex">\(2^4 = 16\)</span>).</p>
 <table>
 <thead>
 <tr>
@@ -1785,8 +1785,8 @@ Ele é extremamente comum na computação para representar endereços de memóri
 <h3 id="aulas-aula-05-conversao-decimal-para-hexadecimal">Conversão Decimal para Hexadecimal</h3>
 <p>Divisões sucessivas por <strong>16</strong>. Lembre-se de converter restos maiores que 9 para letras.</p>
 <p><strong>Exemplo: 255 para Hex</strong>
-1. $255 \div 16 = 15$, resto <strong>15</strong> (F)
-2. $15 \div 16 = 0$, resto <strong>15</strong> (F)</p>
+1. <span class="arithmatex">\(255 \div 16 = 15\)</span>, resto <strong>15</strong> (F)
+2. <span class="arithmatex">\(15 \div 16 = 0\)</span>, resto <strong>15</strong> (F)</p>
 <p>Resultado: <strong>FF</strong></p>
 <h3 id="aulas-aula-05-conversao-hexadecimal-para-decimal">Conversão Hexadecimal para Decimal</h3>
 <p>Soma ponderada por potências de 16.</p>
@@ -1796,7 +1796,7 @@ $$ 1 \times 16 + 10 \times 1 $$
 $$ 16 + 10 = 26 $$</p>
 <h2 id="aulas-aula-05-dica">💡 Dica</h2>
 <p>Sempre que converter grandes números binários, agrupe-os em grupos de 4 bits.
-Ex: $11110000_2 \rightarrow F0_{16}$</p>
+Ex: <span class="arithmatex">\(11110000_2 \rightarrow F0_{16}\)</span></p>
 <hr>
 <p><a href="#aulas-aula-06">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-06" heading-number="3.3.2"><html><head>
         <script type="text/javascript">
@@ -1816,8 +1816,8 @@ Ex: $11110000_2 \rightarrow F0_{16}$</p>
 <ol>
 <li><strong>Decimal para Qualquer Base</strong>: Divisões sucessivas pela base de destino.</li>
 <li><strong>Qualquer Base para Decimal</strong>: Soma ponderada (Notação Posicional).</li>
-<li><strong>Binário $\leftrightarrow$ Octal</strong>: Agrupar de 3 em 3 bits.</li>
-<li><strong>Binário $\leftrightarrow$ Hexadecimal</strong>: Agrupar de 4 em 4 bits.</li>
+<li><strong>Binário <span class="arithmatex">\(\leftrightarrow\)</span> Octal</strong>: Agrupar de 3 em 3 bits.</li>
+<li><strong>Binário <span class="arithmatex">\(\leftrightarrow\)</span> Hexadecimal</strong>: Agrupar de 4 em 4 bits.</li>
 </ol>
 <h3 id="aulas-aula-06-tabela-de-referencia-rapida">Tabela de Referência Rápida</h3>
 <table>
@@ -1864,7 +1864,7 @@ Ex: $11110000_2 \rightarrow F0_{16}$</p>
 </ol>
 <h2 id="aulas-aula-06-dica-de-mestre">💡 Dica de Mestre</h2>
 <p>Para converter Hex direto para Octal, o jeito mais fácil é passar por Binário no meio do caminho!
-Hex $\rightarrow$ Binário $\rightarrow$ Octal.</p>
+Hex <span class="arithmatex">\(\rightarrow\)</span> Binário <span class="arithmatex">\(\rightarrow\)</span> Octal.</p>
 <hr>
 <p><a href="#aulas-aula-07">Próxima Aula</a></p></body></html></section><section class="print-page" id="aulas-aula-07" heading-number="3.3.3"><html><head>
         <script type="text/javascript">
@@ -2775,6 +2775,10 @@ O próximo passo é aprender uma linguagem de programação real (como Python, J
         <script src="../assets/js/mermaid-init.js"></script>
       
         <script src="../assets/js/custom_termynal.js"></script>
+      
+        <script src="../assets/js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
         <script src="../termynal.js"></script>
       
