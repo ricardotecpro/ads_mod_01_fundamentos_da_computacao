@@ -1709,298 +1709,308 @@ $$ 101_{2} = (1 \times 2^2) + (0 \times 2^1) + (1 \times 2^0) = 4 + 0 + 1 = 5_{1
         })
         </script>
         </head><body><h1 id="aula-02-conversao-de-decimal-para-binario">➗ Aula 02 – Conversão de Decimal para Binário</h1>
-<p>Na aula anterior, aprendemos que os computadores são máquinas binárias. Mas como pegamos um número que conhecemos (como nossa idade ou o preço de algo) e explicamos para o computador? Hoje vamos aprender o "caminho de ida": a conversão de <strong>Decimal para Binário</strong>.</p>
+<p>Na aula anterior, aprendemos que os computadores são máquinas binárias. Mas como pegamos um número que conhecemos (como nossa idade) e explicamos para o silício? Vamos aprender o "caminho de ida".</p>
 <hr>
 <h2 id="aulas-aula-02-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Aprender o método das <strong>divisões sucessivas</strong>.
--   [x] Compreender o significado de <strong>MSB</strong> (<em>Most Significant Bit</em>) e <strong>LSB</strong> (<em>Least Significant Bit</em>).
--   [x] Aplicar o método das potências de 2 como alternativa rápida.</p>
+- [x] Aprender o método das <strong>divisões sucessivas</strong>.
+- [x] Compreender o significado de <strong>MSB</strong> (<em>Most Significant Bit</em>) e <strong>LSB</strong> (<em>Least Significant Bit</em>).
+- [x] Aplicar o método das <strong>potências de 2</strong> como alternativa rápida.</p>
 <hr>
 <h2 id="aulas-aula-02-metodo-das-divisoes-sucessivas">🧱 Método das Divisões Sucessivas</h2>
-<p>Este é o método mais seguro e universal. Ele consiste em dividir o número decimal por 2 repetidamente até que o resultado chegue a zero.</p>
+<p>Este é o método mais seguro e universal. Ele consiste em dividir o número decimal por 2 repetidamente até que o quociente chegue a zero.</p>
 <pre class="mermaid"><code>flowchart TD
-    A[Início: Número Decimal] --&gt; B{Dividir por 2}
-    B --&gt; C[Anotar o RESTO]
-    C --&gt; D{Quociente é 0?}
+    A["Início: Número Decimal"] --&gt; B{"Dividir por 2"}
+    B --&gt; C["Anotar o RESTO"]
+    C --&gt; D{"Quociente é 0?"}
     D -- Não --&gt; B
-    D -- Sim --&gt; E[Ler os restos de BAIXO PARA CIMA]
-    E --&gt; F[Binário Resultante]</code></pre>
+    D -- Sim --&gt; E["Ler os restos de BAIXO PARA CIMA"]
+    E --&gt; F["Binário Resultante"]
+    style E fill:#f96,stroke:#333,stroke-width:2px</code></pre>
 <hr>
-<h2 id="aulas-aula-02-exemplo-pratico-numero-13">📝 Exemplo Prático: Número 13</h2>
-<p>Vamos converter o número <strong>13</strong> para binário usando o método acima:</p>
-<div class="termy">
+<h2 id="aulas-aula-02-exemplo-pratico-convertendo-13">📝 Exemplo Prático: Convertendo 13</h2>
+<p>Vamos ver como o número <strong>13</strong> se transforma em código de máquina.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-02-__tabbed_1_1" name="aulas-aula-02-__tabbed_1" type="radio"><input id="aulas-aula-02-__tabbed_1_2" name="aulas-aula-02-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-02-__tabbed_1_1">Divisões Sucessivas</label><label for="aulas-aula-02-__tabbed_1_2">Método das Potências</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div class="termy">
 <div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-02-__codelineno-0-1"></a><span class="gp">$ </span>calc-convert<span class="w"> </span><span class="m">13</span><span class="w"> </span>--to-binary
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-02-__codelineno-0-2"></a><span class="go">1) 13 / 2 = 6  | Resto: 1  (LSB)</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-02-__codelineno-0-3"></a><span class="go">2)  6 / 2 = 3  | Resto: 0</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-02-__codelineno-0-4"></a><span class="go">3)  3 / 2 = 1  | Resto: 1</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-02-__codelineno-0-5"></a><span class="go">4)  1 / 2 = 0  | Resto: 1  (MSB)</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-02-__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-02-__codelineno-0-7"></a><span class="go">Lendo de baixo para cima...</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-02-__codelineno-0-8"></a><span class="go">Resultado: 1101</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-02-__codelineno-0-7"></a><span class="go">🏁 Resultado (Baixo para Cima): 1101</span>
 </span></code></pre></div>
+</div><p></p>
 </div>
-
-<hr>
-<h2 id="aulas-aula-02-a-ordem-importa-msb-e-lsb">⚠️ A Ordem Importa: MSB e LSB</h2>
-<p>Muitos estudantes erram a conversão por lerem os restos na ordem errada.</p>
-<blockquote>
-<p>[!IMPORTANT]
--   <strong>LSB (Least Significant Bit)</strong>: É o primeiro resto obtido. Fica na extrema direita.
--   <strong>MSB (Most Significant Bit)</strong>: É o último resto obtido. Fica na extrema esquerda.</p>
-</blockquote>
-<p><strong>Regra de Ouro</strong>: Sempre leia do último quociente para o primeiro resto (de baixo para cima).</p>
-<hr>
-<h2 id="aulas-aula-02-metodo-2-subtracao-por-potencias">⚡ Método 2: Subtração por Potências</h2>
-<p>Se você memorizar as potências de 2, pode converter números "de cabeça" muito mais rápido.</p>
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
-<th style="text-align: center;"><span class="arithmatex">\(2^7\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(2^6\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(2^5\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(2^4\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(2^3\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(2^2\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(2^1\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(2^0\)</span></th>
+<th style="text-align: center;">128</th>
+<th style="text-align: center;">64</th>
+<th style="text-align: center;">32</th>
+<th style="text-align: center;">16</th>
+<th style="text-align: center;"><strong>8</strong></th>
+<th style="text-align: center;"><strong>4</strong></th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;"><strong>1</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">128</td>
-<td style="text-align: center;">64</td>
-<td style="text-align: center;">32</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;"><strong>1</strong></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Como funciona?</strong>
-Tente encaixar o número 13 nas potências:
--   Cabe 16? Não (0).
--   Cabe <strong>8</strong>? Sim (1). Sobram <span class="arithmatex">\(13 - 8 = 5\)</span>.
--   Cabe <strong>4</strong>? Sim (1). Sobram <span class="arithmatex">\(5 - 4 = 1\)</span>.
--   Cabe 2? Não (0).
--   Cabe <strong>1</strong>? Sim (1). Sobram 0.
--   Resultado: <strong>1101</strong>.</p>
+<ul>
+<li>Somamos as potências onde há o bit <strong>1</strong>: <span class="arithmatex">\(8 + 4 + 1 = 13\)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
 <hr>
-<h2 id="aulas-aula-02-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Converta o número <strong>25</strong> para binário usando as divisões sucessivas.</li>
-<li>Qual o binário do número <strong>2</strong>? (Dica: é mais simples do que parece!)</li>
-</ol>
+<div class="admonition important">
+<p class="admonition-title">Regra de Ouro: MSB vs LSB</p>
+<p>Nunca inverta a ordem! 
+- <strong>LSB (Least Significant Bit)</strong>: Primeiro resto (ponta direita).
+- <strong>MSB (Most Significant Bit)</strong>: Último resto (ponta esquerda).
+- <strong>Leitura</strong>: Sempre de baixo para cima (do último quociente para o primeiro resto).</p>
+</div>
 <hr>
 <h2 id="aulas-aula-02-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Tente converter sua idade para binário. O resultado é um número par ou ímpar?
-<em>Dica: Todo número ímpar termina em 1 em binário!</em></p>
+<p>Tente converter sua idade para binário. 
+- O resultado é um número par ou ímpar?
+- <strong>Dica</strong>: Se o primeiro resto (LSB) for 1, o número decimal original é obrigatoriamente ímpar!</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-02-lesson-02-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-02-quiz-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-02-exercicio-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Veja a animação do método das divisões passo a passo.
+    <a href="#slides-slide-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    Teste suas divisões com 10 questões rápidas.
+    <a href="#quizzes-quiz-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Pratique conversões do básico ao avançado.
+    <a href="#exercicios-exercicio-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-01">« Aula Anterior</a> | <a href="#aulas-aula-03">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-03" heading-number="3.2.3"><html><head>
+<p><a href="#aulas-aula-01">« Aula Anterior</a> | <a href="#aulas-aula-03">Próxima Aula: Binário para Decimal <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-03" heading-number="3.2.3"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-03-conversao-binario-para-decimal">🔢 Aula 03 – Conversão Binário para Decimal</h1>
-<p>Agora que já sabemos como transformar nossos números decimais em binário, é hora de aprender o "caminho de volta". Como o computador nos mostra um resultado que possamos entender? Hoje vamos dominar a conversão de <strong>Binário para Decimal</strong>.</p>
+<p>Agora que já sabemos como transformar nossos números decimais em binário, é hora de aprender o "caminho de volta". Como o computador nos mostra um resultado que possamos entender? </p>
 <hr>
 <h2 id="aulas-aula-03-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Compreender o conceito de <strong>valor posicional</strong> no sistema binário.
--   [x] Aprender o método da <strong>soma de pesos</strong> (potências de 2).
--   [x] Praticar a conversão rápida de números binários pequenos e médios.</p>
+- [x] Compreender o conceito de <strong>valor posicional</strong> no sistema binário.
+- [x] Aprender o método da <strong>soma de pesos</strong> (potências de 2).
+- [x] Praticar a conversão rápida de números binários pequenos e médios.</p>
 <hr>
 <h2 id="aulas-aula-03-o-conceito-de-pesos">🏗️ O Conceito de Pesos</h2>
 <p>Assim como no sistema decimal (onde as casas valem 1, 10, 100, 1000...), no binário cada posição tem um "peso" que é uma potência de 2.</p>
 <pre class="mermaid"><code>graph TD
     subgraph Pesos
-    P3[2³=8]
-    P2[2²=4]
-    P1[2¹=2]
-    P0[2⁰=1]
+    P3["2³=8"]
+    P2["2²=4"]
+    P1["2¹=2"]
+    P0["2⁰=1"]
     end
 
     subgraph Bits
-    B3[1]
-    B2[0]
-    B1[1]
-    B0[1]
+    B3["1"]
+    B2["0"]
+    B1["1"]
+    B0["1"]
     end
 
     B3 --- P3
     B2 --- P2
     B1 --- P1
-    B0 --- P0</code></pre>
+    B0 --- P0
+    style P3 fill:#2fa,stroke:#333
+    style P2 fill:#2fa,stroke:#333
+    style P1 fill:#2fa,stroke:#333
+    style P0 fill:#2fa,stroke:#333</code></pre>
 <hr>
 <h2 id="aulas-aula-03-metodo-da-soma-de-pesos">📝 Método da Soma de Pesos</h2>
 <p>Para converter, basta identificar onde estão os bits <strong>1</strong> e somar os seus pesos correspondentes.</p>
-<div class="termy">
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-03-__tabbed_1_1" name="aulas-aula-03-__tabbed_1" type="radio"><input id="aulas-aula-03-__tabbed_1_2" name="aulas-aula-03-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-03-__tabbed_1_1">Exemplo: 1101</label><label for="aulas-aula-03-__tabbed_1_2">Exemplo: 10101010</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div class="termy">
 <div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-03-__codelineno-0-1"></a><span class="gp">$ </span>bin-convert<span class="w"> </span><span class="m">1101</span><span class="w"> </span>--to-decimal
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-03-__codelineno-0-2"></a><span class="go">Análise de Bits:</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-03-__codelineno-0-3"></a><span class="go">1) Bit na pos 3: 1 x 2³ = 8</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-03-__codelineno-0-4"></a><span class="go">2) Bit na pos 2: 1 x 2² = 4</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-03-__codelineno-0-5"></a><span class="go">3) Bit na pos 1: 0 x 2¹ = 0</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-03-__codelineno-0-6"></a><span class="go">4) Bit na pos 0: 1 x 2⁰ = 1</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-03-__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-03-__codelineno-0-8"></a><span class="go">Soma Final: 8 + 4 + 0 + 1</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#aulas-aula-03-__codelineno-0-9"></a><span class="go">Resultado: 13</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-03-__codelineno-0-2"></a><span class="go">Análise de Pesos:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-03-__codelineno-0-3"></a><span class="gp gp-VirtualEnv">(1 x 8)</span> <span class="go">+ (1 x 4) + (0 x 2) + (1 x 1)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-03-__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-03-__codelineno-0-5"></a><span class="go">🏁 Soma: 8 + 4 + 0 + 1 = 13</span>
 </span></code></pre></div>
+</div><p></p>
 </div>
-
+<div class="tabbed-block">
+<ul>
+<li><span class="arithmatex">\(1 \times 128 = 128\)</span></li>
+<li><span class="arithmatex">\(1 \times 32 = 32\)</span></li>
+<li><span class="arithmatex">\(1 \times 8 = 8\)</span></li>
+<li><span class="arithmatex">\(1 \times 2 = 2\)</span></li>
+<li><strong>Soma Total</strong>: 170</li>
+</ul>
+</div>
+</div>
+</div>
 <hr>
-<h2 id="aulas-aula-03-tabela-de-apoio-rapido">💡 Tabela de Apoio Rápido</h2>
-<p>Memorizar estas potências facilitará sua vida em todas as próximas aulas:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Posição (n)</th>
-<th style="text-align: center;">7</th>
-<th style="text-align: center;">6</th>
-<th style="text-align: center;">5</th>
-<th style="text-align: center;">4</th>
-<th style="text-align: center;">3</th>
-<th style="text-align: center;">2</th>
-<th style="text-align: center;">1</th>
-<th style="text-align: center;">0</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Peso (<span class="arithmatex">\(2^n\)</span>)</strong></td>
-<td style="text-align: center;"><strong>128</strong></td>
-<td style="text-align: center;"><strong>64</strong></td>
-<td style="text-align: center;"><strong>32</strong></td>
-<td style="text-align: center;"><strong>16</strong></td>
-<td style="text-align: center;"><strong>8</strong></td>
-<td style="text-align: center;"><strong>4</strong></td>
-<td style="text-align: center;"><strong>2</strong></td>
-<td style="text-align: center;"><strong>1</strong></td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>[!TIP]
-Notou que cada peso é exatamente o dobro do peso à sua direita? Isso torna a escala muito fácil de lembrar!</p>
-</blockquote>
-<hr>
-<h2 id="aulas-aula-03-exemplo-convertendo-um-byte">⚖️ Exemplo: Convertendo um Byte</h2>
-<p>Vamos converter o byte <code>10101010</code>:
--   <span class="arithmatex">\(1 \times 128 = 128\)</span>
--   <span class="arithmatex">\(0 \times 64 = 0\)</span>
--   <span class="arithmatex">\(1 \times 32 = 32\)</span>
--   <span class="arithmatex">\(0 \times 16 = 0\)</span>
--   <span class="arithmatex">\(1 \times 8 = 8\)</span>
--   <span class="arithmatex">\(0 \times 4 = 0\)</span>
--   <span class="arithmatex">\(1 \times 2 = 2\)</span>
--   <span class="arithmatex">\(0 \times 1 = 0\)</span>
--   <strong>Soma</strong>: <span class="arithmatex">\(128 + 32 + 8 + 2 = 170\)</span></p>
-<hr>
-<h2 id="aulas-aula-03-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Converta o binário <code>111</code> para decimal. (Dica: some os pesos das posições 2, 1 e 0).</li>
-<li>Qual o valor decimal do binário <code>10000</code>?</li>
-</ol>
+<div class="admonition tip">
+<p class="admonition-title">Dica de Memorização</p>
+<p>Notou que cada peso é exatamente o <strong>dobro</strong> do peso à sua direita? 
+<span class="arithmatex">\(1 \to 2 \to 4 \to 8 \to 16 \to 32 \to 64 \to 128 \dots\)</span>
+Isso torna a escala muito fácil de lembrar sem precisar fazer cálculos complexos!</p>
+</div>
 <hr>
 <h2 id="aulas-aula-03-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Qual o maior número decimal que você consegue representar usando apenas 4 bits (ex: <code>1111</code>)? E com 8 bits? Tente descobrir a relação entre o número de bits e o valor máximo suportado!</p>
+<p>Qual o maior número decimal que você consegue representar usando apenas <strong>4 bits</strong> (ex: <code>1111</code>)? 
+- E com <strong>8 bits</strong>? 
+- <strong>Pista</strong>: Tente somar todos os pesos da tabela acima e veja o que acontece!</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-03-lesson-03-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-03-quiz-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-03-exercicio-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Visualize a soma dos pesos com animações dinâmicas.
+    <a href="#slides-slide-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 questões para testar sua agilidade mental.
+    <a href="#quizzes-quiz-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Exercícios de conversão binária para consolidar.
+    <a href="#exercicios-exercicio-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-02">« Aula Anterior</a> | <a href="#aulas-aula-04">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-04" heading-number="3.2.4"><html><head>
+<p><a href="#aulas-aula-02">« Aula Anterior</a> | <a href="#aulas-aula-04">Próxima Aula: Sistema Octal <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-04" heading-number="3.2.4"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-04-sistema-octal-base-8">🎱 Aula 04 – Sistema Octal (Base 8)</h1>
-<p>Você já se perguntou por que os comandos de segurança no Linux usam números como <code>755</code> ou <code>644</code>? Isso acontece porque esses sistemas utilizam o <strong>Sistema Octal</strong>. Hoje vamos aprender como essa base funciona e qual sua relação direta com o mundo binário.</p>
+<p>Você já se perguntou por que os comandos de segurança no Linux usam números como <code>755</code> ou <code>644</code>? Isso acontece porque esses sistemas utilizam o <strong>Sistema Octal</strong>. Vamos aprender como essa base funciona e qual sua relação direta com o mundo binário.</p>
 <hr>
 <h2 id="aulas-aula-04-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Conhecer a base 8 e seus dígitos (0 a 7).
--   [x] Entender a relação matemática entre a Base 2 e a Base 8 (<span class="arithmatex">\(2^3 = 8\)</span>).
--   [x] Aprender a converter entre Binário e Octal através do agrupamento de bits.
--   [x] Ver uma aplicação real: permissões de arquivos em sistemas Unix/Linux.</p>
+- [x] Conhecer a base 8 e seus dígitos (0 a 7).
+- [x] Entender a relação matemática entre a Base 2 e a Base 8 (<span class="arithmatex">\(2^3 = 8\)</span>).
+- [x] Aprender a converter entre Binário e Octal através do agrupamento de bits.
+- [x] Ver uma aplicação real: permissões de arquivos em sistemas Unix/Linux.</p>
 <hr>
 <h2 id="aulas-aula-04-o-que-e-o-sistema-octal">🏗️ O que é o Sistema Octal?</h2>
-<p>O sistema octal utiliza a <strong>Base 8</strong>, o que significa que ele possui apenas 8 símbolos disponíveis:
-<strong>0, 1, 2, 3, 4, 5, 6, 7</strong></p>
-<blockquote>
-<p>[!WARNING]
-Os dígitos <strong>8</strong> e <strong>9</strong> não existem no sistema octal! Se você vir o número <span class="arithmatex">\(18_{8}\)</span>, saiba que ele é inválido.</p>
-</blockquote>
+<p>O sistema octal utiliza a <strong>Base 8</strong>, possuindo apenas 8 símbolos disponíveis: <strong>0, 1, 2, 3, 4, 5, 6, 7</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Dígitos Proibidos</p>
+<p>Os dígitos <strong>8</strong> e <strong>9</strong> não existem no sistema octal! Se você encontrar o número <span class="arithmatex">\(18_{8}\)</span>, saiba que ele é um valor <strong>inválido</strong>.</p>
+</div>
 <hr>
 <h2 id="aulas-aula-04-a-relacao-magica-3-bits-1-digito-octal">🤝 A Relação Mágica: 3 Bits = 1 Dígito Octal</h2>
-<p>A grande vantagem do octal é que podemos converter binários longos para octal apenas "olhando" e agrupando os bits de <strong>três em três</strong> (da direita para a esquerda).</p>
+<p>A grande vantagem do octal é que podemos converter binários longos apenas agrupando os bits de <strong>três em três</strong> (da direita para a esquerda).</p>
 <pre class="mermaid"><code>graph LR
     subgraph Binário
-    B1[101]
-    B2[011]
+    B1["101"]
+    B2["011"]
     end
 
     subgraph Octal
-    O1[5]
-    O2[3]
+    O1["5"]
+    O2["3"]
     end
 
     B1 --&gt; O1
-    B2 --&gt; O2</code></pre>
+    B2 --&gt; O2
+    style O1 fill:#2fa,stroke:#333
+    style O2 fill:#2fa,stroke:#333</code></pre>
 <hr>
-<h2 id="aulas-aula-04-exemplo-pratico-binario-para-octal">📝 Exemplo Prático: Binário para Octal</h2>
-<p>Vamos converter o binário <code>11010111</code>:</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-04-__codelineno-0-1"></a><span class="gp">$ </span>bin-to-octal<span class="w"> </span><span class="m">11010111</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-04-__codelineno-0-2"></a><span class="go">1. Separe em trios (da direita para a esquerda):</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-04-__codelineno-0-3"></a><span class="go">   11 | 010 | 111</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-04-__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-04-__codelineno-0-5"></a><span class="go">2. Complete o trio da esquerda com zero, se necessário:</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-04-__codelineno-0-6"></a><span class="go">   011 | 010 | 111</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-04-__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-04-__codelineno-0-8"></a><span class="go">3. Converta cada trio usando a tabela de pesos (4-2-1):</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#aulas-aula-04-__codelineno-0-9"></a><span class="go">   011 = 3</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#aulas-aula-04-__codelineno-0-10"></a><span class="go">   010 = 2</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#aulas-aula-04-__codelineno-0-11"></a><span class="go">   111 = 7</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#aulas-aula-04-__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#aulas-aula-04-__codelineno-0-13"></a><span class="go">Resultado: 327</span>
-</span></code></pre></div>
+<h2 id="aulas-aula-04-pratica-de-conversao">📝 Prática de Conversão</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-04-__tabbed_1_1" name="aulas-aula-04-__tabbed_1" type="radio"><input id="aulas-aula-04-__tabbed_1_2" name="aulas-aula-04-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-04-__tabbed_1_1">Binário para Octal</label><label for="aulas-aula-04-__tabbed_1_2">Permissões Linux</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Para converter <code>11010111</code>:
+1. Separe em trios: <code>11 | 010 | 111</code>
+2. Complete o trio da esquerda: <code>011 | 010 | 111</code>
+3. Use a tabela 4-2-1:
+    - <code>011 = 3</code>
+    - <code>010 = 2</code>
+    - <code>111 = 7</code></p>
+<p>🏁 <strong>Resultado: 327₈</strong></p>
 </div>
-
-<hr>
-<h2 id="aulas-aula-04-aplicacao-real-permissoes-linux">💡 Aplicação Real: Permissões Linux</h2>
-<p>No Linux, cada arquivo tem permissões de <strong>Leitura (4)</strong>, <strong>Escrita (2)</strong> e <strong>Execução (1)</strong>. A soma dessas permissões resulta em um dígito octal:</p>
-<ul>
-<li><strong>7</strong> (4+2+1): Permissão total (Ler, Escrever, Executar).</li>
-<li><strong>5</strong> (4+0+1): Ler e Executar apenas.</li>
-<li><strong>4</strong> (4+0+0): Apenas Leitura.</li>
-</ul>
-<div class="admonition example">
-<p class="admonition-title">Comando chmod</p>
-<p>O famoso comando <code>chmod 755 arquivo</code> define que o dono pode tudo (7), e os outros podem apenas ler e executar (5).</p>
+<div class="tabbed-block">
+<p>No Linux, somamos permissões para gerar um dígito octal:
+- <strong>7</strong> (4+2+1): Tudo (Ler, Gravar, Executar).
+- <strong>5</strong> (4+0+1): Apenas Ler e Executar.
+- <strong>4</strong> (4+0+0): Somente Leitura.</p>
+<div class="admonition info">
+<p class="admonition-title">Dica de SysAdmin</p>
+<p>O comando <code>chmod 755 arquivo</code> é o padrão para scripts que todos podem ler e rodar, mas só você pode alterar.</p>
 </div>
-<hr>
-<h2 id="aulas-aula-04-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Qual o equivalente octal do binário <code>111</code>?</li>
-<li>Converta o número octal <code>25</code> para binário. (Dica: transforme cada dígito em um trio de 3 bits).</li>
-</ol>
+</div>
+</div>
+</div>
 <hr>
 <h2 id="aulas-aula-04-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Descubra como representar o número decimal <strong>10</strong> na base octal. Lembre-se: você não pode usar os dígitos 8 ou 9!</p>
+<p>Descubra como representar o número decimal <strong>10</strong> na base octal. 
+- Lembre-se: o próximo número após o 7 em octal não é o 8, mas o <strong>10₈</strong>!</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-04-lesson-04-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-04-quiz-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-04-exercicio-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Visualize o agrupamento de bits e as permissões de arquivos.
+    <a href="#slides-slide-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 desafios sobre base 8 e comandos Linux.
+    <a href="#quizzes-quiz-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Exercícios de conversão octal e binária.
+    <a href="#exercicios-exercicio-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-03">« Aula Anterior</a> | <a href="#aulas-aula-05">Próxima Aula »</a></p></body></html></section></section>
+<p><a href="#aulas-aula-03">« Aula Anterior</a> | <a href="#aulas-aula-05">Módulo 2: Hexadecimal e Aritmética <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section></section>
                     <section class='print-page md-section' id='section-3-3' heading-number='3.3'>
                         <h1>Módulo 2 – Hexadecimal e Aritmética<a class='headerlink' href='#section-3-3' title='Permanent link'></a>
                         </h1>
@@ -2011,17 +2021,17 @@ Os dígitos <strong>8</strong> e <strong>9</strong> não existem no sistema octa
         })
         </script>
         </head><body><h1 id="aula-05-sistema-hexadecimal-base-16">🔢 Aula 05 – Sistema Hexadecimal (Base 16)</h1>
-<p>Se existe uma base numérica que todo desenvolvedor, designer e engenheiro de hardware precisa dominar, é o <strong>Hexadecimal</strong>. De cores no CSS até endereços de memória e chaves de segurança, o Hexa está em todo lugar. Hoje vamos entender o porquê.</p>
+<p>Se existe uma base numérica que todo desenvolvedor, designer e engenheiro de hardware precisa dominar, é o <strong>Hexadecimal</strong>. De cores no CSS até endereços de memória, o Hexa está em todo lugar. Vamos entender por que ele é tão amado pela tecnologia.</p>
 <hr>
 <h2 id="aulas-aula-05-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Conhecer a base 16 e seus 16 símbolos (0-9 e A-F).
--   [x] Entender a relação entre a Base 2 e a Base 16 (<span class="arithmatex">\(2^4 = 16\)</span>).
--   [x] Aprender a converter Decimal para Hexadecimal através de divisões.
--   [x] Ver aplicações reais: cores RGB e endereços de memória.</p>
+- [x] Conhecer a base 16 e seus 16 símbolos (0-9 e A-F).
+- [x] Entender a relação entre a Base 2 e a Base 16 (<span class="arithmatex">\(2^4 = 16\)</span>).
+- [x] Aprender a converter Decimal para Hexadecimal através de divisões.
+- [x] Ver aplicações reais: cores RGB e endereços de memória.</p>
 <hr>
 <h2 id="aulas-aula-05-os-16-simbolos-do-hexa">🏗️ Os 16 Símbolos do Hexa</h2>
-<p>Como não temos algarismos únicos para os valores 10, 11, 12, 13, 14 e 15, o sistema hexadecimal utiliza as primeiras letras do alfabeto:</p>
+<p>Como não temos algarismos únicos para os valores de 10 a 15, o sistema hexadecimal utiliza as primeiras letras do alfabeto:</p>
 <table>
 <thead>
 <tr>
@@ -2048,153 +2058,180 @@ Os dígitos <strong>8</strong> e <strong>9</strong> não existem no sistema octa
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!NOTE]
-Pense no <strong>A</strong> como o "dez", no <strong>B</strong> como o "onze", e assim por diante até o <strong>F</strong>, que é o "quinze".</p>
-</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Pense em Equivalência</p>
+<p>Pense no <strong>A</strong> como o "dez", no <strong>B</strong> como o "onze", e assim por diante até o <strong>F</strong>, que é o "quinze". É apenas uma forma de economizar espaço!</p>
+</div>
 <hr>
 <h2 id="aulas-aula-05-aplicacao-real-cores-web-rgb">🎨 Aplicação Real: Cores Web (RGB)</h2>
-<p>As cores na tela do seu computador são formadas pela mistura de Vermelho (Red), Verde (Green) e Azul (Blue). Cada canal pode variar de 0 a 255 (<span class="arithmatex">\(FF\)</span> em hexa).</p>
+<p>As cores na sua tela são misturas de Vermelho (<strong>R</strong>ed), Verde (<strong>G</strong>reen) e Azul (<strong>B</strong>lue). Cada canal vai de 0 a 255 (que em hexa é <strong>FF</strong>).</p>
 <pre class="mermaid"><code>graph TD
     subgraph Cor: #FF5733
-    R[FF: Vermelho Máximo]
-    G[57: Verde Médio]
-    B[33: Azul Baixo]
-    end</code></pre>
-<p>Quando você vê <code>#FFFFFF</code>, significa que os três canais estão no máximo (Branco). Se vir <code>#000000</code>, todos estão no mínimo (Preto).</p>
+    R["FF: Vermelho (Máximo)"]
+    G["57: Verde (Médio)"]
+    B["33: Azul (Baixo)"]
+    end
+    style R fill:#f55,stroke:#333
+    style G fill:#5f5,stroke:#333
+    style B fill:#55f,stroke:#333</code></pre>
 <hr>
-<h2 id="aulas-aula-05-convertendo-decimal-para-hexa">➗ Convertendo Decimal para Hexa</h2>
-<p>Assim como convertemos para binário dividindo por 2, para hexadecimal dividimos por <strong>16</strong>.</p>
-<div class="termy">
+<h2 id="aulas-aula-05-pratica-de-conversao">📝 Prática de Conversão</h2>
+<p>Para converter decimal para hexa, dividimos por <strong>16</strong>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-05-__tabbed_1_1" name="aulas-aula-05-__tabbed_1" type="radio"><input id="aulas-aula-05-__tabbed_1_2" name="aulas-aula-05-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-05-__tabbed_1_1">Cálculo Passo a Passo</label><label for="aulas-aula-05-__tabbed_1_2">A Regra do Quarteto</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div class="termy">
 <div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-05-__codelineno-0-1"></a><span class="gp">$ </span>calc-convert<span class="w"> </span><span class="m">250</span><span class="w"> </span>--to-hex
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-05-__codelineno-0-2"></a><span class="go">1) 250 / 16 = 15 | Resto: 10 (A)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-05-__codelineno-0-3"></a><span class="go">2)  15 / 16 = 0  | Resto: 15 (F)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-05-__codelineno-0-2"></a><span class="go">1) 250 / 16 = 15 | Resto: 10 -&gt; [A]</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-05-__codelineno-0-3"></a><span class="go">2)  15 / 16 = 0  | Resto: 15 -&gt; [F]</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-05-__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-05-__codelineno-0-5"></a><span class="go">Lendo de baixo para cima...</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-05-__codelineno-0-6"></a><span class="go">Resultado: FA</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-05-__codelineno-0-5"></a><span class="go">🏁 Resultado (Baixo para Cima): FA</span>
 </span></code></pre></div>
+</div><p></p>
 </div>
-
-<hr>
-<h2 id="aulas-aula-05-a-regra-do-quarteto-nibble">⚡ A Regra do Quarteto (Nibble)</h2>
-<p>A razão do sucesso do Hexa é que <strong>1 dígito hexa</strong> representa exatamente <strong>4 bits</strong> (chamado de <em>Nibble</em>). Isso significa que 2 dígitos hexa representam perfeitamente <strong>1 Byte</strong> (8 bits).</p>
-<ul>
-<li><code>1111 1111</code> binário = <code>FF</code> em hexa.</li>
-<li>Muito mais fácil de ler e digitar, certo?</li>
-</ul>
-<hr>
-<h2 id="aulas-aula-05-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Qual o valor decimal da letra <strong>C</strong> no sistema hexadecimal?</li>
-<li>Represente o número decimal <strong>16</strong> em hexadecimal. (Dica: divida 16 por 16).</li>
-</ol>
+<div class="tabbed-block">
+<p>A razão do sucesso do Hexa é que <strong>1 dígito hexa</strong> representa exatamente <strong>4 bits</strong> (1 nibble).
+- <code>1111 1111</code> (binário) = <code>FF</code> (hexa).
+- 2 dígitos hexa = <strong>1 Byte</strong> (8 bits).</p>
+</div>
+</div>
+</div>
 <hr>
 <h2 id="aulas-aula-05-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Abra uma ferramenta de inspeção no seu navegador (F12), escolha uma cor de qualquer site e tente identificar seus componentes Vermelho, Verde e Azul em Hexadecimal!</p>
+<p>Abra o "Inspetor de Elementos" (F12) em qualquer site, escolha uma cor e identifique:
+- Quanto de Vermelho ela tem em Hexa?
+- O que acontece se você mudar tudo para <code>00</code>?</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-05-lesson-05-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-05-quiz-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-05-exercicio-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Veja como as letras A-F facilitam a leitura de memória.
+    <a href="#slides-slide-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    Teste sua memória sobre a tabela A-F e conversões.
+    <a href="#quizzes-quiz-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Exercícios de conversão e cálculo de cores Hexa.
+    <a href="#exercicios-exercicio-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-04">« Aula Anterior</a> | <a href="#aulas-aula-06">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-06" heading-number="3.3.2"><html><head>
+<p><a href="#aulas-aula-04">« Aula Anterior</a> | <a href="#aulas-aula-06">Próxima Aula: Binário para Hexadecimal <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-06" heading-number="3.3.2"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-06-conversao-binario-hexadecimal">🚀 Aula 06 – Conversão Binário Hexadecimal</h1>
-<p>Você já notou que o endereço físico (MAC) da sua placa de rede ou um endereço IPv6 parece uma "sopa de letrinhas e números"? Na verdade, eles são apenas números binários muito longos que foram resumidos para facilitar a nossa vida. Hoje vamos aprender o <strong>atalho definitivo</strong>: a conversão direta de <strong>Binário para Hexadecimal</strong>.</p>
+<p>Você já notou que o endereço físico (MAC) da sua placa de rede ou um endereço IPv6 parece uma "sopa de letrinhas e números"? Na verdade, eles são apenas números binários muito longos resumidos para facilitar a nossa vida. Hoje vamos aprender o <strong>atalho definitivo</strong>.</p>
 <hr>
 <h2 id="aulas-aula-06-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Masterizar a técnica de agrupamento de 4 bits (<strong>Nibbles</strong>).
--   [x] Aprender a converter binários longos para hexa sem passar pelo decimal.
--   [x] Aprender o caminho inverso: transformar um dígito hexa em 4 bits instantaneamente.
--   [x] Entender a aplicação em endereços de hardware e redes.</p>
+- [x] Masterizar a técnica de agrupamento de 4 bits (<strong>Nibbles</strong>).
+- [x] Aprender a converter binários longos para hexa sem passar pelo decimal.
+- [x] Aprender o caminho inverso: transformar hexa em 4 bits instantaneamente.
+- [x] Entender a aplicação em endereços de hardware e redes.</p>
 <hr>
 <h2 id="aulas-aula-06-o-atalho-do-quarteto-nibble">🏗️ O Atalho do Quarteto (Nibble)</h2>
 <p>A base 16 (<span class="arithmatex">\(2^4\)</span>) tem uma relação perfeita com a base 2. Cada <strong>um</strong> dígito hexadecimal representa exatamente <strong>quatro</strong> bits em binário.</p>
 <pre class="mermaid"><code>graph TD
     subgraph Binário: 1101 1010
-    B1[1101]
-    B2[1010]
+    B1["1101"]
+    B2["1010"]
     end
 
     subgraph Hexadecimal: DA
-    H1[D]
-    H2[A]
+    H1["D"]
+    H2["A"]
     end
 
     B1 --&gt; H1
-    B2 --&gt; H2</code></pre>
+    B2 --&gt; H2
+    style H1 fill:#2fa,stroke:#333
+    style H2 fill:#2fa,stroke:#333</code></pre>
 <hr>
-<h2 id="aulas-aula-06-exemplo-pratico-binario-para-hexa">📝 Exemplo Prático: Binário para Hexa</h2>
-<p>Vamos converter o binário <code>1011110010</code>:</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-06-__codelineno-0-1"></a><span class="gp">$ </span>bin-to-hexa<span class="w"> </span><span class="m">1011110010</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-06-__codelineno-0-2"></a><span class="go">1. Agrupe de 4 em 4 (da direita para a esquerda):</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-06-__codelineno-0-3"></a><span class="go">   10 | 1111 | 0010</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-06-__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-06-__codelineno-0-5"></a><span class="go">2. Complete com zeros à esquerda:</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-06-__codelineno-0-6"></a><span class="go">   0010 | 1111 | 0010</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-06-__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-06-__codelineno-0-8"></a><span class="go">3. Traduza cada bloco de 4 bits:</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#aulas-aula-06-__codelineno-0-9"></a><span class="go">   0010 = 2</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#aulas-aula-06-__codelineno-0-10"></a><span class="go">   1111 = F</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#aulas-aula-06-__codelineno-0-11"></a><span class="go">   0010 = 2</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#aulas-aula-06-__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#aulas-aula-06-__codelineno-0-13"></a><span class="go">Resultado: 2F2</span>
-</span></code></pre></div>
+<h2 id="aulas-aula-06-pratica-de-conversao">📝 Prática de Conversão</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-06-__tabbed_1_1" name="aulas-aula-06-__tabbed_1" type="radio"><input id="aulas-aula-06-__tabbed_1_2" name="aulas-aula-06-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-06-__tabbed_1_1">Binário para Hexa</label><label for="aulas-aula-06-__tabbed_1_2">Hexa para Binário</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Para converter <code>1011110010</code>:
+1. Agrupe de 4 em 4 (da direita): <code>10 | 1111 | 0010</code>
+2. Complete com zeros: <code>0010 | 1111 | 0010</code>
+3. Traduza cada bloco:
+    - <code>0010 = 2</code>
+    - <code>1111 = F</code>
+    - <code>0010 = 2</code></p>
+<p>🏁 <strong>Resultado: 2F2₁₆</strong></p>
 </div>
-
-<hr>
-<h2 id="aulas-aula-06-hexa-para-binario-expansao-total">🔄 Hexa para Binário: Expansão Total</h2>
-<p>Para fazer o caminho de volta, basta "explodir" cada dígito hexa em 4 bits. <strong>Cuidado</strong>: nunca use menos que 4 bits para representar um dígito do meio!</p>
+<div class="tabbed-block">
+<p>Basta "explodir" cada dígito em 4 bits.</p>
 <div class="admonition warning">
-<p class="admonition-title">O erro do zero</p>
-<p>Se você converter <code>A0B</code> e esquecer os zeros do meio, o número estará errado.
--   A = <code>1010</code>
--   0 = <code>0000</code> (Obrigatório!)
--   B = <code>1011</code>
--   Resultado: <code>1010 0000 1011</code></p>
+<p class="admonition-title">O Zero é Obrigatório</p>
+<p>Ao converter <code>A0B</code>, o zero do meio <strong>deve</strong> ter 4 bits:
+- A = <code>1010</code>
+- 0 = <code>0000</code>
+- B = <code>1011</code></p>
+<p>🏁 <strong>Resultado: 101000001011</strong></p>
 </div>
-<hr>
-<h2 id="aulas-aula-06-aplicacao-real-enderecos-ipv6">💡 Aplicação Real: Endereços IPv6</h2>
-<p>O novo padrão de endereços da internet (IPv6) usa 128 bits. Imagine decorar 128 zeros e uns! Por isso, usamos o Hexa:</p>
-<p><code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code></p>
-<p>Cada caractere que você vê ali resume 4 bits de informação.</p>
-<hr>
-<h2 id="aulas-aula-06-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Qual o equivalente hexadecimal do binário <code>1100 1100</code>?</li>
-<li>Transforme o hexa <code>7E</code> em binário.</li>
-</ol>
+</div>
+</div>
+</div>
 <hr>
 <h2 id="aulas-aula-06-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Descubra o endereço MAC da sua placa de rede (usando o comando <code>ipconfig /all</code> no Windows ou <code>ifconfig</code> no Linux). Tente converter os primeiros dois dígitos para binário!</p>
+<p>Descubra o <strong>Endereço MAC</strong> da sua placa de rede (use <code>ipconfig /all</code> no Windows). 
+- Ele tem quantos dígitos hexadecimais? 
+- Tente converter os primeiros dois dígitos para binário manualmentte!</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-06-lesson-06-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-06-quiz-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-06-exercicio-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Veja a expansão e compressão de bits em tempo real.
+    <a href="#slides-slide-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 desafios sobre o atalho definitivo do Nibble.
+    <a href="#quizzes-quiz-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Converta endereços de rede e cores complexas.
+    <a href="#exercicios-exercicio-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-05">« Aula Anterior</a> | <a href="#aulas-aula-07">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-07" heading-number="3.3.3"><html><head>
+<p><a href="#aulas-aula-05">« Aula Anterior</a> | <a href="#aulas-aula-07">Próxima Aula: Aritmética Binária <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-07" heading-number="3.3.3"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-07-aritmetica-binaria">🧮 Aula 07 – Aritmética Binária</h1>
-<p>Como o computador consegue somar números se ele só entende 0 e 1? A resposta é simples: ele segue as mesmas regras que nós, mas com uma base muito menor. Hoje vamos aprender as 4 regras fundamentais da <strong>Soma Binária</strong> e entender como lidar com o famoso "vai-um".</p>
+<p>Como o computador consegue somar números se ele só entende 0 e 1? A resposta é simples: ele segue as mesmas regras que nós, mas com uma base muito menor. Vamos dominar o famoso "vai-um" da lógica digital.</p>
 <hr>
 <h2 id="aulas-aula-07-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Aprender as 4 regras básicas da soma binária.
--   [x] Dominar o conceito de <strong>Carry Out</strong> (Vai-um) em cálculos complexos.
--   [x] Compreender a lógica da subtração binária e do <strong>Borrow</strong> (empréstimo).
--   [x] Identificar e entender o que é um <strong>Overflow</strong> (Transbordamento).</p>
+- [x] Aprender as 4 regras básicas da soma binária.
+- [x] Dominar o conceito de <strong>Carry Out</strong> (Vai-um) em cálculos complexos.
+- [x] Compreender a lógica da subtração binária e do <strong>Borrow</strong> (empréstimo).
+- [x] Identificar e entender o que é um <strong>Overflow</strong> (Transbordamento).</p>
 <hr>
 <h2 id="aulas-aula-07-regras-da-soma-binaria">➕ Regras da Soma Binária</h2>
-<p>A soma binária é quase igual à decimal, mas você "fecha uma dezena" (vai-um) muito mais rápido:</p>
+<p>A soma binária é quase igual à decimal, mas você "fecha uma casa" (vai-um) muito mais rápido:</p>
 <table>
 <thead>
 <tr>
@@ -2222,155 +2259,166 @@ Pense no <strong>A</strong> como o "dez", no <strong>B</strong> como o "onze", e
 <tr>
 <td style="text-align: center;"><strong>1 + 1</strong></td>
 <td style="text-align: center;"><strong>0</strong></td>
-<td style="text-align: left;"><strong>Vai 1</strong> para a próxima coluna!</td>
+<td style="text-align: left;"><strong>Vai 1 (Carry)</strong> para a próxima coluna!</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="aulas-aula-07-o-conceito-de-carry-vai-um">🚀 O Conceito de Carry (Vai-Um)</h2>
-<p>Quando somamos <span class="arithmatex">\(1+1\)</span>, o resultado é <span class="arithmatex">\(10_{2}\)</span> (que vale 2 em decimal). O <code>0</code> fica na coluna atual e o <code>1</code> sobe para a próxima casa à esquerda.</p>
-<pre class="mermaid"><code>graph TD
-    subgraph Carry_Flow
-    C1[Vai 1] -.-&gt; P2
-    end
-    subgraph Calculo
-    P2[1]
-    P1[1]
-    P0[+]
-    P3[1]
-    end
-    P2 --- R2[1]
-    P1 --- R1[0]
-    P3 --- R1</code></pre>
-<hr>
-<h2 id="aulas-aula-07-exemplo-interativo-soma-complexa">📝 Exemplo Interativo: Soma Complexa</h2>
-<p>Vamos somar <code>1011</code> (11) com <code>0111</code> (7):</p>
-<div class="termy">
+<h2 id="aulas-aula-07-pratica-de-calculo">📝 Prática de Cálculo</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-07-__tabbed_1_1" name="aulas-aula-07-__tabbed_1" type="radio"><input id="aulas-aula-07-__tabbed_1_2" name="aulas-aula-07-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-07-__tabbed_1_1">Soma Com Carry</label><label for="aulas-aula-07-__tabbed_1_2">O Perigo do Overflow</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p></p><div class="termy">
 <div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-07-__codelineno-0-1"></a><span class="gp">$ </span>bin-math<span class="w"> </span>sum<span class="w"> </span><span class="m">1011</span><span class="w"> </span><span class="m">0111</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-07-__codelineno-0-2"></a><span class="go">   [1][1][1]  &lt;-- Carries (vai-um)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-07-__codelineno-0-3"></a><span class="go">     1 0 1 1  (11)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-07-__codelineno-0-4"></a><span class="go">   + 0 1 1 1  (7)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-07-__codelineno-0-2"></a><span class="go">   [1][1][1]  &lt;-- Carry (vai-um)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-07-__codelineno-0-3"></a><span class="go">     1 0 1 1  (11 em decimal)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-07-__codelineno-0-4"></a><span class="go">   + 0 1 1 1  (7 em decimal)</span>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-07-__codelineno-0-5"></a><span class="go">   ---------</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-07-__codelineno-0-6"></a><span class="go">   1 0 0 1 0  (18)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-07-__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-07-__codelineno-0-8"></a><span class="go">Verificação: 18 em binário é 10010. Correto!</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-07-__codelineno-0-6"></a><span class="go">   1 0 0 1 0  (18 em decimal)</span>
 </span></code></pre></div>
+</div><p></p>
 </div>
-
+<div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Cuidado com o Transbordamento</p>
+<p>Se um sistema de 8 bits (máximo 255) tentar somar <span class="arithmatex">\(200 + 100\)</span>, o resultado seria <span class="arithmatex">\(300\)</span>. Como <span class="arithmatex">\(300\)</span> não cabe em 8 bits, o bit extra é "perdido", gerando um resultado errado. Isso é o <strong>Overflow</strong>.</p>
+</div>
+</div>
+</div>
+</div>
 <hr>
-<h2 id="aulas-aula-07-o-perigo-do-overflow">🌊 O Perigo do Overflow</h2>
-<p>O que acontece quando o resultado de uma soma é maior do que o número de bits que o computador consegue guardar?</p>
-<blockquote>
-<p>[!WARNING]
-Se um sistema de 8 bits (máximo 255) tentar somar <span class="arithmatex">\(200 + 100\)</span>, o resultado será 300. Como 300 não cabe em 8 bits, o computador "perde" o bit mais significativo e mostra um valor errado (44). Isso se chama <strong>Overflow</strong>.</p>
-</blockquote>
-<hr>
-<h2 id="aulas-aula-07-subtracao-binaria-borrow">➖ Subtração Binária (Borrow)</h2>
-<p>Na subtração, quando tentamos tirar 1 de 0, precisamos "pedir emprestado" (Borrow) da casa à esquerda. Esse empréstimo em binário vale <strong>2</strong>.</p>
-<ul>
-<li><code>0 - 1</code> = <strong>1</strong> (e pede 1 emprestado à esquerda).</li>
-</ul>
-<hr>
-<h2 id="aulas-aula-07-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Quanto é <code>11</code> + <code>11</code> em binário?</li>
-<li>Se somarmos <code>101</code> (5) com <code>010</code> (2), qual o resultado final?</li>
-</ol>
+<div class="admonition info">
+<p class="admonition-title">Subtração e Borrow</p>
+<p>Na subtração, quando precisamos tirar 1 de 0, "pedimos emprestado" da casa à esquerda. Em binário, esse empréstimo (Borrow) vale <strong>2</strong>.
+<span class="arithmatex">\(0 - 1 = 1\)</span> (e pede 1 emprestado à esquerda).</p>
+</div>
 <hr>
 <h2 id="aulas-aula-07-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Tente somar <code>1111</code> + <code>0001</code>. Observe como o "vai-um" viaja por todas as colunas até o final. Esse efeito é chamado de <em>Ripple Carry</em>.</p>
+<p>Tente somar <code>1111</code> + <code>0001</code>. 
+- Observe como o "vai-um" viaja por todas as colunas até o final. 
+- Esse efeito é chamado de <strong>Ripple Carry</strong> (Soma em Cascata)!</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-07-lesson-07-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-07-quiz-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-07-exercicio-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Animações passo a passo da soma e do caminho do Carry.
+    <a href="#slides-slide-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 somas binárias para você resolver em segundos.
+    <a href="#quizzes-quiz-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Exercícios de soma, subtração e detecção de Overflow.
+    <a href="#exercicios-exercicio-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-06">« Aula Anterior</a> | <a href="#aulas-aula-08">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-08" heading-number="3.3.4"><html><head>
+<p><a href="#aulas-aula-06">« Aula Anterior</a> | <a href="#aulas-aula-08">Próxima Aula: Representação de Dados <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-08" heading-number="3.3.4"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-08-representacao-de-dados">📦 Aula 08 – Representação de Dados</h1>
-<p>Até agora, vimos como o computador lida com números positivos. Mas como ele sabe se um número é negativo? E como ele guarda textos, emojis e símbolos? Hoje vamos mergulhar na <strong>Representação de Dados</strong> e descobrir o padrão que domina o mundo digital: o <strong>Complemento de 2</strong> e o <strong>UTF-8</strong>.</p>
+<p>Até agora, vimos como o computador lida com números positivos. Mas como ele sabe se um número é negativo? E como ele guarda textos, emojis e símbolos? Hoje vamos descobrir o <strong>Complemento de 2</strong> e o <strong>UTF-8</strong>.</p>
 <hr>
 <h2 id="aulas-aula-08-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Aprender a representar números negativos usando <strong>Complemento de 2</strong>.
--   [x] Entender a diferença entre as codificações <strong>ASCII</strong> e <strong>UTF-8</strong>.
--   [x] Compreender como os caracteres são mapeados para números binários.
--   [x] Descobrir como um único arquivo pode conter diversos tipos de dados.</p>
+- [x] Aprender a representar números negativos usando <strong>Complemento de 2</strong>.
+- [x] Entender a diferença entre as codificações <strong>ASCII</strong> e <strong>UTF-8</strong>.
+- [x] Compreender como os caracteres são mapeados para números binários.
+- [x] Descobrir como um único arquivo pode conter diversos tipos de dados.</p>
 <hr>
 <h2 id="aulas-aula-08-numeros-negativos-complemento-de-2">➖ Números Negativos: Complemento de 2</h2>
-<p>O computador não usa o símbolo <code>-</code>. Em vez disso, ele usa um truque matemático inteligente onde o bit mais à esquerda (MSB) indica o sinal (0 para +, 1 para -).</p>
-<pre class="mermaid"><code>graph LR
-    A[Número Positivo] --&gt; B[Inverter Bits]
-    B --&gt; C[Somar 1]
-    C --&gt; D[Número Negativo]</code></pre>
-<p><strong>Exemplo: Representando -5 (em 8 bits)</strong>
-1.  <strong>+5</strong> em binário: <code>0000 0101</code>
-2.  <strong>Inverta</strong> tudo: <code>1111 1010</code>
-3.  <strong>Some 1</strong>: <code>1111 1011</code>
-4.  Resultado: <code>1111 1011</code> representa o <strong>-5</strong>.</p>
+<p>O computador não usa o símbolo <code>-</code>. Ele usa um truque matemático onde o bit mais à esquerda (<strong>MSB</strong>) indica o sinal: <code>0</code> para positivo, <code>1</code> para negativo.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-08-__tabbed_1_1" name="aulas-aula-08-__tabbed_1" type="radio"><input id="aulas-aula-08-__tabbed_1_2" name="aulas-aula-08-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-08-__tabbed_1_1">Como calcular (-5)</label><label for="aulas-aula-08-__tabbed_1_2">Por que isso é bom?</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Para representar o <strong>-5</strong> (usando 8 bits):
+1. <strong>+5</strong> em binário: <code>0000 0101</code>
+2. <strong>Inverta</strong> os bits: <code>1111 1010</code>
+3. <strong>Some 1</strong>: <code>1111 1011</code></p>
+<p>🏁 <strong>Resultado: 1111 1011</strong></p>
+</div>
+<div class="tabbed-block">
+<div class="admonition tip">
+<p class="admonition-title">Vantagem Matemática</p>
+<p>Com o Complemento de 2, a CPU não precisa de circuitos diferentes para somar e subtrair. Ela pode simplesmente somar um número positivo com um negativo e o resultado será matematicamente correto!</p>
+</div>
+</div>
+</div>
+</div>
 <hr>
 <h2 id="aulas-aula-08-codificacao-de-texto">🔤 Codificação de Texto</h2>
-<p>Para o computador, a letra "A" não existe; o que existe é o número <strong>65</strong>. Esse mapeamento é feito por tabelas de codificação.</p>
+<p>Para o computador, a letra "A" não existe; o que existe é o número <strong>65</strong>.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Padrão</th>
 <th style="text-align: center;">Bits</th>
-<th style="text-align: left;">Características</th>
+<th style="text-align: left;">Uso</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>ASCII</strong></td>
 <td style="text-align: center;">7/8</td>
-<td style="text-align: left;">Básico, apenas caracteres da língua inglesa.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>UNICODE</strong></td>
-<td style="text-align: center;">variável</td>
-<td style="text-align: left;">Suporta todos os idiomas do mundo + Emojis.</td>
+<td style="text-align: left;">Apenas caracteres básicos (inglês).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>UTF-8</strong></td>
 <td style="text-align: center;">8-32</td>
-<td style="text-align: left;">O formato mais usado na web, compatível com ASCII.</td>
+<td style="text-align: left;">Padrão da Web: Suporta todos os idiomas e <strong>Emojis</strong> 🚀.</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p>[!TIP]
-O <strong>UTF-8</strong> é tão eficiente porque usa apenas 1 byte para letras comuns (A, B, C) e aumenta para até 4 bytes apenas quando precisa representar símbolos complexos ou emojis 🚀.</p>
-</blockquote>
-<hr>
-<h2 id="aulas-aula-08-visualizando-os-bytes">🔍 Visualizando os Bytes</h2>
-<p>Como o computador "vê" a palavra <code>Ads</code>?</p>
 <div class="termy">
 <div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-08-__codelineno-0-1"></a><span class="gp">$ </span>hex-dump<span class="w"> </span><span class="s2">"Ads"</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-08-__codelineno-0-2"></a><span class="go">Texto:   A      d      s</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-08-__codelineno-0-3"></a><span class="go">Decimal: 65     100    115</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-08-__codelineno-0-4"></a><span class="go">Hexa:    41     64     73</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-08-__codelineno-0-5"></a><span class="go">Binário: 01000001 01100100 01110011</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-08-__codelineno-0-2"></a><span class="go">Texto:       A          d          s</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-08-__codelineno-0-3"></a><span class="go">Decimal:     65         100        115</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-08-__codelineno-0-4"></a><span class="go">Hexa:        41         64         73</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-08-__codelineno-0-5"></a><span class="go">Binário:     01000001   01100100   01110011</span>
 </span></code></pre></div>
 </div>
 
 <hr>
-<h2 id="aulas-aula-08-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Qual a vantagem do Complemento de 2 em relação ao método de apenas mudar o bit de sinal? (Dica: pense na operação de soma).</li>
-<li>Se a letra 'A' é o número 65 em ASCII, qual o número da letra 'C'?</li>
-</ol>
-<hr>
 <h2 id="aulas-aula-08-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Pesquise o que é um "BOM" (<em>Byte Order Mark</em>) em arquivos de texto e por que ele é importante para o Windows saber se um arquivo é UTF-8 ou não.</p>
+<p>Pesquise o que é um <strong>BOM</strong> (<em>Byte Order Mark</em>) em arquivos de texto. 
+- Por que às vezes o Windows "estranha" um arquivo criado no Linux? 
+- Dica: Tem a ver com a forma como os bytes são ordenados na memória!</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-08-lesson-08-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-08-quiz-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-08-exercicio-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Veja o processo de inversão de bits e a tabela ASCII.
+    <a href="#slides-slide-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 perguntas sobre números negativos e codificação.
+    <a href="#quizzes-quiz-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Exercícios de Complemento de 2 e conversão de texto.
+    <a href="#exercicios-exercicio-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-07">« Aula Anterior</a> | <a href="#aulas-aula-09">Próxima Aula »</a></p></body></html></section></section>
+<p><a href="#aulas-aula-07">« Aula Anterior</a> | <a href="#aulas-aula-09">Módulo 3: Lógica Digital <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section></section>
                     <section class='print-page md-section' id='section-3-4' heading-number='3.4'>
                         <h1>Módulo 3 – Lógica Digital<a class='headerlink' href='#section-3-4' title='Permanent link'></a>
                         </h1>
@@ -2381,19 +2429,21 @@ O <strong>UTF-8</strong> é tão eficiente porque usa apenas 1 byte para letras 
         })
         </script>
         </head><body><h1 id="aula-09-logica-booleana">🧠 Aula 09 – Lógica Booleana</h1>
-<p>Até agora, tratamos os bits (0 e 1) como números. Mas o poder real do computador surge quando tratamos esses bits como <strong>Valores Lógicos</strong>: Falso (0) ou Verdadeiro (1). Hoje vamos aprender como a <strong>Lógica Booleana</strong> permite que o computador tome decisões, valide senhas e controle máquinas complexas.</p>
+<p>Até agora, tratamos os bits (0 e 1) como números. Mas o poder real do computador surge quando tratamos esses bits como <strong>Valores Lógicos</strong>: Falso (0) ou Verdadeiro (1). Vamos aprender como a <strong>Lógica Booleana</strong> permite que o computador tome decisões e controle sistemas complexos.</p>
 <hr>
 <h2 id="aulas-aula-09-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Compreender os valores lógicos: Verdadeiro (1) e Falso (0).
--   [x] Conhecer e aplicar os operadores fundamentais: <strong>NOT</strong>, <strong>AND</strong> e <strong>OR</strong>.
--   [x] Aprender a ler e construir Tabelas Verdade básicas.
--   [x] Entender a prioridade das operações lógicas.</p>
+- [x] Compreender os valores lógicos: Verdadeiro (1) e Falso (0).
+- [x] Conhecer e aplicar os operadores fundamentais: <strong>NOT</strong>, <strong>AND</strong> e <strong>OR</strong>.
+- [x] Aprender a ler e construir Tabelas Verdade básicas.
+- [x] Entender a prioridade das operações lógicas.</p>
 <hr>
 <h2 id="aulas-aula-09-os-tres-pilares-da-logica">⚙️ Os Três Pilares da Lógica</h2>
 <p>Para combinar estados e tomar decisões, usamos três operadores básicos:</p>
-<h3 id="aulas-aula-09-1-not-nao-o-inversor">1. NOT (NÃO) - O Inversor</h3>
-<p>Inverte qualquer estado. Se entra 1, sai 0. Se entra 0, sai 1.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="aulas-aula-09-__tabbed_1_1" name="aulas-aula-09-__tabbed_1" type="radio"><input id="aulas-aula-09-__tabbed_1_2" name="aulas-aula-09-__tabbed_1" type="radio"><input id="aulas-aula-09-__tabbed_1_3" name="aulas-aula-09-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-09-__tabbed_1_1">NOT (NÃO)</label><label for="aulas-aula-09-__tabbed_1_2">AND (E)</label><label for="aulas-aula-09-__tabbed_1_3">OR (OU)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>O Inversor</strong>: Inverte qualquer estado. Se entra 1, sai 0. Se entra 0, sai 1.</p>
 <table>
 <thead>
 <tr>
@@ -2412,9 +2462,9 @@ O <strong>UTF-8</strong> é tão eficiente porque usa apenas 1 byte para letras 
 </tr>
 </tbody>
 </table>
-<hr>
-<h3 id="aulas-aula-09-2-and-e-a-conjuncao">2. AND (E) - A Conjunção</h3>
-<p>A saída só é verdadeira se <strong>AMBAS</strong> as entradas forem verdadeiras. Pense em um login: você precisa do usuário CORRETO <strong>E</strong> da senha CORRETA.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>A Conjunção</strong>: Só é verdadeira se <strong>AMBAS</strong> as entradas forem verdadeiras.</p>
 <table>
 <thead>
 <tr>
@@ -2425,30 +2475,20 @@ O <strong>UTF-8</strong> é tão eficiente porque usa apenas 1 byte para letras 
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><strong>1</strong></td>
 </tr>
 <tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">0</td>
 <td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h3 id="aulas-aula-09-3-or-ou-a-disjuncao">3. OR (OU) - A Disjunção</h3>
-<p>A saída é verdadeira se <strong>AO MENOS UMA</strong> das entradas for verdadeira. Pense em um alarme: ele toca se a porta for aberta <strong>OU</strong> se a janela for aberta.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>A Disjunção</strong>: É verdadeira se <strong>AO MENOS UMA</strong> das entradas for verdadeira.</p>
 <table>
 <thead>
 <tr>
@@ -2464,93 +2504,86 @@ O <strong>UTF-8</strong> é tão eficiente porque usa apenas 1 byte para letras 
 <td style="text-align: center;">0</td>
 </tr>
 <tr>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
 <td style="text-align: center;">1</td>
 <td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;"><strong>1</strong></td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+</div>
 <hr>
 <h2 id="aulas-aula-09-fluxo-de-decisao">📊 Fluxo de Decisão</h2>
-<p>Veja como uma expressão como <code>(A OR B) AND C</code> pode ser visualizada:</p>
+<p>Veja como uma expressão como <code>(A OR B) AND C</code> pode ser visualizada em um fluxo lógico:</p>
 <pre class="mermaid"><code>graph LR
-    A[A] --&gt; OR{OR}
-    B[B] --&gt; OR
-    OR --&gt; AND{AND}
-    C[C] --&gt; AND
-    AND --&gt; S[Saída Final]</code></pre>
+    A["Entrada A"] --&gt; OROR
+    B["Entrada B"] --&gt; OR
+    OR --&gt; ANDAND
+    C["Entrada C"] --&gt; AND
+    AND --&gt; S(("Saída Final"))
+    style OR fill:#f96,stroke:#333
+    style AND fill:#2fa,stroke:#333</code></pre>
 <hr>
-<h2 id="aulas-aula-09-exemplo-pratico-sensor-de-incendio">🔍 Exemplo Prático: Sensor de Incêndio</h2>
-<p>Imagine um sistema que ativa o extintor se:
-(Detectar Fumaça <strong>AND</strong> Temperatura &gt; 50°C) <strong>OU</strong> Botão de Emergência for apertado.</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-09-__codelineno-0-1"></a><span class="gp">$ </span>check-security<span class="w"> </span>--fire-sensor
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-09-__codelineno-0-2"></a><span class="go">Entradas:</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-09-__codelineno-0-3"></a><span class="go">- Fumaça (A): 1 (Detectada)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-09-__codelineno-0-4"></a><span class="go">- Temperatura (B): 0 (40°C - Normal)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-09-__codelineno-0-5"></a><span class="go">- Botão (C): 1 (Apertado!)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-09-__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-09-__codelineno-0-7"></a><span class="go">Cálculo: (A AND B) OR C -&gt; (1 AND 0) OR 1 -&gt; 0 OR 1</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-09-__codelineno-0-8"></a><span class="go">Resultado: 1 (EXTINTOR ATIVADO)</span>
-</span></code></pre></div>
-</div>
-
-<hr>
-<h2 id="aulas-aula-09-ordem-de-precedencia">🧐 Ordem de Precedência</h2>
-<p>Assim como na matemática (onde a multiplicação vem antes da soma), na lógica booleana existe uma ordem:</p>
-<blockquote>
-<p>[!WARNING]
+<div class="admonition important">
+<p class="admonition-title">Ordem de Precedência</p>
+<p>Assim como na matemática, existe uma hierarquia na lógica:
 1. <strong>NOT</strong> (Inversão)
 2. <strong>AND</strong> (Conjunção)
-3. <strong>OR</strong> (Disjunção)
-<em>Dica: Sempre use parênteses para garantir que o cálculo seja feito na ordem que você deseja!</em></p>
-</blockquote>
-<hr>
-<h2 id="aulas-aula-09-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Qual o resultado de <code>1 AND (0 OR 1)</code>?</li>
-<li>Se <code>A = 1</code>, qual o valor de <code>NOT (NOT A)</code>?</li>
-</ol>
+3. <strong>OR</strong> (Disjunção)</p>
+<p><strong>Dica</strong>: Sempre use parênteses <code>( )</code> para garantir que o computador entenda a ordem que você deseja!</p>
+</div>
 <hr>
 <h2 id="aulas-aula-09-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Tente encontrar um exemplo de lógica "OU" no seu dia a dia (ex: critérios para ganhar um desconto em uma loja). Escreva isso como uma expressão booleana!</p>
+<p>Tente encontrar um exemplo de lógica "OU" no seu dia a dia.
+- Exemplo: "Só vou ao cinema se for sábado <strong>OU</strong> domingo".
+- Como você escreveria isso como uma expressão booleana?</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-09-lesson-09-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-09-quiz-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-09-exercicio-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Animações das portas lógicas e fluxos de decisão.
+    <a href="#slides-slide-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 desafios para testar seu raciocínio lógico rápido.
+    <a href="#quizzes-quiz-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Exercícios de construção de tabelas verdade.
+    <a href="#exercicios-exercicio-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-08">« Aula Anterior</a> | <a href="#aulas-aula-10">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-10" heading-number="3.4.2"><html><head>
+<p><a href="#aulas-aula-08">« Aula Anterior</a> | <a href="#aulas-aula-10">Próxima Aula: Tabelas Verdade <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-10" heading-number="3.4.2"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-10-tabelas-verdade">📊 Aula 10 – Tabelas Verdade</h1>
-<p>Como podemos garantir que um sistema complexo (com vários sensores e condições) vai se comportar exatamente como esperamos? A resposta está na <strong>Tabela Verdade</strong>. Ela é o mapa completo de todas as possibilidades de um sistema lógico. Hoje vamos aprender a construir esse mapa e conhecer operadores mais sofisticados como o <strong>XOR</strong>, o <strong>NAND</strong> e o <strong>NOR</strong>.</p>
+<p>Como podemos garantir que um sistema complexo (com vários sensores e condições) vai se comportar exatamente como esperamos? A resposta está na <strong>Tabela Verdade</strong>. Ela é o mapa completo de todas as possibilidades de um sistema lógico.</p>
 <hr>
 <h2 id="aulas-aula-10-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Aprender a calcular o número de linhas de uma tabela usando a regra <span class="arithmatex">\(2^n\)</span>.
--   [x] Conhecer os operadores <strong>XOR</strong> (OU Exclusivo), <strong>NAND</strong> e <strong>NOR</strong>.
--   [x] Construir tabelas verdade para expressões lógicas complexas passo a passo.
--   [x] Identificar circuitos equivalentes através de tabelas idênticas.</p>
+- [x] Aprender a calcular o número de linhas de uma tabela usando a regra <span class="arithmatex">\(2^n\)</span>.
+- [x] Conhecer os operadores <strong>XOR</strong> (OU Exclusivo), <strong>NAND</strong> e <strong>NOR</strong>.
+- [x] Construir tabelas verdade para expressões lógicas complexas passo a passo.
+- [x] Identificar circuitos equivalentes através de tabelas idênticas.</p>
 <hr>
 <h2 id="aulas-aula-10-a-regra-das-linhas-2n">🔢 A Regra das Linhas: <span class="arithmatex">\(2^n\)</span></h2>
 <p>O tamanho de uma tabela verdade depende apenas do número de variáveis de entrada (<span class="arithmatex">\(n\)</span>). A cada nova variável, o número de cenários possíveis <strong>dobra</strong>.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">n (Variáveis)</th>
+<th style="text-align: center;">Variáveis (<span class="arithmatex">\(n\)</span>)</th>
 <th style="text-align: center;">Linhas (<span class="arithmatex">\(2^n\)</span>)</th>
 <th style="text-align: left;">Exemplo de Entradas</th>
 </tr>
@@ -2571,28 +2604,50 @@ O <strong>UTF-8</strong> é tão eficiente porque usa apenas 1 byte para letras 
 <td style="text-align: center;">8</td>
 <td style="text-align: left;">A, B, C</td>
 </tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">16</td>
-<td style="text-align: left;">A, B, C, D</td>
-</tr>
 </tbody>
 </table>
 <hr>
 <h2 id="aulas-aula-10-novos-operadores-poderosos">✨ Novos Operadores Poderosos</h2>
-<h3 id="aulas-aula-10-1-xor-ou-exclusivo-oplus">1. XOR (OU Exclusivo) - <span class="arithmatex">\(\oplus\)</span></h3>
-<p>O XOR é o "detector de diferença". Ele só resulta em <strong>Verdadeiro</strong> se as entradas forem <strong>Diferentes</strong>. Se ambas forem iguais (0-0 ou 1-1), o resultado é Falso.</p>
-<blockquote>
-<p>[!TIP]
-O XOR é a base da criptografia e da paridade (detecção de erro em redes)!</p>
-</blockquote>
-<h3 id="aulas-aula-10-2-nand-e-nor-os-universais">2. NAND e NOR (Os Universais)</h3>
-<p>São simplesmente o oposto (NOT) do AND e do OR.
--   <strong>NAND</strong>: 0 apenas se ambos forem 1.
--   <strong>NOR</strong>: 1 apenas se ambos forem 0.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-10-__tabbed_1_1" name="aulas-aula-10-__tabbed_1" type="radio"><input id="aulas-aula-10-__tabbed_1_2" name="aulas-aula-10-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-10-__tabbed_1_1">XOR (OU Exclusivo)</label><label for="aulas-aula-10-__tabbed_1_2">NAND e NOR</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>O detector de diferença</strong>: Só resulta em <strong>Verdadeiro</strong> se as entradas forem <strong>Diferentes</strong>. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">Saída (A ⊕ B)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;"><strong>1</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Uso Prático</p>
+<p>O XOR é a base da criptografia e da detecção de erros em redes de computadores!</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>São os operadores <strong>Universais</strong>. Eles são o oposto (NOT) do AND e do OR.
+- <strong>NAND</strong>: <code>0</code> apenas se ambos forem 1.
+- <strong>NOR</strong>: <code>1</code> apenas se ambos forem 0 (muito usado em alarmes).</p>
+</div>
+</div>
+</div>
 <hr>
-<h2 id="aulas-aula-10-construindo-o-mapa-passo-a-passo">🛠️ Construindo o Mapa: Passo a Passo</h2>
-<p>Para resolver a expressão <code>(A AND B) OR NOT A</code>, não tente fazer tudo de cabeça. Divida em colunas:</p>
+<h2 id="aulas-aula-10-exemplo-de-construcao">🛠️ Exemplo de Construção</h2>
+<p>Para resolver <code>(A AND B) OR NOT A</code>, divida em colunas lógicas:</p>
 <table>
 <thead>
 <tr>
@@ -2634,49 +2689,53 @@ O XOR é a base da criptografia e da paridade (detecção de erro em redes)!</p>
 </tr>
 </tbody>
 </table>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-10-__codelineno-0-1"></a><span class="gp">$ </span>logic-analyzer<span class="w"> </span><span class="s2">"(A AND B) OR NOT A"</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-10-__codelineno-0-2"></a><span class="go">Analisando 2 variáveis...</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-10-__codelineno-0-3"></a><span class="go">Gerando 4 combinações...</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-10-__codelineno-0-4"></a><span class="go">Coluna 1: Resolvendo AND... [Concluído]</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-10-__codelineno-0-5"></a><span class="go">Coluna 2: Resolvendo NOT... [Concluído]</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-10-__codelineno-0-6"></a><span class="go">Saída: Gerando mapa final... [OK]</span>
-</span></code></pre></div>
-</div>
-
-<hr>
-<h2 id="aulas-aula-10-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Quantas linhas teria uma tabela verdade para um sistema com 5 sensores diferentes?</li>
-<li>Qual a saída de um <strong>XOR</strong> para as entradas <code>0</code> e <code>1</code>?</li>
-<li>Se o resultado de uma coluna é <code>{1, 1, 1, 1}</code>, como chamamos essa expressão? (Dica: pesquise por <em>Tautologia</em>).</li>
-</ol>
 <hr>
 <h2 id="aulas-aula-10-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Tente construir a tabela verdade para a expressão <code>NOT (A AND B)</code>. Agora compare o resultado com a tabela do operador <strong>NAND</strong>. O que você descobriu?</p>
+<p>Tente construir a tabela verdade para a expressão <code>NOT (A AND B)</code>. 
+- Compare o resultado com a tabela do operador <strong>NAND</strong>. 
+- O que você descobriu sobre a relação entre eles?</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-10-lesson-10-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-10-quiz-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-10-exercicio-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Veja a construção de tabelas dinâmicas e o comportamento do XOR.
+    <a href="#slides-slide-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 desafios para preencher saídas de tabelas verdade.
+    <a href="#quizzes-quiz-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Exercícios avançados com NAND, NOR e Tautologias.
+    <a href="#exercicios-exercicio-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-09">« Aula Anterior</a> | <a href="#aulas-aula-11">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-11" heading-number="3.4.3"><html><head>
+<p><a href="#aulas-aula-09">« Aula Anterior</a> | <a href="#aulas-aula-11">Próxima Aula: Portas Lógicas <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-11" heading-number="3.4.3"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-11-circuitos-logicos">🔌 Aula 11 – Circuitos Lógicos</h1>
-<p>Como transformamos matemática booleana (E, OU, NÃO) em algo físico que funciona com eletricidade? Hoje vamos conhecer as <strong>Portas Lógicas</strong> (<em>Gates</em>). Elas são os blocos fundamentais de construção de qualquer chip, do processador do seu celular até o supercomputador da NASA.</p>
+<p>Como transformamos matemática booleana (E, OU, NÃO) em algo físico que funciona com eletricidade? Hoje vamos conhecer as <strong>Portas Lógicas</strong> (<em>Gates</em>). Elas são os blocos fundamentais de construção de qualquer chip moderno.</p>
 <hr>
 <h2 id="aulas-aula-11-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Identificar os símbolos internacionais das portas lógicas (<strong>NOT, AND, OR, XOR</strong>).
--   [x] Entender como sinais elétricos (0V e 5V) representam bits.
--   [x] Compreender o funcionamento de um <strong>Somador Binário</strong> (<em>Half Adder</em>).
--   [x] Visualizar como portas lógicas se combinam para formar circuitos complexos.</p>
+- [x] Identificar os símbolos internacionais das portas lógicas (<strong>NOT, AND, OR, XOR</strong>).
+- [x] Entender como sinais elétricos (0V e 5V) representam bits.
+- [x] Compreender o funcionamento de um <strong>Somador Binário</strong> (<em>Half Adder</em>).
+- [x] Visualizar como portas lógicas se combinam para formar circuitos complexos.</p>
 <hr>
 <h2 id="aulas-aula-11-simbologia-das-portas-logicas">🏗️ Simbologia das Portas Lógicas</h2>
-<p>Os engenheiros usam símbolos padrões (ANSI/IEEE) para desenhar circuitos. Aprender esses símbolos é como aprender a ler partituras musicais para computação.</p>
+<p>Os engenheiros usam símbolos padrões (ANSI/IEEE) para desenhar circuitos. Aprender esses símbolos é como aprender a ler "partituras" da eletrônica digital.</p>
 <table>
 <thead>
 <tr>
@@ -2688,145 +2747,169 @@ O XOR é a base da criptografia e da paridade (detecção de erro em redes)!</p>
 <tbody>
 <tr>
 <td style="text-align: left;"><strong>NOT</strong></td>
-<td style="text-align: center;">🔽 (Triângulo + Bolinha)</td>
-<td style="text-align: left;">Inverte o sinal.</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2 1 21h22M12 6l7.53 13H4.47"></path></svg></span></td>
+<td style="text-align: left;">Inverte o sinal (0 vira 1).</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>AND</strong></td>
-<td style="text-align: center;">🔲 (D-Shape)</td>
-<td style="text-align: left;">Saída 1 se Ambos forem 1.</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M8 3h8c2.76 0 5 2.24 5 5v8c0 2.76-2.24 5-5 5H8c-2.76 0-5-2.24-5-5V8c0-2.76 2.24-5 5-5m0 2C6.34 5 5 6.34 5 8v8c0 1.66 1.34 3 3 3h8c1.66 0 3-1.34 3-3V8c0-1.66-1.34-3-3-3z"></path></svg></span></td>
+<td style="text-align: left;">Saída 1 <strong>apenas</strong> se Ambos forem 1.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>OR</strong></td>
-<td style="text-align: center;">🔼 (Seta/Foguete)</td>
-<td style="text-align: left;">Saída 1 se Pelo Menos um for 1.</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M8.5 8.64 13.77 12 8.5 15.36zM6.5 5v14l11-7"></path></svg></span></td>
+<td style="text-align: left;">Saída 1 se <strong>pelo menos um</strong> for 1.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>XOR</strong></td>
-<td style="text-align: center;">🔁 (OR + Traço extra)</td>
-<td style="text-align: left;">Saída 1 se forem Diferentes.</td>
+<td style="text-align: center;"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 20c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m1 5h-2v4H7v2h4v4h2v-4h4v-2h-4z"></path></svg></span></td>
+<td style="text-align: left;">Saída 1 se forem <strong>diferentes</strong>.</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2 id="aulas-aula-11-como-o-computador-soma-half-adder">⚡ Como o Computador Soma? (Half Adder)</h2>
-<p>Para somar <span class="arithmatex">\(1+1\)</span>, o computador usa um circuito chamado <strong>Meio Somador</strong>. Ele utiliza duas portas lógicas em paralelo:</p>
-<ol>
-<li><strong>XOR</strong>: Calcula o resultado da soma (se <span class="arithmatex">\(1+1\)</span>, o XOR dá 0).</li>
-<li><strong>AND</strong>: Calcula o "vai-um" ou <em>Carry</em> (se <span class="arithmatex">\(1+1\)</span>, o AND dá 1).</li>
-</ol>
+<h2 id="aulas-aula-11-como-o-computador-soma">⚡ Como o Computador Soma?</h2>
+<p>Para somar <span class="arithmatex">\(1+1\)</span>, o computador usa um circuito chamado <strong>Meio Somador</strong> (<em>Half Adder</em>). Ele combina duas portas lógicas:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-11-__tabbed_1_1" name="aulas-aula-11-__tabbed_1" type="radio"><input id="aulas-aula-11-__tabbed_1_2" name="aulas-aula-11-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-11-__tabbed_1_1">Esquema do Circuito</label><label for="aulas-aula-11-__tabbed_1_2">Explicação</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <pre class="mermaid"><code>graph LR
-    A[Entrada A] --&gt; XOR((XOR))
-    B[Entrada B] --&gt; XOR
-    A --&gt; AND((AND))
+    A["Entrada A"] --&gt; XOR(("XOR"))
+    B["Entrada B"] --&gt; XOR
+    A --&gt; AND(("AND"))
     B --&gt; AND
-    XOR --&gt; S[Soma]
-    AND --&gt; C[Carry / Vai-um]</code></pre>
-<hr>
-<h2 id="aulas-aula-11-transistores-os-atomos-do-hardware">🔬 Transistores: Os Átomos do Hardware</h2>
-<p>Cada porta lógica que desenhamos é, na verdade, um conjunto de <strong>Transistores</strong>.</p>
-<ul>
-<li>Um transistor funciona como um interruptor eletrônico ultrarrápido.</li>
-<li>Quando combinamos 2 ou 4 transistores, criamos uma porta <strong>NAND</strong> ou <strong>NOR</strong>.</li>
-<li>Um processador moderno (como o i9 ou M2) possui <strong>bilhões</strong> desses transistores em um espaço menor que uma unha.</li>
-</ul>
-<blockquote>
-<p>[!NOTE]
-"O silício é uma areia que aprendeu a pensar através de portas lógicas."</p>
-</blockquote>
-<hr>
-<h2 id="aulas-aula-11-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
+    XOR --&gt; S["Resultado (Soma)"]
+    AND --&gt; C["Carry (Vai-um)"]
+    style XOR fill:#f96,stroke:#333
+    style AND fill:#2fa,stroke:#333</code></pre>
+</div>
+<div class="tabbed-block">
 <ol>
-<li>Qual o nome da porta lógica que inverte o sinal de entrada?</li>
-<li>Se ligarmos as entradas <code>1</code> e <code>1</code> em uma porta <strong>XOR</strong>, qual será a saída?</li>
-<li>Por que a porta <strong>NAND</strong> é chamada de "porta universal"? (Dica: pesquise se é possível construir um AND usando apenas NANDs).</li>
+<li><strong>Porta XOR</strong>: Calcula o dígito da soma. Se <span class="arithmatex">\(1+1\)</span>, o resultado é <strong>0</strong>.</li>
+<li><strong>Porta AND</strong>: Calcula se houve estouro. Se <span class="arithmatex">\(1+1\)</span>, o Carry é <strong>1</strong>.</li>
 </ol>
+<p>🏁 Resultado final: <strong>10</strong> (que é 2 em binário).</p>
+</div>
+</div>
+</div>
+<hr>
+<div class="admonition info">
+<p class="admonition-title">O Silício que Pensa</p>
+<p>Cada porta lógica é formada por pequenos interruptores chamados <strong>Transistores</strong>. Um processador moderno possui <strong>bilhões</strong> desses componentes em um espaço menor que uma unha.</p>
+</div>
 <hr>
 <h2 id="aulas-aula-11-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Procure uma imagem da placa mãe de um computador antigo (anos 80/90). Tente identificar pequenos chips retangulares com números como <code>7408</code> ou <code>7432</code>. Esses eram chips que continham apenas algumas portas lógicas individuais!</p>
+<p>Procure uma imagem de uma placa-mãe antiga (anos 80). 
+- Tente encontrar pequenos chips retangulares. 
+- Muitos deles continham apenas 4 portas lógicas individuais! Imagine o trabalho que era montar um computador assim.</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-11-lesson-11-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-11-quiz-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-11-exercicio-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Simule o funcionamento do Half Adder e veja os sinais elétricos.
+    <a href="#slides-slide-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 circuitos para você identificar a saída correta.
+    <a href="#quizzes-quiz-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Desenhe seus próprios diagramas de portas lógicas.
+    <a href="#exercicios-exercicio-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-10">« Aula Anterior</a> | <a href="#aulas-aula-12">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-12" heading-number="3.4.4"><html><head>
+<p><a href="#aulas-aula-10">« Aula Anterior</a> | <a href="#aulas-aula-12">Próxima Aula: Arquitetura de Computadores <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-12" heading-number="3.4.4"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-12-arquitetura-de-computadores">🏛️ Aula 12 – Arquitetura de Computadores</h1>
-<p>Como os bits e as portas lógicas se organizam para formar um computador completo? Hoje vamos conhecer a <strong>Arquitetura de Von Neumann</strong>, o projeto básico que define 99% dos computadores que existem hoje, desde o seu relógio digital até os servidores mais potentes da nuvem.</p>
+<p>Como bits e portas lógicas se organizam para formar um computador completo? Hoje vamos conhecer a <strong>Arquitetura de Von Neumann</strong>, o projeto básico que define 99% dos computadores modernos, do seu relógio digital aos servidores da nuvem.</p>
 <hr>
 <h2 id="aulas-aula-12-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Compreender os pilares do <strong>Modelo de Von Neumann</strong>.
--   [x] Identificar os componentes da CPU: <strong>ALU</strong>, <strong>UC</strong> e <strong>Registradores</strong>.
--   [x] Entender o <strong>Ciclo de Instrução</strong> (Busca, Decodificação e Execução).
--   [x] Conhecer o papel dos barramentos (<em>Buses</em>) na comunicação interna.</p>
+- [x] Compreender os pilares do <strong>Modelo de Von Neumann</strong>.
+- [x] Identificar os componentes da CPU: <strong>ALU</strong>, <strong>UC</strong> e <strong>Registradores</strong>.
+- [x] Entender o <strong>Ciclo de Instrução</strong> (Busca, Decodificação e Execução).
+- [x] Conhecer o papel dos barramentos (<em>Buses</em>) na comunicação interna.</p>
 <hr>
 <h2 id="aulas-aula-12-o-modelo-de-von-neumann">📑 O Modelo de Von Neumann</h2>
-<p>Em 1945, John von Neumann propôs uma ideia revolucionária: os dados e o programa (instruções) deveriam ser guardados na <strong>mesma memória</strong>. Antes disso, para mudar o programa, era preciso mudar os fios do computador!</p>
+<p>Em 1945, John von Neumann propôs uma ideia revolucionária: dados e programas deveriam ser guardados na <strong>mesma memória</strong>. Antes disso, para mudar o programa, era preciso "trocar os fios" do computador!</p>
 <pre class="mermaid"><code>graph TD
     subgraph CPU
-    ALU[ALU: Cálculos]
-    UC[UC: Controle]
-    REG[Registradores]
+    ALU["ALU: Cálculos"]
+    UC["UC: Controle"]
+    REG["Registradores"]
     end
 
-    subgraph Memória
-    RAM[RAM: Dados e Instruções]
+    subgraph Memoria
+    RAM["RAM: Dados e Programas"]
     end
 
-    CPU &lt;--&gt;|Barramento de Dados| RAM
-    CPU --&gt;|Barramento de Endereço| RAM
-    I/O[Entrada e Saída] &lt;--&gt; CPU</code></pre>
+    CPU &lt;--&gt;|"DADOS"| RAM
+    CPU --&gt;|"ENDEREÇO"| RAM
+    style CPU fill:#f96,stroke:#333
+    style Memoria fill:#2fa,stroke:#333</code></pre>
 <hr>
-<h2 id="aulas-aula-12-a-cpu-e-o-ciclo-de-vida">🧠 A CPU e o Ciclo de Vida</h2>
-<p>A CPU (Unidade Central de Processamento) é o motor do computador. Ela repete um ciclo infinito de três passos:</p>
-<ol>
-<li><strong>Busca (Fetch)</strong>: Pega a próxima instrução na memória RAM.</li>
-<li><strong>Decodifica (Decode)</strong>: A Unidade de Controle entende o que precisa ser feito.</li>
-<li><strong>Executa (Execute)</strong>: A ALU realiza o cálculo ou move o dado.</li>
-</ol>
-<pre class="mermaid"><code>sequenceDiagram
-    participant RAM
-    participant UC as Unidade de Controle
-    participant ALU as ALU / Registradores
-
-    UC-&gt;&gt;RAM: Busca Instrução
-    RAM--&gt;&gt;UC: Envia Bits da Instrução
-    Note over UC: Decodifica "Soma"
-    UC-&gt;&gt;ALU: Comando de Execução
-    ALU--&gt;&gt;ALU: Realiza Cálculo</code></pre>
+<h2 id="aulas-aula-12-ciclo-de-vida-do-processamento">🧠 Ciclo de Vida do Processamento</h2>
+<p>A CPU repete um ciclo infinito de três passos para cada comando que você executa:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="aulas-aula-12-__tabbed_1_1" name="aulas-aula-12-__tabbed_1" type="radio"><input id="aulas-aula-12-__tabbed_1_2" name="aulas-aula-12-__tabbed_1" type="radio"><input id="aulas-aula-12-__tabbed_1_3" name="aulas-aula-12-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-12-__tabbed_1_1">1. Busca (Fetch)</label><label for="aulas-aula-12-__tabbed_1_2">2. Decodifica (Decode)</label><label for="aulas-aula-12-__tabbed_1_3">3. Executa (Execute)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Pega a próxima instrução que está esperando na memória RAM e traz para "dentro" do processador.</p>
+</div>
+<div class="tabbed-block">
+<p>A <strong>Unidade de Controle</strong> traduz aqueles bits em uma ação real (ex: "Isso é uma soma").</p>
+</div>
+<div class="tabbed-block">
+<p>A <strong>ALU</strong> realiza o cálculo matemático e o resultado é guardado nos registradores.</p>
+</div>
+</div>
+</div>
 <hr>
-<h2 id="aulas-aula-12-barramentos-as-rodovias-digitais">🛣️ Barramentos: As Rodovias Digitais</h2>
-<p>Nenhum componente funciona isolado. Eles se comunicam através de trilhas chamadas <strong>Barramentos</strong> (<em>Buses</em>):</p>
-<ul>
-<li><strong>Barramento de Dados</strong>: Carrega a informação real (os bits do seu arquivo).</li>
-<li><strong>Barramento de Endereço</strong>: Identifica <strong>AONDE</strong> o dado deve ir na memória.</li>
-<li><strong>Barramento de Controle</strong>: Gerencia quem pode falar e quem deve ouvir.</li>
-</ul>
-<blockquote>
-<p>[!TIP]
-O "Gargalo de Von Neumann" acontece porque a CPU é bilhões de vezes mais rápida que a Memória RAM, criando uma fila de espera para os dados chegarem.</p>
-</blockquote>
-<hr>
-<h2 id="aulas-aula-12-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Quais são as três partes principais da CPU?</li>
-<li>O que acontece se a Unidade de Controle (UC) não conseguir decodificar uma instrução?</li>
-<li>Explique a diferença entre o barramento de Dados e o de Endereço.</li>
-</ol>
+<div class="admonition tip">
+<p class="admonition-title">O Gargalo do Barramento</p>
+<p>Muitas vezes seu computador trava não porque a CPU é lenta, mas porque os <strong>Barramentos</strong> (as rodovias de dados) estão congestionados. A memória RAM é muito mais lenta que o processador, criando uma "fila de espera" digital.</p>
+</div>
 <hr>
 <h2 id="aulas-aula-12-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Abra o "Gerenciador de Tarefas" (Windows) ou o "Monitor de Atividade" (macOS). Observe o gráfico da CPU. Tente identificar a velocidade (em GHz). Você sabia que 3.0 GHz significa que a CPU realiza <strong>3 bilhões</strong> de ciclos de busca-execução por segundo?</p>
+<p>Abra o <strong>Gerenciador de Tarefas</strong> (ou Monitor de Atividade). 
+- Observe a velocidade da sua CPU em <strong>GHz</strong>. 
+- Você sabia que 3.0 GHz significa que ela realiza <strong>3 bilhões</strong> de ciclos de busca-execução por segundo?</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-12-lesson-12-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-12-quiz-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-12-exercicio-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Animação detalhada do Ciclo de Instrução e fluxo de barramentos.
+    <a href="#slides-slide-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 questões sobre Von Neumann e componentes da CPU.
+    <a href="#quizzes-quiz-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Atividade sobre afunilamento de memória e barramentos.
+    <a href="#exercicios-exercicio-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-11">« Aula Anterior</a> | <a href="#aulas-aula-13">Próxima Aula »</a></p></body></html></section></section>
+<p><a href="#aulas-aula-11">« Aula Anterior</a> | <a href="#aulas-aula-13">Módulo 4: Algoritmos e Programação <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section></section>
                     <section class='print-page md-section' id='section-3-5' heading-number='3.5'>
                         <h1>Módulo 4 – Software e Algoritmos<a class='headerlink' href='#section-3-5' title='Permanent link'></a>
                         </h1>
@@ -2837,15 +2920,15 @@ O "Gargalo de Von Neumann" acontece porque a CPU é bilhões de vezes mais rápi
         })
         </script>
         </head><body><h1 id="aula-13-memoria-e-armazenamento">💾 Aula 13 – Memória e Armazenamento</h1>
-<p>Por que o seu computador "esquece" o que você estava fazendo quando a bateria acaba? Por que um SSD faz o seu sistema ligar em segundos, enquanto um HD antigo demora minutos? Hoje vamos desvendar os mistérios da <strong>Memória e Armazenamento</strong>, entendendo como os dados são guardados de forma temporária e permanente.</p>
+<p>Por que o seu computador "esquece" o que você estava fazendo quando a bateria acaba? E por que um SSD é tão mais rápido que um HD antigo? Vamos desvendar os mistérios da <strong>Memória e Armazenamento</strong>.</p>
 <hr>
 <h2 id="aulas-aula-13-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Diferenciar Memória Primária (Volátil) de Secundária (Não-Volátil).
--   [x] Compreender a <strong>Hierarquia de Memória</strong> (Velocidade vs Custo).
--   [x] Comparar as tecnologias <strong>RAM</strong>, <strong>SSD</strong> e <strong>HD</strong>.
--   [x] Entender o conceito de <strong>Memória Virtual</strong> e <strong>Swap</strong>.
--   [x] Aprender as unidades de medida (KB, MB, GB, TB) e o padrão <strong>KiB</strong>.</p>
+- [x] Diferenciar Memória Primária (Volátil) de Secundária (Não-Volátil).
+- [x] Compreender a <strong>Hierarquia de Memória</strong> (Velocidade vs Custo).
+- [x] Comparar as tecnologias <strong>RAM</strong>, <strong>SSD</strong> e <strong>HD</strong>.
+- [x] Entender o conceito de <strong>Memória Virtual</strong> e <strong>Swap</strong>.
+- [x] Aprender as unidades de medida (KB, MB, GB, TB) e o padrão <strong>KiB</strong>.</p>
 <hr>
 <h2 id="aulas-aula-13-hierarquia-de-memoria">🏗️ Hierarquia de Memória</h2>
 <p>Nem toda memória é igual. Existe um equilíbrio constante entre <strong>Velocidade</strong>, <strong>Capacidade</strong> e <strong>Custo</strong>.</p>
@@ -2892,249 +2975,266 @@ O "Gargalo de Von Neumann" acontece porque a CPU é bilhões de vezes mais rápi
 </table>
 <hr>
 <h2 id="aulas-aula-13-memoria-ram-vs-armazenamento">⚡ Memória RAM vs Armazenamento</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-13-__tabbed_1_1" name="aulas-aula-13-__tabbed_1" type="radio"><input id="aulas-aula-13-__tabbed_1_2" name="aulas-aula-13-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-13-__tabbed_1_1">A Analogia da Cozinha</label><label for="aulas-aula-13-__tabbed_1_2">Fluxo de Dados</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Imagine que você está cozinhando:
--   A <strong>RAM</strong> é o espaço em cima da sua mesa (onde você coloca os ingredientes que está usando agora).
--   O <strong>Armazenamento (SSD/HD)</strong> é o armário (onde você guarda tudo para usar outro dia).</p>
+- A <strong>RAM</strong> é o espaço em cima da sua mesa (onde você coloca os ingredientes que está usando <strong>agora</strong>).
+- O <strong>Armazenamento</strong> é o armário (onde você guarda tudo para usar <strong>outro dia</strong>).</p>
+</div>
+<div class="tabbed-block">
 <pre class="mermaid"><code>graph LR
-    A[(💾 SSD/HD: Permanente)] --&gt;|Carregar| B(📂 RAM: Trabalho)
-    B --&gt;|Busca| C{🧠 CPU}
-    C -.-&gt;|Salvar| A</code></pre>
+    A[(💾 SSD/HD: Permanente)] --&gt;|"Carregar"| B("📂 RAM: Trabalho")
+    B --&gt;|"Busca"| C{"🧠 CPU"}
+    C -.-&gt;|"Salvar"| A
+    style A fill:#2fa,stroke:#333
+    style B fill:#f96,stroke:#333</code></pre>
+</div>
+</div>
+</div>
 <hr>
-<h2 id="aulas-aula-13-ssd-vs-hd-o-fim-da-mecanica">🚀 SSD vs HD: O Fim da Mecânica</h2>
-<ul>
-<li><strong>HD (Hard Disk Drive)</strong>: Usa discos magnéticos giratórios e uma agulha física. É lento porque depende de movimento mecânico.</li>
-<li><strong>SSD (Solid State Drive)</strong>: Usa chips de memória flash. É puramente eletrônico, muito mais rápido e resistente a impactos.</li>
-</ul>
-<blockquote>
-<p>[!TIP]
-Trocar um HD antigo por um SSD é o "upgrade" mais eficiente que você pode fazer em um computador para ganhar velocidade imediata.</p>
-</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Upgrade Mestre</p>
+<p>Trocar um HD antigo por um <strong>SSD</strong> é o upgrade mais eficiente que você pode fazer. Como o SSD é puramente eletrônico (sem peças giratórias), ele aumenta a velocidade do sistema quase instantaneamente.</p>
+</div>
 <hr>
-<h2 id="aulas-aula-13-memoria-virtual-paging">🧱 Memória Virtual (Paging)</h2>
-<p>O que o computador faz quando você abre 50 abas no navegador e sua RAM acaba? Ele usa uma técnica chamada <strong>Memória Virtual</strong>.</p>
-<ol>
-<li>O Sistema Operacional reserva um espaço no SSD/HD.</li>
-<li>Os programas que você não está usando no momento são "movidos" para esse espaço.</li>
-<li>Isso evita que o PC trave, mas torna o sistema muito mais lento.</li>
-</ol>
-<hr>
-<h2 id="aulas-aula-13-unidades-de-medida-e-a-confusao-dos-1024">📏 Unidades de Medida e a Confusão dos 1024</h2>
-<p>Na escola, aprendemos que <span class="arithmatex">\(1\text{ kilo} = 1.000\)</span>. Mas na informática:</p>
-<div class="arithmatex">\[ 1\text{ KiB (Kibibyte)} = 1.024\text{ Bytes} \]</div>
-<p>Isso acontece porque os computadores trabalham em bases de 2 (<span class="arithmatex">\(2^{10} = 1024\)</span>). Fabricantes de HD vendem usando 1.000, mas o Windows lê usando 1.024. É por isso que seu HD de 1 TB sempre parece ter menos espaço quando você o liga!</p>
-<hr>
-<h2 id="aulas-aula-13-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>O que acontece com os dados na memória RAM quando você desliga o computador?</li>
-<li>Por que a memória Cache é necessária se já temos a RAM?</li>
-<li>Qual a diferença principal entre um KiB e um KB?</li>
-</ol>
+<h2 id="aulas-aula-13-unidades-de-medida">📏 Unidades de Medida</h2>
+<p>Na informática, não usamos múltiplos exatos de 1.000, mas de <strong>1.024</strong> (<span class="arithmatex">\(2^{10}\)</span>).</p>
+<div class="admonition info">
+<p class="admonition-title">O mistério do espaço perdido</p>
+<p>Você já notou que um HD de 1 TB parece ter menos espaço quando você liga? É porque os fabricantes usam 1.000 (Kilobytes), mas o sistema usa 1.024 (Kibibytes - <strong>KiB</strong>).</p>
+</div>
 <hr>
 <h2 id="aulas-aula-13-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Descubra quanta memória RAM o seu computador possui e quanto espaço está livre no seu SSD/HD. Tente descobrir também qual a tecnologia do seu disco principal (SATA ou NVMe).</p>
+<p>Descubra quanto de <strong>RAM</strong> o seu computador possui e quanto espaço está livre no seu <strong>SSD/HD</strong>.
+- Tente descobrir também qual a tecnologia do seu disco principal (<strong>SATA</strong> ou <strong>NVMe</strong>).</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-13-lesson-13-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-13-quiz-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-13-exercicio-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Veja a animação da hierarquia de memória e o funcionamento do SSD.
+    <a href="#slides-slide-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    10 desafios sobre Volatilidade e Unidades de Medida.
+    <a href="#quizzes-quiz-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Exercícios de conversão de unidades (GB para KiB).
+    <a href="#exercicios-exercicio-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-12">« Aula Anterior</a> | <a href="#aulas-aula-14">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-14" heading-number="3.5.2"><html><head>
+<p><a href="#aulas-aula-12">« Aula Anterior</a> | <a href="#aulas-aula-14">Próxima Aula: Sistemas Operacionais <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-14" heading-number="3.5.2"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-14-sistemas-operacionais">🖥️ Aula 14 – Sistemas Operacionais</h1>
-<p>Você já parou para pensar em como o seu computador consegue rodar um navegador, um editor de textos e um player de música ao mesmo tempo sem que eles se "atropelem"? O responsável por essa mágica é o <strong>Sistema Operacional (SO)</strong>. Hoje vamos entender como ele atua como o grande gerente de todos os recursos da máquina.</p>
+<p>Como o seu computador consegue rodar um navegador, um editor e um player ao mesmo tempo sem que eles se "atropelem"? O responsável é o <strong>Sistema Operacional (SO)</strong>, o grande gerente de recursos da máquina.</p>
 <hr>
 <h2 id="aulas-aula-14-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Compreender o papel do SO como intermediário entre hardware e software.
--   [x] Conhecer as camadas do sistema: <strong>Kernel</strong>, <strong>Shell</strong> e <strong>GUI</strong>.
--   [x] Entender as funções de gerência (Processos, Memória e Arquivos).
--   [x] Diferenciar o uso de interfaces gráficas (<strong>GUI</strong>) e linhas de comando (<strong>CLI</strong>).</p>
+- [x] Compreender o papel do SO como intermediário entre hardware e software.
+- [x] Conhecer as camadas do sistema: <strong>Kernel</strong>, <strong>Shell</strong> e <strong>GUI</strong>.
+- [x] Entender as funções de gerência (Processos, Memória e Arquivos).
+- [x] Diferenciar o uso de interfaces gráficas (<strong>GUI</strong>) e linhas de comando (<strong>CLI</strong>).</p>
 <hr>
 <h2 id="aulas-aula-14-as-camadas-do-sistema">🏗️ As Camadas do Sistema</h2>
-<p>Um computador funciona como uma cebola, cheia de camadas. O usuário raramente toca o hardware diretamente; ele interage com as camadas superiores.</p>
+<p>Um computador funciona em camadas. Você raramente toca o hardware; você interage com as camadas superiores.</p>
 <pre class="mermaid"><code>graph TD
-    A[👤 Usuário] --&gt; B[🖥️ GUI / Shell]
-    B --&gt; C[🧠 Kernel]
-    C --&gt; D[💾 Hardware]
+    A["👤 Usuário"] --&gt; B["🖥️ GUI / Shell"]
+    B --&gt; C["🧠 Kernel (Núcleo)"]
+    C --&gt; D["💾 Hardware"]
     D --&gt; C
     C --&gt; B
-    B --&gt; A</code></pre>
+    B --&gt; A
+    style C fill:#f96,stroke:#333
+    style D fill:#2fa,stroke:#333</code></pre>
 <hr>
-<h2 id="aulas-aula-14-o-kernel-o-coracao-do-so">🧠 O Kernel: O Coração do SO</h2>
-<p>O <strong>Kernel</strong> é a parte do sistema operacional que fica carregada na memória o tempo todo. Ele é o "chefe" invisível que toma as decisões críticas:</p>
-<ul>
-<li><strong>Gerência de Processos</strong>: Decide qual programa pode usar a CPU agora.</li>
-<li><strong>Gerência de Memória</strong>: Garante que o navegador não apague os dados da sua planilha.</li>
-<li><strong>Gerência de Dispositivos</strong>: Conversa com impressoras, teclados e placas de vídeo através dos <strong>Drivers</strong>.</li>
-</ul>
-<hr>
-<h2 id="aulas-aula-14-cli-vs-gui-duas-formas-de-dar-ordens">⌨️ CLI vs GUI: Duas Formas de dar Ordens</h2>
-<ul>
-<li><strong>GUI (Graphical User Interface)</strong>: É a interface clássica com mouse, janelas e ícones. Ideal para a maioria dos usuários.</li>
-<li><strong>CLI (Command Line Interface)</strong>: É o famoso terminal ou prompt de comando. É a ferramenta favorita de desenvolvedores pela sua velocidade e poder de automação.</li>
-</ul>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-14-__codelineno-0-1"></a><span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>/documents
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-14-__codelineno-0-2"></a><span class="go">total 12</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-14-__codelineno-0-3"></a><span class="go">-rw-r--r--  1 ads  prof  1024 Feb 20 10:00 aula_so.pdf</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-14-__codelineno-0-4"></a><span class="go">-rw-r--r--  1 ads  prof  2048 Feb 21 09:30 resumo.txt</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-14-__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-14-__codelineno-0-6"></a><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/documents
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-14-__codelineno-0-7"></a><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Aprendendo Sistemas Operacionais"</span><span class="w"> </span>&gt;<span class="w"> </span>estudo.txt
-</span></code></pre></div>
+<h2 id="aulas-aula-14-interfaces-e-controle">📂 Interfaces e Controle</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-14-__tabbed_1_1" name="aulas-aula-14-__tabbed_1" type="radio"><input id="aulas-aula-14-__tabbed_1_2" name="aulas-aula-14-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-14-__tabbed_1_1">GUI (Interface Gráfica)</label><label for="aulas-aula-14-__tabbed_1_2">CLI (Linha de Comando)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>É a interface clássica com mouse, janelas e ícones. Ideal para a maioria das tarefas diárias e usuários iniciantes.</p>
 </div>
-
+<div class="tabbed-block">
+<p>O famoso terminal. Ferramenta favorita de desenvolvedores pela velocidade e poder de <strong>automação</strong>.</p>
+<p></p><div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-14-__codelineno-0-1"></a><span class="gp">$ </span>ls<span class="w"> </span>-l<span class="w"> </span>/documents
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-14-__codelineno-0-2"></a><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>/projects/ads
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-14-__codelineno-0-3"></a><span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"Iniciando estudos de SO..."</span><span class="w"> </span>&gt;<span class="w"> </span>log.txt
+</span></code></pre></div>
+</div><p></p>
+</div>
+</div>
+</div>
 <hr>
-<h2 id="aulas-aula-14-sistemas-de-arquivos">📂 Sistemas de Arquivos</h2>
-<p>Cada SO tem sua forma preferida de organizar os bits no disco (o índice do livro).</p>
-<ul>
-<li><strong>NTFS</strong>: Padrão do Windows. Robusto e com permissões complexas.</li>
-<li><strong>EXT4</strong>: Padrão do Linux. Muito rápido e estável.</li>
-<li><strong>FAT32</strong>: Antigo, mas funciona em qualquer lugar (pendrives e câmeras).</li>
-</ul>
-<blockquote>
-<p>[!IMPORTANT]
-Um arquivo deletado muitas vezes não "some" do disco imediatamente. O SO apenas remove a referência dele no Sistema de Arquivos, marcando aquele espaço como "disponível para novos dados".</p>
-</blockquote>
-<hr>
-<h2 id="aulas-aula-14-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Qual a função de um <strong>Driver</strong> de dispositivo?</li>
-<li>Por que o Kernel é considerado a parte mais crítica de um SO?</li>
-<li>Cite uma vantagem de usar a Linha de Comando (CLI) em vez da Interface Gráfica (GUI).</li>
-</ol>
+<div class="admonition important">
+<p class="admonition-title">O Coração: Kernel</p>
+<p>O <strong>Kernel</strong> é a parte que fica carregada na memória o tempo todo. Ele decide qual programa usa a CPU, garante que um app não apague os dados de outro e conversa com dispositivos através dos <strong>Drivers</strong>.</p>
+</div>
 <hr>
 <h2 id="aulas-aula-14-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Abra o Terminal do seu sistema (Prompt/PowerShell no Windows ou Terminal no Linux/Mac) e digite o comando para listar diretórios (<code>dir</code> no Windows ou <code>ls</code> nos outros). Tente navegar entre pastas apenas usando comandos!</p>
+<p>Abra o Terminal do seu sistema (<strong>Prompt/PowerShell</strong> ou <strong>Terminal</strong>). 
+- Use o comando <code>dir</code> (Windows) ou <code>ls</code> (Linux/Mac) para ver onde você está.
+- Tente criar uma pasta e entrar nela apenas usando comandos!</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-14-lesson-14-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-14-quiz-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-14-exercicio-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Animação das camadas de Kernel e demonstração de Shell.
+    <a href="#slides-slide-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    Teste seus conhecimentos sobre Kernel e Sistemas de Arquivos.
+    <a href="#quizzes-quiz-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Atividades práticas de Linha de Comando básica.
+    <a href="#exercicios-exercicio-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-13">« Aula Anterior</a> | <a href="#aulas-aula-15">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-15" heading-number="3.5.3"><html><head>
+<p><a href="#aulas-aula-13">« Aula Anterior</a> | <a href="#aulas-aula-15">Módulo 4: Algoritmos e Programação <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-15" heading-number="3.5.3"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-15-algoritmos-e-fluxogramas">📋 Aula 15 – Algoritmos e Fluxogramas</h1>
-<p>Até agora, aprendemos sobre o "corpo" do computador (hardware) e o seu "cérebro" (SO). Agora, vamos aprender a dar ordens inteligentes para ele. Programar não é apenas escrever códigos complicados; programar é <strong>resolver problemas</strong>. Hoje vamos aprender como planejar essas soluções usando <strong>Algoritmos</strong> e <strong>Fluxogramas</strong>.</p>
+<p>Até agora, aprendemos sobre o "corpo" do computador (hardware) e o seu "cérebro" (SO). Agora, vamos aprender a dar ordens inteligentes para ele. Programar é, antes de tudo, <strong>resolver problemas</strong>.</p>
 <hr>
 <h2 id="aulas-aula-15-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Definir o que é um algoritmo e suas propriedades fundamentais.
--   [x] Identificar e utilizar a simbologia padrão de <strong>Fluxogramas</strong>.
--   [x] Compreender a lógica de <strong>Desvio Condicional</strong> (SE / ENTÃO / SENÃO).
--   [x] Transformar um problema do cotidiano em uma sequência lógica de passos.</p>
+- [x] Definir o que é um algoritmo e suas propriedades fundamentais.
+- [x] Identificar e utilizar a simbologia padrão de <strong>Fluxogramas</strong>.
+- [x] Compreender a lógica de <strong>Desvio Condicional</strong> (SE / ENTÃO / SENÃO).
+- [x] Transformar um problema do cotidiano em uma sequência lógica.</p>
 <hr>
 <h2 id="aulas-aula-15-o-que-e-um-algoritmo">🧩 O que é um Algoritmo?</h2>
 <p>Um algoritmo é simplesmente uma <strong>sequência finita de passos</strong> claros e bem definidos para realizar uma tarefa.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-15-__tabbed_1_1" name="aulas-aula-15-__tabbed_1" type="radio"><input id="aulas-aula-15-__tabbed_1_2" name="aulas-aula-15-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-15-__tabbed_1_1">Exemplos Reais</label><label for="aulas-aula-15-__tabbed_1_2">Propriedades</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ul>
-<li>Uma receita de bolo é um algoritmo.</li>
-<li>As instruções para montar um móvel são um algoritmo.</li>
-<li>O caminho que o GPS calcula é um algoritmo.</li>
+<li>Uma receita de bolo.</li>
+<li>Instruções para montar um móvel.</li>
+<li>O caminho que o GPS calcula.</li>
 </ul>
+</div>
+<div class="tabbed-block">
+<ol>
+<li><strong>Finitude</strong>: Deve ter um fim.</li>
+<li><strong>Clareza</strong>: Cada passo deve ser inequívoco.</li>
+<li><strong>Eficácia</strong>: Deve resolver o problema proposto.</li>
+</ol>
+</div>
+</div>
+</div>
 <hr>
 <h2 id="aulas-aula-15-simbologia-de-fluxogramas">📊 Simbologia de Fluxogramas</h2>
-<p>Para que programadores do mundo todo se entendam, existem símbolos padrões para desenhar algoritmos:</p>
+<p>Para que desenvolvedores do mundo todo se entendam, usamos símbolos padrões:</p>
 <pre class="mermaid"><code>graph TD
-    A([Oval: Início / Fim])
-    B[Retângulo: Processo / Ação]
-    C{Losango: Decisão / Pergunta}
-    D[/Paralelogramo: Entrada / Saída Data/]
+    A(["Oval: Início / Fim"])
+    B["Retângulo: Processo / Ação"]
+    C{"Losango: Decisão"}
+    D[/"Paralelogramo: Entrada/Saída"/]
 
     A --&gt; B
     B --&gt; C
-    C -- Sim --&gt; D
-    C -- Não --&gt; B</code></pre>
+    C -- "Sim" --&gt; D
+    C -- "Não" --&gt; B
+    style C fill:#f96,stroke:#333</code></pre>
 <hr>
-<h2 id="aulas-aula-15-logica-de-decisao-a-bifurcacao">🚦 Lógica de Decisão (A Bifurcação)</h2>
-<p>A parte mais importante de um algoritmo é a capacidade de tomar decisões com base em condições.</p>
-<div class="admonition quote">
-<p class="admonition-title">Estrutura SE-ENTÃO-SENÃO</p>
-<p aluno="Aluno" recuperação="Recuperação" em="em"><strong>SE</strong> (a média for maior que 7)
-   <strong>ENTÃO</strong> { Aluno Aprovado }
-<strong>SENÃO</strong></p>
+<div class="admonition tip">
+<p class="admonition-title">Dica de Ouro: Pseudocódigo</p>
+<p>Antes de escrever em códigos complicados, escreva em <strong>Portugol</strong> (Português Estruturado). Se a lógica funcionar no papel, ela funcionará em qualquer linguagem de programação!</p>
 </div>
-<hr>
-<h2 id="aulas-aula-15-exemplo-pratico-saque-bancario">🔍 Exemplo Prático: Saque Bancário</h2>
-<p>Como o caixa eletrônico decide se te entrega o dinheiro?</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-15-__codelineno-0-1"></a><span class="gp">$ </span>run-algorithm<span class="w"> </span><span class="s2">"Saque Bancário"</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-15-__codelineno-0-2"></a><span class="go">1. Início</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-15-__codelineno-0-3"></a><span class="go">2. Ler VALOR_SAQUE</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-15-__codelineno-0-4"></a><span class="go">3. Ler SALDO_DISPONIVEL</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-15-__codelineno-0-5"></a><span class="go">4. SE (VALOR_SAQUE &lt;= SALDO_DISPONIVEL)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-15-__codelineno-0-6"></a><span class="go">      ENTÃO: Subtrair valor e Entregar Notas</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-15-__codelineno-0-7"></a><span class="go">      SENÃO: Mostrar "Saldo Insuficiente"</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-15-__codelineno-0-8"></a><span class="go">5. Fim</span>
-</span></code></pre></div>
-</div>
-
-<hr>
-<h2 id="aulas-aula-15-dica-de-ouro-pseudocodigo">💡 Dica de Ouro: Pseudocódigo</h2>
-<p>Antes de tentar escrever em Python, C ou Java, escreva em <strong>Portugol</strong> (Português Estruturado). Se a lógica funcionar no papel, ela funcionará em qualquer linguagem de programação!</p>
-<blockquote>
-<p>[!TIP]
-Um programa mal planejado é como uma casa construída sem planta: você vai gastar o dobro do tempo consertando erros no futuro.</p>
-</blockquote>
-<hr>
-<h2 id="aulas-aula-15-exercicios-rapidos">✍️ Exercícios Rápidos</h2>
-<ol>
-<li>Qual a diferença entre um Processo (Retângulo) e uma Decisão (Losango) em um fluxograma?</li>
-<li>Por que um algoritmo deve ser "finito"?</li>
-<li>Monte o algoritmo para "Trocar uma Lâmpada queimada".</li>
-</ol>
 <hr>
 <h2 id="aulas-aula-15-desafio-da-semana">🚀 Desafio da Semana</h2>
-<p>Desenhe o fluxograma de um sistema de login: ele deve perguntar o usuário e a senha. Se ambos estiverem corretos, mostra "Bem-vindo"; caso contrário, mostra "Erro" e termina.</p>
+<p>Desenhe o fluxograma de um sistema de login simples.
+- Ele deve perguntar o usuário e a senha. 
+- <strong>SE</strong> ambos estiverem corretos, mostra "Bem-vindo". 
+- <strong>SENÃO</strong>, mostra "Erro" e termina.</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-15-lesson-15-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-15-quiz-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-15-exercicio-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Veja a construção passo a passo de fluxogramas complexos.
+    <a href="#slides-slide-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz de Prática</strong>
+    ---
+    Identifique erros de lógica em algoritmos do dia a dia.
+    <a href="#quizzes-quiz-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Mão na Massa</strong>
+    ---
+    Exercícios de criação de algoritmos para problemas reais.
+    <a href="#exercicios-exercicio-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar</a></p>
+</li>
+</ul>
+</div>
 <hr>
-<p><a href="#aulas-aula-14">« Aula Anterior</a> | <a href="#aulas-aula-16">Próxima Aula »</a></p></body></html></section><section class="print-page" id="aulas-aula-16" heading-number="3.5.4"><html><head>
+<p><a href="#aulas-aula-14">« Aula Anterior</a> | <a href="#aulas-aula-16">Última Aula: Introdução à Programação <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg></span></a></p></body></html></section><section class="print-page" id="aulas-aula-16" heading-number="3.5.4"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
         </head><body><h1 id="aula-16-introducao-a-programacao">🚀 Aula 16 – Introdução à Programação</h1>
-<p>Chegamos ao ápice da nossa jornada! Percorremos um longo caminho: desde os bits solitários até os complexos sistemas operacionais. Agora, vamos pegar todo esse conhecimento e aplicá-lo na prática mais poderosa de um desenvolvedor: a <strong>Programação</strong>. Hoje vamos entender como transformar ideias em código que o computador obedece.</p>
+<p>Chegamos ao ápice da nossa jornada! Percorremos um longo caminho: desde os bits solitários até os complexos sistemas operacionais. Agora, vamos aplicar esse conhecimento na prática: a <strong>Programação</strong>.</p>
 <hr>
 <h2 id="aulas-aula-16-objetivos-de-aprendizagem">🎯 Objetivos de Aprendizagem</h2>
 <p>Nesta aula, você vai:
--   [x] Compreender o papel das linguagens de programação de alto e baixo nível.
--   [x] Conhecer a diferença entre <strong>Compiladores</strong> e <strong>Interpretadores</strong>.
--   [x] Identificar os blocos básicos de qualquer programa: Variáveis, Laços e Funções.
--   [x] Escrever (ou entender) o seu primeiro "Olá Mundo".</p>
+- [x] Compreender o papel das linguagens de alto e baixo nível.
+- [x] Conhecer a diferença entre <strong>Compiladores</strong> e <strong>Interpretadores</strong>.
+- [x] Identificar os blocos básicos: Variáveis, Laços e Funções.
+- [x] Escrever o seu primeiro "Olá Mundo".</p>
 <hr>
 <h2 id="aulas-aula-16-a-jornada-do-codigo">🏗️ A Jornada do Código</h2>
-<p>Como o texto que você digita vira pulsos elétricos? Existem dois tradutores principais:</p>
-<h3 id="aulas-aula-16-1-compiladores-ex-c-rust-go">1. Compiladores (Ex: C, Rust, Go)</h3>
-<p>Traduzem o código inteiro de uma vez em um arquivo executável (<code>.exe</code>). São muito rápidos na execução, mas demoram um pouco para traduzir.</p>
-<h3 id="aulas-aula-16-2-interpretadores-ex-python-javascript-php">2. Interpretadores (Ex: Python, JavaScript, PHP)</h3>
-<p>Traduzem o código linha por linha, enquanto o programa roda. São excelentes para aprender e testar ideias rapidamente.</p>
+<p>Como o texto que você digita vira pulsos elétricos? Existem dois "tradutores" principais:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-16-__tabbed_1_1" name="aulas-aula-16-__tabbed_1" type="radio"><input id="aulas-aula-16-__tabbed_1_2" name="aulas-aula-16-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-16-__tabbed_1_1">Compiladores</label><label for="aulas-aula-16-__tabbed_1_2">Interpretadores</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Traduzem o código <strong>inteiro</strong> de uma vez em um arquivo executável (<code>.exe</code>). São muito rápidos na execução.
+- <em>Exemplos: C, C++, Rust, Go.</em></p>
+</div>
+<div class="tabbed-block">
+<p>Traduzem o código <strong>linha por linha</strong>, enquanto o programa roda. São ótimos para testes rápidos.
+- <em>Exemplos: Python, JavaScript, PHP.</em></p>
+</div>
+</div>
+</div>
 <pre class="mermaid"><code>graph LR
-    A[⌨️ Código Fonte] --&gt; B{🛠️ Tradutor}
-    B --&gt; C[⚙️ Código de Máquina]
-    C --&gt; D[💻 CPU Executa]</code></pre>
-<hr>
-<h2 id="aulas-aula-16-anatomia-basica-de-um-programa">🦴 Anatomia Básica de um Programa</h2>
-<p>Não importa a linguagem, quase todas usam os mesmos conceitos fundamentais:</p>
-<ul>
-<li><strong>Variáveis</strong>: Gavetas na memória RAM para guardar dados (números, nomes, etc).</li>
-<li><strong>Estruturas de Decisão</strong>: O <code>SE</code> que aprendemos na aula anterior.</li>
-<li><strong>Estruturas de Repetição (Loops)</strong>: Comandos que fazem o computador repetir algo 1.000 ou 1 milhão de vezes sem cansar.</li>
-<li><strong>Funções</strong>: Blocos de código reaproveitáveis (atalhos).</li>
-</ul>
+    A["⌨️ Código Fonte"] --&gt; B🛠️ Tradutor
+    B --&gt; C["⚙️ Código Máquina"]
+    C --&gt; D["💻 CPU Executa"]
+    style B fill:#f96,stroke:#333</code></pre>
 <hr>
 <h2 id="aulas-aula-16-tradicao-ola-mundo">🌎 Tradição: "Olá, Mundo!"</h2>
-<p>Todo programador começa por aqui. Veja como o mesmo comando muda conforme a linguagem, mas o objetivo é o mesmo:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="aulas-aula-16-__tabbed_1_1" name="aulas-aula-16-__tabbed_1" type="radio"><input id="aulas-aula-16-__tabbed_1_2" name="aulas-aula-16-__tabbed_1" type="radio"><input id="aulas-aula-16-__tabbed_1_3" name="aulas-aula-16-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-16-__tabbed_1_1">Python</label><label for="aulas-aula-16-__tabbed_1_2">JavaScript</label><label for="aulas-aula-16-__tabbed_1_3">C</label></div>
+<p>Todo programador começa por aqui. Veja como o comando muda, mas o objetivo é o mesmo:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked id="aulas-aula-16-__tabbed_2_1" name="aulas-aula-16-__tabbed_2" type="radio"><input id="aulas-aula-16-__tabbed_2_2" name="aulas-aula-16-__tabbed_2" type="radio"><input id="aulas-aula-16-__tabbed_2_3" name="aulas-aula-16-__tabbed_2" type="radio"><div class="tabbed-labels"><label for="aulas-aula-16-__tabbed_2_1">Python</label><label for="aulas-aula-16-__tabbed_2_2">JavaScript</label><label for="aulas-aula-16-__tabbed_2_3">C</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-16-__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Olá, Mundo!"</span><span class="p">)</span>
@@ -3155,30 +3255,36 @@ Um programa mal planejado é como uma casa construída sem planta: você vai gas
 </div>
 </div>
 <hr>
-<h2 id="aulas-aula-16-a-grande-revisao-voce-agora-entende">🎓 A Grande Revisão: Você agora entende!</h2>
-<p>Pense em tudo o que você aprendeu para chegar até aqui:
-1.  <strong>Bit e Byte</strong>: O alfabeto da máquina.
-2.  <strong>Lógica Booleana</strong>: As regras do pensamento digital.
-3.  <strong>Circuitos e CPU</strong>: Como o silício executa ordens.
-4.  <strong>Sistemas Operacionais</strong>: Como gerenciar milhares de ordens ao mesmo tempo.
-5.  <strong>Programação</strong>: Como você assume o controle!</p>
-<hr>
-<h2 id="aulas-aula-16-onde-ir-daqui">🚀 Onde Ir daqui?</h2>
-<p>Fundamentos da Computação é apenas o começo. Com essa base sólida, você está pronto para:
--   <strong>Desenvolvimento Web</strong>: Aprender HTML, CSS e JS.
--   <strong>Ciência de Dados</strong>: Aprender Python e Estatística.
--   <strong>Desenvolvimento de Apps</strong>: Aprender Swift, Kotlin ou Flutter.</p>
-<blockquote>
-<p>[!TIP]
-Não tente aprender todas as linguagens ao mesmo tempo. Escolha uma, pratique a lógica e o resto virá naturalmente!</p>
-</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Dica para o Sucesso</p>
+<p>Não tente aprender todas as linguagens ao mesmo tempo. Escolha uma (como Python ou JavaScript), pratique a <strong>Lógica de Programação</strong> e o resto virá naturalmente!</p>
+</div>
 <hr>
 <h2 id="aulas-aula-16-conclusao-do-curso">🏁 Conclusão do Curso</h2>
 <p>Parabéns! Você concluiu os <strong>Fundamentos da Computação</strong>. Agora você não apenas usa o computador, você entende o que acontece "por baixo do capô". A computação deixou de ser mágica e passou a ser uma ferramenta em suas mãos.</p>
 <hr>
-<p><a class="md-button" href="#aulas-aula-16-lesson-16-slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> Ver Slides</a>
-<a class="md-button" href="#aulas-aula-16-quiz-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> Responder Quiz</a>
-<a class="md-button" href="#aulas-aula-16-exercicio-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> Praticar Exercícios</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides de Encerramento</strong>
+    ---
+    Resumo de toda a jornada e próximos passos na carreira.
+    <a href="#slides-slide-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quiz Final</strong>
+    ---
+    O grande desafio final cobrindo todos os módulos.
+    <a href="#quizzes-quiz-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Responder Quiz</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Projeto Final</strong>
+    ---
+    Aplique tudo o que aprendeu em um desafio integrado.
+    <a href="#projetos-projeto-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Projeto</a></p>
+</li>
+</ul>
+</div>
 <hr>
 <p><a href="#aulas-aula-15">« Aula Anterior</a></p></body></html></section></section></section>
                     <section class='print-page md-section' id='section-4' heading-number='4'>
