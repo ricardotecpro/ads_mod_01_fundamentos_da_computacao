@@ -71,6 +71,8 @@ markdown_extensions:
   - tables
   - pymdownx.snippets:
       base_path: docs
+  - pymdownx.arithmatex:
+      generic: true
 
 plugins:
   - mkdocs-revealjs
@@ -126,6 +128,8 @@ extra_javascript:
   - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
   - assets/js/mermaid-init.js
   - assets/js/custom_termynal.js
+  - assets/js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   social:
