@@ -36,5 +36,5 @@ O modelo de Von Neumann possui um ponto fraco conhecido como "Gargalo de Von Neu
 - b) Qual componente de hardware (uma memória muito rápida) foi criado especificamente para tentar diminuir esse problema?
 
 ---
-[:material-book-open-variant: Ver Aula 12](aula-12.md){ .md-button }
-[:material-school: Responder Quiz 12](quiz-12){ .md-button }
+[:material-book-open-variant: Ver Aula 12](../aulas/aula-12.md){ .md-button }
+[:material-school: Responder Quiz 12](../quizzes/quiz-12.md){ .md-button }

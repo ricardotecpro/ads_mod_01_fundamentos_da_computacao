@@ -41,5 +41,5 @@ Imagine um sistema antigo que só consegue armazenar números de **4 bits** (má
 - b) Qual seria o resultado "visível" para o sistema e como chamamos esse erro técnico?
 
 ---
-[:material-book-open-variant: Ver Aula 07](aula-07.md){ .md-button }
-[:material-school: Responder Quiz 07](quiz-07){ .md-button }
+[:material-book-open-variant: Ver Aula 07](../aulas/aula-07.md){ .md-button }
+[:material-school: Responder Quiz 07](../quizzes/quiz-07.md){ .md-button }

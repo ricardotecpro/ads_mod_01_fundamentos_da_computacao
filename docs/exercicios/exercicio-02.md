@@ -37,5 +37,5 @@ Realize a conversão do número decimal **100** para binário.
 Apresente todo o passo a passo das divisões e indique claramente qual foi o bit gerado em cada etapa até chegar ao quociente zero.
 
 ---
-[:material-book-open-variant: Ver Aula 02](aula-02.md){ .md-button }
-[:material-school: Responder Quiz 02](quiz-02){ .md-button }
+[:material-book-open-variant: Ver Aula 02](../aulas/aula-02.md){ .md-button }
+[:material-school: Responder Quiz 02](../quizzes/quiz-02.md){ .md-button }

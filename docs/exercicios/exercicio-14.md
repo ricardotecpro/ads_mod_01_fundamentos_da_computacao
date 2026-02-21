@@ -32,5 +32,5 @@ Imagine que você comprou uma impressora novinha, mas ao conectá-la ao PC, ela 
 - Explique o papel do **Driver** nesta situação. Como ele atua entre o Sistema Operacional e o hardware físico da impressora?
 
 ---
-[:material-book-open-variant: Ver Aula 14](aula-14.md){ .md-button }
-[:material-school: Responder Quiz 14](quiz-14){ .md-button }
+[:material-book-open-variant: Ver Aula 14](../aulas/aula-14.md){ .md-button }
+[:material-school: Responder Quiz 14](../quizzes/quiz-14.md){ .md-button }

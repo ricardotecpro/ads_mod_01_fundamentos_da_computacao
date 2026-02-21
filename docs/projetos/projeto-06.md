@@ -24,5 +24,5 @@ Crie um pequeno "Relatório de Rede" contendo:
 - A breve conclusão sobre a eficiência do agrupamento.
 
 ---
-[:material-book-open-variant: Ver Aula 06](aula-06.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-06){ .md-button }
+[:material-book-open-variant: Ver Aula 06](../aulas/aula-06.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-06.md){ .md-button }

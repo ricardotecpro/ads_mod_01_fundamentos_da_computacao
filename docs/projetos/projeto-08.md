@@ -24,5 +24,5 @@ Crie um "Mapa de Dados" contendo:
 - Uma breve explicação sobre por que o padrão UTF-8 foi a solução para os problemas do ASCII.
 
 ---
-[:material-book-open-variant: Ver Aula 08](aula-08.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-08){ .md-button }
+[:material-book-open-variant: Ver Aula 08](../aulas/aula-08.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-08.md){ .md-button }

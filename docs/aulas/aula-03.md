@@ -1,3 +1,10 @@
+---
+tags:
+  - Bases-Numericas
+  - Binario
+  - Conversao
+---
+
 # 🔢 Aula 03 – Conversão Binário para Decimal
 
 Agora que já sabemos como transformar nossos números decimais em binário, é hora de aprender o "caminho de volta". Como o computador nos mostra um resultado que possamos entender? 
@@ -69,9 +76,11 @@ Para converter, basta identificar onde estão os bits **1** e somar os seus peso
 ---
 
 !!! tip "Dica de Memorização"
-    Notou que cada peso é exatamente o **dobro** do peso à sua direita? 
-    $1 \to 2 \to 4 \to 8 \to 16 \to 32 \to 64 \to 128 \dots$
-    Isso torna a escala muito fácil de lembrar sem precisar fazer cálculos complexos!
+    === "Escala de Dobros"
+        Notou que cada peso é exatamente o **dobro** do peso à sua direita? 
+        $1 \to 2 \to 4 \to 8 \to 16 \to 32 \to 64 \to 128 \dots$
+    === "Por que funciona?"
+        Como a base é 2, cada deslocamento para a esquerda representa elevar a potência de 2 em 1 ($2^n$), multiplicando o valor anterior por 2.
 
 ---
 

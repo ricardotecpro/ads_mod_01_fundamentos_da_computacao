@@ -1,3 +1,10 @@
+---
+tags:
+  - Software
+  - Sistemas-Operacionais
+  - SO
+---
+
 # 🖥️ Aula 14 – Sistemas Operacionais
 
 Como o seu computador consegue rodar um navegador, um editor e um player ao mesmo tempo sem que eles se "atropelem"? O responsável é o **Sistema Operacional (SO)**, o grande gerente de recursos da máquina.

@@ -1,3 +1,10 @@
+---
+tags:
+  - Bases-Numericas
+  - Hexadecimal
+  - Conversao
+---
+
 # 🔢 Aula 05 – Sistema Hexadecimal (Base 16)
 
 Se existe uma base numérica que todo desenvolvedor, designer e engenheiro de hardware precisa dominar, é o **Hexadecimal**. De cores no CSS até endereços de memória, o Hexa está em todo lugar. Vamos entender por que ele é tão amado pela tecnologia.

@@ -40,5 +40,5 @@ Um endereço IPv6 possui 128 bits e é representado inteiramente em hexadecimal 
 - b) Explique por que seria impraticável para um ser humano trabalhar com esse endereço em binário puro ou decimal.
 
 ---
-[:material-book-open-variant: Ver Aula 06](aula-06.md){ .md-button }
-[:material-school: Responder Quiz 06](quiz-06){ .md-button }
+[:material-book-open-variant: Ver Aula 06](../aulas/aula-06.md){ .md-button }
+[:material-school: Responder Quiz 06](../quizzes/quiz-06.md){ .md-button }

@@ -1,3 +1,10 @@
+---
+tags:
+  - Aritmetica
+  - Binario
+  - Calculo
+---
+
 # 🧮 Aula 07 – Aritmética Binária
 
 Como o computador consegue somar números se ele só entende 0 e 1? A resposta é simples: ele segue as mesmas regras que nós, mas com uma base muito menor. Vamos dominar o famoso "vai-um" da lógica digital.

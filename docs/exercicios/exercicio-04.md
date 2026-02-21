@@ -42,5 +42,5 @@ Assim como fazemos com o binário (dividindo por 2), podemos converter decimal p
 Converta o número decimal **100** para **Octal** usando o método das divisões sucessivas por 8. Apresente o cálculo.
 
 ---
-[:material-book-open-variant: Ver Aula 04](aula-04.md){ .md-button }
-[:material-school: Responder Quiz 04](quiz-04){ .md-button }
+[:material-book-open-variant: Ver Aula 04](../aulas/aula-04.md){ .md-button }
+[:material-school: Responder Quiz 04](../quizzes/quiz-04.md){ .md-button }

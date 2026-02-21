@@ -39,5 +39,5 @@ Escreva um pequeno algoritmo (em texto ou pseudocódigo) para verificar se um n�
 - Use a estrutura: **SE** (condição) **ENTÃO** ... **SENÃO** ...
 
 ---
-[:material-book-open-variant: Ver Aula 15](aula-15.md){ .md-button }
-[:material-school: Responder Quiz 15](quiz-15){ .md-button }
+[:material-book-open-variant: Ver Aula 15](../aulas/aula-15.md){ .md-button }
+[:material-school: Responder Quiz 15](../quizzes/quiz-15.md){ .md-button }

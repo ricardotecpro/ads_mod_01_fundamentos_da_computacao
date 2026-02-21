@@ -26,5 +26,5 @@ Crie um "Mapa Lógico de Software" contendo:
 - Uma conclusão sobre a importância de prever o caminho do "Erro" tanto quanto o do "Sucesso".
 
 ---
-[:material-book-open-variant: Ver Aula 15](aula-15.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-15){ .md-button }
+[:material-book-open-variant: Ver Aula 15](../aulas/aula-15.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-15.md){ .md-button }

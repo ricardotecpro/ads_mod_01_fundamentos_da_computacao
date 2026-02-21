@@ -41,5 +41,5 @@ Você precisa criar uma expressão lógica que resulte em **1 (Verdadeiro)** ape
 - b) Como você chamaria essa operação em linguagem natural? (Ex: "A acontece e B não").
 
 ---
-[:material-book-open-variant: Ver Aula 09](aula-09.md){ .md-button }
-[:material-school: Responder Quiz 09](quiz-09){ .md-button }
+[:material-book-open-variant: Ver Aula 09](../aulas/aula-09.md){ .md-button }
+[:material-school: Responder Quiz 09](../quizzes/quiz-09.md){ .md-button }

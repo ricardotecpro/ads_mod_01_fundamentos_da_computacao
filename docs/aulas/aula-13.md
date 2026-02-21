@@ -1,3 +1,10 @@
+---
+tags:
+  - Hardware
+  - Memoria
+  - Armazenamento
+---
+
 # 💾 Aula 13 – Memória e Armazenamento
 
 Por que o seu computador "esquece" o que você estava fazendo quando a bateria acaba? E por que um SSD é tão mais rápido que um HD antigo? Vamos desvendar os mistérios da **Memória e Armazenamento**.

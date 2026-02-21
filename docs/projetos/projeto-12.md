@@ -25,5 +25,5 @@ Crie um "Folder Técnico" contendo:
 - A conclusão sobre a importância do clock.
 
 ---
-[:material-book-open-variant: Ver Aula 12](aula-12.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-12){ .md-button }
+[:material-book-open-variant: Ver Aula 12](../aulas/aula-12.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-12.md){ .md-button }

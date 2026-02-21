@@ -1,3 +1,10 @@
+---
+tags:
+  - Hardware
+  - Arquitetura
+  - Computacao
+---
+
 # 🏛️ Aula 12 – Arquitetura de Computadores
 
 Como bits e portas lógicas se organizam para formar um computador completo? Hoje vamos conhecer a **Arquitetura de Von Neumann**, o projeto básico que define 99% dos computadores modernos, do seu relógio digital aos servidores da nuvem.

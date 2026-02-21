@@ -27,5 +27,5 @@ Crie um "Guia de Identidade Visual" contendo:
 - A explicação técnica sobre o Branco e o Preto.
 
 ---
-[:material-book-open-variant: Ver Aula 05](aula-05.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-05){ .md-button }
+[:material-book-open-variant: Ver Aula 05](../aulas/aula-05.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-05.md){ .md-button }

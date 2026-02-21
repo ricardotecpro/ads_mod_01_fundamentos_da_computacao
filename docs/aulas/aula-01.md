@@ -1,3 +1,10 @@
+---
+tags:
+  - Computacao
+  - Bases-Numericas
+  - Introducao
+---
+
 # 💻 Aula 01 – Introdução à Computação e Bases Numéricas
 
 Bem-vindo à sua primeira lição! Vamos desvendar como a computação funciona e como transformamos impulsos elétricos em inteligência digital.

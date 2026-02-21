@@ -49,6 +49,10 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+  # Privacidade: Fontes locais sem Google Fonts CDN
+  font_display: swap
+  font_style: normal
+  # Nota: O Material for MkDocs baixa as fontes automaticamente se configurado no ambiente de build
   static_templates:
     - 404.html
 
@@ -85,7 +89,9 @@ markdown_extensions:
       generic: true
 
 plugins:
-  - social
+  - social:
+      cards: false
+  - tags:
   - mkdocs-revealjs
   - search:
       lang: pt
@@ -136,7 +142,6 @@ extra_css:
 
 extra_javascript:
   - assets/js/quiz.js
-  - https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js
   - assets/js/mermaid-init.js
   - assets/js/custom_termynal.js
   - assets/js/mathjax.js

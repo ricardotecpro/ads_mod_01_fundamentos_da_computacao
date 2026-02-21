@@ -38,5 +38,5 @@ Converta o número decimal **1000** para **Hexadecimal** usando o método das di
 Apresente o passo a passo e lembre-se de converter os restos maiores que 9 para as letras correspondentes (A-F).
 
 ---
-[:material-book-open-variant: Ver Aula 05](aula-05.md){ .md-button }
-[:material-school: Responder Quiz 05](quiz-05){ .md-button }
+[:material-book-open-variant: Ver Aula 05](../aulas/aula-05.md){ .md-button }
+[:material-school: Responder Quiz 05](../quizzes/quiz-05.md){ .md-button }

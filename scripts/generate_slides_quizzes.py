@@ -1,4 +1,4 @@
-"""
+﻿"""
 Script para gerar automaticamente todos os slides HTML e quizzes interativos
 Baseado nos formatos antigos que funcionavam
 """
@@ -105,10 +105,10 @@ def clean_slide_markdown(md_path: pathlib.Path) -> None:
 def generate_all_slides():
     """Gera arquivos HTML para todos os 16 slides"""
     slides_dst_dir = pathlib.Path('docs/slides')
-    slides_src_dir = slides_dst_dir / '.src'
+    slides_src_dir = slides_dst_dir / 'src'
     
     if not slides_src_dir.exists():
-        print("[yellow]⚠ Pasta docs/slides/.src/ não encontrada.[/yellow]")
+        print("[yellow]⚠ Pasta docs/slides/src/ não encontrada.[/yellow]")
         return
     
     print("\n[bold cyan]📊 Gerando Slides HTML...[/bold cyan]")

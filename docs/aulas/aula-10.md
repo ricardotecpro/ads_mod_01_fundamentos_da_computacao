@@ -1,3 +1,10 @@
+---
+tags:
+  - Logica-Digital
+  - Tabelas-Verdade
+  - Logica
+---
+
 # 📊 Aula 10 – Tabelas Verdade
 
 Como podemos garantir que um sistema complexo (com vários sensores e condições) vai se comportar exatamente como esperamos? A resposta está na **Tabela Verdade**. Ela é o mapa completo de todas as possibilidades de um sistema lógico.

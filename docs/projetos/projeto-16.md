@@ -24,5 +24,5 @@ Crie um "Relatório de Programação" contendo:
 - Uma breve reflexão: Como foi a experiência de ver seu primeiro código rodando? O que foi mais fácil e o que foi mais difícil?
 
 ---
-[:material-book-open-variant: Ver Aula 16](aula-16.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-16){ .md-button }
+[:material-book-open-variant: Ver Aula 16](../aulas/aula-16.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-16.md){ .md-button }

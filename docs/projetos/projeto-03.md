@@ -23,5 +23,5 @@ Crie um relatório simples contendo:
 - A resposta sobre o deslocamento de bits (o efeito de "dobrar" o valor).
 
 ---
-[:material-book-open-variant: Ver Aula 03](aula-03.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-03){ .md-button }
+[:material-book-open-variant: Ver Aula 03](../aulas/aula-03.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-03.md){ .md-button }

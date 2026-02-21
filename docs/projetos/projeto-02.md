@@ -25,5 +25,5 @@ Crie um documento (pode ser manuscrito com foto ou digital) contendo:
 - A prova real do cálculo (soma dos pesos).
 
 ---
-[:material-book-open-variant: Ver Aula 02](aula-02.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-02){ .md-button }
+[:material-book-open-variant: Ver Aula 02](../aulas/aula-02.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-02.md){ .md-button }

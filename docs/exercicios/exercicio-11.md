@@ -36,5 +36,5 @@ O **Transistor** é a unidade básica de um chip. Ele pode atuar como um interru
 - Explique, de forma simplificada, como um transistor pode ser usado para criar uma porta **NOT**. (Dica: Pense no que acontece com a saída quando aplicamos energia na base do transistor).
 
 ---
-[:material-book-open-variant: Ver Aula 11](aula-11.md){ .md-button }
-[:material-school: Responder Quiz 11](quiz-11){ .md-button }
+[:material-book-open-variant: Ver Aula 11](../aulas/aula-11.md){ .md-button }
+[:material-school: Responder Quiz 11](../quizzes/quiz-11.md){ .md-button }

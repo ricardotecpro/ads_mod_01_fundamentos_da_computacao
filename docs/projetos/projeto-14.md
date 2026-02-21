@@ -21,5 +21,5 @@ Crie um "Diário de Bordo do Terminal" contendo:
 - Uma breve conclusão: Qual missão foi a mais difícil e por quê?
 
 ---
-[:material-book-open-variant: Ver Aula 14](aula-14.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-14){ .md-button }
+[:material-book-open-variant: Ver Aula 14](../aulas/aula-14.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-14.md){ .md-button }

@@ -27,5 +27,5 @@ Crie uma "Folha de Teste da ALU" contendo:
 - Uma explicação sobre os perigos do Overflow em sistemas críticos (ex: foguetes ou sistemas financeiros).
 
 ---
-[:material-book-open-variant: Ver Aula 07](aula-07.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-07){ .md-button }
+[:material-book-open-variant: Ver Aula 07](../aulas/aula-07.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-07.md){ .md-button }

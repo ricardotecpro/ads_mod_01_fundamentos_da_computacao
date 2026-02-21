@@ -1,3 +1,10 @@
+---
+tags:
+  - Logica-Digital
+  - Booleana
+  - Logica
+---
+
 # 🧠 Aula 09 – Lógica Booleana
 
 Até agora, tratamos os bits (0 e 1) como números. Mas o poder real do computador surge quando tratamos esses bits como **Valores Lógicos**: Falso (0) ou Verdadeiro (1). Vamos aprender como a **Lógica Booleana** permite que o computador tome decisões e controle sistemas complexos.

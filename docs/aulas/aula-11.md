@@ -1,3 +1,10 @@
+---
+tags:
+  - Logica-Digital
+  - Circuitos
+  - Hardware
+---
+
 # 🔌 Aula 11 – Circuitos Lógicos
 
 Como transformamos matemática booleana (E, OU, NÃO) em algo físico que funciona com eletricidade? Hoje vamos conhecer as **Portas Lógicas** (*Gates*). Elas são os blocos fundamentais de construção de qualquer chip moderno.

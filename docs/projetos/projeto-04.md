@@ -26,5 +26,5 @@ Crie uma "Tabela de Segurança" contendo:
 - Comando `chmod` sugerido.
 
 ---
-[:material-book-open-variant: Ver Aula 04](aula-04.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-04){ .md-button }
+[:material-book-open-variant: Ver Aula 04](../aulas/aula-04.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-04.md){ .md-button }

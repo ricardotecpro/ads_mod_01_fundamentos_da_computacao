@@ -46,5 +46,5 @@ Uma Tautologia é uma expressão que resulta em 1 (Verdadeiro) para **todas** as
 - Explique por que, logicamente, esse resultado faz todo o sentido (Pense: "Ou algo é verdadeiro, ou sua negação é verdadeira").
 
 ---
-[:material-book-open-variant: Ver Aula 10](aula-10.md){ .md-button }
-[:material-school: Responder Quiz 10](quiz-10){ .md-button }
+[:material-book-open-variant: Ver Aula 10](../aulas/aula-10.md){ .md-button }
+[:material-school: Responder Quiz 10](../quizzes/quiz-10.md){ .md-button }

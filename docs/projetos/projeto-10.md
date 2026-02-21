@@ -25,5 +25,5 @@ Crie uma "Planilha de Validação Lógica" contendo:
 - Uma conclusão sobre qual sensor (A, B ou C) tem o maior "poder" de decisão no final do circuito.
 
 ---
-[:material-book-open-variant: Ver Aula 10](aula-10.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-10){ .md-button }
+[:material-book-open-variant: Ver Aula 10](../aulas/aula-10.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-10.md){ .md-button }

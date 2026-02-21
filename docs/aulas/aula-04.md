@@ -1,3 +1,10 @@
+---
+tags:
+  - Bases-Numericas
+  - Octal
+  - Conversao
+---
+
 # 🎱 Aula 04 – Sistema Octal (Base 8)
 
 Você já se perguntou por que os comandos de segurança no Linux usam números como `755` ou `644`? Isso acontece porque esses sistemas utilizam o **Sistema Octal**. Vamos aprender como essa base funciona e qual sua relação direta com o mundo binário.
@@ -65,8 +72,8 @@ graph LR
     - **5** (4+0+1): Apenas Ler e Executar.
     - **4** (4+0+0): Somente Leitura.
 
-    !!! info "Dica de SysAdmin"
-        O comando `chmod 755 arquivo` é o padrão para scripts que todos podem ler e rodar, mas só você pode alterar.
+    !!! tip "Dica de SysAdmin"
+        O comando `chmod 755 arquivo` é o padrão para scripts que todos podem ler e rodar, mas só você pode alterar. O primeiro dígito (7) refere-se ao dono (você!).
 
 ---
 

@@ -1,3 +1,10 @@
+---
+tags:
+  - Programacao
+  - Introducao
+  - Algoritmos
+---
+
 # 🚀 Aula 16 – Introdução à Programação
 
 Chegamos ao ápice da nossa jornada! Percorremos um longo caminho: desde os bits solitários até os complexos sistemas operacionais. Agora, vamos aplicar esse conhecimento na prática: a **Programação**.

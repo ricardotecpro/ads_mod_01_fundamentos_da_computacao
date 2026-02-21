@@ -39,5 +39,5 @@ O ASCII original suportava apenas 128 caracteres. O UTF-8 (Unicode) suporta milh
 - Explique, com suas palavras, por que o padrão UTF-8 é considerado uma tecnologia de "largura variável" e por que isso foi fundamental para a popularização da internet em países não-ingleses e para o uso de Emojis.
 
 ---
-[:material-book-open-variant: Ver Aula 08](aula-08.md){ .md-button }
-[:material-school: Responder Quiz 08](quiz-08){ .md-button }
+[:material-book-open-variant: Ver Aula 08](../aulas/aula-08.md){ .md-button }
+[:material-school: Responder Quiz 08](../quizzes/quiz-08.md){ .md-button }

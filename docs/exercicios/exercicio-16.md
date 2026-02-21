@@ -34,5 +34,5 @@ As linguagens de programação são divididas em **Alto Nível** e **Baixo Níve
 - b) Qual a vantagem de um desenvolvedor moderno preferir uma linguagem de **Alto Nível** (como JavaScript ou C#) para criar um aplicativo de celular?
 
 ---
-[:material-book-open-variant: Ver Aula 16](aula-16.md){ .md-button }
-[:material-school: Responder Quiz 16](quiz-16){ .md-button }
+[:material-book-open-variant: Ver Aula 16](../aulas/aula-16.md){ .md-button }
+[:material-school: Responder Quiz 16](../quizzes/quiz-16.md){ .md-button }

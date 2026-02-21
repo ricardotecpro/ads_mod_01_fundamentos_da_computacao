@@ -24,5 +24,5 @@ Crie um "Esquema de Engenharia" contendo:
 - A resposta sobre o botão de Pânico e como ele alteraria o desenho final.
 
 ---
-[:material-book-open-variant: Ver Aula 11](aula-11.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-11){ .md-button }
+[:material-book-open-variant: Ver Aula 11](../aulas/aula-11.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-11.md){ .md-button }

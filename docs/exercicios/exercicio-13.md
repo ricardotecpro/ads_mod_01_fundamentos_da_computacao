@@ -38,5 +38,5 @@ Quando a memória RAM física do seu computador acaba, o Sistema Operacional uti
 - b) Qual a principal desvantagem de depender excessivamente da Memória Virtual para rodar programas pesados?
 
 ---
-[:material-book-open-variant: Ver Aula 13](aula-13.md){ .md-button }
-[:material-school: Responder Quiz 13](quiz-13){ .md-button }
+[:material-book-open-variant: Ver Aula 13](../aulas/aula-13.md){ .md-button }
+[:material-school: Responder Quiz 13](../quizzes/quiz-13.md){ .md-button }

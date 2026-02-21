@@ -27,5 +27,5 @@ Crie um "Esboço de Sistema Lógico" contendo:
 - Uma breve reflexão sobre por que a lógica é a base para evitar falhas de segurança.
 
 ---
-[:material-book-open-variant: Ver Aula 09](aula-09.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-09){ .md-button }
+[:material-book-open-variant: Ver Aula 09](../aulas/aula-09.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-09.md){ .md-button }

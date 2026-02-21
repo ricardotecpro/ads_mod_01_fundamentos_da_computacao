@@ -1,3 +1,10 @@
+---
+tags:
+  - Bases-Numericas
+  - Hexadecimal
+  - Binario
+---
+
 # 🚀 Aula 06 – Conversão Binário Hexadecimal
 
 Você já notou que o endereço físico (MAC) da sua placa de rede ou um endereço IPv6 parece uma "sopa de letrinhas e números"? Na verdade, eles são apenas números binários muito longos resumidos para facilitar a nossa vida. Hoje vamos aprender o **atalho definitivo**.
@@ -53,13 +60,16 @@ graph TD
 === "Hexa para Binário"
     Basta "explodir" cada dígito em 4 bits.
     
-    !!! warning "O Zero é Obrigatório"
-        Ao converter `A0B`, o zero do meio **deve** ter 4 bits:
-        - A = `1010`
-        - 0 = `0000`
-        - B = `1011`
-        
-        🏁 **Resultado: 101000001011**
+    !!! warning "Cuidado: O Zero é Obrigatório"
+        === "O Erro Comum"
+            Muitos alunos esquecem de representar o zero com 4 bits, o que corrompe o número final.
+        === "Forma Correta"
+            Ao converter `A0B`, o zero do meio **deve** ter 4 bits (`0000`):
+            - A = `1010`
+            - **0 = `0000`**
+            - B = `1011`
+            
+            🏁 **Resultado: 101000001011**
 
 ---
 

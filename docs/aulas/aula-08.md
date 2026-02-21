@@ -1,3 +1,10 @@
+---
+tags:
+  - Representacao
+  - Dados
+  - Hardware
+---
+
 # 📦 Aula 08 – Representação de Dados
 
 Até agora, vimos como o computador lida com números positivos. Mas como ele sabe se um número é negativo? E como ele guarda textos, emojis e símbolos? Hoje vamos descobrir o **Complemento de 2** e o **UTF-8**.

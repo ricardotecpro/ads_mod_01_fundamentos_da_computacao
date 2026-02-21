@@ -25,5 +25,5 @@ Crie uma "Proposta Técnica de Upgrade" contendo:
 - A justificativa técnica para cada mudança (Ex: "Aumentar a RAM evita o uso excessivo de Memória Virtual no disco lento").
 
 ---
-[:material-book-open-variant: Ver Aula 13](aula-13.md){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-13){ .md-button }
+[:material-book-open-variant: Ver Aula 13](../aulas/aula-13.md){ .md-button }
+[:material-dumbbell: Praticar Exercícios](../exercicios/exercicio-13.md){ .md-button }

@@ -38,5 +38,5 @@ Você aprendeu que o número decimal máximo para $n$ bits é dado pela fórmula
 - b) Se um sistema usa 10 bits, qual o maior número decimal que ele pode representar? (Dica: $2^{10} = 1024$).
 
 ---
-[:material-book-open-variant: Ver Aula 03](aula-03.md){ .md-button }
-[:material-school: Responder Quiz 03](quiz-03){ .md-button }
+[:material-book-open-variant: Ver Aula 03](../aulas/aula-03.md){ .md-button }
+[:material-school: Responder Quiz 03](../quizzes/quiz-03.md){ .md-button }

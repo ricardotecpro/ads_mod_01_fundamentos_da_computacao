@@ -1,3 +1,10 @@
+---
+tags:
+  - Bases-Numericas
+  - Binario
+  - Conversao
+---
+
 # ➗ Aula 02 – Conversão de Decimal para Binário
 
 Na aula anterior, aprendemos que os computadores são máquinas binárias. Mas como pegamos um número que conhecemos (como nossa idade) e explicamos para o silício? Vamos aprender o "caminho de ida".
@@ -55,11 +62,13 @@ Vamos ver como o número **13** se transforma em código de máquina.
 
 ---
 
-!!! important "Regra de Ouro: MSB vs LSB"
-    Nunca inverta a ordem! 
-    - **LSB (Least Significant Bit)**: Primeiro resto (ponta direita).
-    - **MSB (Most Significant Bit)**: Último resto (ponta esquerda).
-    - **Leitura**: Sempre de baixo para cima (do último quociente para o primeiro resto).
+!!! info "Conceito Chave: MSB vs LSB"
+    === "Definição"
+        Nunca inverta a ordem! 
+        - **LSB (Least Significant Bit)**: Primeiro resto (ponta direita).
+        - **MSB (Most Significant Bit)**: Último resto (ponta esquerda).
+    === "Dica de Leitura"
+        A leitura do resultado deve ser feita sempre **de baixo para cima** (do último quociente para o primeiro resto anotado).
 
 ---
 
