@@ -7,8 +7,7 @@
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Uma linguagem de programação complexa</div>
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Uma sequência finita de passos claros para resolver um problema">Uma sequência finita de passos claros para resolver um problema</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Um erro que ocorre no sensor do computador</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">O nome do criador do primeiro computador
-    *feedback: Receitas, manuais de montagem e GPS são exemplos de algoritmos.*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Receitas, manuais de montagem e GPS são exemplos de algoritmos.*">O nome do criador do primeiro computador</div>
   <div class="quiz-feedback"></div>
 </div>
 
@@ -17,8 +16,7 @@
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Porque deve caber em uma folha de papel</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Porque deve ser escrito em letras pequenas</div>
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Porque ele deve ter um fim obrigatoriamente, após executar seus passos">Porque ele deve ter um fim obrigatoriamente, após executar seus passos</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Porque só funciona em números inteiros
-    *feedback: Um algoritmo que entra em um "loop infinito" é considerado um erro grave.*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Um algoritmo que entra em um "loop infinito" é considerado um erro grave.*">Porque só funciona em números inteiros</div>
   <div class="quiz-feedback"></div>
 </div>
 
@@ -27,8 +25,7 @@
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Retângulo</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Losango</div>
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Oval (ou Elipse)">Oval (ou Elipse)</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Círculo
-    *feedback: O símbolo oval delimita as fronteiras de onde o algoritmo começa e termina.*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="O símbolo oval delimita as fronteiras de onde o algoritmo começa e termina.*">Círculo</div>
   <div class="quiz-feedback"></div>
 </div>
 
@@ -37,8 +34,7 @@
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Retângulo">Retângulo</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Losango</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Triângulo</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Trapézio
-    *feedback: O retângulo é usado para instruções diretas do tipo "Faça isso".*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="O retângulo é usado para instruções diretas do tipo "Faça isso".*">Trapézio</div>
   <div class="quiz-feedback"></div>
 </div>
 
@@ -47,8 +43,7 @@
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Uma soma matemática</div>
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Uma Decisão ou Pergunta (Desvio Condicional)">Uma Decisão ou Pergunta (Desvio Condicional)</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">A entrada de dados via teclado</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">A impressão de um relatório
-    *feedback: O losango sempre gera duas saídas: uma para "Sim" (Verdadeiro) e outra para "Não" (Falso).*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="O losango sempre gera duas saídas: uma para "Sim" (Verdadeiro) e outra para "Não" (Falso).*">A impressão de um relatório</div>
   <div class="quiz-feedback"></div>
 </div>
 
@@ -57,8 +52,7 @@
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Repetição</div>
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Seleção ou Desvio Condicional">Seleção ou Desvio Condicional</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Conector Lógico</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Procedimento de Busca
-    *feedback: É a base da tomada de decisão em qualquer linguagem de programação.*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="É a base da tomada de decisão em qualquer linguagem de programação.*">Procedimento de Busca</div>
   <div class="quiz-feedback"></div>
 </div>
 
@@ -67,8 +61,7 @@
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Cores diferentes</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">O tamanho dos símbolos</div>
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Setas de conexão">Setas de conexão</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Números de série
-    *feedback: As setas guiam o olhar e o processamento através do caminho planejado.*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="As setas guiam o olhar e o processamento através do caminho planejado.*">Números de série</div>
   <div class="quiz-feedback"></div>
 </div>
 
@@ -77,8 +70,7 @@
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Um código escrito em japonês</div>
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Uma forma de escrever algoritmos usando linguagem humana estruturada">Uma forma de escrever algoritmos usando linguagem humana estruturada</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Um vírus que imita programas reais</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">O código que a CPU executa diretamente
-    *feedback: Ele serve para testar a lógica antes de "traduzir" para uma linguagem de programação real.*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Ele serve para testar a lógica antes de "traduzir" para uma linguagem de programação real.*">O código que a CPU executa diretamente</div>
   <div class="quiz-feedback"></div>
 </div>
 
@@ -87,8 +79,7 @@
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Deixa o programa mais colorido</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Faz o computador gastar menos energia</div>
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Ajuda a visualizar erros de lógica e planejar o fluxo correto do sistema">Ajuda a visualizar erros de lógica e planejar o fluxo correto do sistema</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">É obrigatório por lei
-    *feedback: Planejar evita retrabalho e códigos confusos (conhecidos como "código espaguete").*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Planejar evita retrabalho e códigos confusos (conhecidos como "código espaguete").*">É obrigatório por lei</div>
   <div class="quiz-feedback"></div>
 </div>
 
@@ -97,8 +88,7 @@
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Sim (True)</div>
   <div class="quiz-option" data-correct="true" data-feedback="✅ Correto! Não (False)">Não (False)</div>
   <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">Ambos os caminhos ao mesmo tempo</div>
-  <div class="quiz-option" data-correct="false" data-feedback="Incorreto. Tente novamente.">O fluxo para e gera um erro
-    *feedback: Se a condição é falsa, o algoritmo deve seguir obrigatoriamente o caminho do "Não" (Else).*</div>
+  <div class="quiz-option" data-correct="false" data-feedback="Se a condição é falsa, o algoritmo deve seguir obrigatoriamente o caminho do "Não" (Else).*">O fluxo para e gera um erro</div>
   <div class="quiz-feedback"></div>
 </div>
 

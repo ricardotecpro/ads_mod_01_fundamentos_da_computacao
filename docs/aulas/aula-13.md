@@ -1,26 +1,17 @@
----
-title: Aula 13 – Memória e Armazenamento
-date: 2026-02-16
-quiz: quiz-13
-exercicios: exercicio-13
-projeto: projeto-13
-slides: slide-13.html
----
-
 # 💾 Aula 13 – Memória e Armazenamento
 
-Por que o seu computador "esquece" o que você estava fazendo quando a bateria acaba? Por que um SSD faz o seu sistema ligar em segundos, enquanto um HD antigo demora minutos? Hoje vamos desvendar os mistérios da **Memória e Armazenamento**, entendendo como os dados são guardados de forma temporária e permanente.
+Por que o seu computador "esquece" o que você estava fazendo quando a bateria acaba? E por que um SSD é tão mais rápido que um HD antigo? Vamos desvendar os mistérios da **Memória e Armazenamento**.
 
 ---
 
 ## 🎯 Objetivos de Aprendizagem
 
 Nesta aula, você vai:
--   [x] Diferenciar Memória Primária (Volátil) de Secundária (Não-Volátil).
--   [x] Compreender a **Hierarquia de Memória** (Velocidade vs Custo).
--   [x] Comparar as tecnologias **RAM**, **SSD** e **HD**.
--   [x] Entender o conceito de **Memória Virtual** e **Swap**.
--   [x] Aprender as unidades de medida (KB, MB, GB, TB) e o padrão **KiB**.
+- [x] Diferenciar Memória Primária (Volátil) de Secundária (Não-Volátil).
+- [x] Compreender a **Hierarquia de Memória** (Velocidade vs Custo).
+- [x] Comparar as tecnologias **RAM**, **SSD** e **HD**.
+- [x] Entender o conceito de **Memória Virtual** e **Swap**.
+- [x] Aprender as unidades de medida (KB, MB, GB, TB) e o padrão **KiB**.
 
 ---
 
@@ -39,65 +30,61 @@ Nem toda memória é igual. Existe um equilíbrio constante entre **Velocidade**
 
 ## ⚡ Memória RAM vs Armazenamento
 
-Imagine que você está cozinhando:
--   A **RAM** é o espaço em cima da sua mesa (onde você coloca os ingredientes que está usando agora).
--   O **Armazenamento (SSD/HD)** é o armário (onde você guarda tudo para usar outro dia).
-
-```mermaid
-graph LR
-    A[(💾 SSD/HD: Permanente)] -->|Carregar| B(📂 RAM: Trabalho)
-    B -->|Busca| C{🧠 CPU}
-    C -.->|Salvar| A
-```
-
----
-
-## 🚀 SSD vs HD: O Fim da Mecânica
-
--   **HD (Hard Disk Drive)**: Usa discos magnéticos giratórios e uma agulha física. É lento porque depende de movimento mecânico.
--   **SSD (Solid State Drive)**: Usa chips de memória flash. É puramente eletrônico, muito mais rápido e resistente a impactos.
-
-> [!TIP]
-> Trocar um HD antigo por um SSD é o "upgrade" mais eficiente que você pode fazer em um computador para ganhar velocidade imediata.
+=== "A Analogia da Cozinha"
+    Imagine que você está cozinhando:
+    - A **RAM** é o espaço em cima da sua mesa (onde você coloca os ingredientes que está usando **agora**).
+    - O **Armazenamento** é o armário (onde você guarda tudo para usar **outro dia**).
+=== "Fluxo de Dados"
+    ```mermaid
+    graph LR
+        A[(💾 SSD/HD: Permanente)] -->|"Carregar"| B("📂 RAM: Trabalho")
+        B -->|"Busca"| C{"🧠 CPU"}
+        C -.->|"Salvar"| A
+        style A fill:#2fa,stroke:#333
+        style B fill:#f96,stroke:#333
+    ```
 
 ---
 
-## 🧱 Memória Virtual (Paging)
-
-O que o computador faz quando você abre 50 abas no navegador e sua RAM acaba? Ele usa uma técnica chamada **Memória Virtual**.
-
-1.  O Sistema Operacional reserva um espaço no SSD/HD.
-2.  Os programas que você não está usando no momento são "movidos" para esse espaço.
-3.  Isso evita que o PC trave, mas torna o sistema muito mais lento.
+!!! tip "Upgrade Mestre"
+    Trocar um HD antigo por um **SSD** é o upgrade mais eficiente que você pode fazer. Como o SSD é puramente eletrônico (sem peças giratórias), ele aumenta a velocidade do sistema quase instantaneamente.
 
 ---
 
-## 📏 Unidades de Medida e a Confusão dos 1024
+## 📏 Unidades de Medida
 
-Na escola, aprendemos que $1\text{ kilo} = 1.000$. Mas na informática:
+Na informática, não usamos múltiplos exatos de 1.000, mas de **1.024** ($2^{10}$).
 
-$$ 1\text{ KiB (Kibibyte)} = 1.024\text{ Bytes} $$
-
-Isso acontece porque os computadores trabalham em bases de 2 ($2^{10} = 1024$). Fabricantes de HD vendem usando 1.000, mas o Windows lê usando 1.024. É por isso que seu HD de 1 TB sempre parece ter menos espaço quando você o liga!
-
----
-
-## ✍️ Exercícios Rápidos
-
-1. O que acontece com os dados na memória RAM quando você desliga o computador?
-2. Por que a memória Cache é necessária se já temos a RAM?
-3. Qual a diferença principal entre um KiB e um KB?
+!!! info "O mistério do espaço perdido"
+    Você já notou que um HD de 1 TB parece ter menos espaço quando você liga? É porque os fabricantes usam 1.000 (Kilobytes), mas o sistema usa 1.024 (Kibibytes - **KiB**).
 
 ---
 
 ## 🚀 Desafio da Semana
-Descubra quanta memória RAM o seu computador possui e quanto espaço está livre no seu SSD/HD. Tente descobrir também qual a tecnologia do seu disco principal (SATA ou NVMe).
+
+Descubra quanto de **RAM** o seu computador possui e quanto espaço está livre no seu **SSD/HD**.
+- Tente descobrir também qual a tecnologia do seu disco principal (**SATA** ou **NVMe**).
 
 ---
 
-[:material-presentation: Ver Slides](lesson-13-slides){ .md-button }
-[:material-school: Responder Quiz](quiz-13){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-13){ .md-button }
+<div class="grid cards" markdown>
+
+-   :material-presentation: **Slides Interativos**
+    ---
+    Veja a animação da hierarquia de memória e o funcionamento do SSD.
+    [:octicons-arrow-right-24: Ver Slides](../slides/slide-13.html)
+
+-   :material-school: **Quiz de Prática**
+    ---
+    10 desafios sobre Volatilidade e Unidades de Medida.
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-13.md)
+
+-   :material-dumbbell: **Mão na Massa**
+    ---
+    Exercícios de conversão de unidades (GB para KiB).
+    [:octicons-arrow-right-24: Praticar](../exercicios/exercicio-13.md)
+
+</div>
 
 ---
-[« Aula Anterior](aula-12.md) | [Próxima Aula »](aula-14.md)
+[« Aula Anterior](aula-12.md) | [Próxima Aula: Sistemas Operacionais :material-arrow-right:](aula-14.md)

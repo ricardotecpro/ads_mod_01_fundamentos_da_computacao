@@ -1,103 +1,87 @@
----
-title: Aula 12 – Arquitetura de Computadores
-date: 2026-02-16
-quiz: quiz-12
-exercicios: exercicio-12
-projeto: projeto-12
-slides: slide-12.html
----
-
 # 🏛️ Aula 12 – Arquitetura de Computadores
 
-Como os bits e as portas lógicas se organizam para formar um computador completo? Hoje vamos conhecer a **Arquitetura de Von Neumann**, o projeto básico que define 99% dos computadores que existem hoje, desde o seu relógio digital até os servidores mais potentes da nuvem.
+Como bits e portas lógicas se organizam para formar um computador completo? Hoje vamos conhecer a **Arquitetura de Von Neumann**, o projeto básico que define 99% dos computadores modernos, do seu relógio digital aos servidores da nuvem.
 
 ---
 
 ## 🎯 Objetivos de Aprendizagem
 
 Nesta aula, você vai:
--   [x] Compreender os pilares do **Modelo de Von Neumann**.
--   [x] Identificar os componentes da CPU: **ALU**, **UC** e **Registradores**.
--   [x] Entender o **Ciclo de Instrução** (Busca, Decodificação e Execução).
--   [x] Conhecer o papel dos barramentos (*Buses*) na comunicação interna.
+- [x] Compreender os pilares do **Modelo de Von Neumann**.
+- [x] Identificar os componentes da CPU: **ALU**, **UC** e **Registradores**.
+- [x] Entender o **Ciclo de Instrução** (Busca, Decodificação e Execução).
+- [x] Conhecer o papel dos barramentos (*Buses*) na comunicação interna.
 
 ---
 
 ## 📑 O Modelo de Von Neumann
 
-Em 1945, John von Neumann propôs uma ideia revolucionária: os dados e o programa (instruções) deveriam ser guardados na **mesma memória**. Antes disso, para mudar o programa, era preciso mudar os fios do computador!
+Em 1945, John von Neumann propôs uma ideia revolucionária: dados e programas deveriam ser guardados na **mesma memória**. Antes disso, para mudar o programa, era preciso "trocar os fios" do computador!
 
 ```mermaid
 graph TD
     subgraph CPU
-    ALU[ALU: Cálculos]
-    UC[UC: Controle]
-    REG[Registradores]
+    ALU["ALU: Cálculos"]
+    UC["UC: Controle"]
+    REG["Registradores"]
     end
     
-    subgraph Memória
-    RAM[RAM: Dados e Instruções]
+    subgraph Memoria
+    RAM["RAM: Dados e Programas"]
     end
 
-    CPU <-->|Barramento de Dados| RAM
-    CPU -->|Barramento de Endereço| RAM
-    I/O[Entrada e Saída] <--> CPU
+    CPU <-->|"DADOS"| RAM
+    CPU -->|"ENDEREÇO"| RAM
+    style CPU fill:#f96,stroke:#333
+    style Memoria fill:#2fa,stroke:#333
 ```
 
 ---
 
-## 🧠 A CPU e o Ciclo de Vida
+## 🧠 Ciclo de Vida do Processamento
 
-A CPU (Unidade Central de Processamento) é o motor do computador. Ela repete um ciclo infinito de três passos:
+A CPU repete um ciclo infinito de três passos para cada comando que você executa:
 
-1.  **Busca (Fetch)**: Pega a próxima instrução na memória RAM.
-2.  **Decodifica (Decode)**: A Unidade de Controle entende o que precisa ser feito.
-3.  **Executa (Execute)**: A ALU realiza o cálculo ou move o dado.
-
-```mermaid
-sequenceDiagram
-    participant RAM
-    participant UC as Unidade de Controle
-    participant ALU as ALU / Registradores
-
-    UC->>RAM: Busca Instrução
-    RAM-->>UC: Envia Bits da Instrução
-    Note over UC: Decodifica "Soma"
-    UC->>ALU: Comando de Execução
-    ALU-->>ALU: Realiza Cálculo
-```
+=== "1. Busca (Fetch)"
+    Pega a próxima instrução que está esperando na memória RAM e traz para "dentro" do processador.
+=== "2. Decodifica (Decode)"
+    A **Unidade de Controle** traduz aqueles bits em uma ação real (ex: "Isso é uma soma").
+=== "3. Executa (Execute)"
+    A **ALU** realiza o cálculo matemático e o resultado é guardado nos registradores.
 
 ---
 
-## 🛣️ Barramentos: As Rodovias Digitais
-
-Nenhum componente funciona isolado. Eles se comunicam através de trilhas chamadas **Barramentos** (*Buses*):
-
--   **Barramento de Dados**: Carrega a informação real (os bits do seu arquivo).
--   **Barramento de Endereço**: Identifica **AONDE** o dado deve ir na memória.
--   **Barramento de Controle**: Gerencia quem pode falar e quem deve ouvir.
-
-> [!TIP]
-> O "Gargalo de Von Neumann" acontece porque a CPU é bilhões de vezes mais rápida que a Memória RAM, criando uma fila de espera para os dados chegarem.
-
----
-
-## ✍️ Exercícios Rápidos
-
-1. Quais são as três partes principais da CPU?
-2. O que acontece se a Unidade de Controle (UC) não conseguir decodificar uma instrução?
-3. Explique a diferença entre o barramento de Dados e o de Endereço.
+!!! tip "O Gargalo do Barramento"
+    Muitas vezes seu computador trava não porque a CPU é lenta, mas porque os **Barramentos** (as rodovias de dados) estão congestionados. A memória RAM é muito mais lenta que o processador, criando uma "fila de espera" digital.
 
 ---
 
 ## 🚀 Desafio da Semana
-Abra o "Gerenciador de Tarefas" (Windows) ou o "Monitor de Atividade" (macOS). Observe o gráfico da CPU. Tente identificar a velocidade (em GHz). Você sabia que 3.0 GHz significa que a CPU realiza **3 bilhões** de ciclos de busca-execução por segundo?
+
+Abra o **Gerenciador de Tarefas** (ou Monitor de Atividade). 
+- Observe a velocidade da sua CPU em **GHz**. 
+- Você sabia que 3.0 GHz significa que ela realiza **3 bilhões** de ciclos de busca-execução por segundo?
 
 ---
 
-[:material-presentation: Ver Slides](lesson-12-slides){ .md-button }
-[:material-school: Responder Quiz](quiz-12){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-12){ .md-button }
+<div class="grid cards" markdown>
+
+-   :material-presentation: **Slides Interativos**
+    ---
+    Animação detalhada do Ciclo de Instrução e fluxo de barramentos.
+    [:octicons-arrow-right-24: Ver Slides](../slides/slide-12.html)
+
+-   :material-school: **Quiz de Prática**
+    ---
+    10 questões sobre Von Neumann e componentes da CPU.
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-12.md)
+
+-   :material-dumbbell: **Mão na Massa**
+    ---
+    Atividade sobre afunilamento de memória e barramentos.
+    [:octicons-arrow-right-24: Praticar](../exercicios/exercicio-12.md)
+
+</div>
 
 ---
-[« Aula Anterior](aula-11.md) | [Próxima Aula »](aula-13.md)
+[« Aula Anterior](aula-11.md) | [Módulo 4: Algoritmos e Programação :material-arrow-right:](aula-13.md)

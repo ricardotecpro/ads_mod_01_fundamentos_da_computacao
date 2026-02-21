@@ -46,6 +46,11 @@ theme:
         name: Mudar para modo claro
   icon:
     repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
+  static_templates:
+    - 404.html
 
 copyright: 'Copyright &copy; 2026 Ricardo. Feito com <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>.'
 

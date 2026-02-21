@@ -1,24 +1,15 @@
----
-title: Aula 03 – Conversão Binário para Decimal
-date: 2026-02-16
-quiz: quiz-03
-exercicios: exercicio-03
-projeto: projeto-03
-slides: slide-03.html
----
-
 # 🔢 Aula 03 – Conversão Binário para Decimal
 
-Agora que já sabemos como transformar nossos números decimais em binário, é hora de aprender o "caminho de volta". Como o computador nos mostra um resultado que possamos entender? Hoje vamos dominar a conversão de **Binário para Decimal**.
+Agora que já sabemos como transformar nossos números decimais em binário, é hora de aprender o "caminho de volta". Como o computador nos mostra um resultado que possamos entender? 
 
 ---
 
 ## 🎯 Objetivos de Aprendizagem
 
 Nesta aula, você vai:
--   [x] Compreender o conceito de **valor posicional** no sistema binário.
--   [x] Aprender o método da **soma de pesos** (potências de 2).
--   [x] Praticar a conversão rápida de números binários pequenos e médios.
+- [x] Compreender o conceito de **valor posicional** no sistema binário.
+- [x] Aprender o método da **soma de pesos** (potências de 2).
+- [x] Praticar a conversão rápida de números binários pequenos e médios.
 
 ---
 
@@ -29,23 +20,27 @@ Assim como no sistema decimal (onde as casas valem 1, 10, 100, 1000...), no bin�
 ```mermaid
 graph TD
     subgraph Pesos
-    P3[2³=8]
-    P2[2²=4]
-    P1[2¹=2]
-    P0[2⁰=1]
+    P3["2³=8"]
+    P2["2²=4"]
+    P1["2¹=2"]
+    P0["2⁰=1"]
     end
     
     subgraph Bits
-    B3[1]
-    B2[0]
-    B1[1]
-    B0[1]
+    B3["1"]
+    B2["0"]
+    B1["1"]
+    B0["1"]
     end
 
     B3 --- P3
     B2 --- P2
     B1 --- P1
     B0 --- P0
+    style P3 fill:#2fa,stroke:#333
+    style P2 fill:#2fa,stroke:#333
+    style P1 fill:#2fa,stroke:#333
+    style P0 fill:#2fa,stroke:#333
 ```
 
 ---
@@ -54,65 +49,58 @@ graph TD
 
 Para converter, basta identificar onde estão os bits **1** e somar os seus pesos correspondentes.
 
-<div class="termy">
-```console
-$ bin-convert 1101 --to-decimal
-Análise de Bits:
-1) Bit na pos 3: 1 x 2³ = 8
-2) Bit na pos 2: 1 x 2² = 4
-3) Bit na pos 1: 0 x 2¹ = 0
-4) Bit na pos 0: 1 x 2⁰ = 1
-
-Soma Final: 8 + 4 + 0 + 1
-Resultado: 13
-```
-</div>
-
----
-
-## 💡 Tabela de Apoio Rápido
-
-Memorizar estas potências facilitará sua vida em todas as próximas aulas:
-
-| Posição (n) | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Peso ($2^n$)** | **128** | **64** | **32** | **16** | **8** | **4** | **2** | **1** |
-
-> [!TIP]
-> Notou que cada peso é exatamente o dobro do peso à sua direita? Isso torna a escala muito fácil de lembrar!
+=== "Exemplo: 1101"
+    <div class="termy">
+    ```console
+    $ bin-convert 1101 --to-decimal
+    Análise de Pesos:
+    (1 x 8) + (1 x 4) + (0 x 2) + (1 x 1)
+    
+    🏁 Soma: 8 + 4 + 0 + 1 = 13
+    ```
+    </div>
+=== "Exemplo: 10101010"
+    - $1 \times 128 = 128$
+    - $1 \times 32 = 32$
+    - $1 \times 8 = 8$
+    - $1 \times 2 = 2$
+    - **Soma Total**: 170
 
 ---
 
-## ⚖️ Exemplo: Convertendo um Byte
-
-Vamos converter o byte `10101010`:
--   $1 \times 128 = 128$
--   $0 \times 64 = 0$
--   $1 \times 32 = 32$
--   $0 \times 16 = 0$
--   $1 \times 8 = 8$
--   $0 \times 4 = 0$
--   $1 \times 2 = 2$
--   $0 \times 1 = 0$
--   **Soma**: $128 + 32 + 8 + 2 = 170$
-
----
-
-## ✍️ Exercícios Rápidos
-
-1. Converta o binário `111` para decimal. (Dica: some os pesos das posições 2, 1 e 0).
-2. Qual o valor decimal do binário `10000`?
+!!! tip "Dica de Memorização"
+    Notou que cada peso é exatamente o **dobro** do peso à sua direita? 
+    $1 \to 2 \to 4 \to 8 \to 16 \to 32 \to 64 \to 128 \dots$
+    Isso torna a escala muito fácil de lembrar sem precisar fazer cálculos complexos!
 
 ---
 
 ## 🚀 Desafio da Semana
-Qual o maior número decimal que você consegue representar usando apenas 4 bits (ex: `1111`)? E com 8 bits? Tente descobrir a relação entre o número de bits e o valor máximo suportado!
+
+Qual o maior número decimal que você consegue representar usando apenas **4 bits** (ex: `1111`)? 
+- E com **8 bits**? 
+- **Pista**: Tente somar todos os pesos da tabela acima e veja o que acontece!
 
 ---
 
-[:material-presentation: Ver Slides](lesson-03-slides){ .md-button }
-[:material-school: Responder Quiz](quiz-03){ .md-button }
-[:material-dumbbell: Praticar Exercícios](exercicio-03){ .md-button }
+<div class="grid cards" markdown>
+
+-   :material-presentation: **Slides Interativos**
+    ---
+    Visualize a soma dos pesos com animações dinâmicas.
+    [:octicons-arrow-right-24: Ver Slides](../slides/slide-03.html)
+
+-   :material-school: **Quiz de Prática**
+    ---
+    10 questões para testar sua agilidade mental.
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-03.md)
+
+-   :material-dumbbell: **Mão na Massa**
+    ---
+    Exercícios de conversão binária para consolidar.
+    [:octicons-arrow-right-24: Praticar](../exercicios/exercicio-03.md)
+
+</div>
 
 ---
-[« Aula Anterior](aula-02.md) | [Próxima Aula »](aula-04.md)
+[« Aula Anterior](aula-02.md) | [Próxima Aula: Sistema Octal :material-arrow-right:](aula-04.md)
