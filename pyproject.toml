@@ -28,7 +28,6 @@ dependencies = [
     "mkdocs-jupyter (>=0.25.1,<0.26.0)",
     "mkdocs-rss-plugin (>=1.17.9,<2.0.0)",
     "mkdocs-revealjs (>=0.0.6,<0.0.7)",
-    "mkdocs-image-optimize-plugin (>=0.5.0,<1.0.0)",
 
 ]
 
