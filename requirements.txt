@@ -6,7 +6,6 @@ argcomplete==3.6.2
 asttokens==3.0.1
 astunparse==1.6.3
 attrs==25.3.0
-audioop-lts==0.2.1
 azure-ai-documentintelligence==1.0.2
 azure-core==1.33.0
 azure-identity==1.21.0
