@@ -7,8 +7,8 @@ site_description: Curso completo de Fundamentos da Computação para iniciantes 
 theme:
   name: material
   language: pt-BR
-  favicon: assets/images/logo.png
-  logo: assets/images/logo.png
+  favicon: assets/images/logo.svg
+  logo: assets/images/logo.svg
   custom_dir: overrides
   features:
     - navigation.tracking
@@ -56,6 +56,12 @@ theme:
   static_templates:
     - 404.html
 
+exclude_docs: |
+  quizzes/src/*
+  slides/src/*
+  slides/slide-*.md
+  **/.src/*
+
 copyright: 'Copyright &copy; 2026 Ricardo. Feito com <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>.'
 
 markdown_extensions:
@@ -81,6 +87,8 @@ markdown_extensions:
   - footnotes
   - admonition
   - attr_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - md_in_html
   - tables
   - pymdownx.snippets:
@@ -163,7 +171,7 @@ hooks:
   - hooks/copy_slides.py
 
 nav:
-  - Home: index.md
+  - Principal: index.md
   - Sobre: sobre.md
   - Aulas:
     - aulas/index.md
@@ -215,4 +223,4 @@ nav:
           - projetos/index.md
       - Configuração:
           - setups/index.md
-  - Impressão: print_page.md
+  - Impresso: print_page.md

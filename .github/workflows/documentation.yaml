@@ -43,7 +43,7 @@ jobs:
       - name: Install Playwright Browsers
         run: poetry run playwright install --with-deps chromium
 
-      - name: Deploy with Mike
+      - name: Build and Deploy
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -65,9 +65,5 @@ jobs:
           # Kill server
           kill $PID
           
-          # Clean local gh-pages to ensure fresh fetch/deploy
-          # Clean local gh-pages to ensure fresh fetch/deploy
-          git branch -D gh-pages || echo "gh-pages not present locally"
-          git fetch origin gh-pages --depth=1 || echo "gh-pages branch not found on remote"
-          poetry run mike deploy --push --update-aliases estavel latest
-          poetry run mike set-default --push estavel
+          # Deploy direto para gh-pages (sem Mike)
+          poetry run mkdocs gh-deploy --force
